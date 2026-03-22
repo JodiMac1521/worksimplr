@@ -1,4 +1,5 @@
 export default function Home() {
+  const SERIF = "'DM Serif Display', serif";
   const useCases = [
     { icon: '🗂️', title: 'Data Cleanup & Structuring', desc: 'Messy databases, spreadsheets, and records — cleaned, labeled, and structured.' },
     { icon: '🧪', title: 'User Testing', desc: '10–200 users recruited and tested in weeks, not months.' },
@@ -6,157 +7,134 @@ export default function Home() {
     { icon: '🔄', title: 'CRM Cleanup & Enrichment', desc: 'Contacts verified, enriched, and ready to use.' },
     { icon: '🤖', title: 'AI Workflow Setup', desc: 'Prompts built, tools configured, workflows tested and handed off.' },
   ];
-
   const steps = [
     { num: '01', icon: '📥', title: 'Submit your work', desc: 'Describe what you need in plain language. No scope doc required.' },
     { num: '02', icon: '⚡', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it — in minutes.' },
     { num: '03', icon: '🤝', title: 'AI-powered teams execute', desc: 'Vetted operators + AI tools work together on your project.' },
     { num: '04', icon: '✅', title: 'QA + delivery', desc: 'Every deliverable is reviewed before you receive it. No surprises.' },
   ];
-
   return (
     <>
-      {/* ── NAV ── */}
-      <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: 'rgba(10,35,66,0.95)', backdropFilter: 'blur(14px)', borderBottom: '1px solid rgba(224,123,57,0.2)', height: 60, display: 'flex', alignItems: 'center' }}>
-        <div style={{ maxWidth: 1080, margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
-          <a href="/" style={{ fontFamily: `'DM Serif Display', serif`, fontSize: '1.3rem', color: 'white', textDecoration: 'none' }}>
-            Work<span style={{ color: '#E07B39' }}>Simplr</span>
-          </a>
-          <div style={{ display: 'flex', gap: 28, listStyle: 'none' }}>
+      <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:100,background:'rgba(10,35,66,0.95)',backdropFilter:'blur(14px)',borderBottom:'1px solid rgba(224,123,57,0.2)',height:60,display:'flex',alignItems:'center' }}>
+        <div style={{ maxWidth:1080,margin:'0 auto',padding:'0 24px',display:'flex',alignItems:'center',justifyContent:'space-between',width:'100%' }}>
+          <a href="/" style={{ fontFamily:SERIF,fontSize:'1.3rem',color:'white',textDecoration:'none' }}>Work<span style={{ color:'#E07B39' }}>Simplr</span></a>
+          <div style={{ display:'flex',gap:28 }}>
             {[['#problem','Problem'],['#solution','Solution'],['#how','How It Works'],['#use-cases','Use Cases']].map(([h,l]) => (
-              <a key={h} href={h} style={{ fontSize: '0.88rem', fontWeight: 500, color: 'rgba(255,255,255,0.55)', textDecoration: 'none' }}>{l}</a>
+              <a key={h} href={h} style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none' }}>{l}</a>
             ))}
           </div>
-          <div style={{ display: 'flex', gap: 10 }}>
-            <a href="/login" style={{ padding: '8px 20px', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 999, fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Log in</a>
-            <a href="/register" style={{ padding: '8px 20px', background: '#E07B39', borderRadius: 999, fontSize: '0.875rem', color: 'white', textDecoration: 'none', fontWeight: 600 }}>Start a Sprint</a>
+          <div style={{ display:'flex',gap:10 }}>
+            <a href="/login" style={{ padding:'8px 20px',border:'1px solid rgba(255,255,255,0.2)',borderRadius:999,fontSize:'0.875rem',color:'rgba(255,255,255,0.7)',textDecoration:'none' }}>Log in</a>
+            <a href="/register" style={{ padding:'8px 20px',background:'#E07B39',borderRadius:999,fontSize:'0.875rem',color:'white',textDecoration:'none',fontWeight:600 }}>Start a Sprint</a>
           </div>
         </div>
       </nav>
 
-      {/* ── HERO ── */}
-      <section style={{ paddingTop: 140, paddingBottom: 100, background: 'linear-gradient(160deg, #081A30 0%, #0A2342 60%, #0D2B50 100%)', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: -150, right: -150, width: 500, height: 500, background: 'radial-gradient(circle, rgba(224,123,57,0.12) 0%, transparent 70%)', pointerEvents: 'none' }} />
-        <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px', textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(224,123,57,0.12)', border: '1px solid rgba(224,123,57,0.3)', borderRadius: 999, padding: '5px 14px', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#F08C4E', marginBottom: 28 }}>
-            SprintWork™ Platform
-          </div>
-          <h1 style={{ fontFamily: `'DM Serif Display', serif`, fontSize: 'clamp(2.4rem, 5vw, 3.6rem)', fontWeight: 400, color: 'white', lineHeight: 1.1, marginBottom: 20, letterSpacing: '-0.01em' }}>
-            The Future of Work<br />
-            <em style={{ fontStyle: 'italic', color: '#F08C4E' }}>Runs on Sprints.</em>
+      <section style={{ paddingTop:140,paddingBottom:100,background:'linear-gradient(160deg,#081A30 0%,#0A2342 60%,#0D2B50 100%)',position:'relative',overflow:'hidden' }}>
+        <div style={{ position:'absolute',top:-150,right:-150,width:500,height:500,background:'radial-gradient(circle,rgba(224,123,57,0.12) 0%,transparent 70%)',pointerEvents:'none' }} />
+        <div style={{ maxWidth:800,margin:'0 auto',padding:'0 24px',textAlign:'center',position:'relative',zIndex:1 }}>
+          <div style={{ display:'inline-flex',alignItems:'center',gap:8,background:'rgba(224,123,57,0.12)',border:'1px solid rgba(224,123,57,0.3)',borderRadius:999,padding:'5px 14px',fontSize:'0.75rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'#F08C4E',marginBottom:28 }}>SprintWork™ Platform</div>
+          <h1 style={{ fontFamily:SERIF,fontSize:'clamp(2.4rem,5vw,3.6rem)',fontWeight:400,color:'white',lineHeight:1.1,marginBottom:20 }}>
+            The Future of Work<br /><em style={{ fontStyle:'italic',color:'#F08C4E' }}>Runs on Sprints.</em>
           </h1>
-          <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 12, maxWidth: 600, margin: '0 auto 12px' }}>
-            Structured work, executed in weeks — not months.
-          </p>
-          <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.7, marginBottom: 44, maxWidth: 560, margin: '0 auto 44px' }}>
-            Work Simplr turns undefined work into clear, executable outcomes using AI + managed teams.
-          </p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="/register" style={{ padding: '14px 36px', background: '#E07B39', borderRadius: 999, fontSize: '1rem', fontWeight: 600, color: 'white', textDecoration: 'none', boxShadow: '0 4px 24px rgba(224,123,57,0.4)' }}>Start a Sprint →</a>
-            <a href="#how" style={{ padding: '14px 28px', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 999, fontSize: '1rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>See how it works</a>
+          <p style={{ fontSize:'1.1rem',color:'rgba(255,255,255,0.55)',lineHeight:1.7,marginBottom:12,maxWidth:600,margin:'0 auto 12px' }}>Structured work, executed in weeks — not months.</p>
+          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.45)',lineHeight:1.7,marginBottom:44,maxWidth:560,margin:'0 auto 44px' }}>Work Simplr turns undefined work into clear, executable outcomes using AI + managed teams.</p>
+          <div style={{ display:'flex',gap:12,justifyContent:'center',flexWrap:'wrap' }}>
+            <a href="/register" style={{ padding:'14px 36px',background:'#E07B39',borderRadius:999,fontSize:'1rem',fontWeight:600,color:'white',textDecoration:'none',boxShadow:'0 4px 24px rgba(224,123,57,0.4)' }}>Start a Sprint →</a>
+            <a href="#how" style={{ padding:'14px 28px',border:'1px solid rgba(255,255,255,0.2)',borderRadius:999,fontSize:'1rem',color:'rgba(255,255,255,0.7)',textDecoration:'none' }}>See how it works</a>
           </div>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 40, marginTop: 60, paddingTop: 40, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+          <div style={{ display:'flex',justifyContent:'center',gap:40,marginTop:60,paddingTop:40,borderTop:'1px solid rgba(255,255,255,0.08)' }}>
             {[['5,000+','Projects Completed'],['98%','Completion Rate'],['2 weeks','Avg Sprint Time']].map(([n,l]) => (
-              <div key={l} style={{ textAlign: 'center' }}>
-                <div style={{ fontFamily: `'DM Serif Display', serif`, fontSize: '1.8rem', color: '#F08C4E', marginBottom: 4 }}>{n}</div>
-                <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.5px' }}>{l}</div>
+              <div key={l} style={{ textAlign:'center' }}>
+                <div style={{ fontFamily:SERIF,fontSize:'1.8rem',color:'#F08C4E',marginBottom:4 }}>{n}</div>
+                <div style={{ fontSize:'0.78rem',color:'rgba(255,255,255,0.4)',letterSpacing:'0.5px' }}>{l}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── PROBLEM ── */}
-      <section id="problem" style={{ background: '#081A30', padding: '96px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16 }}>The Problem</div>
-          <h2 style={{ fontFamily: `'DM Serif Display', serif`, fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', color: 'white', marginBottom: 20, lineHeight: 1.2 }}>
-            Most work doesn't fail<br />because of talent.
-          </h2>
-          <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.5)', marginBottom: 40, lineHeight: 1.7, maxWidth: 520 }}>It fails because it's poorly defined before anyone starts.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 40 }}>
+      <section id="problem" style={{ background:'#081A30',padding:'96px 24px' }}>
+        <div style={{ maxWidth:860,margin:'0 auto' }}>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Problem</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:20,lineHeight:1.2 }}>Most work doesn't fail<br />because of talent.</h2>
+          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520 }}>It fails because it's poorly defined before anyone starts.</p>
+          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:16,marginBottom:40 }}>
             {[
-              { icon: '🌫️', label: 'Unclear', desc: 'No one can agree on what "done" looks like.' },
-              { icon: '📐', label: 'Poorly scoped', desc: 'Requirements shift. Time blows out. Budget disappears.' },
-              { icon: '🚫', label: 'Impossible to execute', desc: 'As written, the work can't actually be completed.' },
+              { icon:'🌫️',label:'Unclear',desc:"No one can agree on what done looks like." },
+              { icon:'📐',label:'Poorly scoped',desc:'Requirements shift. Time blows out. Budget disappears.' },
+              { icon:'🚫',label:'Impossible to execute',desc:'As written, the work cannot actually be completed.' },
             ].map(item => (
-              <div key={item.label} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '24px 20px' }}>
-                <div style={{ fontSize: '1.8rem', marginBottom: 12 }}>{item.icon}</div>
-                <div style={{ fontWeight: 700, color: 'white', marginBottom: 6, fontSize: '0.95rem' }}>{item.label}</div>
-                <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.6 }}>{item.desc}</div>
+              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px' }}>
+                <div style={{ fontSize:'1.8rem',marginBottom:12 }}>{item.icon}</div>
+                <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.95rem' }}>{item.label}</div>
+                <div style={{ fontSize:'0.85rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{item.desc}</div>
               </div>
             ))}
           </div>
-          <div style={{ background: 'rgba(224,123,57,0.06)', border: '1px solid rgba(224,123,57,0.2)', borderRadius: 14, padding: '24px 28px' }}>
-            <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, fontStyle: 'italic' }}>
-              "Teams don't need more people. They need better structured work."
-            </p>
+          <div style={{ background:'rgba(224,123,57,0.06)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:14,padding:'24px 28px' }}>
+            <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.75)',lineHeight:1.7,fontStyle:'italic' }}>Teams do not need more people. They need better structured work.</p>
           </div>
         </div>
       </section>
 
-      {/* ── SOLUTION ── */}
-      <section id="solution" style={{ background: '#0A2342', padding: '96px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16 }}>The Solution</div>
-          <h2 style={{ fontFamily: `'DM Serif Display', serif`, fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', color: 'white', marginBottom: 16, lineHeight: 1.2 }}>
-            Welcome to <em style={{ color: '#F08C4E' }}>SprintWork™</em>
-          </h2>
-          <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.5)', marginBottom: 48, lineHeight: 1.7 }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+      <section id="solution" style={{ background:'#0A2342',padding:'96px 24px' }}>
+        <div style={{ maxWidth:860,margin:'0 auto' }}>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Solution</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWork™</em></h2>
+          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:48,lineHeight:1.7 }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
+          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))',gap:16 }}>
             {[
-              { icon: '📋', title: 'Structured tasks', desc: 'Every engagement starts with a clear scope, milestones, and defined deliverables.' },
-              { icon: '🗺️', title: 'Execution plans', desc: 'Not just a to-do list. A plan that accounts for dependencies, QA, and delivery.' },
-              { icon: '📦', title: 'Delivered outcomes', desc: 'You get the thing you asked for — not a status update and an invoice.' },
+              { icon:'📋',title:'Structured tasks',desc:'Every engagement starts with a clear scope, milestones, and defined deliverables.' },
+              { icon:'🗺️',title:'Execution plans',desc:'Not just a to-do list. A plan that accounts for dependencies, QA, and delivery.' },
+              { icon:'📦',title:'Delivered outcomes',desc:'You get the thing you asked for — not a status update and an invoice.' },
             ].map(item => (
-              <div key={item.title} style={{ background: 'rgba(224,123,57,0.05)', border: '1px solid rgba(224,123,57,0.15)', borderRadius: 14, padding: '28px 22px' }}>
-                <div style={{ fontSize: '2rem', marginBottom: 14 }}>{item.icon}</div>
-                <div style={{ fontFamily: `'DM Serif Display', serif`, fontSize: '1.1rem', color: 'white', marginBottom: 8 }}>{item.title}</div>
-                <div style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.65 }}>{item.desc}</div>
+              <div key={item.title} style={{ background:'rgba(224,123,57,0.05)',border:'1px solid rgba(224,123,57,0.15)',borderRadius:14,padding:'28px 22px' }}>
+                <div style={{ fontSize:'2rem',marginBottom:14 }}>{item.icon}</div>
+                <div style={{ fontFamily:SERIF,fontSize:'1.1rem',color:'white',marginBottom:8 }}>{item.title}</div>
+                <div style={{ fontSize:'0.875rem',color:'rgba(255,255,255,0.5)',lineHeight:1.65 }}>{item.desc}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ── */}
-      <section id="how" style={{ background: '#081A30', padding: '96px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16, textAlign: 'center' }}>How It Works</div>
-          <h2 style={{ fontFamily: `'DM Serif Display', serif`, fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', color: 'white', marginBottom: 12, lineHeight: 1.2, textAlign: 'center' }}>Four steps to delivered work.</h2>
-          <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.45)', marginBottom: 56, fontSize: '0.95rem' }}>Submit. Scope. Execute. Deliver.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 4, background: 'rgba(255,255,255,0.04)', borderRadius: 16, overflow: 'hidden' }}>
-            {steps.map((step, i) => (
-              <div key={step.num} style={{ background: '#081A30', padding: '36px 24px', position: 'relative', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}>
-                <div style={{ fontFamily: `'DM Serif Display', serif`, fontSize: '2.8rem', color: 'rgba(224,123,57,0.15)', lineHeight: 1, marginBottom: 16, letterSpacing: '-0.03em' }}>{step.num}</div>
-                <div style={{ fontSize: '1.6rem', marginBottom: 14 }}>{step.icon}</div>
-                <div style={{ fontWeight: 700, color: 'white', marginBottom: 8, fontSize: '0.95rem' }}>{step.title}</div>
-                <div style={{ fontSize: '0.83rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.65 }}>{step.desc}</div>
+      <section id="how" style={{ background:'#081A30',padding:'96px 24px' }}>
+        <div style={{ maxWidth:860,margin:'0 auto' }}>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>How It Works</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:12,lineHeight:1.2,textAlign:'center' }}>Four steps to delivered work.</h2>
+          <p style={{ textAlign:'center',color:'rgba(255,255,255,0.45)',marginBottom:56,fontSize:'0.95rem' }}>Submit. Scope. Execute. Deliver.</p>
+          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(190px,1fr))',gap:2,background:'rgba(255,255,255,0.04)',borderRadius:16,overflow:'hidden' }}>
+            {steps.map((step,i) => (
+              <div key={step.num} style={{ background:'#081A30',padding:'36px 24px',borderRight:i<3?'1px solid rgba(255,255,255,0.06)':'none' }}>
+                <div style={{ fontFamily:SERIF,fontSize:'2.8rem',color:'rgba(224,123,57,0.15)',lineHeight:1,marginBottom:16 }}>{step.num}</div>
+                <div style={{ fontSize:'1.6rem',marginBottom:14 }}>{step.icon}</div>
+                <div style={{ fontWeight:700,color:'white',marginBottom:8,fontSize:'0.95rem' }}>{step.title}</div>
+                <div style={{ fontSize:'0.83rem',color:'rgba(255,255,255,0.45)',lineHeight:1.65 }}>{step.desc}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── WHAT YOU GET ── */}
-      <section style={{ background: '#0A2342', padding: '96px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center' }}>
+      <section style={{ background:'#0A2342',padding:'96px 24px' }}>
+        <div style={{ maxWidth:860,margin:'0 auto' }}>
+          <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:48,alignItems:'center' }}>
             <div>
-              <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16 }}>What You Get</div>
-              <h2 style={{ fontFamily: `'DM Serif Display', serif`, fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', color: 'white', marginBottom: 16, lineHeight: 1.2 }}>Real deliverables.<br />No babysitting.</h2>
-              <p style={{ color: 'rgba(255,255,255,0.45)', lineHeight: 1.7, fontSize: '0.95rem' }}>Every Sprint is scoped, managed, and delivered. You stay focused on your business.</p>
+              <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>What You Get</div>
+              <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.6rem,3vw,2.4rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>Real deliverables.<br />No babysitting.</h2>
+              <p style={{ color:'rgba(255,255,255,0.45)',lineHeight:1.7,fontSize:'0.95rem' }}>Every Sprint is scoped, managed, and delivered. You stay focused on your business.</p>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <div style={{ display:'flex',flexDirection:'column',gap:12 }}>
               {[
-                { icon: '📐', text: 'Fully scoped projects' },
-                { icon: '🎯', text: 'Managed execution (no babysitting)' },
-                { icon: '🤖', text: 'AI + human teams' },
-                { icon: '📦', text: 'Real, usable deliverables' },
+                { icon:'📐',text:'Fully scoped projects' },
+                { icon:'🎯',text:'Managed execution (no babysitting)' },
+                { icon:'🤖',text:'AI + human teams' },
+                { icon:'📦',text:'Real, usable deliverables' },
               ].map(item => (
-                <div key={item.text} style={{ display: 'flex', alignItems: 'center', gap: 16, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: '14px 18px' }}>
-                  <span style={{ fontSize: '1.3rem' }}>{item.icon}</span>
-                  <span style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.75)', fontWeight: 500 }}>{item.text}</span>
+                <div key={item.text} style={{ display:'flex',alignItems:'center',gap:16,background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:10,padding:'14px 18px' }}>
+                  <span style={{ fontSize:'1.3rem' }}>{item.icon}</span>
+                  <span style={{ fontSize:'0.9rem',color:'rgba(255,255,255,0.75)',fontWeight:500 }}>{item.text}</span>
                 </div>
               ))}
             </div>
@@ -164,45 +142,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── USE CASES ── */}
-      <section id="use-cases" style={{ background: '#081A30', padding: '96px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16, textAlign: 'center' }}>Use Cases</div>
-          <h2 style={{ fontFamily: `'DM Serif Display', serif`, fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', color: 'white', marginBottom: 48, lineHeight: 1.2, textAlign: 'center' }}>Work we execute every week.</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 16 }}>
+      <section id="use-cases" style={{ background:'#081A30',padding:'96px 24px' }}>
+        <div style={{ maxWidth:860,margin:'0 auto' }}>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>Use Cases</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:48,lineHeight:1.2,textAlign:'center' }}>Work we execute every week.</h2>
+          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))',gap:16 }}>
             {useCases.map(uc => (
-              <div key={uc.title} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '24px 20px', transition: 'border-color 0.2s, transform 0.2s' }}>
-                <div style={{ fontSize: '1.8rem', marginBottom: 12 }}>{uc.icon}</div>
-                <div style={{ fontWeight: 700, color: 'white', marginBottom: 6, fontSize: '0.9rem' }}>{uc.title}</div>
-                <div style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.6 }}>{uc.desc}</div>
+              <div key={uc.title} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px' }}>
+                <div style={{ fontSize:'1.8rem',marginBottom:12 }}>{uc.icon}</div>
+                <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.9rem' }}>{uc.title}</div>
+                <div style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{uc.desc}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── WHY WORKSIMPLR ── */}
-      <section style={{ background: '#0A2342', padding: '96px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16, textAlign: 'center' }}>Why Work Simplr</div>
-          <h2 style={{ fontFamily: `'DM Serif Display', serif`, fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', color: 'white', marginBottom: 16, lineHeight: 1.2, textAlign: 'center' }}>
-            This isn't staffing.<br /><em style={{ color: '#F08C4E' }}>It's execution.</em>
-          </h2>
-          <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.45)', marginBottom: 52, fontSize: '0.95rem' }}>Instead of hoping for the best, you get structured delivery every time.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
-            <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '28px 24px' }}>
-              <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: 16 }}>The old way</div>
+      <section style={{ background:'#0A2342',padding:'96px 24px' }}>
+        <div style={{ maxWidth:860,margin:'0 auto' }}>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>Why Work Simplr</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>This is not staffing.<br /><em style={{ color:'#F08C4E' }}>It is execution.</em></h2>
+          <p style={{ textAlign:'center',color:'rgba(255,255,255,0.45)',marginBottom:52,fontSize:'0.95rem' }}>Instead of hoping for the best, you get structured delivery every time.</p>
+          <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:20 }}>
+            <div style={{ background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'28px 24px' }}>
+              <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:16 }}>The old way</div>
               {['Hiring people','Managing freelancers','Guessing scope'].map(t => (
-                <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,0.05)', fontSize: '0.875rem', color: 'rgba(255,255,255,0.45)' }}>
-                  <span style={{ color: '#EF4444' }}>✕</span> {t}
+                <div key={t} style={{ display:'flex',alignItems:'center',gap:10,padding:'10px 0',borderBottom:'1px solid rgba(255,255,255,0.05)',fontSize:'0.875rem',color:'rgba(255,255,255,0.45)' }}>
+                  <span style={{ color:'#EF4444' }}>✕</span> {t}
                 </div>
               ))}
             </div>
-            <div style={{ background: 'rgba(224,123,57,0.06)', border: '1px solid rgba(224,123,57,0.2)', borderRadius: 14, padding: '28px 24px' }}>
-              <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16 }}>The Sprint way</div>
+            <div style={{ background:'rgba(224,123,57,0.06)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:14,padding:'28px 24px' }}>
+              <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Sprint way</div>
               {['Structured work','Managed delivery','Predictable outcomes'].map(t => (
-                <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 0', borderBottom: '1px solid rgba(224,123,57,0.1)', fontSize: '0.875rem', color: 'rgba(255,255,255,0.75)' }}>
-                  <span style={{ color: '#22C55E' }}>✓</span> {t}
+                <div key={t} style={{ display:'flex',alignItems:'center',gap:10,padding:'10px 0',borderBottom:'1px solid rgba(224,123,57,0.1)',fontSize:'0.875rem',color:'rgba(255,255,255,0.75)' }}>
+                  <span style={{ color:'#22C55E' }}>✓</span> {t}
                 </div>
               ))}
             </div>
@@ -210,76 +184,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── AI SECTION ── */}
-      <section style={{ background: '#081A30', padding: '96px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center' }}>
-          <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16 }}>AI + Human</div>
-          <h2 style={{ fontFamily: `'DM Serif Display', serif`, fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', color: 'white', marginBottom: 16, lineHeight: 1.2 }}>
-            AI doesn't execute.<br /><em style={{ color: '#F08C4E' }}>We do.</em>
-          </h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', maxWidth: 520, margin: '0 auto 48px', lineHeight: 1.7, fontSize: '0.95rem' }}>
-            We combine AI + human operators + structured workflows so work actually gets done — not just drafted, started, or "in progress."
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+      <section style={{ background:'#081A30',padding:'96px 24px' }}>
+        <div style={{ maxWidth:860,margin:'0 auto',textAlign:'center' }}>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>AI + Human</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>AI does not execute.<br /><em style={{ color:'#F08C4E' }}>We do.</em></h2>
+          <p style={{ color:'rgba(255,255,255,0.5)',maxWidth:520,margin:'0 auto 48px',lineHeight:1.7,fontSize:'0.95rem' }}>We combine AI + human operators + structured workflows so work actually gets done.</p>
+          <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16 }}>
             {[
-              { icon: '🤖', label: 'AI Scoping', desc: 'Classifies and prices your work in minutes' },
-              { icon: '👥', label: 'Human Operators', desc: 'Vetted teams who actually execute the work' },
-              { icon: '🔁', label: 'Structured Workflows', desc: 'Every step defined, tracked, and delivered' },
+              { icon:'🤖',label:'AI Scoping',desc:'Classifies and prices your work in minutes' },
+              { icon:'👥',label:'Human Operators',desc:'Vetted teams who actually execute the work' },
+              { icon:'🔁',label:'Structured Workflows',desc:'Every step defined, tracked, and delivered' },
             ].map(item => (
-              <div key={item.label} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '28px 20px' }}>
-                <div style={{ fontSize: '2rem', marginBottom: 12 }}>{item.icon}</div>
-                <div style={{ fontWeight: 700, color: 'white', marginBottom: 6, fontSize: '0.9rem' }}>{item.label}</div>
-                <div style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.6 }}>{item.desc}</div>
+              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'28px 20px' }}>
+                <div style={{ fontSize:'2rem',marginBottom:12 }}>{item.icon}</div>
+                <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.9rem' }}>{item.label}</div>
+                <div style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{item.desc}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section style={{ background: 'linear-gradient(135deg, #0A2342 0%, #1a3560 100%)', padding: '100px 24px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, rgba(224,123,57,0.15) 0%, transparent 65%)', pointerEvents: 'none' }} />
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: 640, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: `'DM Serif Display', serif`, fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'white', marginBottom: 16, lineHeight: 1.15 }}>
-            Stop managing work.<br /><em style={{ color: '#F08C4E' }}>Start shipping it.</em>
-          </h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', marginBottom: 36, fontSize: '1rem', lineHeight: 1.7 }}>
-            Join the companies already using SprintWork™ to deliver outcomes, not headcount.
-          </p>
-          <a href="/register" style={{ display: 'inline-block', padding: '16px 44px', background: '#E07B39', borderRadius: 999, fontSize: '1.05rem', fontWeight: 700, color: 'white', textDecoration: 'none', boxShadow: '0 8px 32px rgba(224,123,57,0.45)' }}>
-            Start a Sprint →
-          </a>
+      <section style={{ background:'linear-gradient(135deg,#0A2342 0%,#1a3560 100%)',padding:'100px 24px',textAlign:'center',position:'relative',overflow:'hidden' }}>
+        <div style={{ position:'absolute',inset:0,background:'radial-gradient(ellipse at center,rgba(224,123,57,0.15) 0%,transparent 65%)',pointerEvents:'none' }} />
+        <div style={{ position:'relative',zIndex:1,maxWidth:640,margin:'0 auto' }}>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,4vw,3rem)',color:'white',marginBottom:16,lineHeight:1.15 }}>Stop managing work.<br /><em style={{ color:'#F08C4E' }}>Start shipping it.</em></h2>
+          <p style={{ color:'rgba(255,255,255,0.5)',marginBottom:36,fontSize:'1rem',lineHeight:1.7 }}>Join the companies already using SprintWork™ to deliver outcomes, not headcount.</p>
+          <a href="/register" style={{ display:'inline-block',padding:'16px 44px',background:'#E07B39',borderRadius:999,fontSize:'1.05rem',fontWeight:700,color:'white',textDecoration:'none',boxShadow:'0 8px 32px rgba(224,123,57,0.45)' }}>Start a Sprint →</a>
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer style={{ background: '#050F1C', borderTop: '1px solid rgba(255,255,255,0.06)', padding: '48px 24px 32px' }}>
-        <div style={{ maxWidth: 1080, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr', gap: 40, marginBottom: 40 }}>
+      <footer style={{ background:'#050F1C',borderTop:'1px solid rgba(255,255,255,0.06)',padding:'48px 24px 32px' }}>
+        <div style={{ maxWidth:1080,margin:'0 auto' }}>
+          <div style={{ display:'grid',gridTemplateColumns:'1.5fr 1fr 1fr 1fr',gap:40,marginBottom:40 }}>
             <div>
-              <div style={{ fontFamily: `'DM Serif Display', serif`, fontSize: '1.2rem', color: 'white', marginBottom: 10 }}>Work<span style={{ color: '#E07B39' }}>Simplr</span></div>
-              <p style={{ fontSize: '0.83rem', color: 'rgba(255,255,255,0.35)', lineHeight: 1.65, maxWidth: 220 }}>AI-powered execution platform. We turn undefined work into delivered outcomes.</p>
+              <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:10 }}>Work<span style={{ color:'#E07B39' }}>Simplr</span></div>
+              <p style={{ fontSize:'0.83rem',color:'rgba(255,255,255,0.35)',lineHeight:1.65,maxWidth:220 }}>AI-powered execution platform. We turn undefined work into delivered outcomes.</p>
             </div>
             {[
-              { title: 'Platform', links: [['#solution','SprintWork™'],['#use-cases','Use Cases'],['#how','How It Works'],['/register','Start a Sprint']] },
-              { title: 'Company', links: [['/about','About'],['/blog','Blog'],['/contact','Contact']] },
-              { title: 'Legal', links: [['/privacy','Privacy'],['/terms','Terms'],['/cookies','Cookies']] },
+              { title:'Platform',links:[['#solution','SprintWork™'],['#use-cases','Use Cases'],['#how','How It Works'],['/register','Start a Sprint']] },
+              { title:'Company',links:[['/about','About'],['/blog','Blog'],['/contact','Contact']] },
+              { title:'Legal',links:[['/privacy','Privacy'],['/terms','Terms'],['/cookies','Cookies']] },
             ].map(col => (
               <div key={col.title}>
-                <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', marginBottom: 16 }}>{col.title}</div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                  {col.links.map(([href, label]) => (
-                    <a key={label} href={href} style={{ fontSize: '0.84rem', color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>{label}</a>
+                <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'rgba(255,255,255,0.5)',marginBottom:16 }}>{col.title}</div>
+                <div style={{ display:'flex',flexDirection:'column',gap:10 }}>
+                  {col.links.map(([href,label]) => (
+                    <a key={label} href={href} style={{ fontSize:'0.84rem',color:'rgba(255,255,255,0.35)',textDecoration:'none' }}>{label}</a>
                   ))}
                 </div>
               </div>
             ))}
           </div>
-          <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 24, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.78rem', color: 'rgba(255,255,255,0.25)' }}>
+          <div style={{ borderTop:'1px solid rgba(255,255,255,0.06)',paddingTop:24,display:'flex',justifyContent:'space-between',alignItems:'center',fontSize:'0.78rem',color:'rgba(255,255,255,0.25)' }}>
             <span>© {new Date().getFullYear()} Work Simplr Ltd. All rights reserved.</span>
-            <div style={{ display: 'flex', gap: 20 }}>
-              <a href="https://twitter.com/worksimplr" style={{ color: 'inherit', textDecoration: 'none' }}>Twitter</a>
-              <a href="https://linkedin.com/company/worksimplr" style={{ color: 'inherit', textDecoration: 'none' }}>LinkedIn</a>
+            <div style={{ display:'flex',gap:20 }}>
+              <a href="https://twitter.com/worksimplr" style={{ color:'inherit',textDecoration:'none' }}>Twitter</a>
+              <a href="https://linkedin.com/company/worksimplr" style={{ color:'inherit',textDecoration:'none' }}>LinkedIn</a>
             </div>
           </div>
         </div>

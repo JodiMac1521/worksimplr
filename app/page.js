@@ -293,7 +293,11 @@ export default function Home() {
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520,textAlign:'center',margin:'0 auto 40px' }}>It fails because it's poorly defined before anyone starts.</p>
           <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16,marginBottom:40,maxWidth:780,margin:'0 auto 40px' }}>
             {[
-              { icon:'🌫️',label:'Unclear',desc:"No one can agree on what done looks like." },
+              { icon:(<svg width="36" height="36" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style={{display:'block'}}>
+                  <path d="M20 40 C25 20,45 15,50 35 C55 55,30 65,35 45 C40 25,60 30,55 50 C50 70,25 60,30 40 C35 20,55 25,50 45" stroke="rgba(255,255,255,0.65)" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
+                  <path d="M35 25 C50 18,62 35,55 50 C48 65,28 58,25 42 C22 26,42 20,48 36 C54 52,38 62,30 50 C22 38,38 28,46 40" stroke="rgba(255,255,255,0.4)" strokeWidth="1.4" fill="none" strokeLinecap="round"/>
+                  <path d="M28 55 C20 42,28 25,44 28 C60 31,62 50,50 58 C38 66,24 55,32 42 C40 29,57 34,54 48" stroke="rgba(255,255,255,0.25)" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+                </svg>), label:'Unclear', desc:"No one can agree on what done looks like." },
               { icon:'📐',label:'Poorly scoped',desc:'Requirements shift. Time blows out. Budget disappears.' },
               { icon:'🚫',label:'Impossible to execute',desc:'As written, the work cannot actually be completed.' },
             ].map(item => (

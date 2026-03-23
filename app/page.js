@@ -184,7 +184,46 @@ export default function Home() {
             {[
               {
                 num:'01',
-                icon:'🗂️',
+                icon:(<svg width="72" height="56" viewBox="0 0 144 96" xmlns="http://www.w3.org/2000/svg" style={{display:'block'}}>
+                  {/* Workflow diagram: top box → two child boxes, connected by lines */}
+                  {/* Top center box */}
+                  <rect x="44" y="2" width="56" height="24" rx="5" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2"/>
+                  <line x1="56" y1="12" x2="84" y2="12" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5"/>
+                  <line x1="56" y1="17" x2="78" y2="17" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/>
+
+                  {/* Vertical line down from top box */}
+                  <line x1="72" y1="26" x2="72" y2="42" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5"/>
+
+                  {/* Horizontal splitter */}
+                  <line x1="28" y1="42" x2="116" y2="42" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5"/>
+
+                  {/* Left branch line down */}
+                  <line x1="28" y1="42" x2="28" y2="56" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5"/>
+                  {/* Right branch line down */}
+                  <line x1="116" y1="42" x2="116" y2="56" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5"/>
+                  {/* Center branch line down */}
+                  <line x1="72" y1="42" x2="72" y2="56" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5"/>
+
+                  {/* Left child box */}
+                  <rect x="2" y="56" width="52" height="22" rx="5" fill="none" stroke="rgba(224,123,57,0.9)" strokeWidth="2"/>
+                  <line x1="12" y1="65" x2="44" y2="65" stroke="rgba(224,123,57,0.5)" strokeWidth="1.5"/>
+                  <line x1="12" y1="70" x2="38" y2="70" stroke="rgba(224,123,57,0.35)" strokeWidth="1.5"/>
+
+                  {/* Center child box */}
+                  <rect x="46" y="56" width="52" height="22" rx="5" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
+                  <line x1="56" y1="65" x2="88" y2="65" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
+                  <line x1="56" y1="70" x2="82" y2="70" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5"/>
+
+                  {/* Right child box */}
+                  <rect x="90" y="56" width="52" height="22" rx="5" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
+                  <line x1="100" y1="65" x2="132" y2="65" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
+                  <line x1="100" y1="70" x2="126" y2="70" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5"/>
+
+                  {/* Arrowheads pointing down to child boxes */}
+                  <polygon points="28,53 25,48 31,48" fill="rgba(255,255,255,0.6)"/>
+                  <polygon points="72,53 69,48 75,48" fill="rgba(255,255,255,0.6)"/>
+                  <polygon points="116,53 113,48 119,48" fill="rgba(255,255,255,0.6)"/>
+                </svg>),
                 title:'Structured Workflow',
                 desc:"Each engagement is 'projectized' with a clear scope, milestones & tasks.",
               },

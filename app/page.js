@@ -8,9 +8,27 @@ export default function Home() {
     { icon: '🤖', title: 'AI Workflow Setup', desc: 'Prompts built, tools configured, workflows tested and handed off.' },
   ];
   const steps = [
-    { num: '01', icon: '📥', title: 'Submit your work', desc: 'Describe what you need in plain language. No scope doc required.' },
+    { num: '01', icon: (<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  {/* card background */}
+                  <rect x="4" y="2" width="44" height="48" rx="5" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="2"/>
+                  {/* step lines */}
+                  {[10,20,30,40].map((y,i) => (
+                    <g key={y}>
+                      <circle cx="14" cy={y+2} r="3" fill={i===0?"rgba(224,123,57,0.9)":"none"} stroke={i===0?"rgba(224,123,57,0.9)":"rgba(255,255,255,0.5)"} strokeWidth="1.5"/>
+                      <line x1="21" y1={y+2} x2="42" y2={y+2} stroke={i<2?"rgba(255,255,255,0.8)":"rgba(255,255,255,0.35)"} strokeWidth={i===0?2:1.5}/>
+                      {i>0&&i<3&&<line x1="21" y1={y+6} x2="36" y2={y+6} stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>}
+                    </g>
+                  ))}
+                </svg>), title: 'Submit your work', desc: 'Describe what you need in plain language. No scope doc required.' },
     { num: '02', icon: '⚡', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it — in minutes.' },
-    { num: '03', icon: '🤝', title: 'AI-powered teams execute', desc: 'Vetted operators + AI tools work together on your project.' },
+    { num: '03', icon: (<svg width="60" height="44" viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  {[0,1,2,3].map(i => (
+                    <g key={i} transform={`translate(${i*28+6},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="9" cy="8" r="6"/>
+                      <path d="M0 28 C0 18 18 18 18 28"/>
+                    </g>
+                  ))}
+                </svg>), title: 'AI-powered teams execute', desc: 'Vetted operators + AI tools work together on your project.' },
     { num: '04', icon: '✅', title: 'QA + delivery', desc: 'Every deliverable is reviewed before you receive it. No surprises.' },
   ];
   return (
@@ -189,7 +207,14 @@ export default function Home() {
           <div style={{ display:'flex',alignItems:'stretch',gap:0,paddingTop:24,marginBottom:40 }}>
             {[
               { num:'1', icon:'🗂️', title:'Structured Workflow', desc:"Each engagement is 'projectized' with a clear scope, milestones & tasks." },
-              { num:'2', icon:'🤝', title:'Execution plans', desc:'We onboard and distribute the work across 1–100 workers with QA built in.' },
+              { num:'2', icon: (<svg width="60" height="44" viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  {[0,1,2,3].map(i => (
+                    <g key={i} transform={`translate(${i*28+6},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="9" cy="8" r="6"/>
+                      <path d="M0 28 C0 18 18 18 18 28"/>
+                    </g>
+                  ))}
+                </svg>), title:'Execution plans', desc:'We onboard and distribute the work across 1–100 workers with QA built in.' },
               { num:'3', icon:'📦', title:'Delivered outcomes', desc:'You get the thing you asked for — not a status update and an invoice. In 28 days.' },
             ].map((item, i) => (
               <div key={item.num} style={{ display:'flex',alignItems:'center',flex:1 }}>

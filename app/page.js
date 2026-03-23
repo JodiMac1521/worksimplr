@@ -34,6 +34,8 @@ export default function Home() {
 
       <section style={{ paddingTop:140,paddingBottom:100,background:'linear-gradient(160deg,#081A30 0%,#0A2342 60%,#0D2B50 100%)',position:'relative',overflow:'hidden' }}>
         <div style={{ position:'absolute',top:-150,right:-150,width:500,height:500,background:'radial-gradient(circle,rgba(224,123,57,0.12) 0%,transparent 70%)',pointerEvents:'none' }} />
+        {/* Diagonal line texture — repeating CSS gradient */}
+        <div style={{ position:'absolute',inset:0,pointerEvents:'none',opacity:1,background:'repeating-linear-gradient(15deg,rgba(255,255,255,0.025) 0px,rgba(255,255,255,0.025) 1px,transparent 1px,transparent 28px)' }} />
         <div style={{ maxWidth:800,margin:'0 auto',padding:'0 24px',textAlign:'center',position:'relative',zIndex:1 }}>
           <div style={{ display:'inline-flex',alignItems:'center',gap:8,background:'rgba(224,123,57,0.12)',border:'1px solid rgba(224,123,57,0.3)',borderRadius:999,padding:'5px 14px',fontSize:'0.75rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'#F08C4E',marginBottom:28 }}>SprintWork™ Platform</div>
           <h1 style={{ fontFamily:SERIF,fontSize:'clamp(2.4rem,5vw,3.6rem)',fontWeight:400,color:'white',lineHeight:1.1,marginBottom:20 }}>
@@ -45,7 +47,7 @@ export default function Home() {
             <a href="/register" style={{ padding:'14px 36px',background:'#E07B39',borderRadius:999,fontSize:'1rem',fontWeight:600,color:'white',textDecoration:'none',boxShadow:'0 4px 24px rgba(224,123,57,0.4)' }}>Start a Sprint →</a>
             <a href="#how" style={{ padding:'14px 28px',border:'1px solid rgba(255,255,255,0.2)',borderRadius:999,fontSize:'1rem',color:'rgba(255,255,255,0.7)',textDecoration:'none' }}>See how it works</a>
           </div>
-          <div style={{ display:'flex',justifyContent:'center',gap:40,marginTop:60,paddingTop:40,borderTop:'1px solid rgba(255,255,255,0.08)' }}>
+          <div style={{ display:'flex',justifyContent:'center',gap:40,marginTop:60,paddingTop:40,borderTop:'1px solid rgba(224,123,57,0.2)' }}>
             {[['5,000+','Projects Completed'],['98%','Completion Rate'],['2 weeks','Avg Sprint Time']].map(([n,l]) => (
               <div key={l} style={{ textAlign:'center' }}>
                 <div style={{ fontFamily:SERIF,fontSize:'1.8rem',color:'#F08C4E',marginBottom:4 }}>{n}</div>
@@ -57,7 +59,7 @@ export default function Home() {
       </section>
 
       {/* ── SOCIAL PROOF ── */}
-      <section style={{ background:'#060F1C', padding:'72px 24px 80px', borderBottom:'1px solid rgba(255,255,255,0.06)' }}>
+      <section style={{ background:'#060F1C', padding:'72px 24px 80px', borderBottom:'1px solid rgba(255,255,255,0.06)', borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:1080, margin:'0 auto' }}>
 
           {/* Heading */}
@@ -173,8 +175,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="solution" style={{ background:'#0A2342',padding:'96px 24px' }}>
+      <section id="solution" style={{ background:'#0A2342',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:1060,margin:'0 auto' }}>
+          <div style={{ display:'flex',alignItems:'center',gap:16,marginBottom:40 }}>
+            <div style={{ flex:1,height:'1px',background:'linear-gradient(to right,transparent,rgba(255,255,255,0.08))' }} />
+            <span style={{ color:'rgba(224,123,57,0.45)',fontSize:'0.5rem' }}>&#9670;</span>
+            <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
+          </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Solution</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWork™</em></h2>
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7,textAlign:'center' }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
@@ -205,8 +212,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="problem" style={{ background:'#081A30',padding:'96px 24px' }}>
+      <section id="problem" style={{ background:'#081A30',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
+          <div style={{ display:'flex',alignItems:'center',gap:16,marginBottom:40 }}>
+            <div style={{ flex:1,height:'1px',background:'linear-gradient(to right,transparent,rgba(255,255,255,0.08))' }} />
+            <span style={{ color:'rgba(224,123,57,0.45)',fontSize:'0.5rem' }}>&#9670;</span>
+            <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
+          </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Problem</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:20,lineHeight:1.2,textAlign:'center' }}>Most work doesn't fail<br />because of talent.</h2>
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520,textAlign:'center',margin:'0 auto 40px' }}>It fails because it's poorly defined before anyone starts.</p>
@@ -229,9 +241,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how" style={{ background:'#081A30',padding:'96px 24px' }}>
+      <section id="how" style={{ background:'#081A30',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           {/* Left-justified header */}
+
+          {/* diamond divider */}
+          <div style={{ display:'flex',alignItems:'center',gap:16,marginBottom:40 }}>
+            <div style={{ flex:1,height:'1px',background:'linear-gradient(to right,transparent,rgba(255,255,255,0.08))' }} />
+            <span style={{ color:'rgba(224,123,57,0.45)',fontSize:'0.5rem' }}>&#9670;</span>
+            <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
+          </div>
+          <div style={{ display:'flex',alignItems:'center',gap:16,marginBottom:40 }}>
+            <div style={{ flex:1,height:'1px',background:'linear-gradient(to right,transparent,rgba(255,255,255,0.08))' }} />
+            <span style={{ color:'rgba(224,123,57,0.45)',fontSize:'0.5rem' }}>&#9670;</span>
+            <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
+          </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>How It Works</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:12,lineHeight:1.2,textAlign:'center' }}>4 steps to delivered work.</h2>
           <p style={{ color:'rgba(255,255,255,0.45)',marginBottom:56,fontSize:'0.95rem',textAlign:'center' }}>Submit. Scope. Execute. Deliver.</p>
@@ -375,7 +399,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="use-cases" style={{ background:'#081A30',padding:'96px 24px' }}>
+      <section id="use-cases" style={{ background:'#081A30',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>Use Cases</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:48,lineHeight:1.2,textAlign:'center' }}>Work we execute every week.</h2>

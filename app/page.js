@@ -99,6 +99,9 @@ export default function Home() {
               { src:'/logo-gates-white.svg', alt:'Gates Foundation', h:32 },
               { src:'/logo-cuboulder-white.png', alt:'CU Boulder', h:32 },
               { src:'/logo-texastech.svg', alt:'Texas Tech University', h:40 },
+              { src:'/logo-ncstate.svg', alt:'NC State University', h:40 },
+              { src:'/logo-coloradomesa.svg', alt:'Colorado Mesa University', h:40 },
+              { src:'/logo-ivytech.svg', alt:'Ivy Tech Community College', h:40 },
             ].map(logo => (
               <img key={logo.alt} src={logo.src} alt={logo.alt}
                 style={{ height:logo.h, width:'auto', opacity:0.75, filter:'brightness(1.1)', objectFit:'contain', ...(logo.style||{}) }} />
@@ -266,7 +269,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how" style={{ background:'#081A30',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
+      <section id="how" style={{ background:'#0A2342',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           {/* Left-justified header */}
 

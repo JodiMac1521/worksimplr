@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" width="200" height="56">
+  <text x="100" y="22" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="700" fill="white" letter-spacing="2">NC STATE</text>
+  <text x="100" y="40" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="400" fill="rgba(255,255,255,0.65)" letter-spacing="3">UNIVERSITY</text>
+  <line x1="26" y1="47" x2="174" y2="47" stroke="#CC0000" stroke-width="2" opacity="0.7"/>
+</svg>

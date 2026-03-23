@@ -18,7 +18,7 @@ export default function Home() {
       <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:100,background:'rgba(10,35,66,0.95)',backdropFilter:'blur(14px)',borderBottom:'1px solid rgba(224,123,57,0.2)',height:60,display:'flex',alignItems:'center' }}>
         <div style={{ maxWidth:1080,margin:'0 auto',padding:'0 24px',display:'flex',alignItems:'center',justifyContent:'space-between',width:'100%' }}>
           <a href="/" style={{ textDecoration:'none',display:'flex',alignItems:'center' }}>
-            <img src="/logo.png" alt="Work Simplr" style={{ height:48,width:'auto',display:'block' }} />
+            <img src="/logo.svg" alt="Work Simplr" style={{ height:56,width:'auto',display:'block' }} />
           </a>
           <div style={{ display:'flex',gap:28 }}>
             {[['#problem','Problem'],['#solution','Solution'],['#how','How It Works'],['#use-cases','Use Cases']].map(([h,l]) => (

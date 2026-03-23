@@ -32,7 +32,7 @@ export default function LoginPage() {
       {/* Left — form */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '48px 64px', maxWidth: 560 }}>
         <Link href="/" style={{ textDecoration: 'none', marginBottom: 56, display: 'inline-block' }}>
-          <img src="/logo.png" alt="Work Simplr" style={{ height: 48, width: 'auto' }} />
+          <img src="/logo.svg" alt="Work Simplr" style={{ height:56,width:'auto',display:'block' }} />
         </Link>
 
         <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 12 }}>Welcome back</div>

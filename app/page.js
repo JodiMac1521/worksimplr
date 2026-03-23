@@ -291,7 +291,7 @@ export default function Home() {
             ))}
           </div>
           <div style={{ background:'rgba(224,123,57,0.06)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:14,padding:'24px 28px' }}>
-            <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.75)',lineHeight:1.7,fontStyle:'italic' }}>Teams need capacity. And for that, they need the work structured.</p>
+            <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.75)',lineHeight:1.7,fontStyle:'italic',textAlign:'center' }}>Teams need capacity. And for that, they need the work structured.</p>
           </div>
         </div>
       </section>

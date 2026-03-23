@@ -83,7 +83,6 @@ export default function Home() {
               <img key={logo.alt} src={logo.src} alt={logo.alt}
                 style={{ height:logo.h, width:'auto', opacity:0.75, filter:'brightness(1.1)', objectFit:'contain', ...(logo.style||{}) }} />
             ))}
-            ))}
           </div>
 
           {/* Case study cards */}

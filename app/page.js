@@ -195,22 +195,83 @@ export default function Home() {
       </section>
 
       <section id="solution" style={{ background:'#0A2342',padding:'96px 24px' }}>
-        <div style={{ maxWidth:860,margin:'0 auto' }}>
+        <div style={{ maxWidth:1060,margin:'0 auto' }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Solution</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWork™</em></h2>
-          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:48,lineHeight:1.7 }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
-          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))',gap:16 }}>
+          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7 }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
+
+          {/* Process steps with numbers + arrows */}
+          <div style={{ display:'grid',gridTemplateColumns:'1fr auto 1fr auto 1fr',gap:0,alignItems:'start' }}>
             {[
-              { icon:'📋',title:'Structured tasks',desc:'Every engagement starts with a clear scope, milestones, and defined deliverables.' },
-              { icon:'🗺️',title:'Execution plans',desc:'Not just a to-do list. A plan that accounts for dependencies, QA, and delivery.' },
-              { icon:'📦',title:'Delivered outcomes',desc:'You get the thing you asked for — not a status update and an invoice.' },
-            ].map(item => (
-              <div key={item.title} style={{ background:'rgba(224,123,57,0.05)',border:'1px solid rgba(224,123,57,0.15)',borderRadius:14,padding:'28px 22px' }}>
-                <div style={{ fontSize:'2rem',marginBottom:14 }}>{item.icon}</div>
-                <div style={{ fontFamily:SERIF,fontSize:'1.1rem',color:'white',marginBottom:8 }}>{item.title}</div>
-                <div style={{ fontSize:'0.875rem',color:'rgba(255,255,255,0.5)',lineHeight:1.65 }}>{item.desc}</div>
-              </div>
-            ))}
+              {
+                num:'01',
+                icon:'📋',
+                title:'Structured tasks',
+                desc:'Every engagement starts with a clear scope, milestones, and defined deliverables.',
+              },
+              {
+                num:'02',
+                icon:'🤝',
+                title:'Execution plans',
+                desc:'We onboard and distribute the work across 1–100 workers with QA built in.',
+              },
+              {
+                num:'03',
+                icon:'📦',
+                title:'Delivered outcomes',
+                desc:'You get the thing you asked for — not a status update and an invoice. In 28 days.',
+              },
+            ].reduce((acc, item, i) => {
+              // Card
+              acc.push(
+                <div key={item.num} style={{
+                  background:'rgba(224,123,57,0.05)',
+                  border:'1px solid rgba(224,123,57,0.2)',
+                  borderRadius:16,
+                  padding:'32px 28px',
+                  position:'relative',
+                }}>
+                  {/* Step number badge */}
+                  <div style={{
+                    position:'absolute',top:-16,left:28,
+                    width:32,height:32,borderRadius:'50%',
+                    background:'#E07B39',
+                    display:'flex',alignItems:'center',justifyContent:'center',
+                    fontSize:'0.78rem',fontWeight:800,color:'white',
+                    boxShadow:'0 4px 12px rgba(224,123,57,0.5)',
+                  }}>{item.num}</div>
+
+                  {/* Icon */}
+                  <div style={{ fontSize:'2.8rem',marginBottom:20,marginTop:8 }}>{item.icon}</div>
+
+                  {/* Title */}
+                  <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:10,fontWeight:400 }}>{item.title}</div>
+
+                  {/* Description */}
+                  <div style={{ fontSize:'0.9rem',color:'rgba(255,255,255,0.55)',lineHeight:1.7 }}>{item.desc}</div>
+                </div>
+              );
+              // Arrow between cards (not after last)
+              if (i < 2) {
+                acc.push(
+                  <div key={`arrow-${i}`} style={{
+                    display:'flex',alignItems:'center',justifyContent:'center',
+                    paddingTop:60,
+                    color:'#E07B39',
+                    fontSize:'1.8rem',
+                    opacity:0.7,
+                  }}>→</div>
+                );
+              }
+              return acc;
+            }, [])}
+          </div>
+
+          {/* Timeline bar */}
+          <div style={{ marginTop:40,display:'flex',alignItems:'center',justifyContent:'center',gap:8 }}>
+            <div style={{ height:2,flex:1,background:'rgba(224,123,57,0.15)',borderRadius:2 }} />
+            <div style={{ fontSize:'0.75rem',fontWeight:700,color:'#E07B39',letterSpacing:'1.5px',textTransform:'uppercase',padding:'6px 18px',border:'1px solid rgba(224,123,57,0.3)',borderRadius:999,background:'rgba(224,123,57,0.06)',whiteSpace:'nowrap' }}>⚡ 28-Day Sprint</div>
+            <div style={{ height:2,flex:1,background:'rgba(224,123,57,0.15)',borderRadius:2 }} />
           </div>
         </div>
       </section>

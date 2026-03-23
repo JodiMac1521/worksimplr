@@ -69,16 +69,20 @@ export default function Home() {
           </div>
 
           {/* Logo strip */}
-          <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:40, flexWrap:'wrap', marginBottom:56, paddingBottom:40, borderBottom:'1px solid rgba(255,255,255,0.07)' }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:32, flexWrap:'wrap', marginBottom:56, paddingBottom:40, borderBottom:'1px solid rgba(255,255,255,0.07)' }}>
             {[
-              { src:'/logo-usnews.png', alt:'U.S. News & World Report', h:36 },
-              { src:'/logo-poolit.jpg', alt:'Poolit', h:36, style:{ borderRadius:6 } },
-              { src:'/logo-electude.png', alt:'Electude', h:30 },
-              { src:'/logo-vista.png', alt:'Vista Higher Learning', h:44 },
-              { src:'/logo-edl.png', alt:'Education Design Lab', h:34 },
+              { src:'/logo-usnews.png', alt:'U.S. News & World Report', h:34 },
+              { src:'/logo-poolit.jpg', alt:'Poolit', h:34, style:{ borderRadius:6 } },
+              { src:'/logo-electude.png', alt:'Electude', h:28 },
+              { src:'/logo-vista.png', alt:'Vista Higher Learning', h:40 },
+              { src:'/logo-edl-new.svg', alt:'Education Design Lab', h:40 },
+              { src:'/logo-gates-white.svg', alt:'Gates Foundation', h:32 },
+              { src:'/logo-cuboulder-white.png', alt:'CU Boulder', h:32 },
+              { src:'/logo-texastech.svg', alt:'Texas Tech University', h:40 },
             ].map(logo => (
               <img key={logo.alt} src={logo.src} alt={logo.alt}
                 style={{ height:logo.h, width:'auto', opacity:0.75, filter:'brightness(1.1)', objectFit:'contain', ...(logo.style||{}) }} />
+            ))}
             ))}
           </div>
 
@@ -170,30 +174,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="problem" style={{ background:'#081A30',padding:'96px 24px' }}>
-        <div style={{ maxWidth:860,margin:'0 auto' }}>
-          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Problem</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:20,lineHeight:1.2 }}>Most work doesn't fail<br />because of talent.</h2>
-          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520 }}>It fails because it's poorly defined before anyone starts.</p>
-          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:16,marginBottom:40 }}>
-            {[
-              { icon:'🌫️',label:'Unclear',desc:"No one can agree on what done looks like." },
-              { icon:'📐',label:'Poorly scoped',desc:'Requirements shift. Time blows out. Budget disappears.' },
-              { icon:'🚫',label:'Impossible to execute',desc:'As written, the work cannot actually be completed.' },
-            ].map(item => (
-              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px' }}>
-                <div style={{ fontSize:'1.8rem',marginBottom:12 }}>{item.icon}</div>
-                <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.95rem' }}>{item.label}</div>
-                <div style={{ fontSize:'0.85rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{item.desc}</div>
-              </div>
-            ))}
-          </div>
-          <div style={{ background:'rgba(224,123,57,0.06)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:14,padding:'24px 28px' }}>
-            <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.75)',lineHeight:1.7,fontStyle:'italic' }}>Teams do not need more people. They need better structured work.</p>
-          </div>
-        </div>
-      </section>
-
       <section id="solution" style={{ background:'#0A2342',padding:'96px 24px' }}>
         <div style={{ maxWidth:1060,margin:'0 auto' }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Solution</div>
@@ -272,6 +252,30 @@ export default function Home() {
             <div style={{ height:2,flex:1,background:'rgba(224,123,57,0.15)',borderRadius:2 }} />
             <div style={{ fontSize:'0.75rem',fontWeight:700,color:'#E07B39',letterSpacing:'1.5px',textTransform:'uppercase',padding:'6px 18px',border:'1px solid rgba(224,123,57,0.3)',borderRadius:999,background:'rgba(224,123,57,0.06)',whiteSpace:'nowrap' }}>⚡ 28-Day Sprint</div>
             <div style={{ height:2,flex:1,background:'rgba(224,123,57,0.15)',borderRadius:2 }} />
+          </div>
+        </div>
+      </section>
+
+      <section id="problem" style={{ background:'#081A30',padding:'96px 24px' }}>
+        <div style={{ maxWidth:860,margin:'0 auto' }}>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Problem</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:20,lineHeight:1.2 }}>Most work doesn't fail<br />because of talent.</h2>
+          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520 }}>It fails because it's poorly defined before anyone starts.</p>
+          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:16,marginBottom:40 }}>
+            {[
+              { icon:'🌫️',label:'Unclear',desc:"No one can agree on what done looks like." },
+              { icon:'📐',label:'Poorly scoped',desc:'Requirements shift. Time blows out. Budget disappears.' },
+              { icon:'🚫',label:'Impossible to execute',desc:'As written, the work cannot actually be completed.' },
+            ].map(item => (
+              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px' }}>
+                <div style={{ fontSize:'1.8rem',marginBottom:12 }}>{item.icon}</div>
+                <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.95rem' }}>{item.label}</div>
+                <div style={{ fontSize:'0.85rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{item.desc}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ background:'rgba(224,123,57,0.06)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:14,padding:'24px 28px' }}>
+            <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.75)',lineHeight:1.7,fontStyle:'italic' }}>Teams do not need more people. They need better structured work.</p>
           </div>
         </div>
       </section>

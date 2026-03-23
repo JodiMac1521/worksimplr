@@ -32,7 +32,7 @@ export default function LoginPage() {
       {/* Left — form */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '48px 64px', maxWidth: 560 }}>
         <Link href="/" style={{ textDecoration: 'none', marginBottom: 56, display: 'inline-block' }}>
-          <span style={{ fontFamily: SERIF, fontSize: '1.4rem', color: 'white' }}>Work<span style={{ color: '#E07B39' }}>Simplr</span></span>
+          <img src="/logo.svg" alt="Work Simplr" style={{ height: 40, width: 'auto' }} />
         </Link>
 
         <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 12 }}>Welcome back</div>
@@ -88,7 +88,7 @@ export default function LoginPage() {
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 420 }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(224,123,57,0.12)', border: '1px solid rgba(224,123,57,0.25)', borderRadius: 999, padding: '5px 14px', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#F08C4E', marginBottom: 28 }}>SprintWork™</div>
           <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,2.5vw,2.2rem)', fontWeight: 400, color: 'white', lineHeight: 1.25, marginBottom: 16 }}>
-            The UK's gig economy<br /><em style={{ color: '#F08C4E', fontStyle: 'italic' }}>marketplace.</em>
+            AI-powered work,<br /><em style={{ color: '#F08C4E', fontStyle: 'italic' }}>delivered.</em>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.95rem', lineHeight: 1.7, fontWeight: 300, marginBottom: 40 }}>
             Connect with thousands of verified Sprint-Terns™ and get real work done — scoped, managed, and delivered.

@@ -17,7 +17,9 @@ export default function Home() {
     <>
       <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:100,background:'rgba(10,35,66,0.95)',backdropFilter:'blur(14px)',borderBottom:'1px solid rgba(224,123,57,0.2)',height:60,display:'flex',alignItems:'center' }}>
         <div style={{ maxWidth:1080,margin:'0 auto',padding:'0 24px',display:'flex',alignItems:'center',justifyContent:'space-between',width:'100%' }}>
-          <a href="/" style={{ fontFamily:SERIF,fontSize:'1.3rem',color:'white',textDecoration:'none' }}>Work<span style={{ color:'#E07B39' }}>Simplr</span></a>
+          <a href="/" style={{ textDecoration:'none',display:'flex',alignItems:'center' }}>
+            <img src="/logo.svg" alt="Work Simplr" style={{ height:38,width:'auto' }} />
+          </a>
           <div style={{ display:'flex',gap:28 }}>
             {[['#problem','Problem'],['#solution','Solution'],['#how','How It Works'],['#use-cases','Use Cases']].map(([h,l]) => (
               <a key={h} href={h} style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none' }}>{l}</a>
@@ -237,7 +239,7 @@ export default function Home() {
             ))}
           </div>
           <div style={{ borderTop:'1px solid rgba(255,255,255,0.06)',paddingTop:24,display:'flex',justifyContent:'space-between',alignItems:'center',fontSize:'0.78rem',color:'rgba(255,255,255,0.25)' }}>
-            <span>© {new Date().getFullYear()} Work Simplr Ltd. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} Work Simplr. All rights reserved.</span>
             <div style={{ display:'flex',gap:20 }}>
               <a href="https://twitter.com/worksimplr" style={{ color:'inherit',textDecoration:'none' }}>Twitter</a>
               <a href="https://linkedin.com/company/worksimplr" style={{ color:'inherit',textDecoration:'none' }}>LinkedIn</a>

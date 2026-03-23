@@ -47,7 +47,7 @@ export default function RegisterPage() {
       {/* Left — form */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '48px 64px', maxWidth: 560 }}>
         <Link href="/" style={{ textDecoration: 'none', marginBottom: 56, display: 'inline-block' }}>
-          <span style={{ fontFamily: SERIF, fontSize: '1.4rem', color: 'white' }}>Work<span style={{ color: '#E07B39' }}>Simplr</span></span>
+          <img src="/logo.svg" alt="Work Simplr" style={{ height: 40, width: 'auto' }} />
         </Link>
 
         {/* Step indicator */}
@@ -100,7 +100,7 @@ export default function RegisterPage() {
             <form onSubmit={handleRegister}>
               {[
                 { label: 'Full name', type: 'text', val: fullName, set: setFullName, ph: 'Jane Smith' },
-                { label: 'Email address', type: 'email', val: email, set: setEmail, ph: 'you@example.com' },
+                { label: role === 'employer' ? 'Business email address' : 'Personal email address', type: 'email', val: email, set: setEmail, ph: role === 'employer' ? 'you@company.com' : 'you@gmail.com' },
                 { label: 'Password', type: 'password', val: password, set: setPassword, ph: 'Min. 8 characters' },
               ].map(f => (
                 <div key={f.label} style={{ marginBottom: 20 }}>
@@ -129,7 +129,7 @@ export default function RegisterPage() {
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(224,123,57,0.12)', border: '1px solid rgba(224,123,57,0.25)', borderRadius: 999, padding: '5px 14px', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#F08C4E', marginBottom: 28 }}>SprintWork™</div>
           <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,2.5vw,2.2rem)', fontWeight: 400, color: 'white', lineHeight: 1.25, marginBottom: 16 }}>Stop managing work.<br /><em style={{ color: '#F08C4E', fontStyle: 'italic' }}>Start shipping it.</em></h2>
           <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.9rem', lineHeight: 1.7, fontWeight: 300, marginBottom: 40 }}>
-            Join thousands of verified operators and employers already running on SprintWork™ across the UK.
+            Join thousands of verified operators and employers already running on SprintWork™ across the US.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
             {[

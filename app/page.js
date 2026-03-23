@@ -209,33 +209,32 @@ export default function Home() {
 
           <div style={{ display:'flex',alignItems:'stretch',gap:0,paddingTop:24,marginBottom:40 }}>
             {[
-              { num:'1', icon:(<svg width="64" height="56" viewBox="0 0 128 96" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+              { num:'1', icon:(<svg width="80" height="72" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
                   {/* Top node */}
-                  <rect x="40" y="2" width="48" height="20" rx="5" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.8"/>
-                  <line x1="52" y1="11" x2="76" y2="11" stroke="rgba(255,255,255,0.5)" strokeWidth="1.4"/>
-                  <line x1="52" y1="16" x2="70" y2="16" stroke="rgba(255,255,255,0.3)" strokeWidth="1.2"/>
+                  <rect x="46" y="4" width="68" height="26" rx="6" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2"/>
+                  <line x1="60" y1="14" x2="100" y2="14" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5"/>
+                  <line x1="60" y1="21" x2="92" y2="21" stroke="rgba(255,255,255,0.3)" strokeWidth="1.2"/>
                   {/* Vertical line down */}
-                  <line x1="64" y1="22" x2="64" y2="36" stroke="rgba(255,255,255,0.55)" strokeWidth="1.5"/>
+                  <line x1="80" y1="30" x2="80" y2="48" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8"/>
                   {/* Horizontal splitter */}
-                  <line x1="22" y1="36" x2="106" y2="36" stroke="rgba(255,255,255,0.55)" strokeWidth="1.5"/>
-                  {/* 3 branch lines down */}
-                  <line x1="22" y1="36" x2="22" y2="48" stroke="rgba(255,255,255,0.55)" strokeWidth="1.5"/>
-                  <line x1="64" y1="36" x2="64" y2="48" stroke="rgba(255,255,255,0.55)" strokeWidth="1.5"/>
-                  <line x1="106" y1="36" x2="106" y2="48" stroke="rgba(255,255,255,0.55)" strokeWidth="1.5"/>
+                  <line x1="22" y1="48" x2="138" y2="48" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8"/>
+                  {/* 3 branch lines + arrowheads */}
+                  <line x1="22" y1="48" x2="22" y2="64" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8"/>
+                  <polygon points="22,62 18,55 26,55" fill="rgba(255,255,255,0.6)"/>
+                  <line x1="80" y1="48" x2="80" y2="64" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8"/>
+                  <polygon points="80,62 76,55 84,55" fill="rgba(255,255,255,0.6)"/>
+                  <line x1="138" y1="48" x2="138" y2="64" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8"/>
+                  <polygon points="138,62 134,55 142,55" fill="rgba(255,255,255,0.6)"/>
                   {/* 3 child boxes */}
-                  <rect x="2" y="48" width="40" height="18" rx="4" fill="none" stroke="rgba(224,123,57,0.9)" strokeWidth="1.8"/>
-                  <line x1="10" y1="55" x2="34" y2="55" stroke="rgba(224,123,57,0.55)" strokeWidth="1.2"/>
-                  <line x1="10" y1="60" x2="28" y2="60" stroke="rgba(224,123,57,0.3)" strokeWidth="1"/>
-                  <rect x="44" y="48" width="40" height="18" rx="4" fill="none" stroke="rgba(255,255,255,0.65)" strokeWidth="1.8"/>
-                  <line x1="52" y1="55" x2="76" y2="55" stroke="rgba(255,255,255,0.35)" strokeWidth="1.2"/>
-                  <line x1="52" y1="60" x2="70" y2="60" stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>
-                  <rect x="86" y="48" width="40" height="18" rx="4" fill="none" stroke="rgba(255,255,255,0.65)" strokeWidth="1.8"/>
-                  <line x1="94" y1="55" x2="118" y2="55" stroke="rgba(255,255,255,0.35)" strokeWidth="1.2"/>
-                  <line x1="94" y1="60" x2="112" y2="60" stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>
-                  {/* Arrowheads */}
-                  <polygon points="22,46 19,41 25,41" fill="rgba(255,255,255,0.55)"/>
-                  <polygon points="64,46 61,41 67,41" fill="rgba(255,255,255,0.55)"/>
-                  <polygon points="106,46 103,41 109,41" fill="rgba(255,255,255,0.55)"/>
+                  <rect x="2" y="64" width="40" height="26" rx="5" fill="rgba(224,123,57,0.12)" stroke="rgba(224,123,57,0.9)" strokeWidth="2"/>
+                  <line x1="11" y1="74" x2="33" y2="74" stroke="rgba(224,123,57,0.6)" strokeWidth="1.4"/>
+                  <line x1="11" y1="81" x2="27" y2="81" stroke="rgba(224,123,57,0.35)" strokeWidth="1.1"/>
+                  <rect x="60" y="64" width="40" height="26" rx="5" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
+                  <line x1="69" y1="74" x2="91" y2="74" stroke="rgba(255,255,255,0.4)" strokeWidth="1.4"/>
+                  <line x1="69" y1="81" x2="85" y2="81" stroke="rgba(255,255,255,0.22)" strokeWidth="1.1"/>
+                  <rect x="118" y="64" width="40" height="26" rx="5" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
+                  <line x1="127" y1="74" x2="149" y2="74" stroke="rgba(255,255,255,0.4)" strokeWidth="1.4"/>
+                  <line x1="127" y1="81" x2="143" y2="81" stroke="rgba(255,255,255,0.22)" strokeWidth="1.1"/>
                 </svg>), title:'Structured Workflow', desc:"Each engagement is 'projectized' with a clear scope, milestones & tasks." },
               { num:'2', icon: (<svg width="60" height="44" viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
                   {[0,1,2,3].map(i => (

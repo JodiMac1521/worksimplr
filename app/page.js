@@ -317,7 +317,7 @@ export default function Home() {
                 {/* ── ROW 1: Project Intake → SprintWork → TalentOS ── */}
 
                 {/* Project Intake box */}
-                <rect x="20" y="30" width="160" height="52" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" strokeWidth="1.5"/>
+                <rect x="20" y="30" width="160" height="52" rx="10" fill="#16a34a" stroke="#22c55e" strokeWidth="1.5"/>
                 <text x="100" y="52" textAnchor="middle" fontSize="13" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans, sans-serif">📥 Project Intake</text>
 
                 {/* Solid arrow Intake → SprintWork */}
@@ -337,13 +337,13 @@ export default function Home() {
                 {/* ── DOTTED LINES: Row 1 → Row 2 ── */}
 
                 {/* Project Intake → Talent Matching (left node) */}
-                <path d="M100 82 L100 120 L160 150" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.6"/>
+                <path d="M115 82 L115 150" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.6"/>
 
                 {/* SprintWork → Workflow Automation (center node) */}
                 <path d="M312 94 L312 150" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.6"/>
 
                 {/* TalentOS → Performance Analytics (right node) */}
-                <path d="M524 82 L524 120 L560 150" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.6"/>
+                <path d="M524 82 L524 150" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.6"/>
 
                 {/* ── ROW 2: 3 engine nodes ── */}
 
@@ -405,7 +405,7 @@ export default function Home() {
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Problem</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:20,lineHeight:1.2,textAlign:'center' }}>Most work doesn't fail<br />because of talent.</h2>
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520,textAlign:'center',margin:'0 auto 40px' }}>It fails because it's poorly defined before anyone starts.</p>
-          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:16,marginBottom:40 }}>
+          <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16,marginBottom:40,maxWidth:780,margin:'0 auto 40px' }}>
             {[
               { icon:'🌫️',label:'Unclear',desc:"No one can agree on what done looks like." },
               { icon:'📐',label:'Poorly scoped',desc:'Requirements shift. Time blows out. Budget disappears.' },
@@ -419,7 +419,7 @@ export default function Home() {
             ))}
           </div>
           <div style={{ background:'rgba(224,123,57,0.06)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:14,padding:'24px 28px' }}>
-            <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.75)',lineHeight:1.7,fontStyle:'italic' }}>Teams do not need more people. They need better structured work.</p>
+            <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.75)',lineHeight:1.7,fontStyle:'italic' }}>Teams need capacity. And for that, they need the work structured.</p>
           </div>
         </div>
       </section>

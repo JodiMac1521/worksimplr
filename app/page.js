@@ -411,31 +411,31 @@ export default function Home() {
               <div style={{ transform:'rotateX(4deg) rotateY(-3deg)',transformStyle:'preserve-3d',transition:'transform 0.3s ease' }}>
               {/* MacBook SVG shell — space gray palette */}
               <svg viewBox="0 0 620 420" xmlns="http://www.w3.org/2000/svg" style={{ display:'block',width:'100%',filter:'drop-shadow(0 24px 48px rgba(0,0,0,0.55)) drop-shadow(0 8px 16px rgba(0,0,0,0.4))' }}>
-                {/* Screen bezel — space gray #6e6e73 family */}
-                <rect x="30" y="8" width="560" height="344" rx="14" fill="#3a3a3c" stroke="#48484a" strokeWidth="1.5"/>
+                {/* Screen bezel — silver */}
+                <rect x="30" y="8" width="560" height="344" rx="14" fill="#b0b0b5" stroke="#c8c8cc" strokeWidth="1.5"/>
                 {/* Bezel inner lip */}
-                <rect x="36" y="14" width="548" height="332" rx="10" fill="#1c1c1e"/>
+                <rect x="36" y="14" width="548" height="332" rx="10" fill="#888890"/>
                 {/* Screen display area */}
                 <rect x="42" y="20" width="536" height="320" rx="7" fill="#0a0e1a"/>
                 {/* Camera notch */}
-                <circle cx="310" cy="15" r="3.5" fill="#2c2c2e"/>
-                <circle cx="310" cy="15" r="1.5" fill="#1c1c1e"/>
+                <circle cx="310" cy="15" r="3.5" fill="#7a7a82"/>
+                <circle cx="310" cy="15" r="1.5" fill="#555560"/>
                 {/* Hinge bar */}
-                <rect x="20" y="352" width="580" height="10" rx="3" fill="#48484a"/>
-                {/* Base — space gray */}
-                <rect x="0" y="362" width="620" height="24" rx="4" fill="#3a3a3c" stroke="#48484a" strokeWidth="1"/>
+                <rect x="20" y="352" width="580" height="10" rx="3" fill="#a0a0a8"/>
+                {/* Base — silver */}
+                <rect x="0" y="362" width="620" height="24" rx="4" fill="#b8b8be" stroke="#c8c8cc" strokeWidth="1"/>
                 {/* Base top edge highlight */}
-                <rect x="0" y="362" width="620" height="2" rx="1" fill="rgba(255,255,255,0.08)"/>
+                <rect x="0" y="362" width="620" height="2" rx="1" fill="rgba(255,255,255,0.35)"/>
                 {/* Hinge notch */}
-                <rect x="232" y="352" width="156" height="10" rx="5" fill="#2c2c2e"/>
+                <rect x="232" y="352" width="156" height="10" rx="5" fill="#909098"/>
                 {/* Trackpad */}
-                <rect x="242" y="370" width="136" height="12" rx="4" fill="#48484a" stroke="#525254" strokeWidth="0.75"/>
+                <rect x="242" y="370" width="136" height="12" rx="4" fill="#a8a8b0" stroke="#bcbcc4" strokeWidth="0.75"/>
                 {/* Screen top edge glare */}
-                <rect x="42" y="20" width="536" height="1.5" rx="0.75" fill="rgba(255,255,255,0.1)"/>
+                <rect x="42" y="20" width="536" height="1.5" rx="0.75" fill="rgba(255,255,255,0.18)"/>
                 {/* Left edge subtle light */}
-                <rect x="42" y="20" width="1.5" height="320" rx="0.75" fill="rgba(255,255,255,0.05)"/>
-                {/* Logo area (back center — reflected as faint rect) */}
-                <rect x="282" y="383" width="56" height="3" rx="1.5" fill="rgba(255,255,255,0.06)"/>
+                <rect x="42" y="20" width="1.5" height="320" rx="0.75" fill="rgba(255,255,255,0.1)"/>
+                {/* Apple logo hint */}
+                <rect x="282" y="383" width="56" height="3" rx="1.5" fill="rgba(255,255,255,0.15)"/>
               </svg>
 
               {/* Dashboard content overlaid on screen */}

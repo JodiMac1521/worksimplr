@@ -293,22 +293,35 @@ export default function Home() {
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520,textAlign:'center',margin:'0 auto 40px' }}>It fails because it's poorly defined before anyone starts.</p>
           <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16,marginBottom:40,maxWidth:780,margin:'0 auto 40px' }}>
             {[
-              { icon:(<svg width="36" height="36" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style={{display:'block'}}>
-                  <path d="M20 40 C25 20,45 15,50 35 C55 55,30 65,35 45 C40 25,60 30,55 50 C50 70,25 60,30 40 C35 20,55 25,50 45" stroke="rgba(255,255,255,0.65)" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
-                  <path d="M35 25 C50 18,62 35,55 50 C48 65,28 58,25 42 C22 26,42 20,48 36 C54 52,38 62,30 50 C22 38,38 28,46 40" stroke="rgba(255,255,255,0.4)" strokeWidth="1.4" fill="none" strokeLinecap="round"/>
-                  <path d="M28 55 C20 42,28 25,44 28 C60 31,62 50,50 58 C38 66,24 55,32 42 C40 29,57 34,54 48" stroke="rgba(255,255,255,0.25)" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
-                </svg>), label:'Unclear', desc:"No one can agree on what done looks like." },
-              { icon:(<svg width="34" height="34" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
-                  <rect x="8" y="8" width="54" height="54" rx="6" fill="none" stroke="rgba(255,255,255,0.75)" strokeWidth="2" strokeDasharray="6,4"/>
-                  <line x1="8" y1="35" x2="62" y2="35" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
-                  <line x1="35" y1="8" x2="35" y2="62" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
-                  <circle cx="35" cy="35" r="5" fill="none" stroke="rgba(224,123,57,0.85)" strokeWidth="2"/>
-                  <line x1="8" y1="8" x2="62" y2="62" stroke="rgba(255,255,255,0.2)" strokeWidth="1" strokeDasharray="4,4"/>
-                </svg>),label:'Poorly scoped',desc:'Requirements shift. Time blows out. Budget disappears.' },
-              { icon:'🚫',label:'Impossible to execute',desc:'As written, the work cannot actually be completed.' },
+              {
+                label:'Unclear', desc:"No one can agree on what done looks like.",
+                icon:(<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 22 Q12 10 18 16 Q22 20 16 26 Q10 32 18 34 Q26 36 24 26 Q22 18 28 14 Q34 10 32 20 Q30 28 36 26" stroke="rgba(255,255,255,0.8)" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                  <path d="M12 14 Q20 8 26 18 Q30 26 22 30 Q14 34 20 38 Q28 42 34 34 Q38 28 32 22 Q26 16 32 10 Q36 6 40 14" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+                  <path d="M6 30 Q14 24 18 32 Q22 38 30 32 Q36 28 28 20 Q22 14 28 8 Q34 4 38 10" stroke="rgba(255,255,255,0.25)" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+                </svg>)
+              },
+              {
+                label:'Poorly scoped', desc:'Requirements shift. Time blows out. Budget disappears.',
+                icon:(<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="4" width="36" height="36" rx="5" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2" strokeDasharray="5,3"/>
+                  <line x1="4" y1="22" x2="40" y2="22" stroke="rgba(255,255,255,0.35)" strokeWidth="1.4"/>
+                  <line x1="22" y1="4" x2="22" y2="40" stroke="rgba(255,255,255,0.35)" strokeWidth="1.4"/>
+                  <circle cx="22" cy="22" r="4" fill="none" stroke="rgba(224,123,57,0.9)" strokeWidth="2"/>
+                  <line x1="25" y1="18" x2="36" y2="8" stroke="rgba(224,123,57,0.6)" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>)
+              },
+              {
+                label:'Impossible to execute', desc:'As written, the work cannot actually be completed.',
+                icon:(<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="22" cy="22" r="18" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
+                  <line x1="11" y1="11" x2="33" y2="33" stroke="rgba(255,255,255,0.85)" strokeWidth="2.5" strokeLinecap="round"/>
+                  <line x1="33" y1="11" x2="11" y2="33" stroke="rgba(255,255,255,0.85)" strokeWidth="2.5" strokeLinecap="round"/>
+                </svg>)
+              },
             ].map(item => (
-              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px',textAlign:'center' }}>
-                <div style={{ fontSize:'1.8rem',marginBottom:12,display:'flex',justifyContent:'center' }}>{item.icon}</div>
+              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'28px 20px',textAlign:'center' }}>
+                <div style={{ display:'flex',justifyContent:'center',marginBottom:14 }}>{item.icon}</div>
                 <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.95rem' }}>{item.label}</div>
                 <div style={{ fontSize:'0.85rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{item.desc}</div>
               </div>

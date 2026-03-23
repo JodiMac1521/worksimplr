@@ -241,7 +241,7 @@ export default function Home() {
             <div style={{ display:'flex', alignItems:'stretch', justifyContent:'center', gap:0, minWidth:600, position:'relative' }}>
 
               {steps.map((step, i) => (
-                <div key={step.num} style={{ display:'flex', alignItems:'center', gap:0, flex:1 }}>
+                <div key={step.num} style={{ display:'flex', alignItems:'stretch', gap:0, flex:1 }}>
 
                   {/* Node card */}
                   <div style={{
@@ -249,9 +249,13 @@ export default function Home() {
                     background: i === 0 ? '#E07B39' : i === steps.length-1 ? '#0A2342' : 'rgba(255,255,255,0.04)',
                     border: i === 0 ? '2px solid #E07B39' : i === steps.length-1 ? '2px solid #E07B39' : '1.5px solid rgba(255,255,255,0.12)',
                     borderRadius:14,
-                    padding:'28px 20px',
+                    padding:'36px 20px 28px',
                     textAlign:'center',
                     position:'relative',
+                    display:'flex',
+                    flexDirection:'column',
+                    alignItems:'center',
+                    justifyContent:'flex-start',
                     boxShadow: i === 0 ? '0 8px 32px rgba(224,123,57,0.35)' : i === steps.length-1 ? '0 4px 20px rgba(224,123,57,0.2)' : 'none',
                   }}>
                     {/* Step number */}

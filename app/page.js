@@ -238,14 +238,12 @@ export default function Home() {
 
           {/* Visual flow diagram — horizontal node chain */}
           <div style={{ overflowX:'auto', paddingBottom:8, paddingTop:24 }}>
-            <div style={{ display:'flex', alignItems:'stretch', justifyContent:'center', gap:0, minWidth:600, position:'relative' }}>
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 36px 1fr 36px 1fr 36px 1fr', minWidth:600, alignItems:'stretch' }}>
 
               {steps.map((step, i) => (
-                <div key={step.num} style={{ display:'flex', alignItems:'stretch', gap:0, flex:1 }}>
-
+                <>
                   {/* Node card */}
-                  <div style={{
-                    flex:1,
+                  <div key={step.num} style={{
                     background: i === 0 ? '#E07B39' : i === steps.length-1 ? '#0A2342' : 'rgba(255,255,255,0.04)',
                     border: i === 0 ? '2px solid #E07B39' : i === steps.length-1 ? '2px solid #E07B39' : '1.5px solid rgba(255,255,255,0.12)',
                     borderRadius:14,
@@ -255,7 +253,6 @@ export default function Home() {
                     display:'flex',
                     flexDirection:'column',
                     alignItems:'center',
-                    justifyContent:'flex-start',
                     boxShadow: i === 0 ? '0 8px 32px rgba(224,123,57,0.35)' : i === steps.length-1 ? '0 4px 20px rgba(224,123,57,0.2)' : 'none',
                   }}>
                     {/* Step number */}
@@ -268,37 +265,19 @@ export default function Home() {
                       fontSize:'0.72rem', fontWeight:800,
                       boxShadow:'0 2px 8px rgba(0,0,0,0.3)',
                     }}>{i+1}</div>
-
                     {/* Icon */}
                     <div style={{ fontSize:'2.2rem', marginBottom:12, marginTop:6 }}>{step.icon}</div>
-
                     {/* Title */}
-                    <div style={{
-                      fontWeight:700,
-                      color: i === 0 ? 'white' : 'white',
-                      fontSize:'0.9rem',
-                      marginBottom:8,
-                      lineHeight:1.3,
-                    }}>{step.title}</div>
-
+                    <div style={{ fontWeight:700, color:'white', fontSize:'0.9rem', marginBottom:8, lineHeight:1.3 }}>{step.title}</div>
                     {/* Desc */}
-                    <div style={{
-                      fontSize:'0.78rem',
-                      color: i === 0 ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.5)',
-                      lineHeight:1.6,
-                    }}>{step.desc}</div>
+                    <div style={{ fontSize:'0.78rem', color: i === 0 ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.5)', lineHeight:1.6 }}>{step.desc}</div>
                   </div>
 
-                  {/* Arrow connector — not after last */}
+                  {/* Arrow — not after last card */}
                   {i < steps.length - 1 && (
-                    <div style={{
-                      flexShrink:0, width:36, display:'flex', flexDirection:'column',
-                      alignItems:'center', justifyContent:'center', gap:3,
-                    }}>
-                      <div style={{ color:'#E07B39', fontSize:'1.4rem', lineHeight:1 }}>→</div>
-                    </div>
+                    <div key={`a${i}`} style={{ display:'flex', alignItems:'center', justifyContent:'center', color:'#E07B39', fontSize:'1.4rem' }}>→</div>
                   )}
-                </div>
+                </>
               ))}
             </div>
           </div>

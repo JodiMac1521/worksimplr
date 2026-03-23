@@ -176,9 +176,9 @@ export default function Home() {
 
       <section id="solution" style={{ background:'#0A2342',padding:'96px 24px' }}>
         <div style={{ maxWidth:1060,margin:'0 auto' }}>
-          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Solution</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWork™</em></h2>
-          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7 }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Solution</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWork™</em></h2>
+          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7,textAlign:'center' }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
 
           {/* Process steps with numbers + arrows */}
           <div style={{ display:'grid',gridTemplateColumns:'1fr auto 1fr auto 1fr',gap:0,alignItems:'start' }}>
@@ -247,15 +247,15 @@ export default function Home() {
             }, [])}
           </div>
 
-          {/* Timeline bar */}
-          <div style={{ marginTop:40,display:'flex',alignItems:'center',justifyContent:'center',gap:8 }}>
-            <div style={{ height:2,flex:1,background:'rgba(224,123,57,0.15)',borderRadius:2 }} />
+          {/* 28-Day Sprint badge below diagram */}
+          <div style={{ marginTop:32,display:'flex',alignItems:'center',justifyContent:'center',gap:8 }}>
+            <div style={{ height:1,flex:1,background:'rgba(224,123,57,0.12)',borderRadius:2 }} />
             <div style={{ fontSize:'0.75rem',fontWeight:700,color:'#E07B39',letterSpacing:'1.5px',textTransform:'uppercase',padding:'6px 18px',border:'1px solid rgba(224,123,57,0.3)',borderRadius:999,background:'rgba(224,123,57,0.06)',whiteSpace:'nowrap' }}>⚡ 28-Day Sprint</div>
-            <div style={{ height:2,flex:1,background:'rgba(224,123,57,0.15)',borderRadius:2 }} />
+            <div style={{ height:1,flex:1,background:'rgba(224,123,57,0.12)',borderRadius:2 }} />
           </div>
 
           {/* Flow diagram */}
-          <div style={{ marginTop:56,background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:20,padding:'40px 32px' }}>
+          <div style={{ marginTop:48,background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:20,padding:'40px 32px' }}>
             <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:32,textAlign:'center' }}>How the engine runs</div>
 
             {/* Top row: intake → SprintWork → TalentOS */}
@@ -324,9 +324,9 @@ export default function Home() {
 
       <section id="problem" style={{ background:'#081A30',padding:'96px 24px' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
-          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Problem</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:20,lineHeight:1.2 }}>Most work doesn't fail<br />because of talent.</h2>
-          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520 }}>It fails because it's poorly defined before anyone starts.</p>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Problem</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:20,lineHeight:1.2,textAlign:'center' }}>Most work doesn't fail<br />because of talent.</h2>
+          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520,textAlign:'center',margin:'0 auto 40px' }}>It fails because it's poorly defined before anyone starts.</p>
           <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:16,marginBottom:40 }}>
             {[
               { icon:'🌫️',label:'Unclear',desc:"No one can agree on what done looks like." },
@@ -349,32 +349,71 @@ export default function Home() {
       <section id="how" style={{ background:'#081A30',padding:'96px 24px' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           {/* Left-justified header */}
-          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>How It Works</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:12,lineHeight:1.2 }}>4 steps to delivered work.</h2>
-          <p style={{ color:'rgba(255,255,255,0.45)',marginBottom:56,fontSize:'0.95rem' }}>Submit. Scope. Execute. Deliver.</p>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>How It Works</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:12,lineHeight:1.2,textAlign:'center' }}>4 steps to delivered work.</h2>
+          <p style={{ color:'rgba(255,255,255,0.45)',marginBottom:56,fontSize:'0.95rem',textAlign:'center' }}>Submit. Scope. Execute. Deliver.</p>
 
-          {/* Vertical flow */}
-          <div style={{ display:'flex',flexDirection:'column',gap:0,position:'relative' }}>
-            {/* Connecting line */}
-            <div style={{ position:'absolute',left:27,top:56,bottom:56,width:2,background:'linear-gradient(to bottom,rgba(224,123,57,0.6),rgba(224,123,57,0.1))',zIndex:0 }} />
+          {/* Visual flow diagram — horizontal node chain */}
+          <div style={{ overflowX:'auto', paddingBottom:8 }}>
+            <div style={{ display:'flex', alignItems:'stretch', justifyContent:'center', gap:0, minWidth:600, position:'relative' }}>
 
-            {steps.map((step,i) => (
-              <div key={step.num} style={{ display:'flex',gap:24,alignItems:'flex-start',paddingBottom: i<3 ? 36 : 0,position:'relative',zIndex:1 }}>
-                {/* Step circle */}
-                <div style={{ flexShrink:0,width:56,height:56,borderRadius:'50%',background:i===0?'#E07B39':'#0A2342',border:`2px solid ${i===0?'#E07B39':'rgba(224,123,57,0.4)'}`,display:'flex',alignItems:'center',justifyContent:'center',boxShadow: i===0 ? '0 0 20px rgba(224,123,57,0.4)' : 'none' }}>
-                  <span style={{ fontSize:'1.4rem' }}>{step.icon}</span>
-                </div>
+              {steps.map((step, i) => (
+                <div key={step.num} style={{ display:'flex', alignItems:'center', gap:0, flex:1 }}>
 
-                {/* Content */}
-                <div style={{ flex:1,paddingTop:6,background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.06)',borderRadius:12,padding:'20px 24px',marginLeft:0 }}>
-                  <div style={{ display:'flex',alignItems:'center',gap:12,marginBottom:8 }}>
-                    <span style={{ fontFamily:SERIF,fontSize:'1rem',color:'rgba(224,123,57,0.5)',fontWeight:400 }}>{step.num}</span>
-                    <span style={{ fontWeight:700,color:'white',fontSize:'1rem' }}>{step.title}</span>
+                  {/* Node card */}
+                  <div style={{
+                    flex:1,
+                    background: i === 0 ? '#E07B39' : i === steps.length-1 ? '#0A2342' : 'rgba(255,255,255,0.04)',
+                    border: i === 0 ? '2px solid #E07B39' : i === steps.length-1 ? '2px solid #E07B39' : '1.5px solid rgba(255,255,255,0.12)',
+                    borderRadius:14,
+                    padding:'28px 20px',
+                    textAlign:'center',
+                    position:'relative',
+                    boxShadow: i === 0 ? '0 8px 32px rgba(224,123,57,0.35)' : i === steps.length-1 ? '0 4px 20px rgba(224,123,57,0.2)' : 'none',
+                  }}>
+                    {/* Step number */}
+                    <div style={{
+                      position:'absolute', top:-14, left:'50%', transform:'translateX(-50%)',
+                      background: i === 0 ? 'white' : '#E07B39',
+                      color: i === 0 ? '#E07B39' : 'white',
+                      width:28, height:28, borderRadius:'50%',
+                      display:'flex', alignItems:'center', justifyContent:'center',
+                      fontSize:'0.72rem', fontWeight:800,
+                      boxShadow:'0 2px 8px rgba(0,0,0,0.3)',
+                    }}>{i+1}</div>
+
+                    {/* Icon */}
+                    <div style={{ fontSize:'2.2rem', marginBottom:12, marginTop:6 }}>{step.icon}</div>
+
+                    {/* Title */}
+                    <div style={{
+                      fontWeight:700,
+                      color: i === 0 ? 'white' : 'white',
+                      fontSize:'0.9rem',
+                      marginBottom:8,
+                      lineHeight:1.3,
+                    }}>{step.title}</div>
+
+                    {/* Desc */}
+                    <div style={{
+                      fontSize:'0.78rem',
+                      color: i === 0 ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.5)',
+                      lineHeight:1.6,
+                    }}>{step.desc}</div>
                   </div>
-                  <div style={{ fontSize:'0.875rem',color:'rgba(255,255,255,0.5)',lineHeight:1.7 }}>{step.desc}</div>
+
+                  {/* Arrow connector — not after last */}
+                  {i < steps.length - 1 && (
+                    <div style={{
+                      flexShrink:0, width:36, display:'flex', flexDirection:'column',
+                      alignItems:'center', justifyContent:'center', gap:3,
+                    }}>
+                      <div style={{ color:'#E07B39', fontSize:'1.4rem', lineHeight:1 }}>→</div>
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -424,7 +463,7 @@ export default function Home() {
 
       <section style={{ background:'#081A30',padding:'96px 24px' }}>
         <div style={{ maxWidth:860,margin:'0 auto',textAlign:'center' }}>
-          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>AI + Human</div>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>AI + Human</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>AI does not execute.<br /><em style={{ color:'#F08C4E' }}>We do.</em></h2>
           <p style={{ color:'rgba(255,255,255,0.5)',maxWidth:520,margin:'0 auto 48px',lineHeight:1.7,fontSize:'0.95rem' }}>We combine AI + human operators + structured workflows so work actually gets done.</p>
           <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16 }}>

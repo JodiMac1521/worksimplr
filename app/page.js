@@ -410,31 +410,40 @@ export default function Home() {
               </svg>
             </div>
 
-            {/* Dashboard in MacBook frame */}
-            <div style={{ maxWidth:620,margin:'24px auto 0',position:'relative' }}>
-              {/* MacBook SVG shell */}
-              <svg viewBox="0 0 620 420" xmlns="http://www.w3.org/2000/svg" style={{ display:'block',width:'100%' }}>
-                {/* Screen bezel */}
-                <rect x="30" y="10" width="560" height="340" rx="12" fill="#1a1a1a" stroke="#3a3a3a" strokeWidth="2"/>
-                {/* Screen inner (the display area) */}
-                <rect x="40" y="20" width="540" height="320" rx="8" fill="#0a0e1a"/>
-                {/* Camera dot */}
-                <circle cx="310" cy="16" r="3" fill="#2a2a2a"/>
-                {/* Base hinge */}
-                <rect x="0" y="350" width="620" height="12" rx="4" fill="#222"/>
-                {/* Base body */}
-                <rect x="10" y="362" width="600" height="20" rx="3" fill="#1e1e1e" stroke="#333" strokeWidth="1"/>
-                {/* Notch cutout in base */}
-                <rect x="240" y="350" width="140" height="10" rx="5" fill="#111"/>
+            {/* Dashboard in MacBook frame — space gray, slight angle */}
+            <div style={{ maxWidth:620,margin:'24px auto 0',position:'relative',perspective:'1200px' }}>
+              <div style={{ transform:'rotateX(4deg) rotateY(-3deg)',transformStyle:'preserve-3d',transition:'transform 0.3s ease' }}>
+              {/* MacBook SVG shell — space gray palette */}
+              <svg viewBox="0 0 620 420" xmlns="http://www.w3.org/2000/svg" style={{ display:'block',width:'100%',filter:'drop-shadow(0 24px 48px rgba(0,0,0,0.55)) drop-shadow(0 8px 16px rgba(0,0,0,0.4))' }}>
+                {/* Screen bezel — space gray #6e6e73 family */}
+                <rect x="30" y="8" width="560" height="344" rx="14" fill="#3a3a3c" stroke="#48484a" strokeWidth="1.5"/>
+                {/* Bezel inner lip */}
+                <rect x="36" y="14" width="548" height="332" rx="10" fill="#1c1c1e"/>
+                {/* Screen display area */}
+                <rect x="42" y="20" width="536" height="320" rx="7" fill="#0a0e1a"/>
+                {/* Camera notch */}
+                <circle cx="310" cy="15" r="3.5" fill="#2c2c2e"/>
+                <circle cx="310" cy="15" r="1.5" fill="#1c1c1e"/>
+                {/* Hinge bar */}
+                <rect x="20" y="352" width="580" height="10" rx="3" fill="#48484a"/>
+                {/* Base — space gray */}
+                <rect x="0" y="362" width="620" height="24" rx="4" fill="#3a3a3c" stroke="#48484a" strokeWidth="1"/>
+                {/* Base top edge highlight */}
+                <rect x="0" y="362" width="620" height="2" rx="1" fill="rgba(255,255,255,0.08)"/>
+                {/* Hinge notch */}
+                <rect x="232" y="352" width="156" height="10" rx="5" fill="#2c2c2e"/>
                 {/* Trackpad */}
-                <rect x="250" y="368" width="120" height="10" rx="3" fill="#2a2a2a" stroke="#333" strokeWidth="0.5"/>
-                {/* Subtle screen glare */}
-                <rect x="40" y="20" width="540" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-                <rect x="40" y="20" width="2" height="320" rx="1" fill="rgba(255,255,255,0.04)"/>
+                <rect x="242" y="370" width="136" height="12" rx="4" fill="#48484a" stroke="#525254" strokeWidth="0.75"/>
+                {/* Screen top edge glare */}
+                <rect x="42" y="20" width="536" height="1.5" rx="0.75" fill="rgba(255,255,255,0.1)"/>
+                {/* Left edge subtle light */}
+                <rect x="42" y="20" width="1.5" height="320" rx="0.75" fill="rgba(255,255,255,0.05)"/>
+                {/* Logo area (back center — reflected as faint rect) */}
+                <rect x="282" y="383" width="56" height="3" rx="1.5" fill="rgba(255,255,255,0.06)"/>
               </svg>
 
               {/* Dashboard content overlaid on screen */}
-              <div style={{ position:'absolute', top:'5%', left:'7%', right:'7%', bottom:'23%', borderRadius:6, overflow:'hidden', background:'#0A1929' }}>
+              <div style={{ position:'absolute', top:'5%', left:'7%', right:'7%', bottom:'22%', borderRadius:6, overflow:'hidden', background:'#0A1929' }}>
                 {/* Toolbar */}
                 <div style={{ background:'rgba(255,255,255,0.04)',padding:'7px 14px',display:'flex',alignItems:'center',gap:6,borderBottom:'1px solid rgba(255,255,255,0.07)' }}>
                   <div style={{ display:'flex',gap:5 }}>
@@ -461,6 +470,7 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
+              </div>
               </div>
             </div>
           </div>

@@ -253,6 +253,72 @@ export default function Home() {
             <div style={{ fontSize:'0.75rem',fontWeight:700,color:'#E07B39',letterSpacing:'1.5px',textTransform:'uppercase',padding:'6px 18px',border:'1px solid rgba(224,123,57,0.3)',borderRadius:999,background:'rgba(224,123,57,0.06)',whiteSpace:'nowrap' }}>⚡ 28-Day Sprint</div>
             <div style={{ height:2,flex:1,background:'rgba(224,123,57,0.15)',borderRadius:2 }} />
           </div>
+
+          {/* Flow diagram */}
+          <div style={{ marginTop:56,background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:20,padding:'40px 32px' }}>
+            <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:32,textAlign:'center' }}>How the engine runs</div>
+
+            {/* Top row: intake → SprintWork → TalentOS */}
+            <div style={{ display:'flex',alignItems:'center',justifyContent:'center',gap:0,marginBottom:24,flexWrap:'wrap' }}>
+              {/* Project Intake */}
+              <div style={{ background:'rgba(255,255,255,0.06)',border:'1px solid rgba(255,255,255,0.15)',borderRadius:10,padding:'12px 22px',fontSize:'0.85rem',fontWeight:600,color:'rgba(255,255,255,0.8)',whiteSpace:'nowrap' }}>
+                📥 Project Intake
+              </div>
+              <div style={{ color:'#E07B39',fontSize:'1.4rem',margin:'0 10px',lineHeight:1 }}>→</div>
+
+              {/* SprintWork center */}
+              <div style={{ background:'white',borderRadius:12,padding:'16px 28px',fontSize:'1rem',fontWeight:800,color:'#0A2342',whiteSpace:'nowrap',boxShadow:'0 4px 24px rgba(0,0,0,0.3)' }}>
+                SprintWork™
+              </div>
+              <div style={{ color:'#E07B39',fontSize:'1.4rem',margin:'0 10px',lineHeight:1 }}>→</div>
+
+              {/* TalentOS */}
+              <div style={{ background:'#E07B39',borderRadius:10,padding:'12px 22px',fontSize:'0.85rem',fontWeight:700,color:'white',whiteSpace:'nowrap' }}>
+                🎯 TalentOS
+              </div>
+            </div>
+
+            {/* Middle row: 3 engine nodes */}
+            <div style={{ display:'flex',justifyContent:'center',gap:12,marginBottom:24,flexWrap:'wrap' }}>
+              {[
+                { icon:'🧩', label:'Talent Matching' },
+                { icon:'⚙️', label:'Workflow Automation' },
+                { icon:'📊', label:'Performance Analytics' },
+              ].map(node => (
+                <div key={node.label} style={{ background:'rgba(224,123,57,0.08)',border:'1px solid rgba(224,123,57,0.3)',borderRadius:10,padding:'10px 20px',fontSize:'0.82rem',fontWeight:600,color:'rgba(255,255,255,0.75)',display:'flex',alignItems:'center',gap:8,whiteSpace:'nowrap' }}>
+                  <span>{node.icon}</span>{node.label}
+                </div>
+              ))}
+            </div>
+
+            {/* Arrow down */}
+            <div style={{ textAlign:'center',color:'rgba(224,123,57,0.5)',fontSize:'1.4rem',marginBottom:16,lineHeight:1 }}>↓</div>
+
+            {/* Dashboard output */}
+            <div style={{ maxWidth:480,margin:'0 auto',background:'#0A1929',border:'1px solid rgba(255,255,255,0.1)',borderRadius:12,overflow:'hidden' }}>
+              {/* Mock toolbar */}
+              <div style={{ background:'rgba(255,255,255,0.05)',padding:'8px 16px',display:'flex',alignItems:'center',gap:8,borderBottom:'1px solid rgba(255,255,255,0.08)' }}>
+                <div style={{ width:8,height:8,borderRadius:'50%',background:'rgba(255,255,255,0.2)' }} />
+                <span style={{ fontSize:'0.72rem',color:'rgba(255,255,255,0.4)',fontWeight:600,letterSpacing:'1px',textTransform:'uppercase' }}>Dashboard — Sprint Progress</span>
+              </div>
+              <div style={{ padding:'20px 16px',display:'grid',gridTemplateColumns:'1fr 1fr',gap:10 }}>
+                {[
+                  { label:'Tasks Complete', val:'48 / 60', bar:0.8, color:'#E07B39' },
+                  { label:'QA Passed', val:'44', bar:0.93, color:'#22C55E' },
+                  { label:'Days Remaining', val:'9 of 28', bar:0.32, color:'#6B8FD4' },
+                  { label:'Team Active', val:'12 workers', bar:1, color:'#E07B39' },
+                ].map(item => (
+                  <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',borderRadius:8,padding:'10px 12px' }}>
+                    <div style={{ fontSize:'0.68rem',color:'rgba(255,255,255,0.4)',marginBottom:4,letterSpacing:'0.5px',textTransform:'uppercase' }}>{item.label}</div>
+                    <div style={{ fontSize:'0.9rem',fontWeight:700,color:'white',marginBottom:6 }}>{item.val}</div>
+                    <div style={{ height:4,background:'rgba(255,255,255,0.07)',borderRadius:2,overflow:'hidden' }}>
+                      <div style={{ height:'100%',width:`${item.bar*100}%`,background:item.color,borderRadius:2 }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -313,32 +379,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ background:'#0A2342',padding:'96px 24px' }}>
-        <div style={{ maxWidth:860,margin:'0 auto' }}>
-          <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:48,alignItems:'center' }}>
-            <div>
-              <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>What You Get</div>
-              <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.6rem,3vw,2.4rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>Real deliverables.<br />No babysitting.</h2>
-              <p style={{ color:'rgba(255,255,255,0.45)',lineHeight:1.7,fontSize:'0.95rem' }}>Every Sprint is scoped, managed, and delivered. You stay focused on your business.</p>
-            </div>
-            <div style={{ display:'flex',flexDirection:'column',gap:12 }}>
-              {[
-                { icon:'📐',text:'Fully scoped projects' },
-                { icon:'🎯',text:'Managed execution (no babysitting)' },
-                { icon:'🤖',text:'AI + human teams' },
-                { icon:'📦',text:'Real, usable deliverables' },
-              ].map(item => (
-                <div key={item.text} style={{ display:'flex',alignItems:'center',gap:16,background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:10,padding:'14px 18px' }}>
-                  <span style={{ fontSize:'1.3rem' }}>{item.icon}</span>
-                  <span style={{ fontSize:'0.9rem',color:'rgba(255,255,255,0.75)',fontWeight:500 }}>{item.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section id="use-cases" style={{ background:'#081A30',padding:'96px 24px' }}>
+<section id="use-cases" style={{ background:'#081A30',padding:'96px 24px' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>Use Cases</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:48,lineHeight:1.2,textAlign:'center' }}>Work we execute every week.</h2>

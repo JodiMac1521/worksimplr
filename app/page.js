@@ -298,10 +298,16 @@ export default function Home() {
                   <path d="M35 25 C50 18,62 35,55 50 C48 65,28 58,25 42 C22 26,42 20,48 36 C54 52,38 62,30 50 C22 38,38 28,46 40" stroke="rgba(255,255,255,0.4)" strokeWidth="1.4" fill="none" strokeLinecap="round"/>
                   <path d="M28 55 C20 42,28 25,44 28 C60 31,62 50,50 58 C38 66,24 55,32 42 C40 29,57 34,54 48" stroke="rgba(255,255,255,0.25)" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
                 </svg>), label:'Unclear', desc:"No one can agree on what done looks like." },
-              { icon:'📐',label:'Poorly scoped',desc:'Requirements shift. Time blows out. Budget disappears.' },
+              { icon:(<svg width="34" height="34" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  <rect x="8" y="8" width="54" height="54" rx="6" fill="none" stroke="rgba(255,255,255,0.75)" strokeWidth="2" strokeDasharray="6,4"/>
+                  <line x1="8" y1="35" x2="62" y2="35" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
+                  <line x1="35" y1="8" x2="35" y2="62" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
+                  <circle cx="35" cy="35" r="5" fill="none" stroke="rgba(224,123,57,0.85)" strokeWidth="2"/>
+                  <line x1="8" y1="8" x2="62" y2="62" stroke="rgba(255,255,255,0.2)" strokeWidth="1" strokeDasharray="4,4"/>
+                </svg>),label:'Poorly scoped',desc:'Requirements shift. Time blows out. Budget disappears.' },
               { icon:'🚫',label:'Impossible to execute',desc:'As written, the work cannot actually be completed.' },
             ].map(item => (
-              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px' }}>
+              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px',textAlign:'center' }}>
                 <div style={{ fontSize:'1.8rem',marginBottom:12,display:'flex',justifyContent:'center' }}>{item.icon}</div>
                 <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.95rem' }}>{item.label}</div>
                 <div style={{ fontSize:'0.85rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{item.desc}</div>

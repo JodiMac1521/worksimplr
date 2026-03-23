@@ -302,7 +302,7 @@ export default function Home() {
               { icon:'🚫',label:'Impossible to execute',desc:'As written, the work cannot actually be completed.' },
             ].map(item => (
               <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px' }}>
-                <div style={{ fontSize:'1.8rem',marginBottom:12 }}>{item.icon}</div>
+                <div style={{ fontSize:'1.8rem',marginBottom:12,display:'flex',justifyContent:'center' }}>{item.icon}</div>
                 <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.95rem' }}>{item.label}</div>
                 <div style={{ fontSize:'0.85rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{item.desc}</div>
               </div>

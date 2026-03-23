@@ -282,16 +282,31 @@ export default function Home() {
 
       <section id="how" style={{ background:'#081A30',padding:'96px 24px' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
-          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>How It Works</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:12,lineHeight:1.2,textAlign:'center' }}>Four steps to delivered work.</h2>
-          <p style={{ textAlign:'center',color:'rgba(255,255,255,0.45)',marginBottom:56,fontSize:'0.95rem' }}>Submit. Scope. Execute. Deliver.</p>
-          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(190px,1fr))',gap:2,background:'rgba(255,255,255,0.04)',borderRadius:16,overflow:'hidden' }}>
+          {/* Left-justified header */}
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>How It Works</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:12,lineHeight:1.2 }}>4 steps to delivered work.</h2>
+          <p style={{ color:'rgba(255,255,255,0.45)',marginBottom:56,fontSize:'0.95rem' }}>Submit. Scope. Execute. Deliver.</p>
+
+          {/* Vertical flow */}
+          <div style={{ display:'flex',flexDirection:'column',gap:0,position:'relative' }}>
+            {/* Connecting line */}
+            <div style={{ position:'absolute',left:27,top:56,bottom:56,width:2,background:'linear-gradient(to bottom,rgba(224,123,57,0.6),rgba(224,123,57,0.1))',zIndex:0 }} />
+
             {steps.map((step,i) => (
-              <div key={step.num} style={{ background:'#081A30',padding:'36px 24px',borderRight:i<3?'1px solid rgba(255,255,255,0.06)':'none' }}>
-                <div style={{ fontFamily:SERIF,fontSize:'2.8rem',color:'rgba(224,123,57,0.15)',lineHeight:1,marginBottom:16 }}>{step.num}</div>
-                <div style={{ fontSize:'1.6rem',marginBottom:14 }}>{step.icon}</div>
-                <div style={{ fontWeight:700,color:'white',marginBottom:8,fontSize:'0.95rem' }}>{step.title}</div>
-                <div style={{ fontSize:'0.83rem',color:'rgba(255,255,255,0.45)',lineHeight:1.65 }}>{step.desc}</div>
+              <div key={step.num} style={{ display:'flex',gap:24,alignItems:'flex-start',paddingBottom: i<3 ? 36 : 0,position:'relative',zIndex:1 }}>
+                {/* Step circle */}
+                <div style={{ flexShrink:0,width:56,height:56,borderRadius:'50%',background:i===0?'#E07B39':'#0A2342',border:`2px solid ${i===0?'#E07B39':'rgba(224,123,57,0.4)'}`,display:'flex',alignItems:'center',justifyContent:'center',boxShadow: i===0 ? '0 0 20px rgba(224,123,57,0.4)' : 'none' }}>
+                  <span style={{ fontSize:'1.4rem' }}>{step.icon}</span>
+                </div>
+
+                {/* Content */}
+                <div style={{ flex:1,paddingTop:6,background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.06)',borderRadius:12,padding:'20px 24px',marginLeft:0 }}>
+                  <div style={{ display:'flex',alignItems:'center',gap:12,marginBottom:8 }}>
+                    <span style={{ fontFamily:SERIF,fontSize:'1rem',color:'rgba(224,123,57,0.5)',fontWeight:400 }}>{step.num}</span>
+                    <span style={{ fontWeight:700,color:'white',fontSize:'1rem' }}>{step.title}</span>
+                  </div>
+                  <div style={{ fontSize:'0.875rem',color:'rgba(255,255,255,0.5)',lineHeight:1.7 }}>{step.desc}</div>
+                </div>
               </div>
             ))}
           </div>

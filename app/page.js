@@ -205,9 +205,9 @@ export default function Home() {
             {[
               {
                 num:'01',
-                icon:'📋',
-                title:'Structured tasks',
-                desc:'Every engagement starts with a clear scope, milestones, and defined deliverables.',
+                icon:'🗂️',
+                title:'Structured Workflow',
+                desc:"Each engagement is 'projectized' with a clear scope, milestones & tasks.",
               },
               {
                 num:'02',
@@ -242,7 +242,7 @@ export default function Home() {
                   }}>{item.num}</div>
 
                   {/* Icon */}
-                  <div style={{ fontSize:'2.8rem',marginBottom:20,marginTop:8 }}>{item.icon}</div>
+                  <div style={{ fontSize:'3.4rem',marginBottom:20,marginTop:8 }}>{item.icon}</div>
 
                   {/* Title */}
                   <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:10,fontWeight:400 }}>{item.title}</div>

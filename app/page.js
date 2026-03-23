@@ -204,7 +204,7 @@ export default function Home() {
             <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
           </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Solution</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWork™</em></h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWork™</em></h2>
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7,textAlign:'center' }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
 
           <div style={{ display:'flex',alignItems:'stretch',gap:0,paddingTop:24,marginBottom:40 }}>
@@ -275,7 +275,7 @@ export default function Home() {
             <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
           </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Problem</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:20,lineHeight:1.2,textAlign:'center' }}>Most work doesn't fail<br />because of talent.</h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:20,lineHeight:1.2,textAlign:'center' }}>Most work doesn't fail<br />because of talent.</h2>
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520,textAlign:'center',margin:'0 auto 40px' }}>It fails because it's poorly defined before anyone starts.</p>
           <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16,marginBottom:40,maxWidth:780,margin:'0 auto 40px' }}>
             {[
@@ -312,7 +312,7 @@ export default function Home() {
             <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
           </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>How It Works</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:12,lineHeight:1.2,textAlign:'center' }}>4 steps to delivered work.</h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:12,lineHeight:1.2,textAlign:'center' }}>4 steps to delivered work.</h2>
           <p style={{ color:'rgba(255,255,255,0.45)',marginBottom:56,fontSize:'0.95rem',textAlign:'center' }}>Submit. Scope. Execute. Deliver.</p>
 
           {/* Visual flow diagram — horizontal node chain */}
@@ -411,27 +411,57 @@ export default function Home() {
               </svg>
             </div>
 
-            {/* Dashboard mockup */}
-            <div style={{ maxWidth:480,margin:'16px auto 0',background:'#0A1929',border:'1px solid rgba(224,123,57,0.2)',borderRadius:12,overflow:'hidden' }}>
-              <div style={{ background:'rgba(255,255,255,0.04)',padding:'8px 16px',display:'flex',alignItems:'center',gap:8,borderBottom:'1px solid rgba(255,255,255,0.06)' }}>
-                <div style={{ width:8,height:8,borderRadius:'50%',background:'#E07B39',opacity:0.7 }} />
-                <span style={{ fontSize:'0.72rem',color:'rgba(255,255,255,0.4)',fontWeight:600,letterSpacing:'1px',textTransform:'uppercase' }}>Dashboard — Sprint Progress</span>
-              </div>
-              <div style={{ padding:'16px',display:'grid',gridTemplateColumns:'1fr 1fr',gap:10 }}>
-                {[
-                  { label:'Tasks Complete', val:'48 / 60', bar:0.8, color:'#E07B39' },
-                  { label:'QA Passed', val:'98%', bar:0.98, color:'#22C55E' },
-                  { label:'Days Remaining', val:'9 of 28', bar:0.32, color:'#6B8FD4' },
-                  { label:'Team Active', val:'12 workers', bar:1, color:'#E07B39' },
-                ].map(item => (
-                  <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',borderRadius:8,padding:'10px 12px' }}>
-                    <div style={{ fontSize:'0.68rem',color:'rgba(255,255,255,0.4)',marginBottom:4,letterSpacing:'0.5px',textTransform:'uppercase' }}>{item.label}</div>
-                    <div style={{ fontSize:'0.9rem',fontWeight:700,color:'white',marginBottom:6 }}>{item.val}</div>
-                    <div style={{ height:4,background:'rgba(255,255,255,0.07)',borderRadius:2,overflow:'hidden' }}>
-                      <div style={{ height:'100%',width:`${item.bar*100}%`,background:item.color,borderRadius:2 }} />
-                    </div>
+            {/* Dashboard in MacBook frame */}
+            <div style={{ maxWidth:620,margin:'24px auto 0',position:'relative' }}>
+              {/* MacBook SVG shell */}
+              <svg viewBox="0 0 620 420" xmlns="http://www.w3.org/2000/svg" style={{ display:'block',width:'100%' }}>
+                {/* Screen bezel */}
+                <rect x="30" y="10" width="560" height="340" rx="12" fill="#1a1a1a" stroke="#3a3a3a" strokeWidth="2"/>
+                {/* Screen inner (the display area) */}
+                <rect x="40" y="20" width="540" height="320" rx="8" fill="#0a0e1a"/>
+                {/* Camera dot */}
+                <circle cx="310" cy="16" r="3" fill="#2a2a2a"/>
+                {/* Base hinge */}
+                <rect x="0" y="350" width="620" height="12" rx="4" fill="#222"/>
+                {/* Base body */}
+                <rect x="10" y="362" width="600" height="20" rx="3" fill="#1e1e1e" stroke="#333" strokeWidth="1"/>
+                {/* Notch cutout in base */}
+                <rect x="240" y="350" width="140" height="10" rx="5" fill="#111"/>
+                {/* Trackpad */}
+                <rect x="250" y="368" width="120" height="10" rx="3" fill="#2a2a2a" stroke="#333" strokeWidth="0.5"/>
+                {/* Subtle screen glare */}
+                <rect x="40" y="20" width="540" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
+                <rect x="40" y="20" width="2" height="320" rx="1" fill="rgba(255,255,255,0.04)"/>
+              </svg>
+
+              {/* Dashboard content overlaid on screen */}
+              <div style={{ position:'absolute', top:'5%', left:'7%', right:'7%', bottom:'23%', borderRadius:6, overflow:'hidden', background:'#0A1929' }}>
+                {/* Toolbar */}
+                <div style={{ background:'rgba(255,255,255,0.04)',padding:'7px 14px',display:'flex',alignItems:'center',gap:6,borderBottom:'1px solid rgba(255,255,255,0.07)' }}>
+                  <div style={{ display:'flex',gap:5 }}>
+                    <div style={{ width:9,height:9,borderRadius:'50%',background:'#ff5f57' }} />
+                    <div style={{ width:9,height:9,borderRadius:'50%',background:'#febc2e' }} />
+                    <div style={{ width:9,height:9,borderRadius:'50%',background:'#28c840' }} />
                   </div>
-                ))}
+                  <span style={{ fontSize:'0.65rem',color:'rgba(255,255,255,0.35)',fontWeight:600,letterSpacing:'1px',textTransform:'uppercase',marginLeft:8 }}>Dashboard — Sprint Progress</span>
+                </div>
+                {/* 4 stat cards */}
+                <div style={{ padding:'14px',display:'grid',gridTemplateColumns:'1fr 1fr',gap:10,height:'calc(100% - 32px)',boxSizing:'border-box' }}>
+                  {[
+                    { label:'Tasks Complete', val:'48 / 60', bar:0.8, color:'#E07B39' },
+                    { label:'QA Passed', val:'98%', bar:0.98, color:'#22C55E' },
+                    { label:'Days Remaining', val:'9 of 28', bar:0.32, color:'#6B8FD4' },
+                    { label:'Team Active', val:'12 workers', bar:1, color:'#E07B39' },
+                  ].map(item => (
+                    <div key={item.label} style={{ background:'rgba(255,255,255,0.04)',borderRadius:8,padding:'10px 12px',border:'1px solid rgba(255,255,255,0.05)' }}>
+                      <div style={{ fontSize:'0.6rem',color:'rgba(255,255,255,0.4)',marginBottom:4,letterSpacing:'0.5px',textTransform:'uppercase' }}>{item.label}</div>
+                      <div style={{ fontSize:'1rem',fontWeight:700,color:'white',marginBottom:8 }}>{item.val}</div>
+                      <div style={{ height:4,background:'rgba(255,255,255,0.07)',borderRadius:2,overflow:'hidden' }}>
+                        <div style={{ height:'100%',width:`${item.bar*100}%`,background:item.color,borderRadius:2 }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -449,7 +479,7 @@ export default function Home() {
           {/* Top eyebrow + headline */}
           <div style={{ textAlign:'center',marginBottom:64 }}>
             <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>Why Now?</div>
-            <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.8rem)',color:'white',marginBottom:20,lineHeight:1.2,fontWeight:400 }}>
+            <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,3rem)',color:'white',marginBottom:20,lineHeight:1.2,fontWeight:400 }}>
               Built for forward-thinking employers<br /><em style={{ color:'#F08C4E' }}>done with broken internships.</em>
             </h2>
             <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.55)',maxWidth:600,margin:'0 auto',lineHeight:1.75 }}>
@@ -533,7 +563,7 @@ export default function Home() {
       <section id="use-cases" style={{ background:'#081A30',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>Use Cases</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:48,lineHeight:1.2,textAlign:'center' }}>Work we execute every week.</h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:48,lineHeight:1.2,textAlign:'center' }}>Work we execute every week.</h2>
           <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))',gap:16 }}>
             {useCases.map(uc => (
               <div key={uc.title} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px' }}>
@@ -549,7 +579,7 @@ export default function Home() {
       <section style={{ background:'#0A2342',padding:'96px 24px' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>Why Work Simplr</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>This is not staffing.<br /><em style={{ color:'#F08C4E' }}>It is execution.</em></h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>This is not staffing.<br /><em style={{ color:'#F08C4E' }}>It is execution.</em></h2>
           <p style={{ textAlign:'center',color:'rgba(255,255,255,0.45)',marginBottom:52,fontSize:'0.95rem' }}>Instead of hoping for the best, you get structured delivery every time.</p>
           <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:20 }}>
             <div style={{ background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'28px 24px' }}>
@@ -575,7 +605,7 @@ export default function Home() {
       <section style={{ background:'#081A30',padding:'96px 24px' }}>
         <div style={{ maxWidth:860,margin:'0 auto',textAlign:'center' }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>AI + Human</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>AI does not execute.<br /><em style={{ color:'#F08C4E' }}>We do.</em></h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>AI does not execute.<br /><em style={{ color:'#F08C4E' }}>We do.</em></h2>
           <p style={{ color:'rgba(255,255,255,0.5)',maxWidth:520,margin:'0 auto 48px',lineHeight:1.7,fontSize:'0.95rem' }}>We combine AI + human operators + structured workflows so work actually gets done.</p>
           <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16 }}>
             {[

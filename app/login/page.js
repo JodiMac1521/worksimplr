@@ -32,7 +32,7 @@ export default function LoginPage() {
       {/* Left — form */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '48px 64px', maxWidth: 560 }}>
         <Link href="/" style={{ textDecoration: 'none', marginBottom: 56, display: 'inline-block' }}>
-          <img src="/logo.svg" alt="Work Simplr" style={{ height: 40, width: 'auto' }} />
+          <img src="/logo.png" alt="Work Simplr" style={{ height: 48, width: 'auto' }} />
         </Link>
 
         <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 12 }}>Welcome back</div>
@@ -101,7 +101,7 @@ export default function LoginPage() {
               { icon: '👥', title: 'Distributed execution', desc: 'Work is distributed across 1–100 Sprint-Terns™ and one account manager.' },
             ].map(item => (
               <div key={item.title} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
-                <div style={{ width: 40, height: 40, background: 'rgba(224,123,57,0.1)', border: '1px solid rgba(224,123,57,0.2)', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.1rem', flexShrink: 0 }}>{item.icon}</div>
+                <div style={{ width: 40, height: 48, background: 'rgba(224,123,57,0.1)', border: '1px solid rgba(224,123,57,0.2)', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.1rem', flexShrink: 0 }}>{item.icon}</div>
                 <div>
                   <div style={{ fontWeight: 600, color: 'white', fontSize: '0.9rem', marginBottom: 3 }}>{item.title}</div>
                   <div style={{ fontSize: '0.83rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.6 }}>{item.desc}</div>

@@ -47,7 +47,7 @@ export default function RegisterPage() {
       {/* Left — form */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '48px 64px', maxWidth: 560 }}>
         <Link href="/" style={{ textDecoration: 'none', marginBottom: 56, display: 'inline-block' }}>
-          <img src="/logo.svg" alt="Work Simplr" style={{ height: 40, width: 'auto' }} />
+          <img src="/logo.png" alt="Work Simplr" style={{ height: 48, width: 'auto' }} />
         </Link>
 
         {/* Step indicator */}

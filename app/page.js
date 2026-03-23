@@ -18,7 +18,7 @@ export default function Home() {
       <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:100,background:'rgba(10,35,66,0.95)',backdropFilter:'blur(14px)',borderBottom:'1px solid rgba(224,123,57,0.2)',height:60,display:'flex',alignItems:'center' }}>
         <div style={{ maxWidth:1080,margin:'0 auto',padding:'0 24px',display:'flex',alignItems:'center',justifyContent:'space-between',width:'100%' }}>
           <a href="/" style={{ textDecoration:'none',display:'flex',alignItems:'center' }}>
-            <img src="/logo.svg" alt="Work Simplr" style={{ height:38,width:'auto' }} />
+            <img src="/logo.png" alt="Work Simplr" style={{ height:48,width:'auto',display:'block' }} />
           </a>
           <div style={{ display:'flex',gap:28 }}>
             {[['#problem','Problem'],['#solution','Solution'],['#how','How It Works'],['#use-cases','Use Cases']].map(([h,l]) => (
@@ -50,6 +50,120 @@ export default function Home() {
               <div key={l} style={{ textAlign:'center' }}>
                 <div style={{ fontFamily:SERIF,fontSize:'1.8rem',color:'#F08C4E',marginBottom:4 }}>{n}</div>
                 <div style={{ fontSize:'0.78rem',color:'rgba(255,255,255,0.4)',letterSpacing:'0.5px' }}>{l}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SOCIAL PROOF ── */}
+      <section style={{ background:'#060F1C', padding:'72px 24px 80px', borderBottom:'1px solid rgba(255,255,255,0.06)' }}>
+        <div style={{ maxWidth:1080, margin:'0 auto' }}>
+
+          {/* Heading */}
+          <div style={{ textAlign:'center', marginBottom:52 }}>
+            <div style={{ fontSize:'0.72rem', fontWeight:700, letterSpacing:'2px', textTransform:'uppercase', color:'#E07B39', marginBottom:12 }}>Client Results</div>
+            <h2 style={{ fontFamily:SERIF, fontSize:'clamp(1.6rem,3vw,2.2rem)', color:'white', fontWeight:400, marginBottom:0, lineHeight:1.2 }}>
+              Proven Results — <em style={{ color:'#F08C4E', fontStyle:'italic' }}>In Weeks, Not Months</em>
+            </h2>
+          </div>
+
+          {/* Logo strip */}
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:40, flexWrap:'wrap', marginBottom:56, paddingBottom:40, borderBottom:'1px solid rgba(255,255,255,0.07)' }}>
+            {[
+              { src:'/logo-usnews.png', alt:'U.S. News & World Report', h:36 },
+              { src:'/logo-poolit.jpg', alt:'Poolit', h:36, style:{ borderRadius:6 } },
+              { src:'/logo-electude.png', alt:'Electude', h:30 },
+              { src:'/logo-vista.png', alt:'Vista Higher Learning', h:44 },
+              { src:'/logo-edl.png', alt:'Education Design Lab', h:34 },
+            ].map(logo => (
+              <img key={logo.alt} src={logo.src} alt={logo.alt}
+                style={{ height:logo.h, width:'auto', opacity:0.75, filter:'brightness(1.1)', objectFit:'contain', ...(logo.style||{}) }} />
+            ))}
+          </div>
+
+          {/* Case study cards */}
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:18 }}>
+            {[
+              {
+                stat:'180K Records',
+                company:'U.S. News & World Report',
+                quote:'Work Simplr successfully processed over 180,000 pieces of data in just three weeks using a coordinated team of 60 students. The work was accurate, well-managed, and delivered on schedule.',
+                name:'Eric H.',
+                tag:'Data Processing',
+                color:'#E07B39',
+              },
+              {
+                stat:'6,000 Leads',
+                company:'Poolit',
+                quote:'Work Simplr helped us generate qualified leads while reducing the operational lift on our internal team. The quality of leads and the structure behind the work stood out. This wasn\'t busywork — it was real pipeline impact.',
+                name:'James L.',
+                tag:'Lead Generation',
+                color:'#6B8FD4',
+              },
+              {
+                stat:'600 User Tests',
+                company:'Wiley',
+                quote:'We tested with hundreds of users in a fraction of the time. The quality and consistency of the feedback exceeded expectations. Clean data. Clear decisions.',
+                name:'Jason J., VP',
+                tag:'User Research',
+                color:'#4BBFA0',
+              },
+              {
+                stat:'75% Time Saved',
+                company:'Cloverleaf',
+                quote:'We saved 75% of the time and 50% off the cost of new lead gen and cleansing our old database.',
+                name:'Eric H., COO',
+                tag:'Efficiency',
+                color:'#E07B39',
+              },
+              {
+                stat:'5,000 Districts',
+                company:'CEMD',
+                quote:'We can scale up and down as we gather nearly 5,000 districts of information and insight with Work Simplr. Steady and accurate.',
+                name:'Shari M., VP',
+                tag:'Research',
+                color:'#6B8FD4',
+              },
+              {
+                stat:'2-Week Launch',
+                company:'Education Design Lab',
+                quote:'This unblocked us. We needed product testing fast — in under 3 weeks we had end-to-end user tests completed in just 2 weeks, keeping our launch schedule on time.',
+                name:'Tara M., Product Lead',
+                tag:'Product Testing',
+                color:'#4BBFA0',
+              },
+            ].map(card => (
+              <div key={card.company} style={{
+                background:'rgba(255,255,255,0.03)',
+                border:'1px solid rgba(255,255,255,0.08)',
+                borderRadius:16,
+                padding:'28px 24px',
+                display:'flex',
+                flexDirection:'column',
+                gap:16,
+                position:'relative',
+                overflow:'hidden',
+              }}>
+                {/* Accent top bar */}
+                <div style={{ position:'absolute', top:0, left:0, right:0, height:3, background:card.color, borderRadius:'16px 16px 0 0' }} />
+
+                {/* Stat */}
+                <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:8 }}>
+                  <div style={{ fontFamily:SERIF, fontSize:'2rem', color:card.color, lineHeight:1, fontWeight:400 }}>{card.stat}</div>
+                  <div style={{ fontSize:'0.68rem', fontWeight:700, letterSpacing:'1.5px', textTransform:'uppercase', color:card.color, background:`rgba(255,255,255,0.06)`, border:`1px solid ${card.color}30`, borderRadius:999, padding:'4px 10px', whiteSpace:'nowrap', marginTop:4 }}>{card.tag}</div>
+                </div>
+
+                {/* Company */}
+                <div style={{ fontSize:'0.78rem', fontWeight:700, color:'rgba(255,255,255,0.45)', letterSpacing:'0.5px', textTransform:'uppercase' }}>{card.company}</div>
+
+                {/* Quote */}
+                <p style={{ fontSize:'0.88rem', color:'rgba(255,255,255,0.65)', lineHeight:1.7, margin:0, flex:1, fontStyle:'italic' }}>
+                  "{card.quote}"
+                </p>
+
+                {/* Attribution */}
+                <div style={{ fontSize:'0.78rem', color:'rgba(255,255,255,0.35)', fontWeight:500 }}>— {card.name}</div>
               </div>
             ))}
           </div>

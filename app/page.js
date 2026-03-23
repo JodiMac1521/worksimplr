@@ -307,12 +307,93 @@ export default function Home() {
           </div>
 
           {/* Flow diagram */}
-          <div style={{ marginTop:48,background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:20,padding:'40px 32px' }}>
+          <div style={{ marginTop:48,background:'rgba(255,255,255,0.02)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:20,padding:'40px 32px',boxShadow:'0 0 40px rgba(224,123,57,0.04)' }}>
             <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:32,textAlign:'center' }}>How the engine runs</div>
 
-            {/* SVG diagram with dotted connector lines */}
-            <div style={{ position:'relative', width:'100%', overflowX:'auto' }}>
-              <svg width="100%" viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" style={{ display:'block', minWidth:560 }}>
+            {/* SVG diagram — centered viewBox */}
+            <div style={{ width:'100%', overflowX:'auto' }}>
+              <svg width="100%" viewBox="0 0 660 240" xmlns="http://www.w3.org/2000/svg" style={{ display:'block', minWidth:520, maxWidth:700, margin:'0 auto' }}>
+                <defs>
+                  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L8,3 z" fill="#E07B39"/>
+                  </marker>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                </defs>
+
+                {/* ── ROW 1 (centered at x=330) ── */}
+                {/* Project Intake — green */}
+                <rect x="18" y="24" width="164" height="52" rx="10" fill="#15803d" stroke="#22c55e" strokeWidth="1.5"/>
+                <text x="100" y="44" textAnchor="middle" fontSize="11" fontWeight="600" fill="rgba(255,255,255,0.7)" fontFamily="DM Sans,sans-serif">📥</text>
+                <text x="100" y="60" textAnchor="middle" fontSize="12" fontWeight="700" fill="white" fontFamily="DM Sans,sans-serif">Project Intake</text>
+
+                {/* Arrow → SprintWork */}
+                <path d="M182 50 L218 50" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)"/>
+
+                {/* SprintWork — white center */}
+                <rect x="218" y="12" width="224" height="76" rx="14" fill="white" filter="url(#glow)"/>
+                <text x="330" y="50" textAnchor="middle" fontSize="15" fontWeight="800" fill="#0A2342" fontFamily="DM Sans,sans-serif">SprintWork™</text>
+
+                {/* Arrow SprintWork → TalentOS */}
+                <path d="M442 50 L478 50" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)"/>
+
+                {/* TalentOS — orange */}
+                <rect x="478" y="24" width="164" height="52" rx="10" fill="#E07B39"/>
+                <text x="560" y="44" textAnchor="middle" fontSize="11" fontWeight="600" fill="rgba(255,255,255,0.8)" fontFamily="DM Sans,sans-serif">🎯</text>
+                <text x="560" y="60" textAnchor="middle" fontSize="12" fontWeight="700" fill="white" fontFamily="DM Sans,sans-serif">TalentOS</text>
+
+                {/* ── DOTTED LINES Row 1 → Row 2 ── */}
+                {/* Intake (cx=100) → Talent Matching (cx=115) */}
+                <path d="M100 76 L100 108 L115 140" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.55"/>
+                {/* SprintWork (cx=330) → Workflow Automation (cx=330) */}
+                <path d="M330 88 L330 140" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.55"/>
+                {/* TalentOS (cx=560) → Performance Analytics (cx=545) */}
+                <path d="M560 76 L560 108 L545 140" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.55"/>
+
+                {/* ── ROW 2 — 3 engine nodes (centered) ── */}
+                {/* Talent Matching x=20 */}
+                <rect x="20" y="140" width="190" height="46" rx="9" fill="rgba(224,123,57,0.07)" stroke="rgba(224,123,57,0.45)" strokeWidth="1.5"/>
+                <text x="115" y="169" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">🧩 Talent Matching</text>
+
+                {/* Workflow Automation x=235 */}
+                <rect x="235" y="140" width="190" height="46" rx="9" fill="rgba(224,123,57,0.07)" stroke="rgba(224,123,57,0.45)" strokeWidth="1.5"/>
+                <text x="330" y="169" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">⚙️ Workflow Automation</text>
+
+                {/* Performance Analytics x=450 */}
+                <rect x="450" y="140" width="190" height="46" rx="9" fill="rgba(224,123,57,0.07)" stroke="rgba(224,123,57,0.45)" strokeWidth="1.5"/>
+                <text x="545" y="169" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">📊 Performance Analytics</text>
+
+                {/* Arrow down to dashboard from center */}
+                <path d="M330 186 L330 218" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)" opacity="0.65"/>
+              </svg>
+            </div>
+
+            {/* Dashboard output */}
+            <div style={{ maxWidth:480,margin:'0 auto',background:'#0A1929',border:'1px solid rgba(224,123,57,0.25)',borderRadius:12,overflow:'hidden',boxShadow:'0 4px 24px rgba(0,0,0,0.3)' }}>
+              <div style={{ background:'rgba(255,255,255,0.04)',padding:'8px 16px',display:'flex',alignItems:'center',gap:8,borderBottom:'1px solid rgba(255,255,255,0.06)' }}>
+                <div style={{ width:8,height:8,borderRadius:'50%',background:'#E07B39',opacity:0.7 }} />
+                <span style={{ fontSize:'0.72rem',color:'rgba(255,255,255,0.4)',fontWeight:600,letterSpacing:'1px',textTransform:'uppercase' }}>Dashboard — Sprint Progress</span>
+              </div>
+              <div style={{ padding:'20px 16px',display:'grid',gridTemplateColumns:'1fr 1fr',gap:10 }}>
+                {[
+                  { label:'Tasks Complete', val:'48 / 60', bar:0.8, color:'#E07B39' },
+                  { label:'QA Passed', val:'98%', bar:0.98, color:'#22C55E' },
+                  { label:'Days Remaining', val:'9 of 28', bar:0.32, color:'#6B8FD4' },
+                  { label:'Team Active', val:'12 workers', bar:1, color:'#E07B39' },
+                ].map(item => (
+                  <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.05)',borderRadius:8,padding:'10px 12px' }}>
+                    <div style={{ fontSize:'0.68rem',color:'rgba(255,255,255,0.4)',marginBottom:4,letterSpacing:'0.5px',textTransform:'uppercase' }}>{item.label}</div>
+                    <div style={{ fontSize:'0.9rem',fontWeight:700,color:'white',marginBottom:6 }}>{item.val}</div>
+                    <div style={{ height:4,background:'rgba(255,255,255,0.07)',borderRadius:2,overflow:'hidden' }}>
+                      <div style={{ height:'100%',width:`${item.bar*100}%`,background:item.color,borderRadius:2 }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
 
                 {/* ── ROW 1: Project Intake → SprintWork → TalentOS ── */}
 
@@ -432,7 +513,7 @@ export default function Home() {
           <p style={{ color:'rgba(255,255,255,0.45)',marginBottom:56,fontSize:'0.95rem',textAlign:'center' }}>Submit. Scope. Execute. Deliver.</p>
 
           {/* Visual flow diagram — horizontal node chain */}
-          <div style={{ overflowX:'auto', paddingBottom:8 }}>
+          <div style={{ overflowX:'auto', paddingBottom:8, paddingTop:24 }}>
             <div style={{ display:'flex', alignItems:'stretch', justifyContent:'center', gap:0, minWidth:600, position:'relative' }}>
 
               {steps.map((step, i) => (

@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* ── SOCIAL PROOF ── */}
-      <section style={{ background:'#060F1C', padding:'72px 24px 80px', borderBottom:'1px solid rgba(255,255,255,0.06)', borderTop:'1px solid rgba(255,255,255,0.06)' }}>
+      <section style={{ background:'#081A30', padding:'72px 24px 80px', borderBottom:'1px solid rgba(255,255,255,0.06)', borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:1080, margin:'0 auto' }}>
 
           {/* Heading */}
@@ -338,7 +338,7 @@ export default function Home() {
 
 
       {/* ── WHY NOW ── */}
-      <section style={{ background:'linear-gradient(160deg,#0A2342 0%,#081A30 100%)',padding:'96px 24px',position:'relative',overflow:'hidden' }}>
+      <section style={{ background:'#081A30',padding:'96px 24px',position:'relative',overflow:'hidden',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         {/* subtle bg glow */}
         <div style={{ position:'absolute',top:-120,right:-120,width:480,height:480,background:'radial-gradient(circle,rgba(224,123,57,0.1) 0%,transparent 70%)',pointerEvents:'none' }} />
         <div style={{ maxWidth:1020,margin:'0 auto',position:'relative',zIndex:1 }}>

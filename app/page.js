@@ -209,7 +209,34 @@ export default function Home() {
 
           <div style={{ display:'flex',alignItems:'stretch',gap:0,paddingTop:24,marginBottom:40 }}>
             {[
-              { num:'1', icon:'🗂️', title:'Structured Workflow', desc:"Each engagement is 'projectized' with a clear scope, milestones & tasks." },
+              { num:'1', icon:(<svg width="64" height="56" viewBox="0 0 128 96" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  {/* Top node */}
+                  <rect x="40" y="2" width="48" height="20" rx="5" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.8"/>
+                  <line x1="52" y1="11" x2="76" y2="11" stroke="rgba(255,255,255,0.5)" strokeWidth="1.4"/>
+                  <line x1="52" y1="16" x2="70" y2="16" stroke="rgba(255,255,255,0.3)" strokeWidth="1.2"/>
+                  {/* Vertical line down */}
+                  <line x1="64" y1="22" x2="64" y2="36" stroke="rgba(255,255,255,0.55)" strokeWidth="1.5"/>
+                  {/* Horizontal splitter */}
+                  <line x1="22" y1="36" x2="106" y2="36" stroke="rgba(255,255,255,0.55)" strokeWidth="1.5"/>
+                  {/* 3 branch lines down */}
+                  <line x1="22" y1="36" x2="22" y2="48" stroke="rgba(255,255,255,0.55)" strokeWidth="1.5"/>
+                  <line x1="64" y1="36" x2="64" y2="48" stroke="rgba(255,255,255,0.55)" strokeWidth="1.5"/>
+                  <line x1="106" y1="36" x2="106" y2="48" stroke="rgba(255,255,255,0.55)" strokeWidth="1.5"/>
+                  {/* 3 child boxes */}
+                  <rect x="2" y="48" width="40" height="18" rx="4" fill="none" stroke="rgba(224,123,57,0.9)" strokeWidth="1.8"/>
+                  <line x1="10" y1="55" x2="34" y2="55" stroke="rgba(224,123,57,0.55)" strokeWidth="1.2"/>
+                  <line x1="10" y1="60" x2="28" y2="60" stroke="rgba(224,123,57,0.3)" strokeWidth="1"/>
+                  <rect x="44" y="48" width="40" height="18" rx="4" fill="none" stroke="rgba(255,255,255,0.65)" strokeWidth="1.8"/>
+                  <line x1="52" y1="55" x2="76" y2="55" stroke="rgba(255,255,255,0.35)" strokeWidth="1.2"/>
+                  <line x1="52" y1="60" x2="70" y2="60" stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>
+                  <rect x="86" y="48" width="40" height="18" rx="4" fill="none" stroke="rgba(255,255,255,0.65)" strokeWidth="1.8"/>
+                  <line x1="94" y1="55" x2="118" y2="55" stroke="rgba(255,255,255,0.35)" strokeWidth="1.2"/>
+                  <line x1="94" y1="60" x2="112" y2="60" stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>
+                  {/* Arrowheads */}
+                  <polygon points="22,46 19,41 25,41" fill="rgba(255,255,255,0.55)"/>
+                  <polygon points="64,46 61,41 67,41" fill="rgba(255,255,255,0.55)"/>
+                  <polygon points="106,46 103,41 109,41" fill="rgba(255,255,255,0.55)"/>
+                </svg>), title:'Structured Workflow', desc:"Each engagement is 'projectized' with a clear scope, milestones & tasks." },
               { num:'2', icon: (<svg width="60" height="44" viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
                   {[0,1,2,3].map(i => (
                     <g key={i} transform={`translate(${i*28+6},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -333,6 +360,82 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          {/* ── HOW THE ENGINE RUNS ── */}
+          <div style={{ marginTop:56, background:'rgba(255,255,255,0.02)', border:'1px solid rgba(255,255,255,0.07)', borderRadius:20, padding:'36px 28px' }}>
+            <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:32,textAlign:'center' }}>How the engine runs</div>
+
+            {/* SVG flow diagram */}
+            <div style={{ overflowX:'auto' }}>
+              <svg width="100%" viewBox="0 0 660 240" xmlns="http://www.w3.org/2000/svg" style={{ display:'block', minWidth:520, maxWidth:700, margin:'0 auto' }}>
+                <defs>
+                  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L8,3 z" fill="#E07B39"/>
+                  </marker>
+                </defs>
+
+                {/* ROW 1 */}
+                <rect x="20" y="30" width="160" height="52" rx="10" fill="#16a34a" stroke="#22c55e" strokeWidth="1.5"/>
+                <text x="100" y="51" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.9)" fontFamily="DM Sans,sans-serif">📥 Project Intake</text>
+                <text x="100" y="68" textAnchor="middle" fontSize="10" fill="rgba(255,255,255,0.6)" fontFamily="DM Sans,sans-serif">Client submits work</text>
+
+                <path d="M180 56 L225 56" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)"/>
+
+                <rect x="225" y="18" width="210" height="76" rx="12" fill="white"/>
+                <text x="330" y="52" textAnchor="middle" fontSize="16" fontWeight="800" fill="#0A2342" fontFamily="DM Sans,sans-serif">SprintWork™</text>
+                <text x="330" y="70" textAnchor="middle" fontSize="10" fill="#0A2342" fontFamily="DM Sans,sans-serif">AI scoping + project structure</text>
+
+                <path d="M435 56 L480 56" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)"/>
+
+                <rect x="480" y="30" width="160" height="52" rx="10" fill="#E07B39"/>
+                <text x="560" y="51" textAnchor="middle" fontSize="12" fontWeight="700" fill="white" fontFamily="DM Sans,sans-serif">🎯 TalentOS</text>
+                <text x="560" y="68" textAnchor="middle" fontSize="10" fill="rgba(255,255,255,0.8)" fontFamily="DM Sans,sans-serif">Worker matching</text>
+
+                {/* DOTTED LINES: Row 1 → Row 2 */}
+                <path d="M100 82 L100 140" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.6"/>
+                <path d="M330 94 L330 140" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.6"/>
+                <path d="M560 82 L560 140" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.6"/>
+
+                {/* ROW 2 */}
+                <rect x="20" y="140" width="190" height="44" rx="9" fill="rgba(224,123,57,0.08)" stroke="rgba(224,123,57,0.4)" strokeWidth="1.5"/>
+                <text x="115" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">🧩 Talent Matching</text>
+
+                <rect x="235" y="140" width="190" height="44" rx="9" fill="rgba(224,123,57,0.08)" stroke="rgba(224,123,57,0.4)" strokeWidth="1.5"/>
+                <text x="330" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">⚙️ Workflow Automation</text>
+
+                <rect x="450" y="140" width="190" height="44" rx="9" fill="rgba(224,123,57,0.08)" stroke="rgba(224,123,57,0.4)" strokeWidth="1.5"/>
+                <text x="545" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">📊 Performance Analytics</text>
+
+                {/* Arrow down to dashboard */}
+                <path d="M330 184 L330 214" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)" opacity="0.7"/>
+              </svg>
+            </div>
+
+            {/* Dashboard mockup */}
+            <div style={{ maxWidth:480,margin:'16px auto 0',background:'#0A1929',border:'1px solid rgba(224,123,57,0.2)',borderRadius:12,overflow:'hidden' }}>
+              <div style={{ background:'rgba(255,255,255,0.04)',padding:'8px 16px',display:'flex',alignItems:'center',gap:8,borderBottom:'1px solid rgba(255,255,255,0.06)' }}>
+                <div style={{ width:8,height:8,borderRadius:'50%',background:'#E07B39',opacity:0.7 }} />
+                <span style={{ fontSize:'0.72rem',color:'rgba(255,255,255,0.4)',fontWeight:600,letterSpacing:'1px',textTransform:'uppercase' }}>Dashboard — Sprint Progress</span>
+              </div>
+              <div style={{ padding:'16px',display:'grid',gridTemplateColumns:'1fr 1fr',gap:10 }}>
+                {[
+                  { label:'Tasks Complete', val:'48 / 60', bar:0.8, color:'#E07B39' },
+                  { label:'QA Passed', val:'98%', bar:0.98, color:'#22C55E' },
+                  { label:'Days Remaining', val:'9 of 28', bar:0.32, color:'#6B8FD4' },
+                  { label:'Team Active', val:'12 workers', bar:1, color:'#E07B39' },
+                ].map(item => (
+                  <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',borderRadius:8,padding:'10px 12px' }}>
+                    <div style={{ fontSize:'0.68rem',color:'rgba(255,255,255,0.4)',marginBottom:4,letterSpacing:'0.5px',textTransform:'uppercase' }}>{item.label}</div>
+                    <div style={{ fontSize:'0.9rem',fontWeight:700,color:'white',marginBottom:6 }}>{item.val}</div>
+                    <div style={{ height:4,background:'rgba(255,255,255,0.07)',borderRadius:2,overflow:'hidden' }}>
+                      <div style={{ height:'100%',width:`${item.bar*100}%`,background:item.color,borderRadius:2 }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 

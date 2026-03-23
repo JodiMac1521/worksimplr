@@ -578,7 +578,97 @@ export default function Home() {
       </section>
 
 
-<section id="use-cases" style={{ background:'#081A30',padding:'96px 24px' }}>
+      {/* ── WHY NOW ── */}
+      <section style={{ background:'linear-gradient(160deg,#0A2342 0%,#081A30 100%)',padding:'96px 24px',position:'relative',overflow:'hidden' }}>
+        {/* subtle bg glow */}
+        <div style={{ position:'absolute',top:-120,right:-120,width:480,height:480,background:'radial-gradient(circle,rgba(224,123,57,0.1) 0%,transparent 70%)',pointerEvents:'none' }} />
+        <div style={{ maxWidth:1020,margin:'0 auto',position:'relative',zIndex:1 }}>
+
+          {/* Top eyebrow + headline */}
+          <div style={{ textAlign:'center',marginBottom:64 }}>
+            <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>Why Now?</div>
+            <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.8rem)',color:'white',marginBottom:20,lineHeight:1.2,fontWeight:400 }}>
+              Built for forward-thinking employers<br /><em style={{ color:'#F08C4E' }}>done with broken internships.</em>
+            </h2>
+            <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.55)',maxWidth:600,margin:'0 auto',lineHeight:1.75 }}>
+              No new tools. No added headcount. Scalable decentralized hiring solutions for any company.
+            </p>
+          </div>
+
+          {/* Two-column: For Employers + The Issue */}
+          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))',gap:20,marginBottom:40 }}>
+
+            {/* For Forward-Thinking Employers */}
+            <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px' }}>
+              <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>For Forward-Thinking Employers</div>
+              <div style={{ fontFamily:SERIF,fontSize:'1.1rem',color:'white',marginBottom:24,lineHeight:1.4 }}>Who Value Output Over Optics</div>
+              <div style={{ display:'flex',flexDirection:'column',gap:12 }}>
+                {[
+                  'Projects completed in weeks, not semesters',
+                  'No HR lift',
+                  'AI-native talent',
+                  'Transparent deliverables',
+                ].map(item => (
+                  <div key={item} style={{ display:'flex',alignItems:'flex-start',gap:12 }}>
+                    <div style={{ width:20,height:20,borderRadius:'50%',background:'rgba(224,123,57,0.2)',border:'1px solid rgba(224,123,57,0.5)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,marginTop:1 }}>
+                      <span style={{ color:'#E07B39',fontSize:'0.65rem',fontWeight:800 }}>✓</span>
+                    </div>
+                    <span style={{ fontSize:'0.925rem',color:'rgba(255,255,255,0.8)',lineHeight:1.5 }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* The Overarching Issues */}
+            <div style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:18,padding:'36px 32px' }}>
+              <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.4)',marginBottom:16 }}>The Overarching Issue</div>
+              <p style={{ fontSize:'0.95rem',color:'rgba(255,255,255,0.75)',lineHeight:1.75,marginBottom:24 }}>
+                Companies don't just need "help" — they need work that's been <strong style={{ color:'white' }}>properly scoped, clearly structured, and consistently executed.</strong>
+              </p>
+              <div style={{ borderTop:'1px solid rgba(255,255,255,0.07)',paddingTop:20 }}>
+                <div style={{ fontSize:'0.78rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:14 }}>SprintWork™ Services</div>
+                <div style={{ fontSize:'0.875rem',color:'rgba(255,255,255,0.5)',marginBottom:12,fontStyle:'italic' }}>Whether you're:</div>
+                <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:8 }}>
+                  {[
+                    'Validating a product concept',
+                    'Testing user experience',
+                    'Collecting research data',
+                    'Building technical prototypes',
+                    'Managing campus programs',
+                    'Finding specialized talent',
+                  ].map(item => (
+                    <div key={item} style={{ display:'flex',alignItems:'flex-start',gap:8 }}>
+                      <span style={{ color:'#E07B39',fontSize:'0.7rem',marginTop:3,flexShrink:0 }}>▸</span>
+                      <span style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.65)',lineHeight:1.5 }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* The challenge statement */}
+          <div style={{ background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:16,padding:'32px 40px',textAlign:'center',marginBottom:40 }}>
+            <p style={{ fontSize:'1.1rem',color:'rgba(255,255,255,0.7)',lineHeight:1.8,marginBottom:8 }}>
+              <em>...the challenge is the same...</em>
+            </p>
+            <p style={{ fontFamily:SERIF,fontSize:'clamp(1.2rem,2.5vw,1.6rem)',color:'white',lineHeight:1.4,marginBottom:8 }}>
+              How do you get quality results from distributed work<br />without adding management overhead?
+            </p>
+            <p style={{ fontSize:'1rem',color:'#F08C4E',fontWeight:600,marginTop:16 }}>That's what Work Simplr solves.</p>
+          </div>
+
+          {/* CTA */}
+          <div style={{ textAlign:'center' }}>
+            <a href="/register" style={{ display:'inline-block',padding:'16px 48px',background:'#E07B39',borderRadius:999,fontSize:'1.05rem',fontWeight:700,color:'white',textDecoration:'none',boxShadow:'0 8px 32px rgba(224,123,57,0.4)',letterSpacing:'0.3px' }}>
+              Start a Sprint →
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="use-cases" style={{ background:'#081A30',padding:'96px 24px' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>Use Cases</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.5vw,2.6rem)',color:'white',marginBottom:48,lineHeight:1.2,textAlign:'center' }}>Work we execute every week.</h2>

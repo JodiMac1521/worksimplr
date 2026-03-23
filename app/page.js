@@ -190,7 +190,21 @@ export default function Home() {
               },
               {
                 num:'02',
-                icon:'🤝',
+                icon:(<svg width="64" height="52" viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg" style={{display:'block'}}>
+                  {/* Group of 20 outlined person figures in two rows of 10 */}
+                  {[0,1,2,3,4,5,6,7,8,9].map(i => (
+                    <g key={`t${i}`} transform={`translate(${i*15+4},0)`} fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="7" cy="8" r="5"/>
+                      <path d="M1 26 C1 18 13 18 13 26"/>
+                    </g>
+                  ))}
+                  {[0,1,2,3,4,5,6,7,8,9].map(i => (
+                    <g key={`b${i}`} transform={`translate(${i*15+4},38)`} fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="7" cy="8" r="5"/>
+                      <path d="M1 26 C1 18 13 18 13 26"/>
+                    </g>
+                  ))}
+                </svg>),
                 title:'Execution plans',
                 desc:'We onboard and distribute the work across 1–100 workers with QA built in.',
               },
@@ -221,7 +235,7 @@ export default function Home() {
                   }}>{item.num}</div>
 
                   {/* Icon */}
-                  <div style={{ fontSize:'3.4rem',marginBottom:20,marginTop:8 }}>{item.icon}</div>
+                  <div style={{ fontSize:'3.4rem',marginBottom:20,marginTop:8,lineHeight:1 }}>{item.icon}</div>
 
                   {/* Title */}
                   <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:10,fontWeight:400 }}>{item.title}</div>

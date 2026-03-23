@@ -303,7 +303,7 @@ export default function Home() {
               <div style={{ padding:'20px 16px',display:'grid',gridTemplateColumns:'1fr 1fr',gap:10 }}>
                 {[
                   { label:'Tasks Complete', val:'48 / 60', bar:0.8, color:'#E07B39' },
-                  { label:'QA Passed', val:'44', bar:0.93, color:'#22C55E' },
+                  { label:'QA Passed', val:'28', bar:0.93, color:'#22C55E' },
                   { label:'Days Remaining', val:'9 of 28', bar:0.32, color:'#6B8FD4' },
                   { label:'Team Active', val:'12 workers', bar:1, color:'#E07B39' },
                 ].map(item => (

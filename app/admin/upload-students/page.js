@@ -89,7 +89,7 @@ export default function UploadStudents() {
       {/* Nav */}
       <nav style={{ background: 'rgba(10,35,66,0.95)', backdropFilter: 'blur(14px)', borderBottom: '1px solid rgba(224,123,57,0.2)', height: 60, display: 'flex', alignItems: 'center', padding: '0 32px', justifyContent: 'space-between' }}>
         <a href="/" style={{ textDecoration: 'none' }}>
-          <img src="/logo.svg" alt="Work Simplr" style={{ height:56,width:'auto',display:'block' }} />
+          <img src="/logo.png" alt="Work Simplr" style={{ height:52,width:'auto',display:'block' }} />
         </a>
         <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.3)', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase' }}>Admin Portal</span>
       </nav>

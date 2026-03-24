@@ -1,3 +1,5 @@
+import AnimatedStats from './components/AnimatedStats';
+
 export default function Home() {
   const SERIF = "'DM Serif Display', serif";
   const useCases = [
@@ -29,7 +31,10 @@ export default function Home() {
                     </g>
                   ))}
                 </svg>), title: 'AI-powered teams execute', desc: 'Vetted operators + AI tools work together on your project.' },
-    { num: '04', icon: '✅', title: 'QA + delivery', desc: 'Every deliverable is reviewed before you receive it. No surprises.' },
+    { num: '04', icon: (<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="22" cy="22" r="18" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
+      <polyline points="13,22 19,29 31,15" stroke="#22C55E" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>), title: 'QA + delivery', desc: 'Every deliverable is reviewed before you receive it. No surprises.' },
   ];
   return (
     <>
@@ -39,7 +44,7 @@ export default function Home() {
             <img src="/logo.png" alt="Work Simplr" style={{ height:52,width:'auto',display:'block' }} />
           </a>
           <div style={{ display:'flex',gap:28 }}>
-            {[['#problem','Problem'],['#solution','Solution'],['#how','How It Works'],['#use-cases','Use Cases'],['/about','About'],['/students','For Students']].map(([h,l]) => (
+            {[['#problem','Why It Works'],['#solution','Platform'],['#how','Process'],['#use-cases','For Teams'],['/about','About'],['/students','For Students']].map(([h,l]) => (
               <a key={h} href={h} style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none' }}>{l}</a>
             ))}
           </div>
@@ -66,13 +71,7 @@ export default function Home() {
             <a href="#how" style={{ padding:'14px 28px',border:'1px solid rgba(255,255,255,0.2)',borderRadius:999,fontSize:'1rem',color:'rgba(255,255,255,0.7)',textDecoration:'none' }}>See how it works</a>
           </div>
           <div style={{ display:'flex',justifyContent:'center',gap:40,marginTop:60,paddingTop:40,borderTop:'1px solid rgba(224,123,57,0.2)' }}>
-            {[['5,000+','Projects Completed'],['98%','Completion Rate'],['2 weeks','Avg Sprint Time']].map(([n,l]) => (
-              <div key={l} style={{ textAlign:'center' }}>
-                <div style={{ fontFamily:SERIF,fontSize:'1.8rem',color:'#F08C4E',marginBottom:4 }}>{n}</div>
-                <div style={{ fontSize:'0.78rem',color:'rgba(255,255,255,0.4)',letterSpacing:'0.5px' }}>{l}</div>
-              </div>
-            ))}
-          </div>
+            <AnimatedStats />          </div>
         </div>
       </section>
 
@@ -254,11 +253,6 @@ export default function Home() {
             ))}
           </div>
 
-          <div style={{ display:'flex',alignItems:'center',justifyContent:'center',gap:8,marginBottom:48 }}>
-            <div style={{ height:1,flex:1,background:'rgba(224,123,57,0.12)',borderRadius:2 }} />
-            <div style={{ fontSize:'0.75rem',fontWeight:700,color:'#E07B39',letterSpacing:'1.5px',textTransform:'uppercase',padding:'6px 18px',border:'1px solid rgba(224,123,57,0.3)',borderRadius:999,background:'rgba(224,123,57,0.06)',whiteSpace:'nowrap' }}>⚡ 28-Day Sprint</div>
-            <div style={{ height:1,flex:1,background:'rgba(224,123,57,0.12)',borderRadius:2 }} />
-          </div>
         </div>
       </section>
 
@@ -308,8 +302,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div style={{ background:'rgba(224,123,57,0.06)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:14,padding:'24px 28px' }}>
-            <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.75)',lineHeight:1.7,fontStyle:'italic',textAlign:'center' }}>Teams need capacity. And for that, they need the work structured.</p>
+          <div style={{ background:'rgba(224,123,57,0.06)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:14,padding:'28px 40px',textAlign:'center' }}>
+            <div style={{ fontFamily:SERIF,fontSize:'clamp(1.4rem,2.5vw,2rem)',color:'white',marginBottom:8,lineHeight:1.3 }}>
+              <em style={{ color:'#F08C4E' }}>74%</em> of projects fail at the definition stage —<br />not the execution.
+            </div>
+            <div style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.4)',marginTop:8 }}>That's the problem Work Simplr was built to solve.</div>
           </div>
         </div>
       </section>
@@ -331,7 +328,6 @@ export default function Home() {
           </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>How It Works</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:12,lineHeight:1.2,textAlign:'center' }}>4 steps to delivered work.</h2>
-          <p style={{ color:'rgba(255,255,255,0.45)',marginBottom:56,fontSize:'0.95rem',textAlign:'center' }}>Submit. Scope. Execute. Deliver.</p>
 
           {/* Visual flow diagram — horizontal node chain */}
           <div style={{ overflowX:'auto', paddingBottom:8, paddingTop:24 }}>
@@ -606,55 +602,36 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Two-column: For Employers + The Issue */}
-          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))',gap:20,marginBottom:40 }}>
+          {/* Two-column: bullets + challenge */}
+          <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:24,marginBottom:40,alignItems:'start' }}>
 
-            {/* For Forward-Thinking Employers */}
+            {/* Left — 4 bullets */}
             <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px' }}>
-              <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>For Forward-Thinking Employers</div>
-              <div style={{ fontFamily:SERIF,fontSize:'1.1rem',color:'white',marginBottom:24,lineHeight:1.4 }}>Who Value Output Over Optics</div>
-              <div style={{ display:'flex',flexDirection:'column',gap:12 }}>
+              <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:24,lineHeight:1.4 }}>For teams who value<br /><em style={{ color:'#F08C4E' }}>output over optics.</em></div>
+              <div style={{ display:'flex',flexDirection:'column',gap:14 }}>
                 {[
                   'Projects completed in weeks, not semesters',
-                  'No HR lift',
-                  'AI-native talent',
-                  'Transparent deliverables',
+                  'No HR lift or added headcount',
+                  'AI-native talent, structured delivery',
+                  'Transparent deliverables — not status updates',
                 ].map(item => (
                   <div key={item} style={{ display:'flex',alignItems:'flex-start',gap:12 }}>
-                    <div style={{ width:20,height:20,borderRadius:'50%',background:'rgba(224,123,57,0.2)',border:'1px solid rgba(224,123,57,0.5)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,marginTop:1 }}>
-                      <span style={{ color:'#E07B39',fontSize:'0.65rem',fontWeight:800 }}>✓</span>
+                    <div style={{ width:18,height:18,borderRadius:'50%',background:'rgba(224,123,57,0.2)',border:'1px solid rgba(224,123,57,0.5)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,marginTop:2 }}>
+                      <span style={{ color:'#E07B39',fontSize:'0.6rem',fontWeight:800 }}>✓</span>
                     </div>
-                    <span style={{ fontSize:'0.925rem',color:'rgba(255,255,255,0.8)',lineHeight:1.5 }}>{item}</span>
+                    <span style={{ fontSize:'0.9rem',color:'rgba(255,255,255,0.8)',lineHeight:1.5 }}>{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* The Overarching Issues */}
-            <div style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:18,padding:'36px 32px' }}>
-              <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.4)',marginBottom:16 }}>The Overarching Issue</div>
-              <p style={{ fontSize:'0.95rem',color:'rgba(255,255,255,0.75)',lineHeight:1.75,marginBottom:24 }}>
-                Companies don't just need "help" — they need work that's been <strong style={{ color:'white' }}>properly scoped, clearly structured, and consistently executed.</strong>
-              </p>
-              <div style={{ borderTop:'1px solid rgba(255,255,255,0.07)',paddingTop:20 }}>
-                <div style={{ fontSize:'0.78rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:14 }}>SprintWork™ Services</div>
-                <div style={{ fontSize:'0.875rem',color:'rgba(255,255,255,0.5)',marginBottom:12,fontStyle:'italic' }}>Whether you're:</div>
-                <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:8 }}>
-                  {[
-                    'Validating a product concept',
-                    'Testing user experience',
-                    'Collecting research data',
-                    'Building technical prototypes',
-                    'Managing campus programs',
-                    'Finding specialized talent',
-                  ].map(item => (
-                    <div key={item} style={{ display:'flex',alignItems:'flex-start',gap:8 }}>
-                      <span style={{ color:'#E07B39',fontSize:'0.7rem',marginTop:3,flexShrink:0 }}>▸</span>
-                      <span style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.65)',lineHeight:1.5 }}>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            {/* Right — challenge question */}
+            <div style={{ display:'flex',flexDirection:'column',justifyContent:'center',padding:'36px 32px' }}>
+              <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:20 }}>The Core Challenge</div>
+              <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.4rem,2.5vw,2rem)',color:'white',lineHeight:1.35,marginBottom:20,fontWeight:400 }}>
+                How do you get quality results from distributed work without adding management overhead?
+              </h3>
+              <p style={{ fontSize:'1rem',color:'#F08C4E',fontWeight:600,marginBottom:0 }}>That's what Work Simplr solves.</p>
             </div>
           </div>
 

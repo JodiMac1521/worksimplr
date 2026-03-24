@@ -462,32 +462,123 @@ export default function Home() {
               </svg>
 
               {/* Dashboard content overlaid on screen */}
-              <div style={{ position:'absolute', top:'5%', left:'7%', right:'7%', bottom:'22%', borderRadius:6, overflow:'hidden', background:'#0A1929' }}>
-                {/* Toolbar */}
-                <div style={{ background:'rgba(255,255,255,0.04)',padding:'7px 14px',display:'flex',alignItems:'center',gap:6,borderBottom:'1px solid rgba(255,255,255,0.07)' }}>
-                  <div style={{ display:'flex',gap:5 }}>
-                    <div style={{ width:9,height:9,borderRadius:'50%',background:'#ff5f57' }} />
-                    <div style={{ width:9,height:9,borderRadius:'50%',background:'#febc2e' }} />
-                    <div style={{ width:9,height:9,borderRadius:'50%',background:'#28c840' }} />
+              <div style={{ position:'absolute', top:'5%', left:'7%', right:'7%', bottom:'22%', borderRadius:6, overflow:'hidden', background:'#0d1117', display:'flex', flexDirection:'column' }}>
+
+                {/* Top nav bar */}
+                <div style={{ background:'#161b22', padding:'6px 12px', display:'flex', alignItems:'center', justifyContent:'space-between', borderBottom:'1px solid rgba(255,255,255,0.07)', flexShrink:0 }}>
+                  <div style={{ display:'flex', alignItems:'center', gap:6 }}>
+                    <div style={{ display:'flex', gap:4 }}>
+                      <div style={{ width:8, height:8, borderRadius:'50%', background:'#ff5f57' }} />
+                      <div style={{ width:8, height:8, borderRadius:'50%', background:'#febc2e' }} />
+                      <div style={{ width:8, height:8, borderRadius:'50%', background:'#28c840' }} />
+                    </div>
+                    <span style={{ fontSize:'0.55rem', color:'#E07B39', fontWeight:700, marginLeft:8, letterSpacing:'0.5px' }}>WorkSimplr</span>
                   </div>
-                  <span style={{ fontSize:'0.65rem',color:'rgba(255,255,255,0.35)',fontWeight:600,letterSpacing:'1px',textTransform:'uppercase',marginLeft:8 }}>Dashboard — Sprint Progress</span>
+                  <div style={{ display:'flex', gap:8, alignItems:'center' }}>
+                    <div style={{ fontSize:'0.5rem', color:'rgba(255,255,255,0.35)', background:'rgba(255,255,255,0.06)', padding:'2px 8px', borderRadius:4 }}>Welcome back, Acme Corp</div>
+                    <div style={{ width:16, height:16, borderRadius:'50%', background:'#E07B39', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'0.45rem', color:'white', fontWeight:700 }}>AC</div>
+                  </div>
                 </div>
-                {/* 4 stat cards */}
-                <div style={{ padding:'14px',display:'grid',gridTemplateColumns:'1fr 1fr',gap:10,height:'calc(100% - 32px)',boxSizing:'border-box' }}>
-                  {[
-                    { label:'Tasks Complete', val:'48 / 60', bar:0.8, color:'#E07B39' },
-                    { label:'QA Passed', val:'98%', bar:0.98, color:'#22C55E' },
-                    { label:'Days Remaining', val:'9 of 28', bar:0.32, color:'#6B8FD4' },
-                    { label:'Team Active', val:'12 workers', bar:1, color:'#E07B39' },
-                  ].map(item => (
-                    <div key={item.label} style={{ background:'rgba(255,255,255,0.04)',borderRadius:8,padding:'10px 12px',border:'1px solid rgba(255,255,255,0.05)' }}>
-                      <div style={{ fontSize:'0.6rem',color:'rgba(255,255,255,0.4)',marginBottom:4,letterSpacing:'0.5px',textTransform:'uppercase' }}>{item.label}</div>
-                      <div style={{ fontSize:'1rem',fontWeight:700,color:'white',marginBottom:8 }}>{item.val}</div>
-                      <div style={{ height:4,background:'rgba(255,255,255,0.07)',borderRadius:2,overflow:'hidden' }}>
-                        <div style={{ height:'100%',width:`${item.bar*100}%`,background:item.color,borderRadius:2 }} />
+
+                {/* Body: sidebar + main */}
+                <div style={{ display:'flex', flex:1, overflow:'hidden' }}>
+
+                  {/* Sidebar */}
+                  <div style={{ width:80, background:'#161b22', borderRight:'1px solid rgba(255,255,255,0.06)', padding:'10px 0', display:'flex', flexDirection:'column', gap:2, flexShrink:0 }}>
+                    {[
+                      { label:'Dashboard', active:true },
+                      { label:'Projects', active:false },
+                      { label:'Status', active:false },
+                      { label:'Payments', active:false },
+                      { label:'New Sprint', active:false },
+                    ].map(item => (
+                      <div key={item.label} style={{ padding:'5px 8px', fontSize:'0.45rem', color: item.active ? '#E07B39' : 'rgba(255,255,255,0.35)', background: item.active ? 'rgba(224,123,57,0.1)' : 'transparent', borderLeft: item.active ? '2px solid #E07B39' : '2px solid transparent', fontWeight: item.active ? 700 : 400 }}>
+                        {item.label}
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Main content */}
+                  <div style={{ flex:1, padding:'8px', overflow:'hidden', display:'flex', flexDirection:'column', gap:6 }}>
+
+                    {/* Top stat cards */}
+                    <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:5 }}>
+                      {[
+                        { label:'Total Savings', val:'$12,500' },
+                        { label:'Hours Back', val:'144' },
+                        { label:'Total Spend', val:'$38,500' },
+                        { label:'Completed', val:'29' },
+                      ].map(s => (
+                        <div key={s.label} style={{ background:'rgba(255,255,255,0.04)', borderRadius:4, padding:'5px 6px', border:'1px solid rgba(255,255,255,0.06)' }}>
+                          <div style={{ fontSize:'0.42rem', color:'rgba(255,255,255,0.35)', marginBottom:2 }}>{s.label}</div>
+                          <div style={{ fontSize:'0.7rem', fontWeight:700, color:'white' }}>{s.val}</div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Charts row */}
+                    <div style={{ display:'grid', gridTemplateColumns:'1fr 1.6fr 1fr', gap:5, flex:1 }}>
+
+                      {/* Donut chart */}
+                      <div style={{ background:'rgba(255,255,255,0.03)', borderRadius:4, padding:'6px', border:'1px solid rgba(255,255,255,0.06)' }}>
+                        <div style={{ fontSize:'0.45rem', color:'rgba(255,255,255,0.5)', marginBottom:4, fontWeight:600 }}>Progress</div>
+                        <svg viewBox="0 0 60 60" style={{ width:'100%', maxHeight:52 }}>
+                          <circle cx="30" cy="30" r="22" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="8"/>
+                          <circle cx="30" cy="30" r="22" fill="none" stroke="#E07B39" strokeWidth="8" strokeDasharray="87 51" strokeDashoffset="17" strokeLinecap="round"/>
+                          <circle cx="30" cy="30" r="22" fill="none" stroke="#22C55E" strokeWidth="8" strokeDasharray="22 116" strokeDashoffset="-70" strokeLinecap="round"/>
+                          <circle cx="30" cy="30" r="22" fill="none" stroke="#6B8FD4" strokeWidth="8" strokeDasharray="30 108" strokeDashoffset="-92" strokeLinecap="round"/>
+                          <text x="30" y="33" textAnchor="middle" fontSize="7" fontWeight="700" fill="white">61%</text>
+                        </svg>
+                        <div style={{ display:'flex', flexDirection:'column', gap:2, marginTop:2 }}>
+                          {[['#E07B39','Completed 61%'],['#22C55E','On Track 35%'],['#6B8FD4','Behind 4%']].map(([c,l]) => (
+                            <div key={l} style={{ display:'flex', alignItems:'center', gap:3, fontSize:'0.38rem', color:'rgba(255,255,255,0.45)' }}>
+                              <div style={{ width:5, height:5, borderRadius:1, background:c }} />{l}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Bar chart — projects per month */}
+                      <div style={{ background:'rgba(255,255,255,0.03)', borderRadius:4, padding:'6px', border:'1px solid rgba(255,255,255,0.06)' }}>
+                        <div style={{ fontSize:'0.45rem', color:'rgba(255,255,255,0.5)', marginBottom:4, fontWeight:600 }}>Sprints per Month</div>
+                        <div style={{ display:'flex', alignItems:'flex-end', gap:3, height:52, paddingBottom:2 }}>
+                          {[8,12,6,14,10,18,15,22,20,28,24,20].map((h,i) => (
+                            <div key={i} style={{ flex:1, background: i===11 ? '#E07B39' : i > 8 ? '#0A2342' : 'rgba(255,255,255,0.15)', height:`${(h/28)*100}%`, borderRadius:'1px 1px 0 0', minWidth:3 }} />
+                          ))}
+                        </div>
+                        <div style={{ display:'flex', justifyContent:'space-between', marginTop:2 }}>
+                          {['J','F','M','A','M','J','J','A','S','O','N','D'].map(m => (
+                            <div key={m} style={{ flex:1, fontSize:'0.35rem', color:'rgba(255,255,255,0.25)', textAlign:'center' }}>{m}</div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Students / workers map placeholder */}
+                      <div style={{ background:'rgba(255,255,255,0.03)', borderRadius:4, padding:'6px', border:'1px solid rgba(255,255,255,0.06)' }}>
+                        <div style={{ fontSize:'0.45rem', color:'rgba(255,255,255,0.5)', marginBottom:4, fontWeight:600 }}>Worker Locations</div>
+                        <svg viewBox="0 0 80 54" style={{ width:'100%' }}>
+                          <rect x="0" y="0" width="80" height="54" rx="2" fill="rgba(255,255,255,0.04)"/>
+                          {/* Simple US outline suggestion */}
+                          <path d="M10 15 L70 15 L72 38 L60 42 L50 40 L30 42 L15 40 L8 35 Z" fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="0.8"/>
+                          {/* dots */}
+                          {[[22,22],[38,20],[50,25],[58,28],[30,30],[45,32],[20,32]].map(([x,y],i) => (
+                            <circle key={i} cx={x} cy={y} r="2.5" fill="#E07B39" opacity="0.8"/>
+                          ))}
+                        </svg>
+                        <div style={{ fontSize:'0.38rem', color:'rgba(255,255,255,0.3)', marginTop:2 }}>24 active states</div>
                       </div>
                     </div>
-                  ))}
+
+                    {/* Bottom sprint progress bar */}
+                    <div style={{ background:'rgba(255,255,255,0.03)', borderRadius:4, padding:'5px 8px', border:'1px solid rgba(255,255,255,0.06)', display:'flex', alignItems:'center', gap:8 }}>
+                      <div style={{ fontSize:'0.45rem', color:'rgba(255,255,255,0.5)', fontWeight:600, whiteSpace:'nowrap' }}>Active Sprint</div>
+                      <div style={{ flex:1, height:4, background:'rgba(255,255,255,0.07)', borderRadius:2, overflow:'hidden' }}>
+                        <div style={{ width:'80%', height:'100%', background:'linear-gradient(90deg,#E07B39,#F08C4E)', borderRadius:2 }} />
+                      </div>
+                      <div style={{ fontSize:'0.45rem', color:'#E07B39', fontWeight:700, whiteSpace:'nowrap' }}>48/60 tasks</div>
+                      <div style={{ fontSize:'0.45rem', color:'rgba(255,255,255,0.35)', whiteSpace:'nowrap' }}>9 days left</div>
+                    </div>
+                  </div>
                 </div>
               </div>
               </div>

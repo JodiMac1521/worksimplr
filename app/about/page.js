@@ -135,10 +135,10 @@ export default function AboutPage() {
             },
             {
               img: '/headshot-eric.png',
-              name: 'Eric H.',
-              title: 'Client Partner, U.S. News & World Report',
-              bio: '"Work Simplr successfully processed over 180,000 pieces of data in just three weeks using a coordinated team of 60 students. The work was accurate, well-managed, and delivered on schedule."',
-              isQuote: true,
+              name: 'Eric Severson',
+              title: 'Chief Operating Officer',
+              bio: '30+ years in EdTech building and managing $1B in sales and revenue operations. Eric brings deep expertise in sales ops, data ops, and scaling go-to-market teams — the operational backbone behind how Work Simplr delivers at scale.',
+              isQuote: false,
             },
           ].map(person => (
             <div key={person.name} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 20, padding: '36px 32px', maxWidth: 400, width: '100%' }}>

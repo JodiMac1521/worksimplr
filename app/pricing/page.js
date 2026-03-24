@@ -4,63 +4,58 @@ const SERIF = "'DM Serif Display', serif";
 
 const plans = [
   {
-    name: 'Starter Sprint',
+    name: 'Starter',
+    tagline: 'Launch your first SprintWork™ experience.',
     price: '$2,500',
-    per: 'per sprint',
+    per: 'starting at',
     desc: 'Perfect for validating a single project or workflow with a small team.',
     highlight: false,
     features: [
-      'One 28-day sprint',
-      'Up to 3 Sprint-Terns™',
-      'AI-scoped project brief',
-      'Weekly milestone check-ins',
-      'QA review before delivery',
-      '1 revision round',
+      '1 project',
+      'Up to 5 Sprint-Terns™',
+      'Ready-to-use project templates',
+      'Core platform access',
+      'Basic reporting',
     ],
     cta: 'Start a Sprint',
     href: '/register?role=employer',
   },
   {
     name: 'Growth',
-    price: '$6,500',
-    per: 'per sprint',
-    desc: 'For teams running ongoing work across multiple workstreams.',
+    tagline: 'Scale across programs.',
+    price: '$7,500',
+    per: 'starting at',
+    desc: 'For teams running ongoing work across multiple projects and cohorts.',
     highlight: true,
     badge: 'Most Popular',
     features: [
-      'One 28-day sprint',
-      'Up to 10 Sprint-Terns™',
-      'AI scoping + project manager',
-      'Bi-weekly stakeholder syncs',
-      'Full QA + delivery report',
-      '2 revision rounds',
-      'Accredible credentials for team',
-      'Priority talent matching',
+      'Multiple projects + cohorts',
+      'Up to 10 Sprint-Terns™ per project',
+      'Employer collaboration tools',
+      'Custom project support',
+      'Outcomes tracking + analytics',
     ],
     cta: 'Start a Sprint',
     href: '/register?role=employer',
   },
   {
     name: 'Enterprise',
+    tagline: 'Build workforce infrastructure.',
     price: 'Custom',
-    per: 'contact us',
-    desc: 'For organizations running multiple sprints, campus programs, or workforce pipelines.',
+    per: 'pricing',
+    desc: 'For organizations running multi-program or multi-site workforce pipelines.',
     highlight: false,
     features: [
-      'Unlimited sprint capacity',
-      '10–100+ Sprint-Terns™',
-      'Dedicated account manager',
-      'Custom scoping workflow',
-      'SLA-backed delivery',
-      'Branded credential program',
-      'School partner integration',
-      'Quarterly impact reports',
+      'Multi-program or multi-site rollout',
+      'Employer network integration',
+      'Advanced reporting + integrations',
+      'Custom workflows + API access',
+      'Dedicated onboarding + support',
     ],
     cta: 'Contact Sales',
     href: 'mailto:hello@worksimplr.com',
   },
 ];
-
 const faqs = [
   { q: 'What exactly is a "sprint"?', a: 'A sprint is a 28-day structured engagement where a team of vetted Sprint-Terns™ executes a scoped project and delivers a finished output — not a status update.' },
   { q: 'How does AI scoping work?', a: 'When you submit a project, our SprintWork™ AI classifies the work, defines deliverables, estimates team size, and produces a brief — in minutes. You approve it before any work starts.' },
@@ -117,10 +112,11 @@ export default function PricingPage() {
                   {plan.badge}
                 </div>
               )}
-              <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: plan.highlight ? '#E07B39' : 'rgba(255,255,255,0.4)', marginBottom: 12 }}>{plan.name}</div>
+              <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: plan.highlight ? '#E07B39' : 'rgba(255,255,255,0.4)', marginBottom: 8 }}>{plan.name}</div>
+              <div style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', marginBottom: 12, lineHeight: 1.4, fontStyle: 'italic' }}>{plan.tagline}</div>
               <div style={{ marginBottom: 6 }}>
+                <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.35)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: 4 }}>{plan.per}</div>
                 <span style={{ fontFamily: SERIF, fontSize: 'clamp(2rem,4vw,2.8rem)', color: 'white', fontWeight: 400 }}>{plan.price}</span>
-                <span style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.35)', marginLeft: 8 }}>{plan.per}</span>
               </div>
               <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.65, marginBottom: 28, minHeight: 48 }}>{plan.desc}</p>
 

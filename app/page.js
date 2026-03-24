@@ -394,7 +394,7 @@ export default function Home() {
 
                 {/* ROW 1 */}
                 <rect x="20" y="30" width="160" height="52" rx="10" fill="#16a34a" stroke="#22c55e" strokeWidth="1.5"/>
-                <text x="100" y="51" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.9)" fontFamily="DM Sans,sans-serif">📥 Project Intake</text>
+                <text x="100" y="51" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.9)" fontFamily="DM Sans,sans-serif">Project Intake</text>
                 <text x="100" y="68" textAnchor="middle" fontSize="10" fill="rgba(255,255,255,0.6)" fontFamily="DM Sans,sans-serif">Client submits work</text>
 
                 <path d="M180 56 L225 56" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)"/>
@@ -406,7 +406,7 @@ export default function Home() {
                 <path d="M435 56 L480 56" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)"/>
 
                 <rect x="480" y="30" width="160" height="52" rx="10" fill="#E07B39"/>
-                <text x="560" y="51" textAnchor="middle" fontSize="12" fontWeight="700" fill="white" fontFamily="DM Sans,sans-serif">🎯 TalentOS</text>
+                <text x="560" y="51" textAnchor="middle" fontSize="12" fontWeight="700" fill="white" fontFamily="DM Sans,sans-serif">TalentOS</text>
                 <text x="560" y="68" textAnchor="middle" fontSize="10" fill="rgba(255,255,255,0.8)" fontFamily="DM Sans,sans-serif">Worker matching</text>
 
                 {/* DOTTED LINES: Row 1 → Row 2 */}
@@ -416,13 +416,13 @@ export default function Home() {
 
                 {/* ROW 2 */}
                 <rect x="20" y="140" width="190" height="44" rx="9" fill="rgba(224,123,57,0.08)" stroke="rgba(224,123,57,0.4)" strokeWidth="1.5"/>
-                <text x="115" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">🧩 Talent Matching</text>
+                <text x="115" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">Talent Matching</text>
 
                 <rect x="235" y="140" width="190" height="44" rx="9" fill="rgba(224,123,57,0.08)" stroke="rgba(224,123,57,0.4)" strokeWidth="1.5"/>
-                <text x="330" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">⚙️ Workflow Automation</text>
+                <text x="330" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">Workflow Automation</text>
 
                 <rect x="450" y="140" width="190" height="44" rx="9" fill="rgba(224,123,57,0.08)" stroke="rgba(224,123,57,0.4)" strokeWidth="1.5"/>
-                <text x="545" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">📊 Performance Analytics</text>
+                <text x="545" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">Performance Analytics</text>
 
                 {/* Arrow down to dashboard */}
                 <path d="M330 184 L330 214" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)" opacity="0.7"/>

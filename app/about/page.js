@@ -87,7 +87,7 @@ export default function AboutPage() {
           {[
             { label: 'Staffing agencies', vs: 'Place people\nYou manage the work', us: 'We scope, structure\n& deliver outcomes' },
             { label: 'Freelance platforms', vs: 'Browse profiles\nHope for the best', us: 'AI-scoped briefs\n28-day sprint delivery' },
-            { label: 'University programs', vs: 'Semester timelines\nAcademic outputs', us: 'Business deliverables\nin 2–4 weeks' },
+            { label: 'AI alone', vs: 'Time training models\nRisk without audit\nNo repeatability', us: 'Workflow documentation\naudit trail + compounding\noperational knowledge' },
           ].map(c => (
             <div key={c.label} style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)' }}>
               <div style={{ background: 'rgba(255,255,255,0.04)', padding: '12px 20px', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>{c.label}</div>
@@ -115,6 +115,49 @@ export default function AboutPage() {
               <img key={src} src={src} alt="" style={{ height: 32, width: 'auto', opacity: 0.6, filter: 'brightness(1.2)', objectFit: 'contain' }} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section style={{ padding: '72px 24px', maxWidth: 860, margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: 48 }}>
+          <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16 }}>The Team</div>
+          <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.2rem)', fontWeight: 400 }}>The people behind SprintWork™</h2>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 32, justifyItems: 'center' }}>
+          {[
+            {
+              img: '/headshot-jodi.jpg',
+              name: 'Jodi Mac',
+              title: 'Founder & CEO',
+              bio: '30+ years in EdTech, including scaling products at Pearson. Jodi built Work Simplr after watching organizations consistently fail at the same place — not execution, but definition. She bootstrapped the company for 3.5 years before raising from Techstars and Gener8tor.',
+              linkedin: 'https://linkedin.com/in/jodimac',
+            },
+            {
+              img: '/headshot-eric.png',
+              name: 'Eric H.',
+              title: 'Client Partner, U.S. News & World Report',
+              bio: '"Work Simplr successfully processed over 180,000 pieces of data in just three weeks using a coordinated team of 60 students. The work was accurate, well-managed, and delivered on schedule."',
+              isQuote: true,
+            },
+          ].map(person => (
+            <div key={person.name} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 20, padding: '36px 32px', maxWidth: 400, width: '100%' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
+                <img
+                  src={person.img}
+                  alt={person.name}
+                  style={{ width: 72, height: 72, borderRadius: '50%', objectFit: 'cover', flexShrink: 0, border: '2px solid rgba(224,123,57,0.4)' }}
+                />
+                <div>
+                  <div style={{ fontWeight: 700, color: 'white', fontSize: '1.05rem', marginBottom: 4 }}>{person.name}</div>
+                  <div style={{ fontSize: '0.82rem', color: '#E07B39', fontWeight: 500 }}>{person.title}</div>
+                </div>
+              </div>
+              <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, fontStyle: person.isQuote ? 'italic' : 'normal', margin: 0 }}>
+                {person.bio}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 

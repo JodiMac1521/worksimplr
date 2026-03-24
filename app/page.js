@@ -1,5 +1,3 @@
-export const dynamic = 'force-dynamic';
-
 export default function Home() {
   const SERIF = "'DM Serif Display', serif";
   const useCases = [

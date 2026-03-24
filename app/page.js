@@ -1,16 +1,11 @@
 export default function Home() {
   const SERIF = "'DM Serif Display', serif";
   const useCases = [
-    { icon: (<svg width='32' height='32' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='14' width='36' height='26' rx='4' fill='none' stroke='rgba(255,255,255,0.8)' strokeWidth='2'/><rect x='4' y='14' width='16' height='8' rx='2' fill='rgba(224,123,57,0.3)' stroke='rgba(224,123,57,0.7)' strokeWidth='1.5'/><line x1='10' y1='26' x2='34' y2='26' stroke='rgba(255,255,255,0.4)' strokeWidth='1.5'/><line x1='10' y1='32' x2='28' y2='32' stroke='rgba(255,255,255,0.25)' strokeWidth='1.2'/></svg>), title: 'Data Cleanup & Structuring', desc: 'Messy databases, spreadsheets, and records — cleaned, labeled, and structured.', slug: 'data-cleanup', stat: '200K', statLabel: 'Data Points', client: 'U.S. News & World Report' },
-    { icon: (<svg width='32' height='32' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'><path d='M16 6 L16 26 L8 38 L36 38 L28 26 L28 6' fill='none' stroke='rgba(255,255,255,0.8)' strokeWidth='2' strokeLinejoin='round'/><line x1='13' y1='6' x2='31' y2='6' stroke='rgba(255,255,255,0.8)' strokeWidth='2'/><ellipse cx='22' cy='33' rx='6' ry='3' fill='rgba(34,197,94,0.35)' stroke='rgba(34,197,94,0.7)' strokeWidth='1.2'/></svg>), title: 'User Testing', desc: '10–200 users recruited and tested in weeks, not months.', slug: 'user-testing', stat: '10 wks', statLabel: 'Kickoff to results', client: 'MacMillan Learning' },
-    { icon: (<svg width='32' height='32' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'><rect x='6' y='28' width='8' height='12' rx='2' fill='rgba(224,123,57,0.7)'/><rect x='18' y='18' width='8' height='22' rx='2' fill='rgba(255,255,255,0.6)'/><rect x='30' y='10' width='8' height='30' rx='2' fill='rgba(224,123,57,0.9)'/><line x1='4' y1='40' x2='40' y2='40' stroke='rgba(255,255,255,0.3)' strokeWidth='1.5'/></svg>), title: 'Market Research & Intelligence', desc: 'Competitive analysis, pricing research, and market mapping — delivered as a document.', slug: 'market-research', stat: '$3.5K', statLabel: 'All-in project cost', client: 'Gates Foundation' },
-    { icon: (<svg width='32' height='32' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'><path d='M8 22 A14 14 0 0 1 36 22' fill='none' stroke='rgba(255,255,255,0.8)' strokeWidth='2' strokeLinecap='round'/><polygon points='36,16 40,24 32,24' fill='rgba(255,255,255,0.8)'/><path d='M36 22 A14 14 0 0 1 8 22' fill='none' stroke='rgba(224,123,57,0.8)' strokeWidth='2' strokeLinecap='round'/><polygon points='8,28 4,20 12,20' fill='rgba(224,123,57,0.8)'/></svg>), title: 'CRM Cleanup & Enrichment', desc: 'Contacts verified, enriched, and ready to use.', slug: 'campus-marketing', stat: '75%', statLabel: 'Conversion rate', client: 'Acadeum' },
-    { icon: (<svg width='32' height='32' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'><rect x='8' y='14' width='28' height='22' rx='5' fill='none' stroke='rgba(255,255,255,0.8)' strokeWidth='2'/><circle cx='16' cy='24' r='3' fill='rgba(224,123,57,0.8)'/><circle cx='28' cy='24' r='3' fill='rgba(224,123,57,0.8)'/><line x1='18' y1='32' x2='26' y2='32' stroke='rgba(255,255,255,0.5)' strokeWidth='2' strokeLinecap='round'/><line x1='22' y1='6' x2='22' y2='14' stroke='rgba(255,255,255,0.6)' strokeWidth='2'/><circle cx='22' cy='5' r='2.5' fill='rgba(255,255,255,0.5)'/></svg>), title: 'AI Workflow Setup', desc: 'Prompts built, tools configured, workflows tested and handed off.', slug: 'ai-development', stat: '4 wks', statLabel: 'Working prototype', client: 'Select Partner' },
-    { icon: (<svg width="36" height="36" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="22,2 42,22 22,42 2,22" fill="none" stroke="rgba(224,123,57,0.9)" strokeWidth="2"/>
-      <polygon points="22,8 36,22 22,36 8,22" fill="rgba(224,123,57,0.12)" stroke="rgba(224,123,57,0.5)" strokeWidth="1.5"/>
-      <text x="22" y="27" textAnchor="middle" fontSize="13" fontWeight="800" fill="white" fontFamily="DM Sans,sans-serif">J</text>
-    </svg>), title: 'The Wildcard', desc: 'Clean up unwanted and high impact backlog in multiple categories with a Sprint-Tern™ team.', slug: 'wildcard', stat: 'Any', statLabel: 'Category, any size', client: 'Work Simplr' },
+    { icon: '🗂️', title: 'Data Cleanup & Structuring', desc: 'Messy databases, spreadsheets, and records — cleaned, labeled, and structured.' },
+    { icon: '🧪', title: 'User Testing', desc: '10–200 users recruited and tested in weeks, not months.' },
+    { icon: '📊', title: 'Market Research & Intelligence', desc: 'Competitive analysis, pricing research, and market mapping — delivered as a document.' },
+    { icon: '🔄', title: 'CRM Cleanup & Enrichment', desc: 'Contacts verified, enriched, and ready to use.' },
+    { icon: '🤖', title: 'AI Workflow Setup', desc: 'Prompts built, tools configured, workflows tested and handed off.' },
   ];
   const steps = [
     { num: '01', icon: (<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
@@ -26,17 +21,11 @@ export default function Home() {
                   ))}
                 </svg>), title: 'Submit your work', desc: 'Describe what you need in plain language. No scope doc required.' },
     { num: '02', icon: '⚡', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it — in minutes.' },
-    { num: '03', icon: (<svg width="80" height="48" viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
-                  {[0,1,2,3,4].map(i => (
-                    <g key={i} transform={`translate(${i*19+2},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="8" cy="7" r="5"/>
-                      <path d="M0 24 C0 16 16 16 16 24"/>
-                    </g>
-                  ))}
-                  {[0,1,2,3,4].map(i => (
-                    <g key={`b${i}`} transform={`translate(${i*19+2},26)`} fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="8" cy="7" r="5"/>
-                      <path d="M0 24 C0 16 16 16 16 24"/>
+    { num: '03', icon: (<svg width="60" height="44" viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  {[0,1,2,3].map(i => (
+                    <g key={i} transform={`translate(${i*28+6},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="9" cy="8" r="6"/>
+                      <path d="M0 28 C0 18 18 18 18 28"/>
                     </g>
                   ))}
                 </svg>), title: 'AI-powered teams execute', desc: 'Vetted operators + AI tools work together on your project.' },
@@ -88,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* ── SOCIAL PROOF ── */}
-      <section style={{ background:'#081A30', padding:'52px 24px 60px', borderBottom:'1px solid rgba(255,255,255,0.06)', borderTop:'1px solid rgba(255,255,255,0.06)' }}>
+      <section style={{ background:'#081A30', padding:'72px 24px 80px', borderBottom:'1px solid rgba(255,255,255,0.06)', borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:1080, margin:'0 auto' }}>
 
           {/* Heading */}
@@ -207,7 +196,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="solution" style={{ background:'#0A2342',padding:'68px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
+      <section id="solution" style={{ background:'#0A2342',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:1060,margin:'0 auto' }}>
           <div style={{ display:'flex',alignItems:'center',gap:16,marginBottom:40 }}>
             <div style={{ flex:1,height:'1px',background:'linear-gradient(to right,transparent,rgba(255,255,255,0.08))' }} />
@@ -215,40 +204,39 @@ export default function Home() {
             <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
           </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Solution</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2.2rem,4vw,3.2rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWork™</em></h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWork™</em></h2>
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7,textAlign:'center' }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
 
           <div style={{ display:'flex',alignItems:'stretch',gap:0,paddingTop:24,marginBottom:40 }}>
             {[
-              { num:'1', icon:(<svg width="88" height="44" viewBox="0 0 176 60" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
-                  <rect x="2" y="14" width="46" height="32" rx="6" fill="rgba(224,123,57,0.15)" stroke="rgba(224,123,57,0.9)" strokeWidth="2"/>
-                  <line x1="12" y1="25" x2="38" y2="25" stroke="rgba(224,123,57,0.6)" strokeWidth="1.5"/>
-                  <line x1="12" y1="32" x2="32" y2="32" stroke="rgba(224,123,57,0.35)" strokeWidth="1.2"/>
-                  <line x1="12" y1="39" x2="35" y2="39" stroke="rgba(224,123,57,0.2)" strokeWidth="1"/>
-                  <line x1="48" y1="30" x2="64" y2="30" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8"/>
-                  <polygon points="66,30 60,26 60,34" fill="rgba(255,255,255,0.6)"/>
-                  <rect x="66" y="14" width="42" height="32" rx="6" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
-                  <line x1="76" y1="25" x2="98" y2="25" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
-                  <line x1="76" y1="32" x2="94" y2="32" stroke="rgba(255,255,255,0.22)" strokeWidth="1.2"/>
-                  <line x1="76" y1="39" x2="96" y2="39" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
-                  <line x1="108" y1="30" x2="124" y2="30" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8"/>
-                  <polygon points="126,30 120,26 120,34" fill="rgba(255,255,255,0.6)"/>
-                  <rect x="126" y="14" width="48" height="32" rx="6" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
-                  <line x1="136" y1="25" x2="164" y2="25" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
-                  <line x1="136" y1="32" x2="158" y2="32" stroke="rgba(255,255,255,0.22)" strokeWidth="1.2"/>
-                  <line x1="136" y1="39" x2="161" y2="39" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
+              { num:'1', icon:(<svg width="88" height="52" viewBox="0 0 176 72" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  {/* Box 1 — orange */}
+                  <rect x="2" y="20" width="44" height="32" rx="6" fill="rgba(224,123,57,0.12)" stroke="rgba(224,123,57,0.9)" strokeWidth="2"/>
+                  <line x1="11" y1="31" x2="37" y2="31" stroke="rgba(224,123,57,0.6)" strokeWidth="1.5"/>
+                  <line x1="11" y1="38" x2="30" y2="38" stroke="rgba(224,123,57,0.35)" strokeWidth="1.2"/>
+                  <line x1="11" y1="44" x2="33" y2="44" stroke="rgba(224,123,57,0.2)" strokeWidth="1"/>
+                  {/* Arrow 1→2 */}
+                  <line x1="46" y1="36" x2="64" y2="36" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8"/>
+                  <polygon points="66,36 60,32 60,40" fill="rgba(255,255,255,0.6)"/>
+                  {/* Box 2 — white */}
+                  <rect x="66" y="20" width="44" height="32" rx="6" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
+                  <line x1="75" y1="31" x2="101" y2="31" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
+                  <line x1="75" y1="38" x2="94" y2="38" stroke="rgba(255,255,255,0.22)" strokeWidth="1.2"/>
+                  <line x1="75" y1="44" x2="97" y2="44" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
+                  {/* Arrow 2→3 */}
+                  <line x1="110" y1="36" x2="128" y2="36" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8"/>
+                  <polygon points="130,36 124,32 124,40" fill="rgba(255,255,255,0.6)"/>
+                  {/* Box 3 — white */}
+                  <rect x="130" y="20" width="44" height="32" rx="6" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
+                  <line x1="139" y1="31" x2="165" y2="31" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
+                  <line x1="139" y1="38" x2="158" y2="38" stroke="rgba(255,255,255,0.22)" strokeWidth="1.2"/>
+                  <line x1="139" y1="44" x2="161" y2="44" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
                 </svg>), title:'Structured Workflow', desc:"Each engagement is 'projectized' with a clear scope, milestones & tasks." },
-              { num:'2', icon: (<svg width="80" height="48" viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
-                  {[0,1,2,3,4].map(i => (
-                    <g key={i} transform={`translate(${i*19+2},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="8" cy="7" r="5"/>
-                      <path d="M0 24 C0 16 16 16 16 24"/>
-                    </g>
-                  ))}
-                  {[0,1,2,3,4].map(i => (
-                    <g key={`b${i}`} transform={`translate(${i*19+2},26)`} fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="8" cy="7" r="5"/>
-                      <path d="M0 24 C0 16 16 16 16 24"/>
+              { num:'2', icon: (<svg width="60" height="44" viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  {[0,1,2,3].map(i => (
+                    <g key={i} transform={`translate(${i*28+6},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="9" cy="8" r="6"/>
+                      <path d="M0 28 C0 18 18 18 18 28"/>
                     </g>
                   ))}
                 </svg>), title:'Execution plans', desc:'We onboard and distribute the work across 1–100 workers with QA built in.' },
@@ -274,7 +262,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="problem" style={{ background:'#081A30',padding:'68px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
+      <section id="problem" style={{ background:'#081A30',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           <div style={{ display:'flex',alignItems:'center',gap:16,marginBottom:40 }}>
             <div style={{ flex:1,height:'1px',background:'linear-gradient(to right,transparent,rgba(255,255,255,0.08))' }} />
@@ -282,7 +270,7 @@ export default function Home() {
             <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
           </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Problem</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2.2rem,4vw,3.2rem)',color:'white',marginBottom:20,lineHeight:1.2,textAlign:'center' }}>Most work doesn't fail<br />because of talent.</h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:20,lineHeight:1.2,textAlign:'center' }}>Most work doesn't fail<br />because of talent.</h2>
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520,textAlign:'center',margin:'0 auto 40px' }}>It fails because it's poorly defined before anyone starts.</p>
           <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16,marginBottom:40,maxWidth:780,margin:'0 auto 40px' }}>
             {[
@@ -313,8 +301,8 @@ export default function Home() {
                 </svg>)
               },
             ].map(item => (
-              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'28px 20px',textAlign:'center' }}>
-                <div style={{ display:'flex',justifyContent:'center',marginBottom:14 }}>{item.icon}</div>
+              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px',textAlign:'center' }}>
+                <div style={{ display:'flex',justifyContent:'center',marginBottom:12 }}>{item.icon}</div>
                 <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.95rem' }}>{item.label}</div>
                 <div style={{ fontSize:'0.85rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{item.desc}</div>
               </div>
@@ -326,7 +314,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how" style={{ background:'#0A2342',padding:'68px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
+      <section id="how" style={{ background:'#0A2342',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           {/* Left-justified header */}
 
@@ -342,7 +330,7 @@ export default function Home() {
             <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
           </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>How It Works</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2.2rem,4vw,3.2rem)',color:'white',marginBottom:12,lineHeight:1.2,textAlign:'center' }}>4 steps to delivered work.</h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:12,lineHeight:1.2,textAlign:'center' }}>4 steps to delivered work.</h2>
           <p style={{ color:'rgba(255,255,255,0.45)',marginBottom:56,fontSize:'0.95rem',textAlign:'center' }}>Submit. Scope. Execute. Deliver.</p>
 
           {/* Visual flow diagram — horizontal node chain */}
@@ -511,7 +499,7 @@ export default function Home() {
 
 
       {/* ── WHY NOW ── */}
-      <section style={{ background:'#081A30',padding:'68px 24px',position:'relative',overflow:'hidden',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
+      <section style={{ background:'#081A30',padding:'96px 24px',position:'relative',overflow:'hidden',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         {/* subtle bg glow */}
         <div style={{ position:'absolute',top:-120,right:-120,width:480,height:480,background:'radial-gradient(circle,rgba(224,123,57,0.1) 0%,transparent 70%)',pointerEvents:'none' }} />
         <div style={{ maxWidth:1020,margin:'0 auto',position:'relative',zIndex:1 }}>
@@ -519,7 +507,7 @@ export default function Home() {
           {/* Top eyebrow + headline */}
           <div style={{ textAlign:'center',marginBottom:64 }}>
             <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>Why Now?</div>
-            <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2.2rem,4vw,3.3rem)',color:'white',marginBottom:20,lineHeight:1.2,fontWeight:400 }}>
+            <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,3rem)',color:'white',marginBottom:20,lineHeight:1.2,fontWeight:400 }}>
               Built for forward-thinking employers<br /><em style={{ color:'#F08C4E' }}>done with broken internships.</em>
             </h2>
             <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.55)',maxWidth:600,margin:'0 auto',lineHeight:1.75 }}>
@@ -600,48 +588,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="use-cases" style={{ background:'#081A30',padding:'68px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
+      <section id="use-cases" style={{ background:'#081A30',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>Use Cases</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2.2rem,4vw,3.2rem)',color:'white',marginBottom:48,lineHeight:1.2,textAlign:'center' }}>Work we execute every week.</h2>
-          {/* Row 1: 3 cards */}
-          <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16,marginBottom:16 }}>
-            {useCases.slice(0,3).map(uc => (
-              <a key={uc.title} href={`/use-cases/${uc.slug}`} style={{ textDecoration:'none',display:'block',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px',transition:'border-color 0.2s',cursor:'pointer',textAlign:'center' }}
-                onMouseEnter={e=>e.currentTarget.style.borderColor='rgba(224,123,57,0.4)'}
-                onMouseLeave={e=>e.currentTarget.style.borderColor='rgba(255,255,255,0.08)'}>
-                {/* Stat on top */}
-                <div style={{ fontSize:'1.6rem',fontWeight:800,color:'#E07B39',fontFamily:'DM Sans,sans-serif',marginBottom:2 }}>{uc.stat}</div>
-                <div style={{ fontSize:'0.65rem',color:'rgba(255,255,255,0.35)',letterSpacing:'1px',textTransform:'uppercase',marginBottom:16 }}>{uc.statLabel}</div>
-                <div style={{ display:'flex',justifyContent:'center',marginBottom:10 }}>{uc.icon}</div>
-                <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.88rem' }}>{uc.title}</div>
-                <div style={{ fontSize:'0.78rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6,marginBottom:14 }}>{uc.desc}</div>
-                <div style={{ fontSize:'0.7rem',color:'rgba(224,123,57,0.7)',fontWeight:600 }}>{uc.client} →</div>
-              </a>
-            ))}
-          </div>
-          {/* Row 2: 2 cards centered */}
-          <div style={{ display:'flex',justifyContent:'center',gap:16 }}>
-            {useCases.slice(3).map(uc => (
-              <a key={uc.title} href={`/use-cases/${uc.slug}`} style={{ textDecoration:'none',display:'block',width:'calc(33.333% - 8px)',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px',transition:'border-color 0.2s',cursor:'pointer',textAlign:'center' }}
-                onMouseEnter={e=>e.currentTarget.style.borderColor='rgba(224,123,57,0.4)'}
-                onMouseLeave={e=>e.currentTarget.style.borderColor='rgba(255,255,255,0.08)'}>
-                <div style={{ fontSize:'1.6rem',fontWeight:800,color:'#E07B39',fontFamily:'DM Sans,sans-serif',marginBottom:2 }}>{uc.stat}</div>
-                <div style={{ fontSize:'0.65rem',color:'rgba(255,255,255,0.35)',letterSpacing:'1px',textTransform:'uppercase',marginBottom:16 }}>{uc.statLabel}</div>
-                <div style={{ display:'flex',justifyContent:'center',marginBottom:10 }}>{uc.icon}</div>
-                <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.88rem' }}>{uc.title}</div>
-                <div style={{ fontSize:'0.78rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6,marginBottom:14 }}>{uc.desc}</div>
-                <div style={{ fontSize:'0.7rem',color:'rgba(224,123,57,0.7)',fontWeight:600 }}>{uc.client} →</div>
-              </a>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:48,lineHeight:1.2,textAlign:'center' }}>Work we execute every week.</h2>
+          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))',gap:16 }}>
+            {useCases.map(uc => (
+              <div key={uc.title} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px' }}>
+                <div style={{ fontSize:'1.8rem',marginBottom:12 }}>{uc.icon}</div>
+                <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.9rem' }}>{uc.title}</div>
+                <div style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{uc.desc}</div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section style={{ background:'#0A2342',padding:'68px 24px' }}>
+      <section style={{ background:'#0A2342',padding:'96px 24px' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>Why Work Simplr</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2.2rem,4vw,3.2rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>This is not staffing.<br /><em style={{ color:'#F08C4E' }}>It is execution.</em></h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>This is not staffing.<br /><em style={{ color:'#F08C4E' }}>It is execution.</em></h2>
           <p style={{ textAlign:'center',color:'rgba(255,255,255,0.45)',marginBottom:52,fontSize:'0.95rem' }}>Instead of hoping for the best, you get structured delivery every time.</p>
           <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:20 }}>
             <div style={{ background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'28px 24px' }}>
@@ -664,10 +630,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ background:'#081A30',padding:'68px 24px' }}>
+      <section style={{ background:'#081A30',padding:'96px 24px' }}>
         <div style={{ maxWidth:860,margin:'0 auto',textAlign:'center' }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>AI + Human</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2.2rem,4vw,3.2rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>AI does not execute.<br /><em style={{ color:'#F08C4E' }}>We do.</em></h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>AI does not execute.<br /><em style={{ color:'#F08C4E' }}>We do.</em></h2>
           <p style={{ color:'rgba(255,255,255,0.5)',maxWidth:520,margin:'0 auto 48px',lineHeight:1.7,fontSize:'0.95rem' }}>We combine AI + human operators + structured workflows so work actually gets done.</p>
           <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16 }}>
             {[
@@ -685,10 +651,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ background:'linear-gradient(135deg,#0A2342 0%,#1a3560 100%)',padding:'72px 24px',textAlign:'center',position:'relative',overflow:'hidden' }}>
+      <section style={{ background:'linear-gradient(135deg,#0A2342 0%,#1a3560 100%)',padding:'100px 24px',textAlign:'center',position:'relative',overflow:'hidden' }}>
         <div style={{ position:'absolute',inset:0,background:'radial-gradient(ellipse at center,rgba(224,123,57,0.15) 0%,transparent 65%)',pointerEvents:'none' }} />
         <div style={{ position:'relative',zIndex:1,maxWidth:640,margin:'0 auto' }}>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2.2rem,4vw,3.2rem)',color:'white',marginBottom:16,lineHeight:1.15 }}>Stop managing work.<br /><em style={{ color:'#F08C4E' }}>Start shipping it.</em></h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,4vw,3rem)',color:'white',marginBottom:16,lineHeight:1.15 }}>Stop managing work.<br /><em style={{ color:'#F08C4E' }}>Start shipping it.</em></h2>
           <p style={{ color:'rgba(255,255,255,0.5)',marginBottom:36,fontSize:'1rem',lineHeight:1.7 }}>Join the companies already using SprintWork™ to deliver outcomes, not headcount.</p>
           <a href="/register" style={{ display:'inline-block',padding:'16px 44px',background:'#E07B39',borderRadius:999,fontSize:'1.05rem',fontWeight:700,color:'white',textDecoration:'none',boxShadow:'0 8px 32px rgba(224,123,57,0.45)' }}>Start a Sprint →</a>
         </div>

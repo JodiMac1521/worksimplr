@@ -1,11 +1,19 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { supabase } from '../../lib/supabase';
 import Link from 'next/link';
 
 export default function RegisterPage() {
   const [step, setStep] = useState(1);
   const [role, setRole] = useState('');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const r = params.get('role');
+    if (r === 'employer') { setRole('employer'); setStep(2); }
+    if (r === 'student') { setRole('student'); setStep(2); }
+  }, []);
+
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

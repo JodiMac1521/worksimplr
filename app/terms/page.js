@@ -220,7 +220,7 @@ export default function Terms() {
             <img src="/logo.png" alt="Work Simplr" style={{ height:52,width:'auto',display:'block' }} />
           </a>
           <div className="nav-desktop-links" style={{ display:'flex',gap:28,alignItems:'center' }}>
-            {[['/#solution','Platform'],['/#how','Process'],['/pricing','Pricing'],['/case-studies','Case Studies']].map(([h,l]) => (
+            {[['/#solution','Platform'],['/#how','Process'],['/pricing','Pricing'],['/about','About'],['/case-studies','Case Studies']].map(([h,l]) => (
               <a key={h} href={h} style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none' }}>{l}</a>
             ))}
           </div>

@@ -823,6 +823,10 @@ a { color: inherit; text-decoration: none; }
   visibility: visible !important;
   pointer-events: auto !important;
 }
+.cs-dropdown-item:hover {
+  background: rgba(224,123,57,0.08) !important;
+  color: rgba(255,255,255,0.9) !important;
+}
 
 /* ─── Responsive ───────────────────────────────────────────────────── */
 @media (max-width: 900px) {

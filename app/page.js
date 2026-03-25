@@ -68,9 +68,7 @@ export default function Home() {
                     { href:'/case-studies#tech-development', label:'Tech Development', sub:'AI & software prototypes',
                       icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="5,5 2,9 5,13" stroke="#E07B39" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/><polyline points="13,5 16,9 13,13" stroke="#E07B39" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/><line x1="10" y1="3" x2="8" y2="15" stroke="#E07B39" strokeWidth="1.5" strokeLinecap="round" opacity="0.6"/></svg> },
                   ].map(item => (
-                    <a key={item.label} href={item.href} style={{ display:'flex',alignItems:'center',gap:12,padding:'10px 12px',borderRadius:8,textDecoration:'none',color:'rgba(255,255,255,0.55)',transition:'all 0.15s',fontSize:'0.82rem' }}
-                      onMouseEnter={e => { e.currentTarget.style.background='rgba(224,123,57,0.08)'; e.currentTarget.style.color='rgba(255,255,255,0.9)'; }}
-                      onMouseLeave={e => { e.currentTarget.style.background='transparent'; e.currentTarget.style.color='rgba(255,255,255,0.55)'; }}>
+                    <a key={item.label} href={item.href} className="cs-dropdown-item" style={{ display:'flex',alignItems:'center',gap:12,padding:'10px 12px',borderRadius:8,textDecoration:'none',color:'rgba(255,255,255,0.55)',transition:'all 0.15s',fontSize:'0.82rem' }}>
                       <div style={{ width:32,height:32,borderRadius:6,background:'rgba(224,123,57,0.08)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}>{item.icon}</div>
                       <div><div style={{ fontWeight:600,color:'white',fontSize:'0.84rem' }}>{item.label}</div><div style={{ fontSize:'0.72rem',opacity:0.5 }}>{item.sub}</div></div>
                     </a>

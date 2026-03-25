@@ -44,8 +44,8 @@ export default function Home() {
           <a href="/" style={{ textDecoration:'none',display:'flex',alignItems:'center' }}>
             <img src="/logo.png" alt="Work Simplr" style={{ height:52,width:'auto',display:'block' }} />
           </a>
-          <div style={{ display:'flex',gap:28,alignItems:'center' }}>
-            {[['#solution','Platform'],['#how','Process'],['#problem','Why It Works'],['/pricing','Pricing']].map(([h,l]) => (
+          <div className="nav-desktop-links" style={{ display:'flex',gap:28,alignItems:'center' }}>
+            {[['#solution','Platform'],['#how','Process'],['/pricing','Pricing']].map(([h,l]) => (
               <a key={h} href={h} style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none' }}>{l}</a>
             ))}
             {/* Case Studies dropdown */}
@@ -77,10 +77,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div style={{ display:'flex',gap:10 }}>
+          <div className="nav-desktop-cta" style={{ display:'flex',gap:10 }}>
             <a href="/login" style={{ padding:'8px 20px',border:'1px solid rgba(255,255,255,0.2)',borderRadius:999,fontSize:'0.875rem',color:'rgba(255,255,255,0.7)',textDecoration:'none' }}>Log in</a>
             <a href="/register?role=employer" style={{ padding:'8px 20px',background:'#E07B39',borderRadius:999,fontSize:'0.875rem',color:'white',textDecoration:'none',fontWeight:600 }}>Start a Sprint</a>
           </div>
+          <a className="mobile-menu-btn" href="/register?role=employer" style={{ padding:'8px 20px',background:'#E07B39',borderRadius:999,fontSize:'0.82rem',fontWeight:600,color:'white',textDecoration:'none' }}>Start a Sprint</a>
         </div>
       </nav>
 

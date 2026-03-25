@@ -7,15 +7,60 @@ export default function CaseStudies() {
 
   const caseStudies = [
     {
+      id: 'data-collection',
+      tag: 'Data Collection',
+      title: 'Large-Scale Data Collection & Research',
+      client: 'U.S. News & World Report',
+      industry: 'Media · Data Research',
+      desc: 'Deployed 60 emerging talent workers using AI + human workflows to collect 200,000 verified data points in 4 weeks for their annual "Best Colleges" report.',
+      chips: ['AI + Human', 'Data Validation', 'Publication-Ready'],
+      stats: [
+        { num: '200K', label: 'Data Points' },
+        { num: '4', label: 'Weeks' },
+        { num: '60', label: 'Workers' },
+      ],
+      icon: (
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="28" width="8" height="16" rx="2" fill="#E07B39" opacity="0.3" />
+          <rect x="16" y="18" width="8" height="26" rx="2" fill="#E07B39" opacity="0.5" />
+          <rect x="28" y="8" width="8" height="36" rx="2" fill="#E07B39" opacity="0.7" />
+          <rect x="40" y="2" width="4" height="42" rx="2" fill="#E07B39" />
+          <line x1="2" y1="44" x2="46" y2="44" stroke="#E07B39" strokeWidth="1.5" opacity="0.3" />
+        </svg>
+      ),
+    },
+    {
+      id: 'specialized-research',
+      tag: 'Specialized Research',
+      title: 'Influencer & Tutor Identification',
+      client: 'The Gates Foundation',
+      industry: 'Philanthropy · Education',
+      desc: 'Student researchers identified 100+ vetted math tutors and content creators across YouTube, TikTok, Discord, and Reddit — with peer-informed authenticity insights.',
+      chips: ['Peer Perspective', 'Multi-Platform', 'Partnership-Ready'],
+      stats: [
+        { num: '100+', label: 'Creators' },
+        { num: '4', label: 'Weeks' },
+        { num: '$3.5K', label: 'Fixed Fee' },
+      ],
+      icon: (
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="12" stroke="#E07B39" strokeWidth="2.5" />
+          <line x1="29" y1="29" x2="42" y2="42" stroke="#E07B39" strokeWidth="2.5" strokeLinecap="round" />
+          <circle cx="20" cy="20" r="5" stroke="#E07B39" strokeWidth="1.5" opacity="0.3" />
+          <circle cx="20" cy="20" r="1.5" fill="#E07B39" />
+        </svg>
+      ),
+    },
+    {
       id: 'product-testing',
       tag: 'Product Testing',
       title: 'Alpha Product Testing with Real Users',
       client: 'MacMillan Learning',
       industry: 'EdTech · Product Development',
-      desc: 'Recruited 6 nursing students for a "3+1" testing model over 10 weeks — generating 15-20 hours of real behavioral data and accelerating their beta launch by 3 months.',
+      desc: 'Recruited 6 nursing students for a "3+1" testing model over 4 weeks — generating 15-20 hours of real behavioral data and accelerating their beta launch by 3 months.',
       chips: ['NCLEX Prep', 'UX Testing', 'Behavioral Data'],
       stats: [
-        { num: '10', label: 'Weeks' },
+        { num: '4', label: 'Weeks' },
         { num: '6', label: 'Students' },
         { num: '3mo', label: 'Faster' },
       ],
@@ -36,7 +81,7 @@ export default function CaseStudies() {
       id: 'demand-validation',
       tag: 'Market Research',
       title: 'Demand Validation Research',
-      client: 'MacMillan Learning',
+      client: 'Vista Learning',
       industry: 'EdTech · Product Validation',
       desc: 'Validated product demand with 10 qualified nursing students in just 2 weeks — delivering enterprise research quality at a total investment of $3,500.',
       chips: ['Interviews', 'Product Validation', 'Hard-to-Reach Audience'],
@@ -55,29 +100,6 @@ export default function CaseStudies() {
           <line x1="24" y1="40" x2="24" y2="46" stroke="#E07B39" strokeWidth="1.5" opacity="0.3" />
           <line x1="2" y1="24" x2="8" y2="24" stroke="#E07B39" strokeWidth="1.5" opacity="0.3" />
           <line x1="40" y1="24" x2="46" y2="24" stroke="#E07B39" strokeWidth="1.5" opacity="0.3" />
-        </svg>
-      ),
-    },
-    {
-      id: 'data-collection',
-      tag: 'Data Collection',
-      title: 'Large-Scale Data Collection & Research',
-      client: 'U.S. News & World Report',
-      industry: 'Media · Data Research',
-      desc: 'Deployed 60 emerging talent workers using AI + human workflows to collect 200,000 verified data points in 4 weeks for their annual "Best Colleges" report.',
-      chips: ['AI + Human', 'Data Validation', 'Publication-Ready'],
-      stats: [
-        { num: '200K', label: 'Data Points' },
-        { num: '4', label: 'Weeks' },
-        { num: '60', label: 'Workers' },
-      ],
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="28" width="8" height="16" rx="2" fill="#E07B39" opacity="0.3" />
-          <rect x="16" y="18" width="8" height="26" rx="2" fill="#E07B39" opacity="0.5" />
-          <rect x="28" y="8" width="8" height="36" rx="2" fill="#E07B39" opacity="0.7" />
-          <rect x="40" y="2" width="4" height="42" rx="2" fill="#E07B39" />
-          <line x1="2" y1="44" x2="46" y2="44" stroke="#E07B39" strokeWidth="1.5" opacity="0.3" />
         </svg>
       ),
     },
@@ -127,28 +149,6 @@ export default function CaseStudies() {
       ),
     },
     {
-      id: 'specialized-research',
-      tag: 'Specialized Research',
-      title: 'Influencer & Tutor Identification',
-      client: 'The Gates Foundation',
-      industry: 'Philanthropy · Education',
-      desc: 'Student researchers identified 100+ vetted math tutors and content creators across YouTube, TikTok, Discord, and Reddit — with peer-informed authenticity insights.',
-      chips: ['Peer Perspective', 'Multi-Platform', 'Partnership-Ready'],
-      stats: [
-        { num: '100+', label: 'Creators' },
-        { num: '4', label: 'Weeks' },
-        { num: '$3.5K', label: 'Fixed Fee' },
-      ],
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="12" stroke="#E07B39" strokeWidth="2.5" />
-          <line x1="29" y1="29" x2="42" y2="42" stroke="#E07B39" strokeWidth="2.5" strokeLinecap="round" />
-          <circle cx="20" cy="20" r="5" stroke="#E07B39" strokeWidth="1.5" opacity="0.3" />
-          <circle cx="20" cy="20" r="1.5" fill="#E07B39" />
-        </svg>
-      ),
-    },
-    {
       id: 'uat',
       tag: 'QA & Program Management',
       title: 'User Acceptance Testing (UAT)',
@@ -178,16 +178,17 @@ export default function CaseStudies() {
           <a href="/" style={{ textDecoration:'none',display:'flex',alignItems:'center' }}>
             <img src="/logo.png" alt="Work Simplr" style={{ height:52,width:'auto',display:'block' }} />
           </a>
-          <div style={{ display:'flex',gap:28,alignItems:'center' }}>
-            {[['/#solution','Platform'],['/#how','Process'],['/#problem','Why It Works'],['/pricing','Pricing']].map(([h,l]) => (
+          <div className="nav-desktop-links" style={{ display:'flex',gap:28,alignItems:'center' }}>
+            {[['/#solution','Platform'],['/#how','Process'],['/pricing','Pricing']].map(([h,l]) => (
               <a key={h} href={h} style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none' }}>{l}</a>
             ))}
             <a href="/case-studies" style={{ fontSize:'0.88rem',fontWeight:600,color:ORANGE_LIGHT,textDecoration:'none' }}>Case Studies</a>
           </div>
-          <div style={{ display:'flex',gap:10 }}>
+          <div className="nav-desktop-cta" style={{ display:'flex',gap:10 }}>
             <a href="/login" style={{ padding:'8px 20px',border:'1px solid rgba(255,255,255,0.2)',borderRadius:999,fontSize:'0.875rem',color:'rgba(255,255,255,0.7)',textDecoration:'none' }}>Log in</a>
             <a href="/register?role=employer" style={{ padding:'8px 20px',background:ORANGE,borderRadius:999,fontSize:'0.875rem',color:'white',textDecoration:'none',fontWeight:600 }}>Start a Sprint</a>
           </div>
+          <a className="mobile-menu-btn" href="/register?role=employer" style={{ padding:'8px 20px',background:ORANGE,borderRadius:999,fontSize:'0.82rem',fontWeight:600,color:'white',textDecoration:'none' }}>Start a Sprint</a>
         </div>
       </nav>
 
@@ -213,15 +214,14 @@ export default function CaseStudies() {
           {caseStudies.map((cs, i) => {
             const isEven = i % 2 === 1;
             return (
-              <div key={cs.id} id={cs.id} style={{
-                display:'grid',
-                gridTemplateColumns:'1fr 1fr',
+              <div key={cs.id} id={cs.id} className="cs-card-grid" style={{
                 borderRadius:20,
                 overflow:'hidden',
-                border:'1px solid rgba(255,255,255,0.06)',
+                border:'1px solid rgba(224,123,57,0.1)',
+                boxShadow:'0 4px 32px rgba(224,123,57,0.12), 0 1px 8px rgba(224,123,57,0.08)',
               }}>
                 {/* VISUAL side */}
-                <div style={{
+                <div className="cs-card-visual" style={{
                   background:NAVY_DARK,
                   padding:'48px 40px',
                   display:'flex',
@@ -241,6 +241,7 @@ export default function CaseStudies() {
                     width:80,height:80,borderRadius:20,
                     background:'rgba(224,123,57,0.08)',
                     border:'1px solid rgba(224,123,57,0.15)',
+                    boxShadow:'0 4px 20px rgba(224,123,57,0.15)',
                     display:'flex',alignItems:'center',justifyContent:'center',
                     marginBottom:20,position:'relative',zIndex:1,
                   }}>
@@ -251,9 +252,9 @@ export default function CaseStudies() {
                   <div style={{ fontSize:'0.78rem',color:'rgba(255,255,255,0.4)',textAlign:'center',position:'relative',zIndex:1,marginBottom:20 }}>{cs.industry}</div>
 
                   {/* Stats */}
-                  <div style={{ display:'flex',gap:16,position:'relative',zIndex:1 }}>
+                  <div className="cs-stat-pills" style={{ display:'flex',gap:16,position:'relative',zIndex:1,flexWrap:'wrap',justifyContent:'center' }}>
                     {cs.stats.map(s => (
-                      <div key={s.label} style={{
+                      <div key={s.label} className="cs-stat-pill" style={{
                         background:'rgba(255,255,255,0.04)',
                         border:'1px solid rgba(255,255,255,0.06)',
                         borderRadius:10,
@@ -269,7 +270,7 @@ export default function CaseStudies() {
                 </div>
 
                 {/* CONTENT side */}
-                <div style={{
+                <div className="cs-card-content" style={{
                   background:'rgba(255,255,255,0.02)',
                   padding:'48px 44px',
                   display:'flex',
@@ -314,7 +315,7 @@ export default function CaseStudies() {
       {/* FOOTER */}
       <footer style={{ background:'#050F1C',borderTop:'1px solid rgba(255,255,255,0.06)',padding:'48px 24px 32px' }}>
         <div style={{ maxWidth:1080,margin:'0 auto' }}>
-          <div style={{ display:'grid',gridTemplateColumns:'1.5fr 1fr 1fr 1fr',gap:40,marginBottom:40 }}>
+          <div className="cs-footer-grid" style={{ marginBottom:40 }}>
             <div>
               <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:10 }}>Work<span style={{ color:ORANGE }}>Simplr</span></div>
               <p style={{ fontSize:'0.83rem',color:'rgba(255,255,255,0.35)',lineHeight:1.65,maxWidth:220 }}>AI-powered execution platform. We turn undefined work into delivered outcomes.</p>

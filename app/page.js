@@ -258,7 +258,7 @@ export default function Home() {
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7,textAlign:'center' }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
 
           <AnimatedSteps>
-          <div style={{ display:'flex',alignItems:'stretch',gap:0,paddingTop:24,marginBottom:40 }}>
+          <div className="hp-steps-row" style={{ display:'flex',alignItems:'stretch',gap:0,paddingTop:24,marginBottom:40 }}>
             {[
               { num:'1', icon:(<svg width="160" height="90" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
                   <defs>
@@ -343,7 +343,7 @@ export default function Home() {
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Problem</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:20,lineHeight:1.2,textAlign:'center' }}>Most work doesn't fail<br />because of talent.</h2>
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520,textAlign:'center',margin:'0 auto 40px' }}>It fails because it's poorly defined before anyone starts.</p>
-          <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16,marginBottom:40,maxWidth:780,margin:'0 auto 40px' }}>
+          <div className="hp-problem-grid" style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16,marginBottom:40,maxWidth:780,margin:'0 auto 40px' }}>
             {[
               {
                 label:'Unclear', desc:"No one can agree on what done looks like.",
@@ -528,7 +528,7 @@ export default function Home() {
           </div>
 
           {/* Two-column: bullets + challenge */}
-          <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:24,marginBottom:40,alignItems:'start' }}>
+          <div className="hp-whynow-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:24,marginBottom:40,alignItems:'start' }}>
 
             {/* Left — 4 bullets */}
             <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px' }}>
@@ -587,7 +587,7 @@ export default function Home() {
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>Why Work Simplr</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>This is not staffing.<br /><em style={{ color:'#F08C4E' }}>It is execution.</em></h2>
           <p style={{ textAlign:'center',color:'rgba(255,255,255,0.45)',marginBottom:52,fontSize:'0.95rem' }}>Instead of hoping for the best, you get structured delivery every time.</p>
-          <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:20 }}>
+          <div className="hp-compare-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:20 }}>
             <div style={{ background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'28px 24px' }}>
               <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:16 }}>The old way</div>
               {['Hiring people','Managing freelancers','Guessing scope'].map(t => (
@@ -613,7 +613,7 @@ export default function Home() {
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>AI + Human</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>AI does not execute.<br /><em style={{ color:'#F08C4E' }}>We do.</em></h2>
           <p style={{ color:'rgba(255,255,255,0.5)',maxWidth:520,margin:'0 auto 48px',lineHeight:1.7,fontSize:'0.95rem' }}>We combine AI + human operators + structured workflows so work actually gets done.</p>
-          <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16 }}>
+          <div className="hp-ai-grid" style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16 }}>
             {[
               { icon:(<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="6" y="8" width="28" height="24" rx="4" stroke="#E07B39" strokeWidth="2"/>
@@ -665,7 +665,7 @@ export default function Home() {
 
       <footer style={{ background:'#050F1C',borderTop:'1px solid rgba(255,255,255,0.06)',padding:'48px 24px 32px' }}>
         <div style={{ maxWidth:1080,margin:'0 auto' }}>
-          <div style={{ display:'grid',gridTemplateColumns:'1.5fr 1fr 1fr 1fr',gap:40,marginBottom:40 }}>
+          <div className="cs-footer-grid" style={{ display:'grid',gridTemplateColumns:'1.5fr 1fr 1fr 1fr',gap:40,marginBottom:40 }}>
             <div>
               <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:10 }}>Work<span style={{ color:'#E07B39' }}>Simplr</span></div>
               <p style={{ fontSize:'0.83rem',color:'rgba(255,255,255,0.35)',lineHeight:1.65,maxWidth:220 }}>AI-powered execution platform. We turn undefined work into delivered outcomes.</p>

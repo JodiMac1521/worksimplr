@@ -817,6 +817,13 @@ a { color: inherit; text-decoration: none; }
 }
 .footer__bottom-links a:hover { color: white; }
 
+/* ─── Case Studies Dropdown ────────────────────────────────────────── */
+.cs-dropdown:hover .cs-dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
 /* ─── Responsive ───────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .hero__inner { grid-template-columns: 1fr; }

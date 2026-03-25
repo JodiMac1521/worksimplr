@@ -44,10 +44,40 @@ export default function Home() {
           <a href="/" style={{ textDecoration:'none',display:'flex',alignItems:'center' }}>
             <img src="/logo.png" alt="Work Simplr" style={{ height:52,width:'auto',display:'block' }} />
           </a>
-          <div style={{ display:'flex',gap:28 }}>
-            {[['#problem','Why It Works'],['#solution','Platform'],['#how','Process'],['#use-cases','For Teams'],['/about','About'],['/pricing','Pricing']].map(([h,l]) => (
+          <div style={{ display:'flex',gap:28,alignItems:'center' }}>
+            {[['#solution','Platform'],['#how','Process'],['#problem','Why It Works'],['/pricing','Pricing']].map(([h,l]) => (
               <a key={h} href={h} style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none' }}>{l}</a>
             ))}
+            {/* Case Studies dropdown */}
+            <div style={{ position:'relative' }} className="cs-dropdown">
+              <a href="/case-studies" style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none',display:'flex',alignItems:'center',gap:4 }}>
+                Case Studies
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 3.5l3 3 3-3"/></svg>
+              </a>
+              <div className="cs-dropdown-menu" style={{ position:'absolute',top:'100%',left:'50%',transform:'translateX(-50%)',paddingTop:8,opacity:0,visibility:'hidden',transition:'all 0.2s',pointerEvents:'none' }}>
+                <div style={{ background:'rgba(10,35,66,0.98)',border:'1px solid rgba(224,123,57,0.15)',borderRadius:12,padding:8,minWidth:260,boxShadow:'0 20px 40px rgba(0,0,0,0.4)',backdropFilter:'blur(16px)' }}>
+                  {[
+                    { href:'/case-studies#product-testing', label:'Product Testing', sub:'Alpha/beta with real users',
+                      icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="1" width="8" height="16" rx="2" stroke="#E07B39" strokeWidth="1.5"/><circle cx="9" cy="12" r="1.5" fill="#E07B39"/><line x1="7" y1="5" x2="11" y2="5" stroke="#E07B39" strokeWidth="1" opacity="0.5"/><line x1="7" y1="7" x2="11" y2="7" stroke="#E07B39" strokeWidth="1" opacity="0.3"/></svg> },
+                    { href:'/case-studies#data-collection', label:'Data & Research', sub:'Large-scale research sprints',
+                      icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="10" width="3" height="6" rx="1" fill="#E07B39" opacity="0.4"/><rect x="7.5" y="6" width="3" height="10" rx="1" fill="#E07B39" opacity="0.6"/><rect x="13" y="2" width="3" height="14" rx="1" fill="#E07B39"/></svg> },
+                    { href:'/case-studies#campus-marketing', label:'Campus Marketing', sub:'Peer-to-peer outreach',
+                      icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 14 L9 4 L16 14" stroke="#E07B39" strokeWidth="1.5" fill="none"/><circle cx="9" cy="2" r="1.5" fill="#E07B39"/><line x1="5" y1="14" x2="13" y2="14" stroke="#E07B39" strokeWidth="1.5"/></svg> },
+                    { href:'/case-studies#specialized-research', label:'Specialized Research', sub:'Niche experts & influencers',
+                      icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="5" stroke="#E07B39" strokeWidth="1.5"/><line x1="12" y1="12" x2="16" y2="16" stroke="#E07B39" strokeWidth="1.5" strokeLinecap="round"/></svg> },
+                    { href:'/case-studies#tech-development', label:'Tech Development', sub:'AI & software prototypes',
+                      icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="5,5 2,9 5,13" stroke="#E07B39" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/><polyline points="13,5 16,9 13,13" stroke="#E07B39" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/><line x1="10" y1="3" x2="8" y2="15" stroke="#E07B39" strokeWidth="1.5" strokeLinecap="round" opacity="0.6"/></svg> },
+                  ].map(item => (
+                    <a key={item.label} href={item.href} style={{ display:'flex',alignItems:'center',gap:12,padding:'10px 12px',borderRadius:8,textDecoration:'none',color:'rgba(255,255,255,0.55)',transition:'all 0.15s',fontSize:'0.82rem' }}
+                      onMouseEnter={e => { e.currentTarget.style.background='rgba(224,123,57,0.08)'; e.currentTarget.style.color='rgba(255,255,255,0.9)'; }}
+                      onMouseLeave={e => { e.currentTarget.style.background='transparent'; e.currentTarget.style.color='rgba(255,255,255,0.55)'; }}>
+                      <div style={{ width:32,height:32,borderRadius:6,background:'rgba(224,123,57,0.08)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}>{item.icon}</div>
+                      <div><div style={{ fontWeight:600,color:'white',fontSize:'0.84rem' }}>{item.label}</div><div style={{ fontSize:'0.72rem',opacity:0.5 }}>{item.sub}</div></div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
           <div style={{ display:'flex',gap:10 }}>
             <a href="/login" style={{ padding:'8px 20px',border:'1px solid rgba(255,255,255,0.2)',borderRadius:999,fontSize:'0.875rem',color:'rgba(255,255,255,0.7)',textDecoration:'none' }}>Log in</a>
@@ -585,7 +615,7 @@ export default function Home() {
             </div>
             {[
               { title:'Platform',links:[['#solution','SprintWork™'],['#use-cases','Use Cases'],['#how','How It Works'],['/register','Start a Sprint']] },
-              { title:'Company',links:[['/about','About'],['/blog','Blog'],['/contact','Contact']] },
+              { title:'Company',links:[['/about','About'],['/case-studies','Case Studies'],['/blog','Blog'],['/contact','Contact']] },
               { title:'Legal',links:[['/privacy','Privacy'],['/terms','Terms'],['/cookies','Cookies']] },
             ].map(col => (
               <div key={col.title}>

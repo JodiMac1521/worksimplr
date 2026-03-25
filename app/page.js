@@ -5,17 +5,39 @@ import AnimatedSteps from './components/AnimatedSteps';
 export default function Home() {
   const SERIF = "'DM Serif Display', serif";
   const steps = [
-    { num: '01', icon: (<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
-                  {/* card background */}
-                  <rect x="4" y="2" width="44" height="48" rx="5" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="2"/>
-                  {/* step lines */}
-                  {[10,20,30,40].map((y,i) => (
-                    <g key={y}>
-                      <circle cx="14" cy={y+2} r="3" fill={i===0?"rgba(224,123,57,0.9)":"none"} stroke={i===0?"rgba(224,123,57,0.9)":"rgba(255,255,255,0.5)"} strokeWidth="1.5"/>
-                      <line x1="21" y1={y+2} x2="42" y2={y+2} stroke={i<2?"rgba(255,255,255,0.8)":"rgba(255,255,255,0.35)"} strokeWidth={i===0?2:1.5}/>
-                      {i>0&&i<3&&<line x1="21" y1={y+6} x2="36" y2={y+6} stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>}
-                    </g>
-                  ))}
+    { num: '01', icon: (<svg width="100" height="80" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  {/* Data input node */}
+                  <rect x="4" y="38" width="28" height="18" rx="3" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.8"/>
+                  <text x="18" y="50" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="6" fontFamily="DM Sans, sans-serif">Data</text>
+                  {/* Arrow from Data to Process A */}
+                  <line x1="32" y1="47" x2="52" y2="28" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2" markerEnd="url(#wfArrow)"/>
+                  {/* Arrow from Data to Process B */}
+                  <line x1="32" y1="47" x2="52" y2="50" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2"/>
+                  {/* Arrow from Data to Process C */}
+                  <line x1="32" y1="47" x2="52" y2="76" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2"/>
+                  {/* Process A */}
+                  <ellipse cx="72" cy="22" rx="18" ry="12" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.8"/>
+                  <text x="72" y="25" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="6" fontFamily="DM Sans, sans-serif">Process A</text>
+                  {/* Process B */}
+                  <ellipse cx="72" cy="50" rx="18" ry="12" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.8"/>
+                  <text x="72" y="53" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="6" fontFamily="DM Sans, sans-serif">Process B</text>
+                  {/* Process C */}
+                  <ellipse cx="72" cy="78" rx="18" ry="12" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.8"/>
+                  <text x="72" y="81" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="6" fontFamily="DM Sans, sans-serif">Process C</text>
+                  {/* Output node */}
+                  <ellipse cx="132" cy="40" rx="22" ry="14" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.8"/>
+                  <text x="132" y="43" textAnchor="middle" fill="rgba(255,255,255,0.8)" fontSize="6" fontFamily="DM Sans, sans-serif">Output</text>
+                  {/* Arrows to output */}
+                  <line x1="90" y1="22" x2="110" y2="36" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2"/>
+                  <line x1="90" y1="50" x2="110" y2="42" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2"/>
+                  <path d="M90 78 Q110 78 110 52 L110 48" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2"/>
+                  {/* Arrow from B to output (cross-link) */}
+                  {/* Arrowhead marker */}
+                  <defs>
+                    <marker id="wfArrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                      <path d="M0,0 L6,3 L0,6" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="0.8"/>
+                    </marker>
+                  </defs>
                 </svg>), title: 'Submit your work', desc: 'Describe what you need in plain language. No scope doc required.' },
     { num: '02', icon: '⚡', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it — in minutes.' },
     { num: '03', icon: (<svg width="60" height="44" viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>

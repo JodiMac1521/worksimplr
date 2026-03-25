@@ -560,12 +560,37 @@ export default function Home() {
           <p style={{ color:'rgba(255,255,255,0.5)',maxWidth:520,margin:'0 auto 48px',lineHeight:1.7,fontSize:'0.95rem' }}>We combine AI + human operators + structured workflows so work actually gets done.</p>
           <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16 }}>
             {[
-              { icon:'🤖',label:'AI Scoping',desc:'Classifies and prices your work in minutes' },
-              { icon:'👥',label:'Human Operators',desc:'Vetted teams who actually execute the work' },
-              { icon:'🔁',label:'Structured Workflows',desc:'Every step defined, tracked, and delivered' },
+              { icon:(<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="28" height="24" rx="4" stroke="#E07B39" strokeWidth="2"/>
+                <circle cx="15" cy="18" r="2" fill="#E07B39"/>
+                <circle cx="25" cy="18" r="2" fill="#E07B39"/>
+                <path d="M14 25 C14 22 26 22 26 25" stroke="#E07B39" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+                <line x1="16" y1="4" x2="16" y2="8" stroke="#E07B39" strokeWidth="1.5" strokeLinecap="round"/>
+                <line x1="24" y1="4" x2="24" y2="8" stroke="#E07B39" strokeWidth="1.5" strokeLinecap="round"/>
+                <rect x="12" y="2" width="3" height="4" rx="1" fill="#E07B39" opacity="0.4"/>
+                <rect x="25" y="2" width="3" height="4" rx="1" fill="#E07B39" opacity="0.4"/>
+              </svg>),label:'AI Scoping',desc:'Classifies and prices your work in minutes' },
+              { icon:(<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="12" r="6" stroke="#E07B39" strokeWidth="2"/>
+                <path d="M8 34 C8 24 32 24 32 34" stroke="#E07B39" strokeWidth="2" fill="none"/>
+                <circle cx="8" cy="16" r="4" stroke="#E07B39" strokeWidth="1.5" opacity="0.4"/>
+                <path d="M0 32 C0 26 12 26 12 30" stroke="#E07B39" strokeWidth="1.5" fill="none" opacity="0.3"/>
+                <circle cx="32" cy="16" r="4" stroke="#E07B39" strokeWidth="1.5" opacity="0.4"/>
+                <path d="M40 32 C40 26 28 26 28 30" stroke="#E07B39" strokeWidth="1.5" fill="none" opacity="0.3"/>
+              </svg>),label:'Human Operators',desc:'Vetted teams who actually execute the work' },
+              { icon:(<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="32" height="32" rx="6" stroke="#E07B39" strokeWidth="2"/>
+                <path d="M12 14 L18 14 L18 20 L24 20 L24 26 L28 26" stroke="#E07B39" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="12" cy="14" r="2" fill="#E07B39"/>
+                <circle cx="18" cy="14" r="2" fill="#E07B39" opacity="0.6"/>
+                <circle cx="18" cy="20" r="2" fill="#E07B39" opacity="0.6"/>
+                <circle cx="24" cy="20" r="2" fill="#E07B39" opacity="0.6"/>
+                <circle cx="24" cy="26" r="2" fill="#E07B39" opacity="0.6"/>
+                <circle cx="28" cy="26" r="2" fill="#E07B39"/>
+              </svg>),label:'Structured Workflows',desc:'Every step defined, tracked, and delivered' },
             ].map(item => (
-              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'28px 20px' }}>
-                <div style={{ fontSize:'2rem',marginBottom:12 }}>{item.icon}</div>
+              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(224,123,57,0.1)',borderRadius:14,padding:'32px 24px',boxShadow:'0 4px 24px rgba(224,123,57,0.08)' }}>
+                <div style={{ width:64,height:64,borderRadius:16,background:'rgba(224,123,57,0.08)',border:'1px solid rgba(224,123,57,0.15)',boxShadow:'0 4px 16px rgba(224,123,57,0.12)',display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 16px' }}>{item.icon}</div>
                 <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.9rem' }}>{item.label}</div>
                 <div style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{item.desc}</div>
               </div>

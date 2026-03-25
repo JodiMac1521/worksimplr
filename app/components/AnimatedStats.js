@@ -41,7 +41,7 @@ export default function AnimatedStats() {
       {[
         { target:'5000', suffix:'+', label:'Projects Completed' },
         { target:'98', suffix:'%', label:'Completion Rate' },
-        { target:'2', suffix:' weeks', label:'Avg Sprint Time' },
+        { target:'4', suffix:' weeks', label:'Avg Sprint Time' },
       ].map(s => (
         <div key={s.label} style={{ textAlign:'center' }}>
           <div style={{ fontFamily:SERIF, fontSize:'clamp(2rem,4vw,2.8rem)', color:'#E07B39', fontWeight:400, lineHeight:1 }}>

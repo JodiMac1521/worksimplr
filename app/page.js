@@ -1,5 +1,6 @@
 import AnimatedStats from './components/AnimatedStats';
 import AnimatedDashboard from './components/AnimatedDashboard';
+import AnimatedSteps from './components/AnimatedSteps';
 
 export default function Home() {
   const SERIF = "'DM Serif Display', serif";
@@ -228,6 +229,7 @@ export default function Home() {
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWork™</em></h2>
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7,textAlign:'center' }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
 
+          <AnimatedSteps>
           <div style={{ display:'flex',alignItems:'stretch',gap:0,paddingTop:24,marginBottom:40 }}>
             {[
               { num:'1', icon:(<svg width="88" height="52" viewBox="0 0 176 72" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
@@ -261,19 +263,26 @@ export default function Home() {
                     </g>
                   ))}
                 </svg>), title:'Execution plans', desc:'We onboard and distribute the work across 1–100 workers with QA built in.' },
-              { num:'3', icon:'📦', title:'Delivered outcomes', desc:'You get the thing you asked for — not a status update and an invoice. In 28 days.' },
+              { num:'3', icon:(<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                <rect x="6" y="16" width="40" height="30" rx="4" stroke="rgba(255,255,255,0.8)" strokeWidth="2" fill="none"/>
+                <polyline points="6,16 26,6 46,16" stroke="rgba(255,255,255,0.8)" strokeWidth="2" fill="none" strokeLinejoin="round"/>
+                <line x1="26" y1="6" x2="26" y2="46" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5"/>
+                <line x1="6" y1="16" x2="46" y2="16" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5"/>
+                <polyline points="18,28 24,34 36,22" stroke="#22C55E" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>), title:'Delivered outcomes', desc:'You get the thing you asked for — not a status update and an invoice. In 28 days.' },
             ].map((item, i) => (
-              <div key={item.num} style={{ display:'flex',alignItems:'center',flex:1 }}>
+              <div key={item.num} className="step-card" style={{ display:'flex',alignItems:'center',flex:1 }}>
                 <div style={{ flex:1,background:i===0?'#E07B39':'rgba(224,123,57,0.05)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:16,padding:'36px 24px 28px',textAlign:'center',position:'relative',boxShadow:i===0?'0 8px 32px rgba(224,123,57,0.3)':'none' }}>
                   <div style={{ position:'absolute',top:-18,left:'50%',transform:'translateX(-50%)',background:i===0?'white':'#E07B39',color:i===0?'#E07B39':'white',width:32,height:32,borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'0.78rem',fontWeight:800,boxShadow:'0 4px 12px rgba(224,123,57,0.5)' }}>{item.num}</div>
                   <div style={{ fontSize:'3.4rem',marginBottom:14,marginTop:8,lineHeight:1 }}>{item.icon}</div>
                   <div style={{ fontFamily:SERIF,fontSize:'1.1rem',color:'white',marginBottom:8,fontWeight:400 }}>{item.title}</div>
                   <div style={{ fontSize:'0.875rem',color:i===0?'rgba(255,255,255,0.85)':'rgba(255,255,255,0.55)',lineHeight:1.65 }}>{item.desc}</div>
                 </div>
-                {i < 2 && <div style={{ flexShrink:0,width:44,display:'flex',alignItems:'center',justifyContent:'center',color:'#E07B39',fontSize:'1.6rem' }}>→</div>}
+                {i < 2 && <div className="step-arrow" style={{ flexShrink:0,width:44,display:'flex',alignItems:'center',justifyContent:'center',color:'#E07B39',fontSize:'1.6rem' }}>→</div>}
               </div>
             ))}
           </div>
+          </AnimatedSteps>
 
         </div>
       </section>

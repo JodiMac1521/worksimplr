@@ -159,7 +159,7 @@ export default function Home() {
           </div>
 
           {/* Case study cards */}
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:18 }}>
+          <div className="hp-results-grid" style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:18 }}>
             {[
               {
                 stat:'180K Records',
@@ -407,8 +407,8 @@ export default function Home() {
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:12,lineHeight:1.2,textAlign:'center' }}>4 steps to delivered work.</h2>
 
           {/* Visual flow diagram — horizontal node chain */}
-          <div style={{ overflowX:'auto', paddingBottom:8, paddingTop:24 }}>
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 36px 1fr 36px 1fr 36px 1fr', minWidth:600, alignItems:'stretch' }}>
+          <div style={{ paddingBottom:8, paddingTop:24 }}>
+            <div className="hp-4step-grid" style={{ display:'grid', gridTemplateColumns:'1fr 36px 1fr 36px 1fr 36px 1fr', alignItems:'stretch' }}>
 
               {steps.map((step, i) => (
                 <>
@@ -445,7 +445,7 @@ export default function Home() {
 
                   {/* Arrow — not after last card */}
                   {i < steps.length - 1 && (
-                    <div key={`a${i}`} style={{ display:'flex', alignItems:'center', justifyContent:'center', color:'#E07B39', fontSize:'1.4rem' }}>→</div>
+                    <div key={`a${i}`} className="hp-4step-arrow" style={{ display:'flex', alignItems:'center', justifyContent:'center', color:'#E07B39', fontSize:'1.4rem' }}>→</div>
                   )}
                 </>
               ))}
@@ -457,8 +457,8 @@ export default function Home() {
             <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:32,textAlign:'center' }}>How the engine runs</div>
 
             {/* SVG flow diagram */}
-            <div style={{ overflowX:'auto' }}>
-              <svg width="100%" viewBox="0 0 660 240" xmlns="http://www.w3.org/2000/svg" style={{ display:'block', minWidth:520, maxWidth:700, margin:'0 auto' }}>
+            <div style={{ overflow:'hidden' }}>
+              <svg className="hp-engine-svg" width="100%" viewBox="0 0 660 240" xmlns="http://www.w3.org/2000/svg" style={{ display:'block', maxWidth:700, margin:'0 auto' }}>
                 <defs>
                   <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
                     <path d="M0,0 L0,6 L8,3 z" fill="#E07B39"/>

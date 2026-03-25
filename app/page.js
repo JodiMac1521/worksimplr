@@ -260,34 +260,52 @@ export default function Home() {
           <AnimatedSteps>
           <div style={{ display:'flex',alignItems:'stretch',gap:0,paddingTop:24,marginBottom:40 }}>
             {[
-              { num:'1', icon:(<svg width="88" height="52" viewBox="0 0 176 72" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
-                  {/* Box 1 — orange */}
-                  <rect x="2" y="20" width="44" height="32" rx="6" fill="rgba(224,123,57,0.12)" stroke="rgba(224,123,57,0.9)" strokeWidth="2"/>
-                  <line x1="11" y1="31" x2="37" y2="31" stroke="rgba(224,123,57,0.6)" strokeWidth="1.5"/>
-                  <line x1="11" y1="38" x2="30" y2="38" stroke="rgba(224,123,57,0.35)" strokeWidth="1.2"/>
-                  <line x1="11" y1="44" x2="33" y2="44" stroke="rgba(224,123,57,0.2)" strokeWidth="1"/>
-                  {/* Arrow 1→2 */}
-                  <line x1="46" y1="36" x2="64" y2="36" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8"/>
-                  <polygon points="66,36 60,32 60,40" fill="rgba(255,255,255,0.6)"/>
-                  {/* Box 2 — white */}
-                  <rect x="66" y="20" width="44" height="32" rx="6" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
-                  <line x1="75" y1="31" x2="101" y2="31" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
-                  <line x1="75" y1="38" x2="94" y2="38" stroke="rgba(255,255,255,0.22)" strokeWidth="1.2"/>
-                  <line x1="75" y1="44" x2="97" y2="44" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
-                  {/* Arrow 2→3 */}
-                  <line x1="110" y1="36" x2="128" y2="36" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8"/>
-                  <polygon points="130,36 124,32 124,40" fill="rgba(255,255,255,0.6)"/>
-                  {/* Box 3 — white */}
-                  <rect x="130" y="20" width="44" height="32" rx="6" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
-                  <line x1="139" y1="31" x2="165" y2="31" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
-                  <line x1="139" y1="38" x2="158" y2="38" stroke="rgba(255,255,255,0.22)" strokeWidth="1.2"/>
-                  <line x1="139" y1="44" x2="161" y2="44" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
+              { num:'1', icon:(<svg width="160" height="90" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  <defs>
+                    <marker id="wfA" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                      <path d="M1,1 L7,4 L1,7" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"/>
+                    </marker>
+                  </defs>
+                  {/* Input node */}
+                  <rect x="4" y="42" width="38" height="26" rx="5" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.9)" strokeWidth="2"/>
+                  <text x="23" y="59" textAnchor="middle" fill="rgba(255,255,255,0.85)" fontSize="10" fontWeight="600" fontFamily="DM Sans, sans-serif">Input</text>
+                  {/* Arrows from Input to processes */}
+                  <line x1="42" y1="50" x2="68" y2="26" stroke="rgba(255,255,255,0.55)" strokeWidth="1.6" markerEnd="url(#wfA)"/>
+                  <line x1="42" y1="55" x2="68" y2="55" stroke="rgba(255,255,255,0.55)" strokeWidth="1.6" markerEnd="url(#wfA)"/>
+                  <line x1="42" y1="62" x2="68" y2="88" stroke="rgba(255,255,255,0.55)" strokeWidth="1.6" markerEnd="url(#wfA)"/>
+                  {/* Scope node */}
+                  <ellipse cx="94" cy="22" rx="24" ry="15" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="2"/>
+                  <text x="94" y="26" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="9" fontFamily="DM Sans, sans-serif">Scope</text>
+                  {/* Build node */}
+                  <ellipse cx="94" cy="56" rx="24" ry="15" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="2"/>
+                  <text x="94" y="60" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="9" fontFamily="DM Sans, sans-serif">Build</text>
+                  {/* QA node */}
+                  <ellipse cx="94" cy="90" rx="24" ry="15" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="2"/>
+                  <text x="94" y="94" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="9" fontFamily="DM Sans, sans-serif">QA</text>
+                  {/* Arrows to Output */}
+                  <line x1="118" y1="26" x2="150" y2="48" stroke="rgba(255,255,255,0.55)" strokeWidth="1.6" markerEnd="url(#wfA)"/>
+                  <line x1="118" y1="56" x2="150" y2="56" stroke="rgba(255,255,255,0.55)" strokeWidth="1.6" markerEnd="url(#wfA)"/>
+                  <path d="M118 90 Q142 90 148 66" fill="none" stroke="rgba(255,255,255,0.55)" strokeWidth="1.6" markerEnd="url(#wfA)"/>
+                  {/* Dashed cross-links */}
+                  <line x1="94" y1="37" x2="94" y2="41" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeDasharray="2,2"/>
+                  <line x1="94" y1="71" x2="94" y2="75" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeDasharray="2,2"/>
+                  {/* Output node */}
+                  <ellipse cx="180" cy="56" rx="30" ry="18" fill="none" stroke="rgba(255,255,255,0.95)" strokeWidth="2.2"/>
+                  <text x="180" y="60" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="10" fontWeight="600" fontFamily="DM Sans, sans-serif">Output</text>
                 </svg>), title:'Structured Workflow', desc:"Each engagement is 'projectized' with a clear scope, milestones & tasks." },
-              { num:'2', icon: (<svg width="60" height="44" viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
-                  {[0,1,2,3].map(i => (
-                    <g key={i} transform={`translate(${i*28+6},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="9" cy="8" r="6"/>
-                      <path d="M0 28 C0 18 18 18 18 28"/>
+              { num:'2', icon: (<svg width="140" height="56" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  {/* Row 1 - 5 people */}
+                  {[0,1,2,3,4].map(i => (
+                    <g key={`a-${i}`} transform={`translate(${i*38+8},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="10" cy="8" r="6"/>
+                      <path d="M0 26 C0 17 20 17 20 26"/>
+                    </g>
+                  ))}
+                  {/* Row 2 - 5 people (slightly lighter) */}
+                  {[0,1,2,3,4].map(i => (
+                    <g key={`b-${i}`} transform={`translate(${i*38+8},36)`} fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="10" cy="8" r="6"/>
+                      <path d="M0 26 C0 17 20 17 20 26"/>
                     </g>
                   ))}
                 </svg>), title:'Execution plans', desc:'We onboard and distribute the work across 1–100 workers with QA built in.' },

@@ -5,46 +5,52 @@ import AnimatedSteps from './components/AnimatedSteps';
 export default function Home() {
   const SERIF = "'DM Serif Display', serif";
   const steps = [
-    { num: '01', icon: (<svg width="100" height="80" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
-                  {/* Data input node */}
-                  <rect x="4" y="38" width="28" height="18" rx="3" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.8"/>
-                  <text x="18" y="50" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="6" fontFamily="DM Sans, sans-serif">Data</text>
-                  {/* Arrow from Data to Process A */}
-                  <line x1="32" y1="47" x2="52" y2="28" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2" markerEnd="url(#wfArrow)"/>
-                  {/* Arrow from Data to Process B */}
-                  <line x1="32" y1="47" x2="52" y2="50" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2"/>
-                  {/* Arrow from Data to Process C */}
-                  <line x1="32" y1="47" x2="52" y2="76" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2"/>
-                  {/* Process A */}
-                  <ellipse cx="72" cy="22" rx="18" ry="12" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.8"/>
-                  <text x="72" y="25" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="6" fontFamily="DM Sans, sans-serif">Process A</text>
-                  {/* Process B */}
-                  <ellipse cx="72" cy="50" rx="18" ry="12" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.8"/>
-                  <text x="72" y="53" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="6" fontFamily="DM Sans, sans-serif">Process B</text>
-                  {/* Process C */}
-                  <ellipse cx="72" cy="78" rx="18" ry="12" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.8"/>
-                  <text x="72" y="81" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="6" fontFamily="DM Sans, sans-serif">Process C</text>
-                  {/* Output node */}
-                  <ellipse cx="132" cy="40" rx="22" ry="14" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.8"/>
-                  <text x="132" y="43" textAnchor="middle" fill="rgba(255,255,255,0.8)" fontSize="6" fontFamily="DM Sans, sans-serif">Output</text>
-                  {/* Arrows to output */}
-                  <line x1="90" y1="22" x2="110" y2="36" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2"/>
-                  <line x1="90" y1="50" x2="110" y2="42" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2"/>
-                  <path d="M90 78 Q110 78 110 52 L110 48" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2"/>
-                  {/* Arrow from B to output (cross-link) */}
-                  {/* Arrowhead marker */}
+    { num: '01', icon: (<svg width="140" height="100" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
                   <defs>
-                    <marker id="wfArrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-                      <path d="M0,0 L6,3 L0,6" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="0.8"/>
+                    <marker id="wfArr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                      <path d="M1,1 L7,4 L1,7" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"/>
                     </marker>
                   </defs>
+                  {/* Input node */}
+                  <rect x="6" y="42" width="36" height="24" rx="4" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2"/>
+                  <text x="24" y="58" textAnchor="middle" fill="rgba(255,255,255,0.8)" fontSize="9" fontWeight="600" fontFamily="DM Sans, sans-serif">Input</text>
+                  {/* Arrows from Input */}
+                  <line x1="42" y1="50" x2="62" y2="26" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
+                  <line x1="42" y1="54" x2="62" y2="54" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
+                  <line x1="42" y1="58" x2="62" y2="86" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
+                  {/* Process A */}
+                  <ellipse cx="86" cy="22" rx="22" ry="14" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="2"/>
+                  <text x="86" y="26" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="8" fontFamily="DM Sans, sans-serif">Scope</text>
+                  {/* Process B */}
+                  <ellipse cx="86" cy="54" rx="22" ry="14" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="2"/>
+                  <text x="86" y="58" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="8" fontFamily="DM Sans, sans-serif">Build</text>
+                  {/* Process C */}
+                  <ellipse cx="86" cy="88" rx="22" ry="14" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="2"/>
+                  <text x="86" y="92" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="8" fontFamily="DM Sans, sans-serif">QA</text>
+                  {/* Arrows to Output */}
+                  <line x1="108" y1="26" x2="138" y2="46" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
+                  <line x1="108" y1="54" x2="138" y2="54" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
+                  <path d="M108 88 Q130 88 134 62" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
+                  {/* Cross-link: A to B */}
+                  <line x1="86" y1="36" x2="86" y2="40" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeDasharray="2,2"/>
+                  {/* Output node */}
+                  <ellipse cx="164" cy="54" rx="28" ry="16" fill="none" stroke="rgba(255,255,255,0.95)" strokeWidth="2.2"/>
+                  <text x="164" y="58" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="9" fontWeight="600" fontFamily="DM Sans, sans-serif">Output</text>
                 </svg>), title: 'Submit your work', desc: 'Describe what you need in plain language. No scope doc required.' },
     { num: '02', icon: '⚡', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it — in minutes.' },
-    { num: '03', icon: (<svg width="60" height="44" viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
-                  {[0,1,2,3].map(i => (
-                    <g key={i} transform={`translate(${i*28+6},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="9" cy="8" r="6"/>
-                      <path d="M0 28 C0 18 18 18 18 28"/>
+    { num: '03', icon: (<svg width="120" height="56" viewBox="0 0 180 80" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+                  {/* Row 1 - 5 people */}
+                  {[0,1,2,3,4].map(i => (
+                    <g key={`r1-${i}`} transform={`translate(${i*34+8},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="9" cy="8" r="5.5"/>
+                      <path d="M0 24 C0 16 18 16 18 24"/>
+                    </g>
+                  ))}
+                  {/* Row 2 - 5 people */}
+                  {[0,1,2,3,4].map(i => (
+                    <g key={`r2-${i}`} transform={`translate(${i*34+8},34)`} fill="none" stroke="rgba(255,255,255,0.65)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="9" cy="8" r="5.5"/>
+                      <path d="M0 24 C0 16 18 16 18 24"/>
                     </g>
                   ))}
                 </svg>), title: 'AI-powered teams execute', desc: 'Vetted operators + AI tools work together on your project.' },

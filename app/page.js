@@ -3,7 +3,7 @@ import AnimatedDashboard from './components/AnimatedDashboard';
 import AnimatedSteps from './components/AnimatedSteps';
 
 export default function Home() {
-  const SERIF = "'DM Serif Display', serif";
+  const SERIF = "'DM Serif Display', serif"
   const steps = [
     { num: '01', icon: (<svg width="140" height="100" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
                   <defs>
@@ -67,7 +67,7 @@ export default function Home() {
             <img src="/logo.png" alt="Work Simplr" style={{ height:52,width:'auto',display:'block' }} />
           </a>
           <div className="nav-desktop-links" style={{ display:'flex',gap:28,alignItems:'center' }}>
-            {[['#solution','Platform'],['#how','Process'],['/pricing','Pricing']].map(([h,l]) => (
+            {[['#solution','Platform'],['#how','Process'],['/pricing','Pricing'],['/about','About']].map(([h,l]) => (
               <a key={h} href={h} style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none' }}>{l}</a>
             ))}
             {/* Case Studies dropdown */}

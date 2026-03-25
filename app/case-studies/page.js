@@ -321,7 +321,7 @@ export default function CaseStudies() {
               <p style={{ fontSize:'0.83rem',color:'rgba(255,255,255,0.35)',lineHeight:1.65,maxWidth:220 }}>AI-powered execution platform. We turn undefined work into delivered outcomes.</p>
             </div>
             {[
-              { title:'Platform',links:[['/#solution','SprintWork™'],['/#use-cases','Use Cases'],['/#how','How It Works'],['/register','Start a Sprint']] },
+              { title:'Platform',links:[['/#solution','SprintWork™'],['/case-studies','Case Studies'],['/#how','How It Works'],['/register','Start a Sprint']] },
               { title:'Company',links:[['/about','About'],['/case-studies','Case Studies'],['/blog','Blog'],['/contact','Contact']] },
               { title:'Legal',links:[['/privacy','Privacy'],['/terms','Terms'],['/cookies','Cookies']] },
             ].map(col => (
@@ -338,8 +338,10 @@ export default function CaseStudies() {
           <div style={{ borderTop:'1px solid rgba(255,255,255,0.06)',paddingTop:24,display:'flex',justifyContent:'space-between',alignItems:'center',fontSize:'0.78rem',color:'rgba(255,255,255,0.25)' }}>
             <span>© {new Date().getFullYear()} Work Simplr. All rights reserved.</span>
             <div style={{ display:'flex',gap:20 }}>
-              <a href="https://twitter.com/worksimplr" style={{ color:'inherit',textDecoration:'none' }}>Twitter</a>
-              <a href="https://linkedin.com/company/worksimplr" style={{ color:'inherit',textDecoration:'none' }}>LinkedIn</a>
+              <a href="https://www.linkedin.com/company/68873365/" style={{ color:'inherit',textDecoration:'none' }}>LinkedIn</a>
+              <a href="https://www.facebook.com/worksimplrUS/" style={{ color:'inherit',textDecoration:'none' }}>Facebook</a>
+              <a href="https://www.instagram.com/worksimplr/" style={{ color:'inherit',textDecoration:'none' }}>Instagram</a>
+              <a href="https://x.com/worksimplr" style={{ color:'inherit',textDecoration:'none' }}>X</a>
             </div>
           </div>
         </div>

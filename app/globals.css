@@ -915,6 +915,21 @@ a { color: inherit; text-decoration: none; }
     grid-template-columns: 1fr 1fr !important;
   }
   .cs-dropdown { display: none; }
+
+  /* Pricing compare table - horizontal scroll */
+  .pricing-compare-grid {
+    font-size: 0.75rem !important;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr !important;
+  }
+
+  /* About page grids */
+  .about-founding-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .about-diff-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 @media (max-width: 540px) {
   .categories { grid-template-columns: 1fr 1fr; }
@@ -930,5 +945,14 @@ a { color: inherit; text-decoration: none; }
   .cs-stat-pill {
     min-width: 70px !important;
     padding: 10px 12px !important;
+  }
+
+  /* Pricing compare - stack on very small screens */
+  .pricing-compare-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  .pricing-compare-grid > div {
+    text-align: left !important;
   }
 }

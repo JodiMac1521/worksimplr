@@ -67,7 +67,7 @@ const faqs = [
 
 export default function PricingPage() {
   return (
-    <div style={{ fontFamily: 'DM Sans, sans-serif', background: '#081A30', minHeight: '100vh', color: 'white' }}>
+    <div style={{ fontFamily: 'DM Sans, sans-serif', background: 'linear-gradient(160deg,#0A2342 0%,#081A30 40%,#0A2342 100%)', minHeight: '100vh', color: 'white' }}>
 
       {/* Nav */}
       <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:100,background:'rgba(10,35,66,0.95)',backdropFilter:'blur(14px)',borderBottom:'1px solid rgba(224,123,57,0.2)',height:60,display:'flex',alignItems:'center' }}>
@@ -191,7 +191,7 @@ export default function PricingPage() {
             <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 12 }}>Why SprintWork™</div>
             <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.5rem,3vw,2rem)', fontWeight: 400 }}>Compare the real cost of getting work done</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr', gap: 0, fontSize: '0.85rem' }}>
+          <div className="pricing-compare-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr', gap: 0, fontSize: '0.85rem' }}>
             {/* Header */}
             {['', 'Agency / Staffing', 'Freelance', 'SprintWork™'].map((h, i) => (
               <div key={i} style={{ padding: '12px 16px', background: i === 3 ? 'rgba(224,123,57,0.1)' : 'rgba(255,255,255,0.03)', borderBottom: '1px solid rgba(255,255,255,0.08)', fontWeight: 700, color: i === 3 ? '#E07B39' : 'rgba(255,255,255,0.5)', fontSize: '0.78rem', letterSpacing: i > 0 ? '0.5px' : 0, textAlign: i > 0 ? 'center' : 'left', border: i === 3 ? '1px solid rgba(224,123,57,0.2)' : undefined, borderBottom: '1px solid rgba(255,255,255,0.08)' }}>{h}</div>

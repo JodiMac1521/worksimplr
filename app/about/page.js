@@ -4,7 +4,7 @@ const SERIF = "'DM Serif Display', serif";
 
 export default function AboutPage() {
   return (
-    <div style={{ fontFamily: 'DM Sans, sans-serif', background: '#081A30', minHeight: '100vh', color: 'white' }}>
+    <div style={{ fontFamily: 'DM Sans, sans-serif', background: 'linear-gradient(160deg,#0A2342 0%,#081A30 40%,#0A2342 100%)', minHeight: '100vh', color: 'white' }}>
 
       {/* Nav */}
       <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:100,background:'rgba(10,35,66,0.95)',backdropFilter:'blur(14px)',borderBottom:'1px solid rgba(224,123,57,0.2)',height:60,display:'flex',alignItems:'center' }}>
@@ -69,7 +69,7 @@ export default function AboutPage() {
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', maxWidth: 860, margin: '0 auto' }} />
 
       {/* Founding story */}
-      <section style={{ padding: '72px 24px', maxWidth: 860, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+      <section className="about-founding-grid" style={{ padding: '72px 24px', maxWidth: 860, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
         <div>
           <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16 }}>Founded 2021</div>
           <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.2rem)', fontWeight: 400, lineHeight: 1.25, marginBottom: 20 }}>From EdTech veteran to workforce innovator</h2>
@@ -114,7 +114,7 @@ export default function AboutPage() {
           <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16 }}>The Difference</div>
           <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.2rem)', fontWeight: 400 }}>SprintWork™ vs. everything else</h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 20 }}>
+        <div className="about-diff-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 20 }}>
           {[
             { label: 'Staffing agencies', vs: 'Place people\nYou manage the work', us: 'We scope, structure\n& deliver outcomes' },
             { label: 'Freelance platforms', vs: 'Browse profiles\nHope for the best', us: 'AI-scoped briefs\n28-day sprint delivery' },

@@ -274,8 +274,8 @@ export default function Terms() {
             </div>
             {[
               { title:'Platform',links:[['/#solution','SprintWork\u2122'],['/case-studies','Case Studies'],['/#how','How It Works'],['/register','Start a Sprint']] },
-              { title:'Company',links:[['/about','About'],['/case-studies','Case Studies'],['/blog','Blog'],['/contact','Contact']] },
-              { title:'Legal',links:[['/privacy','Privacy'],['/terms','Terms'],['/cookies','Cookies']] },
+              { title:'Company',links:[['/about','About'],['/case-studies','Case Studies'],['/contact','Contact']] },
+              { title:'Legal',links:[['/privacy-policy','Privacy Policy'],['/terms','Terms']] },
             ].map(col => (
               <div key={col.title}>
                 <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'rgba(255,255,255,0.5)',marginBottom:16 }}>{col.title}</div>

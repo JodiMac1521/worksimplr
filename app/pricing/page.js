@@ -5,14 +5,14 @@ const SERIF = "'DM Serif Display', serif";
 const plans = [
   {
     name: 'Starter',
-    tagline: 'Launch your first SprintWork™ experience.',
+    tagline: 'Launch your first SprintWorkâ¢ experience.',
     price: '$2,500',
     per: 'starting at',
     desc: 'Perfect for validating a single project or workflow with a small team.',
     highlight: false,
     features: [
       '1 project',
-      'Up to 5 Sprint-Terns™',
+      'Up to 5 Sprint-Ternsâ¢',
       'Ready-to-use project templates',
       'Core platform access',
       'Basic reporting',
@@ -30,7 +30,7 @@ const plans = [
     badge: 'Most Popular',
     features: [
       'Multiple projects + cohorts',
-      'Up to 10 Sprint-Terns™ per project',
+      'Up to 10 Sprint-Ternsâ¢ per project',
       'Employer collaboration tools',
       'Custom project support',
       'Outcomes tracking + analytics',
@@ -57,10 +57,10 @@ const plans = [
   },
 ];
 const faqs = [
-  { q: 'What exactly is a "sprint"?', a: 'A sprint is a 28-day structured engagement where a team of vetted Sprint-Terns™ executes a scoped project and delivers a finished output — not a status update.' },
-  { q: 'How does AI scoping work?', a: 'When you submit a project, our SprintWork™ AI classifies the work, defines deliverables, estimates team size, and produces a brief — in minutes. You approve it before any work starts.' },
+  { q: 'What exactly is a "sprint"?', a: 'A sprint is a 28-day structured engagement where a team of vetted Sprint-Ternsâ¢ executes a scoped project and delivers a finished output â not a status update.' },
+  { q: 'How does AI scoping work?', a: 'When you submit a project, our SprintWorkâ¢ AI classifies the work, defines deliverables, estimates team size, and produces a brief â in minutes. You approve it before any work starts.' },
   { q: 'What if I\'m not happy with the output?', a: 'Every deliverable goes through QA before it reaches you. Starter includes 1 revision round, Growth includes 2. Enterprise has SLA-backed guarantees.' },
-  { q: 'How are Sprint-Terns™ vetted?', a: 'All Sprint-Terns™ complete a skills assessment, background check, and onboarding through our TalentOS platform. Only the top applicants are matched to client sprints.' },
+  { q: 'How are Sprint-Ternsâ¢ vetted?', a: 'All Sprint-Ternsâ¢ complete a skills assessment, background check, and onboarding through our TalentOS platform. Only the top applicants are matched to client sprints.' },
   { q: 'Can I run multiple sprints at once?', a: 'Yes. Growth and Enterprise plans support concurrent sprints across different workstreams. Talk to us about volume pricing.' },
   { q: 'Is there a setup fee?', a: 'No setup fees. You pay per sprint. Enterprise contracts are quoted annually with volume discounts.' },
 ];
@@ -123,7 +123,7 @@ export default function PricingPage() {
           Pay per sprint.<br /><em style={{ color: '#F08C4E' }}>Get real deliverables.</em>
         </h1>
         <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.75, maxWidth: 520, margin: '0 auto' }}>
-          No retainers. No headcount. No surprise invoices. Every sprint is scoped, priced, and delivered in 28 days — or we make it right.
+          No retainers. No headcount. No surprise invoices. Every sprint is scoped, priced, and delivered in 28 days â or we make it right.
         </p>
       </section>
 
@@ -169,7 +169,7 @@ export default function PricingPage() {
                 borderRadius: 999, color: 'white', textDecoration: 'none',
                 fontWeight: 600, fontSize: '0.95rem',
                 boxShadow: plan.highlight ? '0 8px 24px rgba(224,123,57,0.35)' : 'none',
-              }}>{plan.cta} →</Link>
+              }}>{plan.cta} â</Link>
             </div>
           ))}
         </div>
@@ -178,7 +178,7 @@ export default function PricingPage() {
         <div style={{ textAlign: 'center', marginTop: 40, fontSize: '0.82rem', color: 'rgba(255,255,255,0.3)', display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap' }}>
           {['No setup fees', '28-day delivery guarantee', 'QA on every deliverable', 'Cancel anytime'].map(t => (
             <span key={t} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-              <span style={{ color: '#22C55E', fontSize: '0.75rem' }}>✓</span> {t}
+              <span style={{ color: '#22C55E', fontSize: '0.75rem' }}>â</span> {t}
             </span>
           ))}
         </div>
@@ -188,19 +188,19 @@ export default function PricingPage() {
       <section style={{ background: '#0A2342', padding: '72px 24px', borderTop: '1px solid rgba(255,255,255,0.06)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth: 860, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 12 }}>Why SprintWork™</div>
+            <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 12 }}>Why SprintWorkâ¢</div>
             <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.5rem,3vw,2rem)', fontWeight: 400 }}>Compare the real cost of getting work done</h2>
           </div>
           <div className="pricing-compare-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr', gap: 0, fontSize: '0.85rem' }}>
             {/* Header */}
-            {['', 'Agency / Staffing', 'Freelance', 'SprintWork™'].map((h, i) => (
+            {['', 'Agency / Staffing', 'Freelance', 'SprintWorkâ¢'].map((h, i) => (
               <div key={i} style={{ padding: '12px 16px', background: i === 3 ? 'rgba(224,123,57,0.1)' : 'rgba(255,255,255,0.03)', borderBottom: '1px solid rgba(255,255,255,0.08)', fontWeight: 700, color: i === 3 ? '#E07B39' : 'rgba(255,255,255,0.5)', fontSize: '0.78rem', letterSpacing: i > 0 ? '0.5px' : 0, textAlign: i > 0 ? 'center' : 'left', border: i === 3 ? '1px solid rgba(224,123,57,0.2)' : undefined, borderBottom: '1px solid rgba(255,255,255,0.08)' }}>{h}</div>
             ))}
             {[
-              ['Time to first output', '3–6 months', '2–8 weeks', '28 days'],
-              ['Scoping included', '✗', '✗', '✓ AI-powered'],
-              ['QA built in', '✗', '✗', '✓ Every sprint'],
-              ['Predictable cost', '✗ hourly', '✗ varies', '✓ Fixed price'],
+              ['Time to first output', '3â6 months', '2â8 weeks', '28 days'],
+              ['Scoping included', 'â', 'â', 'â AI-powered'],
+              ['QA built in', 'â', 'â', 'â Every sprint'],
+              ['Predictable cost', 'â hourly', 'â varies', 'â Fixed price'],
               ['Management overhead', 'High', 'Medium', 'None'],
               ['Talent pipeline', 'Their network', 'Public marketplace', '590+ school partners'],
             ].map((row, ri) => row.map((cell, ci) => (
@@ -231,7 +231,7 @@ export default function PricingPage() {
         <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 400, marginBottom: 12 }}>Ready to run your first sprint?</h2>
         <p style={{ color: 'rgba(255,255,255,0.45)', marginBottom: 32, fontSize: '0.95rem' }}>Set up takes 10 minutes. First deliverable in 28 days.</p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/register?role=employer" style={{ padding: '14px 40px', background: '#E07B39', borderRadius: 999, color: 'white', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', boxShadow: '0 8px 24px rgba(224,123,57,0.4)' }}>Start a Sprint →</Link>
+          <Link href="/register?role=employer" style={{ padding: '14px 40px', background: '#E07B39', borderRadius: 999, color: 'white', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', boxShadow: '0 8px 24px rgba(224,123,57,0.4)' }}>Start a Sprint â</Link>
           <a href="mailto:hello@worksimplr.com" style={{ padding: '14px 32px', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 999, color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: '0.95rem' }}>Talk to sales</a>
         </div>
       </section>
@@ -241,7 +241,7 @@ export default function PricingPage() {
           <div className="cs-footer-grid" style={{ marginBottom:40 }}>
             <div>
               <div style={{ fontFamily:"'DM Serif Display', serif",fontSize:'1.15rem',color:'white',marginBottom:10 }}>Work Simplr</div>
-              <p style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.4)',lineHeight:1.65,maxWidth:240 }}>Structured work, executed in weeks — not months.</p>
+              <p style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.4)',lineHeight:1.65,maxWidth:240 }}>Structured work, executed in weeks â not months.</p>
             </div>
             <div>
               <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.5)',marginBottom:16 }}>Platform</div>
@@ -257,6 +257,7 @@ export default function PricingPage() {
                 <Link href="/about" style={{ fontSize:'0.84rem',color:'rgba(255,255,255,0.4)',textDecoration:'none' }}>About</Link>
                 <Link href="/students" style={{ fontSize:'0.84rem',color:'rgba(255,255,255,0.4)',textDecoration:'none' }}>For Students</Link>
                 <Link href="/terms" style={{ fontSize:'0.84rem',color:'rgba(255,255,255,0.4)',textDecoration:'none' }}>Terms of Service</Link>
+                <Link href="/privacy-policy" style={{ fontSize:'0.84rem',color:'rgba(255,255,255,0.4)',textDecoration:'none' }}>Privacy Policy</Link>
               </div>
             </div>
             <div>
@@ -270,7 +271,7 @@ export default function PricingPage() {
             </div>
           </div>
           <div style={{ borderTop:'1px solid rgba(255,255,255,0.06)',paddingTop:20,textAlign:'center',fontSize:'0.78rem',color:'rgba(255,255,255,0.25)' }}>
-            © {new Date().getFullYear()} Work Simplr. All rights reserved.
+            Â© {new Date().getFullYear()} Work Simplr. All rights reserved.
           </div>
         </div>
       </footer>

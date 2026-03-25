@@ -11,7 +11,7 @@ export default function CaseStudies() {
       tag: 'Data Collection',
       title: 'Large-Scale Data Collection & Research',
       client: 'U.S. News & World Report',
-      industry: 'Media · Data Research',
+      industry: 'Media Â· Data Research',
       desc: 'Deployed 60 emerging talent workers using AI + human workflows to collect 200,000 verified data points in 4 weeks for their annual "Best Colleges" report.',
       chips: ['AI + Human', 'Data Validation', 'Publication-Ready'],
       stats: [
@@ -34,8 +34,8 @@ export default function CaseStudies() {
       tag: 'Specialized Research',
       title: 'Influencer & Tutor Identification',
       client: 'The Gates Foundation',
-      industry: 'Philanthropy · Education',
-      desc: 'Student researchers identified 100+ vetted math tutors and content creators across YouTube, TikTok, Discord, and Reddit — with peer-informed authenticity insights.',
+      industry: 'Philanthropy Â· Education',
+      desc: 'Student researchers identified 100+ vetted math tutors and content creators across YouTube, TikTok, Discord, and Reddit â with peer-informed authenticity insights.',
       chips: ['Peer Perspective', 'Multi-Platform', 'Partnership-Ready'],
       stats: [
         { num: '100+', label: 'Creators' },
@@ -56,8 +56,8 @@ export default function CaseStudies() {
       tag: 'Product Testing',
       title: 'Alpha Product Testing with Real Users',
       client: 'MacMillan Learning',
-      industry: 'EdTech · Product Development',
-      desc: 'Recruited 6 nursing students for a "3+1" testing model over 4 weeks — generating 15-20 hours of real behavioral data and accelerating their beta launch by 3 months.',
+      industry: 'EdTech Â· Product Development',
+      desc: 'Recruited 6 nursing students for a "3+1" testing model over 4 weeks â generating 15-20 hours of real behavioral data and accelerating their beta launch by 3 months.',
       chips: ['NCLEX Prep', 'UX Testing', 'Behavioral Data'],
       stats: [
         { num: '4', label: 'Weeks' },
@@ -82,8 +82,8 @@ export default function CaseStudies() {
       tag: 'Market Research',
       title: 'Demand Validation Research',
       client: 'Vista Learning',
-      industry: 'EdTech · Product Validation',
-      desc: 'Validated product demand with 10 qualified nursing students in just 2 weeks — delivering enterprise research quality at a total investment of $3,500.',
+      industry: 'EdTech Â· Product Validation',
+      desc: 'Validated product demand with 10 qualified nursing students in just 2 weeks â delivering enterprise research quality at a total investment of $3,500.',
       chips: ['Interviews', 'Product Validation', 'Hard-to-Reach Audience'],
       stats: [
         { num: '2', label: 'Weeks' },
@@ -108,8 +108,8 @@ export default function CaseStudies() {
       tag: 'Campus Marketing',
       title: 'Student-to-Student Enrollment Program',
       client: 'Acadeum (College Consortium)',
-      industry: 'Higher Ed · Marketing',
-      desc: '5 student ambassadors across partner campuses drove peer-to-peer marketing through clubs, social media, and events — hitting the 75% prospect conversion target.',
+      industry: 'Higher Ed Â· Marketing',
+      desc: '5 student ambassadors across partner campuses drove peer-to-peer marketing through clubs, social media, and events â hitting the 75% prospect conversion target.',
       chips: ['Peer Outreach', 'Multi-Channel', 'Replicable Model'],
       stats: [
         { num: '75%', label: 'Conversion' },
@@ -132,9 +132,9 @@ export default function CaseStudies() {
       tag: 'Tech Development',
       title: 'AI Product Development with Student Teams',
       client: 'Select Partner (Nonprofit)',
-      industry: 'Nonprofit · Financial Services',
-      desc: '28-day SprintWork™ model with 6-8 student developers built a working AI website agent — complete with documentation, content model, and product roadmap.',
-      chips: ['AI Agent', 'SprintWork™', 'Full Handoff'],
+      industry: 'Nonprofit Â· Financial Services',
+      desc: '28-day SprintWorkâ¢ model with 6-8 student developers built a working AI website agent â complete with documentation, content model, and product roadmap.',
+      chips: ['AI Agent', 'SprintWorkâ¢', 'Full Handoff'],
       stats: [
         { num: '4', label: 'Weeks' },
         { num: '6-8', label: 'Devs' },
@@ -153,8 +153,8 @@ export default function CaseStudies() {
       tag: 'QA & Program Management',
       title: 'User Acceptance Testing (UAT)',
       client: 'Norton',
-      industry: 'EdTech · Quality Assurance',
-      desc: 'End-to-end UAT program management — recruiting participants, coordinating synchronous + asynchronous sessions, and delivering weekly progress reporting.',
+      industry: 'EdTech Â· Quality Assurance',
+      desc: 'End-to-end UAT program management â recruiting participants, coordinating synchronous + asynchronous sessions, and delivering weekly progress reporting.',
       chips: ['Sync + Async', 'Risk Tracking', 'Full Coordination'],
       stats: [
         { num: 'Live', label: 'Sync Testing' },
@@ -172,7 +172,7 @@ export default function CaseStudies() {
 
   return (
     <>
-      {/* NAV — same as homepage */}
+      {/* NAV â same as homepage */}
       <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:100,background:'rgba(10,35,66,0.95)',backdropFilter:'blur(14px)',borderBottom:'1px solid rgba(224,123,57,0.2)',height:60,display:'flex',alignItems:'center' }}>
         <div style={{ maxWidth:1080,margin:'0 auto',padding:'0 24px',display:'flex',alignItems:'center',justifyContent:'space-between',width:'100%' }}>
           <a href="/" style={{ textDecoration:'none',display:'flex',alignItems:'center' }}>
@@ -182,7 +182,34 @@ export default function CaseStudies() {
             {[['/#solution','Platform'],['/#how','Process'],['/pricing','Pricing']].map(([h,l]) => (
               <a key={h} href={h} style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none' }}>{l}</a>
             ))}
-            <a href="/case-studies" style={{ fontSize:'0.88rem',fontWeight:600,color:ORANGE_LIGHT,textDecoration:'none' }}>Case Studies</a>
+            {/* Case Studies dropdown */}
+            <div style={{ position:'relative' }} className="cs-dropdown">
+              <a href="/case-studies" style={{ fontSize:'0.88rem',fontWeight:600,color:ORANGE_LIGHT,textDecoration:'none',display:'flex',alignItems:'center',gap:4 }}>
+                Case Studies
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 3.5l3 3 3-3"/></svg>
+              </a>
+              <div className="cs-dropdown-menu" style={{ position:'absolute',top:'100%',left:'50%',transform:'translateX(-50%)',paddingTop:8,opacity:0,visibility:'hidden',transition:'all 0.2s',pointerEvents:'none' }}>
+                <div style={{ background:'rgba(10,35,66,0.98)',border:'1px solid rgba(224,123,57,0.15)',borderRadius:12,padding:8,minWidth:260,boxShadow:'0 20px 40px rgba(0,0,0,0.4)',backdropFilter:'blur(16px)' }}>
+                  {[
+                    { href:'/case-studies#product-testing', label:'Product Testing', sub:'Alpha/beta with real users',
+                      icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="1" width="8" height="16" rx="2" stroke="#E07B39" strokeWidth="1.5"/><circle cx="9" cy="12" r="1.5" fill="#E07B39"/><line x1="7" y1="5" x2="11" y2="5" stroke="#E07B39" strokeWidth="1" opacity="0.5"/><line x1="7" y1="7" x2="11" y2="7" stroke="#E07B39" strokeWidth="1" opacity="0.3"/></svg> },
+                    { href:'/case-studies#data-collection', label:'Data & Research', sub:'Large-scale research sprints',
+                      icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="10" width="3" height="6" rx="1" fill="#E07B39" opacity="0.4"/><rect x="7.5" y="6" width="3" height="10" rx="1" fill="#E07B39" opacity="0.6"/><rect x="13" y="2" width="3" height="14" rx="1" fill="#E07B39"/></svg> },
+                    { href:'/case-studies#campus-marketing', label:'Campus Marketing', sub:'Peer-to-peer outreach',
+                      icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 14 L9 4 L16 14" stroke="#E07B39" strokeWidth="1.5" fill="none"/><circle cx="9" cy="2" r="1.5" fill="#E07B39"/><line x1="5" y1="14" x2="13" y2="14" stroke="#E07B39" strokeWidth="1.5"/></svg> },
+                    { href:'/case-studies#specialized-research', label:'Specialized Research', sub:'Niche experts & influencers',
+                      icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="5" stroke="#E07B39" strokeWidth="1.5"/><line x1="12" y1="12" x2="16" y2="16" stroke="#E07B39" strokeWidth="1.5" strokeLinecap="round"/></svg> },
+                    { href:'/case-studies#tech-development', label:'Tech Development', sub:'AI & software prototypes',
+                      icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="5,5 2,9 5,13" stroke="#E07B39" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/><polyline points="13,5 16,9 13,13" stroke="#E07B39" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/><line x1="10" y1="3" x2="8" y2="15" stroke="#E07B39" strokeWidth="1.5" strokeLinecap="round" opacity="0.6"/></svg> },
+                  ].map(item => (
+                    <a key={item.label} href={item.href} className="cs-dropdown-item" style={{ display:'flex',alignItems:'center',gap:12,padding:'10px 12px',borderRadius:8,textDecoration:'none',color:'rgba(255,255,255,0.55)',transition:'all 0.15s',fontSize:'0.82rem' }}>
+                      <div style={{ width:32,height:32,borderRadius:6,background:'rgba(224,123,57,0.08)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}>{item.icon}</div>
+                      <div><div style={{ fontWeight:600,color:'white',fontSize:'0.84rem' }}>{item.label}</div><div style={{ fontSize:'0.72rem',opacity:0.5 }}>{item.sub}</div></div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
           <div className="nav-desktop-cta" style={{ display:'flex',gap:10 }}>
             <a href="/login" style={{ padding:'8px 20px',border:'1px solid rgba(255,255,255,0.2)',borderRadius:999,fontSize:'0.875rem',color:'rgba(255,255,255,0.7)',textDecoration:'none' }}>Log in</a>
@@ -199,10 +226,10 @@ export default function CaseStudies() {
         <div style={{ maxWidth:800,margin:'0 auto',padding:'0 24px',textAlign:'center',position:'relative',zIndex:1 }}>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:ORANGE,marginBottom:16 }}>Case Studies</div>
           <h1 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,4.5vw,3.2rem)',fontWeight:400,color:'white',lineHeight:1.15,marginBottom:20 }}>
-            Real Results — <em style={{ fontStyle:'italic',color:ORANGE_LIGHT }}>In Weeks, Not Months</em>
+            Real Results â <em style={{ fontStyle:'italic',color:ORANGE_LIGHT }}>In Weeks, Not Months</em>
           </h1>
           <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.5)',lineHeight:1.7,maxWidth:600,margin:'0 auto' }}>
-            Detailed stories of how organizations leverage emerging talent through SprintWork™ to ship real outcomes.
+            Detailed stories of how organizations leverage emerging talent through SprintWorkâ¢ to ship real outcomes.
           </p>
         </div>
       </section>
@@ -307,8 +334,8 @@ export default function CaseStudies() {
         <div style={{ position:'absolute',inset:0,background:'radial-gradient(ellipse at center,rgba(224,123,57,0.15) 0%,transparent 65%)',pointerEvents:'none' }} />
         <div style={{ position:'relative',zIndex:1,maxWidth:640,margin:'0 auto' }}>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,4vw,3rem)',color:'white',marginBottom:16,lineHeight:1.15 }}>Ready to see results<br /><em style={{ color:ORANGE_LIGHT }}>like these?</em></h2>
-          <p style={{ color:'rgba(255,255,255,0.5)',marginBottom:36,fontSize:'1rem',lineHeight:1.7 }}>Join the companies already using SprintWork™ to deliver outcomes, not headcount.</p>
-          <a href="/register?role=employer" style={{ display:'inline-block',padding:'16px 44px',background:ORANGE,borderRadius:999,fontSize:'1.05rem',fontWeight:700,color:'white',textDecoration:'none',boxShadow:'0 8px 32px rgba(224,123,57,0.45)' }}>Start a Sprint →</a>
+          <p style={{ color:'rgba(255,255,255,0.5)',marginBottom:36,fontSize:'1rem',lineHeight:1.7 }}>Join the companies already using SprintWorkâ¢ to deliver outcomes, not headcount.</p>
+          <a href="/register?role=employer" style={{ display:'inline-block',padding:'16px 44px',background:ORANGE,borderRadius:999,fontSize:'1.05rem',fontWeight:700,color:'white',textDecoration:'none',boxShadow:'0 8px 32px rgba(224,123,57,0.45)' }}>Start a Sprint â</a>
         </div>
       </section>
 
@@ -321,7 +348,7 @@ export default function CaseStudies() {
               <p style={{ fontSize:'0.83rem',color:'rgba(255,255,255,0.35)',lineHeight:1.65,maxWidth:220 }}>AI-powered execution platform. We turn undefined work into delivered outcomes.</p>
             </div>
             {[
-              { title:'Platform',links:[['/#solution','SprintWork™'],['/case-studies','Case Studies'],['/#how','How It Works'],['/register','Start a Sprint']] },
+              { title:'Platform',links:[['/#solution','SprintWorkâ¢'],['/case-studies','Case Studies'],['/#how','How It Works'],['/register','Start a Sprint']] },
               { title:'Company',links:[['/about','About'],['/case-studies','Case Studies'],['/blog','Blog'],['/contact','Contact']] },
               { title:'Legal',links:[['/privacy','Privacy'],['/terms','Terms'],['/cookies','Cookies']] },
             ].map(col => (
@@ -336,7 +363,7 @@ export default function CaseStudies() {
             ))}
           </div>
           <div style={{ borderTop:'1px solid rgba(255,255,255,0.06)',paddingTop:24,display:'flex',justifyContent:'space-between',alignItems:'center',fontSize:'0.78rem',color:'rgba(255,255,255,0.25)' }}>
-            <span>© {new Date().getFullYear()} Work Simplr. All rights reserved.</span>
+            <span>Â© {new Date().getFullYear()} Work Simplr. All rights reserved.</span>
             <div style={{ display:'flex',gap:20 }}>
               <a href="https://www.linkedin.com/company/68873365/" style={{ color:'inherit',textDecoration:'none' }}>LinkedIn</a>
               <a href="https://www.facebook.com/worksimplrUS/" style={{ color:'inherit',textDecoration:'none' }}>Facebook</a>

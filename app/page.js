@@ -3,13 +3,6 @@ import AnimatedDashboard from './components/AnimatedDashboard';
 
 export default function Home() {
   const SERIF = "'DM Serif Display', serif";
-  const useCases = [
-    { icon: '🗂️', title: 'Data Cleanup & Structuring', desc: 'Messy databases, spreadsheets, and records — cleaned, labeled, and structured.' },
-    { icon: '🧪', title: 'User Testing', desc: '10–200 users recruited and tested in weeks, not months.' },
-    { icon: '📊', title: 'Market Research & Intelligence', desc: 'Competitive analysis, pricing research, and market mapping — delivered as a document.' },
-    { icon: '🔄', title: 'CRM Cleanup & Enrichment', desc: 'Contacts verified, enriched, and ready to use.' },
-    { icon: '🤖', title: 'AI Workflow Setup', desc: 'Prompts built, tools configured, workflows tested and handed off.' },
-  ];
   const steps = [
     { num: '01', icon: (<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
                   {/* card background */}
@@ -533,21 +526,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="use-cases" style={{ background:'#081A30',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
-        <div style={{ maxWidth:860,margin:'0 auto' }}>
-          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>Use Cases</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:48,lineHeight:1.2,textAlign:'center' }}>Work we execute every week.</h2>
-          <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))',gap:16 }}>
-            {useCases.map(uc => (
-              <div key={uc.title} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:14,padding:'24px 20px' }}>
-                <div style={{ fontSize:'1.8rem',marginBottom:12 }}>{uc.icon}</div>
-                <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.9rem' }}>{uc.title}</div>
-                <div style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{uc.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section style={{ background:'#0A2342',padding:'96px 24px' }}>
         <div style={{ maxWidth:860,margin:'0 auto' }}>
@@ -613,7 +591,7 @@ export default function Home() {
               <p style={{ fontSize:'0.83rem',color:'rgba(255,255,255,0.35)',lineHeight:1.65,maxWidth:220 }}>AI-powered execution platform. We turn undefined work into delivered outcomes.</p>
             </div>
             {[
-              { title:'Platform',links:[['#solution','SprintWork™'],['#use-cases','Use Cases'],['#how','How It Works'],['/register','Start a Sprint']] },
+              { title:'Platform',links:[['#solution','SprintWork™'],['/case-studies','Case Studies'],['#how','How It Works'],['/register','Start a Sprint']] },
               { title:'Company',links:[['/about','About'],['/case-studies','Case Studies'],['/blog','Blog'],['/contact','Contact']] },
               { title:'Legal',links:[['/privacy','Privacy'],['/terms','Terms'],['/cookies','Cookies']] },
             ].map(col => (

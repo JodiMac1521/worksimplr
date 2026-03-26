@@ -217,7 +217,7 @@ export default function Home() {
           <AnimatedSteps>
           <div className="hp-steps-row" style={{ display:'flex',alignItems:'stretch',gap:0,paddingTop:24,marginBottom:40 }}>
             {[
-              { num:'1', icon:(<svg width="160" height="90" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
+              { num:'1', icon:(<svg width="120" height="68" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
                   <defs>
                     <marker id="wfA" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
                       <path d="M1,1 L7,4 L1,7" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"/>
@@ -277,9 +277,9 @@ export default function Home() {
               <div key={item.num} className="step-card" style={{ display:'flex',alignItems:'stretch',flex:1 }}>
                 <div style={{ flex:1,display:'flex',flexDirection:'column',background:i===0?'#E07B39':'rgba(224,123,57,0.05)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:16,padding:'36px 24px 28px',textAlign:'center',position:'relative',boxShadow:i===0?'0 8px 32px rgba(224,123,57,0.3)':'none' }}>
                   <div style={{ position:'absolute',top:-18,left:'50%',transform:'translateX(-50%)',background:i===0?'white':'#E07B39',color:i===0?'#E07B39':'white',width:32,height:32,borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'0.78rem',fontWeight:800,boxShadow:'0 4px 12px rgba(224,123,57,0.5)' }}>{item.num}</div>
-                  <div style={{ fontSize:'3.4rem',marginBottom:14,marginTop:8,lineHeight:1 }}>{item.icon}</div>
+                  <div style={{ fontSize:'3.4rem',marginBottom:14,marginTop:8,lineHeight:1,height:100,display:'flex',alignItems:'center',justifyContent:'center' }}>{item.icon}</div>
                   <div style={{ fontFamily:SERIF,fontSize:'1.1rem',color:'white',marginBottom:8,fontWeight:400 }}>{item.title}</div>
-                  <div style={{ fontSize:'0.875rem',color:i===0?'rgba(255,255,255,0.85)':'rgba(255,255,255,0.55)',lineHeight:1.65 }}>{item.desc}</div>
+                  <div style={{ fontSize:'0.875rem',maxWidth:260,color:i===0?'rgba(255,255,255,0.85)':'rgba(255,255,255,0.55)',lineHeight:1.65 }}>{item.desc}</div>
                 </div>
                 {i < 2 && <div className="step-arrow" style={{ flexShrink:0,width:44,display:'flex',alignItems:'center',justifyContent:'center',color:'#E07B39',fontSize:'1.6rem' }}>→</div>}
               </div>
@@ -366,23 +366,14 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Right: Before/After contrast table */}
-            <div style={{ width:380,flexShrink:0,borderRadius:16,overflow:'hidden',border:'1px solid rgba(255,255,255,0.08)',background:'rgba(255,255,255,0.02)' }}>
-              <div style={{ display:'flex',alignItems:'center',borderBottom:'1px solid rgba(255,255,255,0.1)',background:'rgba(255,255,255,0.03)' }}>
-                <div style={{ flex:1,padding:'14px 24px',fontSize:11,fontWeight:700,letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)' }}>Before</div>
-                <div style={{ width:36 }} />
-                <div style={{ flex:1,padding:'14px 24px',fontSize:11,fontWeight:700,letterSpacing:'0.15em',textTransform:'uppercase',color:'#E07B39',borderLeft:'2px solid #E07B39',background:'rgba(224,123,57,0.06)' }}>After</div>
-              </div>
-              {[['Messy','Handled'],['Ambiguous','Structured'],['Planned','Done'],['Slow','Fast/Reliable']].map(([b,a],i) => (
-                <div key={i} style={{ display:'flex',alignItems:'center',borderBottom:i<3?'1px solid rgba(255,255,255,0.06)':'none' }}>
-                  <div style={{ flex:1,padding:'18px 24px',fontSize:16,color:'rgba(255,255,255,0.35)',fontWeight:400 }}>{b}</div>
-                  <div style={{ width:36,display:'flex',alignItems:'center',justifyContent:'center' }}>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#E07B39" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </div>
-                  <div style={{ flex:1,padding:'18px 24px',fontSize:16,color:'white',fontWeight:700,background:'rgba(224,123,57,0.06)',borderLeft:'2px solid #E07B39' }}>{a}</div>
-                </div>
-              ))}
-            </div>
+            {/* Right: Accent panel */}
+          <div style={{ width:340,flexShrink:0,borderRadius:20,background:'linear-gradient(135deg,rgba(224,123,57,0.08) 0%,rgba(224,123,57,0.03) 100%)',border:'1px solid rgba(224,123,57,0.15)',padding:'40px 32px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',gap:24,position:'relative',overflow:'hidden' }}>
+            <div style={{ position:'absolute',top:-60,right:-60,width:160,height:160,borderRadius:'50%',background:'radial-gradient(circle,rgba(224,123,57,0.15) 0%,transparent 70%)' }} />
+            <div style={{ position:'absolute',bottom:-40,left:-40,width:120,height:120,borderRadius:'50%',background:'radial-gradient(circle,rgba(224,123,57,0.1) 0%,transparent 70%)' }} />
+            <div style={{ fontFamily:SERIF,fontSize:72,fontWeight:400,color:'#E07B39',lineHeight:1,opacity:0.9 }}>5</div>
+            <div style={{ fontFamily:SERIF,fontSize:22,color:'white',textAlign:'center',lineHeight:1.3 }}>Simple steps.<br/>Zero complexity.</div>
+            <div style={{ width:48,height:2,background:'#E07B39',borderRadius:1,opacity:0.6 }} />
+            <div style={{ fontSize:14,color:'rgba(255,255,255,0.45)',textAlign:'center',lineHeight:1.7 }}>From request to delivery, every sprint is AI-scoped, talent-matched, and quality-checked.</div>
           </div>
 
           <p style={{ textAlign:'center',color:'rgba(255,255,255,0.5)',fontSize:15,lineHeight:1.7,maxWidth:780,margin:'56px auto 0' }}>Whether you need research, analysis, content, or technical builds — Sprint-Terns™ deploy in hours, not weeks. Every sprint is scoped, managed, and delivered with AI precision.</p>
@@ -432,11 +423,25 @@ export default function Home() {
 
             {/* Right — challenge question */}
             <div style={{ display:'flex',flexDirection:'column',justifyContent:'center',padding:'36px 32px' }}>
-              <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:20 }}>The Core Challenge</div>
-              <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.4rem,2.5vw,2rem)',color:'white',lineHeight:1.35,marginBottom:20,fontWeight:400 }}>
-                How do you get quality results from distributed work without adding management overhead?
+              <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.4rem,2.5vw,2rem)',color:'white',lineHeight:1.35,marginBottom:24,fontWeight:400 }}>
+                Built to handle the part where most work breaks.
               </h3>
-              <p style={{ fontSize:'1rem',color:'#F08C4E',fontWeight:600,marginBottom:0 }}>That's what Work Simplr solves.</p>
+              <div style={{ borderRadius:16,overflow:'hidden',border:'1px solid rgba(255,255,255,0.08)',background:'rgba(255,255,255,0.02)',width:'100%' }}>
+                <div style={{ display:'flex',alignItems:'center',borderBottom:'1px solid rgba(255,255,255,0.1)',background:'rgba(255,255,255,0.03)' }}>
+                  <div style={{ flex:1,padding:'14px 24px',fontSize:11,fontWeight:700,letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)' }}>Before</div>
+                  <div style={{ width:36 }} />
+                  <div style={{ flex:1,padding:'14px 24px',fontSize:11,fontWeight:700,letterSpacing:'0.15em',textTransform:'uppercase',color:'#E07B39',borderLeft:'2px solid #E07B39',background:'rgba(224,123,57,0.06)' }}>After</div>
+                </div>
+                {[['Messy','Handled'],['Ambiguous','Structured'],['Planned','Done'],['Slow + Chaos','Fast + reliable']].map(([b,a],i) => (
+                  <div key={i} style={{ display:'flex',alignItems:'center',borderBottom:i<3?'1px solid rgba(255,255,255,0.06)':'none' }}>
+                    <div style={{ flex:1,padding:'18px 24px',fontSize:16,color:'rgba(255,255,255,0.35)',fontWeight:400 }}>{b}</div>
+                    <div style={{ width:36,display:'flex',alignItems:'center',justifyContent:'center' }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#E07B39" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </div>
+                    <div style={{ flex:1,padding:'18px 24px',fontSize:16,color:'white',fontWeight:700,background:'rgba(224,123,57,0.06)',borderLeft:'2px solid #E07B39' }}>{a}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 

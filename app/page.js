@@ -1,6 +1,7 @@
 import AnimatedStats from './components/AnimatedStats';
 import AnimatedDashboard from './components/AnimatedDashboard';
 import AnimatedSteps from './components/AnimatedSteps';
+import ScrollReveal from './components/ScrollReveal';
 
 export default function Home() {
   const SERIF = "'DM Serif Display', serif"
@@ -398,7 +399,7 @@ export default function Home() {
           </div>
 
           {/* Two-column layout */}
-          <div className="hp-whynow-grid" id="whynow-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:32,marginBottom:40,alignItems:'start' }}>
+          <div className="hp-whynow-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:32,marginBottom:40,alignItems:'start' }}>
 
             {/* Left column: heading + checklist */}
             <div>
@@ -423,10 +424,10 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Right column: contrast heading + table */}
-            <div style={{ display:'flex',flexDirection:'column',justifyContent:'flex-end',height:'100%' }}>
+            <ScrollReveal delay={0.25} style={{ display:'flex',flexDirection:'column',justifyContent:'flex-end',height:'100%' }}>
               <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',lineHeight:1.2,marginBottom:28,fontWeight:400 }}>
                 Built to handle the part where most work breaks.
               </h3>
@@ -446,7 +447,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* The challenge statement */}
@@ -469,8 +470,8 @@ export default function Home() {
 
         </div>
       
-          <style>{`#whynow-grid > div { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); } #whynow-grid > div:nth-child(2) { transition-delay: 0.25s; } #whynow-grid.visible > div { opacity: 1; transform: translateY(0); }`}</style>
-          <script dangerouslySetInnerHTML={{ __html: `(function(){var g=document.getElementById("whynow-grid");if(!g)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){g.classList.add("visible");obs.disconnect();}});},{threshold:0.15});obs.observe(g);})();`}} />
+          
+          
 </section>
 
 

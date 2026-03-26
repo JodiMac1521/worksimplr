@@ -6,9 +6,9 @@ const NAVY = '#0A2342'
 const ORANGE = '#E07B39'
 
 const steps = [
-  { num: '01', title: 'Submit your work', desc: 'Describe what you need in plain language. No scope doc required. Just share your raw data, goals, or brief \u2014 and we handle the rest.', label: 'Submit work', color: '#3b82f6', icon: 'doc' },
-  { num: '02', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it \u2014 in minutes. No back-and-forth. You get a clear scope, timeline, and cost before anything starts.', label: 'AI scoping', color: '#a855f7', icon: 'bolt' },
-  { num: '03', title: 'Talent matched & onboarded', desc: 'Work is distributed across 1\u2013100 vetted operators (Sprint-Terns\u2122) and we train/manage them. Your Account Manager handles everything.', label: 'Talent match', color: ORANGE, icon: 'people' },
+  { num: '01', title: 'Submit your work', desc: 'Describe what you need in plain language. No scope doc required. Just share your raw data, goals, or brief — and we handle the rest.', label: 'Submit work', color: '#3b82f6', icon: 'doc' },
+  { num: '02', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it — in minutes. No back-and-forth. You get a clear scope, timeline, and cost before anything starts.', label: 'AI scoping', color: '#a855f7', icon: 'bolt' },
+  { num: '03', title: 'Talent matched & onboarded', desc: 'Work is distributed across 1–100 vetted operators (Sprint-Terns™) and we train/manage them. Your Account Manager handles everything.', label: 'Talent match', color: ORANGE, icon: 'people' },
   { num: '04', title: 'AI-powered teams execute', desc: 'Vetted operators + AI tools work together on your project. Real-time quality monitoring, structured milestones, daily progress.', label: 'Execution', color: '#10b981', icon: 'gear' },
   { num: '05', title: 'QA + delivery', desc: 'We review and package up the work. No surprises. Clean deliverables, on time. Insight reports, structured data, and actionable outcomes.', label: 'Delivery', color: '#0ea5e9', icon: 'check' },
 ]
@@ -182,7 +182,7 @@ export default function AnimatedHowItWorks() {
             aria-label={playing ? 'Pause' : 'Play'}
           >{playing ? '\u23F8' : '\u25B6'}</button>
           <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: 620, margin: '0 auto' }}>
-            Whether you need research, analysis, content, or technical builds \u2014 Sprint-Terns\u2122 deploy in hours, not weeks. Every sprint is scoped, managed, and delivered with <em style={{ color: ORANGE, fontStyle: 'italic', fontFamily: SERIF }}>AI precision.</em>
+            Whether you need research, analysis, content, or technical builds — Sprint-Terns™ deploy in hours, not weeks. Every sprint is scoped, managed, and delivered with <em style={{ color: ORANGE, fontStyle: 'italic', fontFamily: SERIF }}>AI precision.</em>
           </p>
         </div>
       </div>

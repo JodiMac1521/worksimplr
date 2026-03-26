@@ -73,7 +73,7 @@ export default function AboutPage() {
       <section style={{ padding: '72px 24px', maxWidth: 860, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
           <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16 }}>The Team</div>
-          <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.2rem)', fontWeight: 400 }}>The people behind SprintWorkÃ¢ÂÂ¢</h2>
+          <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.2rem)', fontWeight: 400 }}>The people behind SprintWork™</h2>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 32, justifyItems: 'center' }}>
           {[
@@ -81,14 +81,14 @@ export default function AboutPage() {
               img: '/headshot-jodi.jpg',
               name: 'Jodi Mac',
               title: 'Founder & CEO',
-              bio: '30+ years in EdTech, including scaling products at Pearson. Jodi built Work Simplr after watching organizations consistently fail at the same place Ã¢ÂÂ not execution, but definition. She bootstrapped the company for 3.5 years before raising from Techstars and Gener8tor.',
+              bio: '30+ years in EdTech, including scaling products at Pearson. Jodi built Work Simplr after watching organizations consistently fail at the same place — not execution, but definition. She bootstrapped the company for 3.5 years before raising from Techstars and Gener8tor.',
               linkedin: 'https://linkedin.com/in/jodimac',
             },
             {
               img: '/headshot-eric.png',
               name: 'Eric Severson',
               title: 'Chief Operating Officer',
-              bio: '30+ years in EdTech building and managing $1B in sales and revenue operations. Eric brings deep expertise in sales ops, data ops, and scaling go-to-market teams Ã¢ÂÂ the operational backbone behind how Work Simplr delivers at scale.',
+              bio: '30+ years in EdTech building and managing $1B in sales and revenue operations. Eric brings deep expertise in sales ops, data ops, and scaling go-to-market teams — the operational backbone behind how Work Simplr delivers at scale.',
               isQuote: false,
             },
           ].map(person => (
@@ -118,7 +118,7 @@ export default function AboutPage() {
           <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16 }}>Founded 2021</div>
           <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.2rem)', fontWeight: 400, lineHeight: 1.25, marginBottom: 20 }}>From EdTech veteran to workforce innovator</h2>
           <p style={{ color: 'rgba(255,255,255,0.55)', lineHeight: 1.8, marginBottom: 16 }}>
-            After 30+ years scaling products at Pearson and watching organizations struggle to get real work done Ã¢ÂÂ not just staffed Ã¢ÂÂ our founder Jodi Mac built Work Simplr to solve the root problem.
+            After 30+ years scaling products at Pearson and watching organizations struggle to get real work done — not just staffed — our founder Jodi Mac built Work Simplr to solve the root problem.
           </p>
           <p style={{ color: 'rgba(255,255,255,0.55)', lineHeight: 1.8 }}>
             The insight: companies don't fail at execution because they lack talent. They fail because the work was never properly defined, scoped, or structured before anyone started.
@@ -147,7 +147,7 @@ export default function AboutPage() {
             "Make it as easy to get structured work done as it is to book a flight."
           </h2>
           <p style={{ marginTop: 24, color: 'rgba(255,255,255,0.45)', fontSize: '0.95rem', lineHeight: 1.7 }}>
-            We're building the operating system for distributed knowledge work Ã¢ÂÂ where AI handles scoping, college talent handles execution, and employers get deliverables, not status updates.
+            We're building the operating system for distributed knowledge work — where AI handles scoping, college talent handles execution, and employers get deliverables, not status updates.
           </p>
         </div>
       </section>
@@ -156,7 +156,7 @@ export default function AboutPage() {
       <section style={{ padding: '72px 24px', maxWidth: 960, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
           <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 16 }}>The Difference</div>
-          <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.2rem)', fontWeight: 400 }}>SprintWorkÃ¢ÂÂ¢ vs. everything else</h2>
+          <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.2rem)', fontWeight: 400 }}>SprintWork™ vs. everything else</h2>
         </div>
         <div className="about-diff-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 20 }}>
           {[
@@ -197,8 +197,8 @@ export default function AboutPage() {
         <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 400, marginBottom: 16 }}>Ready to run your first sprint?</h2>
         <p style={{ color: 'rgba(255,255,255,0.45)', marginBottom: 32, fontSize: '0.95rem' }}>Join 200+ companies who've stopped managing work and started shipping it.</p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center' }}>
-          <Link href="/register?role=employer" style={{ padding: '14px 36px', background: '#E07B39', borderRadius: 999, color: 'white', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', boxShadow: '0 8px 24px rgba(224,123,57,0.4)' }}>Start a Sprint Ã¢ÂÂ</Link>
-          <Link href="/students" style={{ padding: '14px 28px', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 999, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.95rem' }}>Join as a Sprint-TernÃ¢ÂÂ¢</Link>
+          <Link href="/register?role=employer" style={{ padding: '14px 36px', background: '#E07B39', borderRadius: 999, color: 'white', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', boxShadow: '0 8px 24px rgba(224,123,57,0.4)' }}>Start a Sprint →</Link>
+          <Link href="/students" style={{ padding: '14px 28px', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 999, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.95rem' }}>Join as a Sprint-Tern™</Link>
         </div>
       </section>
 
@@ -208,7 +208,7 @@ export default function AboutPage() {
           <div className="cs-footer-grid" style={{ marginBottom:40 }}>
             <div>
               <div style={{ fontFamily:"'DM Serif Display', serif",fontSize:'1.15rem',color:'white',marginBottom:10 }}>Work Simplr</div>
-              <p style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.4)',lineHeight:1.65,maxWidth:240 }}>Structured work, executed in weeks Ã¢ÂÂ not months.</p>
+              <p style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.4)',lineHeight:1.65,maxWidth:240 }}>Structured work, executed in weeks — not months.</p>
             </div>
             <div>
               <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.5)',marginBottom:16 }}>Platform</div>
@@ -238,7 +238,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div style={{ borderTop:'1px solid rgba(255,255,255,0.06)',paddingTop:20,textAlign:'center',fontSize:'0.78rem',color:'rgba(255,255,255,0.25)' }}>
-            ÃÂ© {new Date().getFullYear()} Work Simplr. All rights reserved.
+            © {new Date().getFullYear()} Work Simplr. All rights reserved.
           </div>
         </div>
       </footer>

@@ -144,10 +144,10 @@ export default function AboutPage() {
         <div style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center' }}>
           <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#E07B39', marginBottom: 20 }}>Mission</div>
           <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 400, lineHeight: 1.3, color: 'white' }}>
-            "Get messy work done—as easily as booking a flight. We've built the operating system for getting real work done using AI scoping and emerging talent for execution."
+            "Get messy work done—as easily as booking a flight."
           </h2>
           <p style={{ marginTop: 24, color: 'rgba(255,255,255,0.45)', fontSize: '0.95rem', lineHeight: 1.7 }}>
-            We're building the operating system for distributed knowledge work — where AI handles scoping, college talent handles execution, and employers get deliverables, not status updates.
+            We've built the operating system for getting real work done using AI scoping and emerging talent for execution.
           </p>
         </div>
       </section>

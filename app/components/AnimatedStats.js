@@ -39,9 +39,9 @@ export default function AnimatedStats() {
   return (
     <div style={{ display:'flex',justifyContent:'center',gap:64,flexWrap:'wrap',paddingTop:40,borderTop:'1px solid rgba(224,123,57,0.2)' }}>
       {[
-        { target:'5000', suffix:'+', label:'Projects Completed' },
-        { target:'98', suffix:'%', label:'Completion Rate' },
-        { target:'4', suffix:' weeks', label:'Avg Sprint Time' },
+        { target:'250', suffix:'+', label:'Projects Delivered' },
+        { target:'96', suffix:'%', label:'On-Time Delivery' },
+        { target:'2', suffix:'–4 weeks', label:'Average Delivery' },
       ].map(s => (
         <div key={s.label} style={{ textAlign:'center' }}>
           <div style={{ fontFamily:SERIF, fontSize:'clamp(2rem,4vw,2.8rem)', color:'#E07B39', fontWeight:400, lineHeight:1 }}>

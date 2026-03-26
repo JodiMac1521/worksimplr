@@ -215,7 +215,7 @@ export default function Home() {
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7,textAlign:'center' }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
 
           <AnimatedSteps>
-          <div className="hp-steps-row" style={{ display:'flex',alignItems:'stretch',gap:0,paddingTop:24,marginBottom:40 }}>
+          <div className="hp-steps-row" style={{ display:'flex',alignItems:'stretch',gap:44,paddingTop:24,marginBottom:40 }}>
             {[
               { num:'1', icon:(<svg width="120" height="68" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
                   <defs>
@@ -274,14 +274,14 @@ export default function Home() {
                 <polyline points="18,28 24,34 36,22" stroke="#22C55E" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>), title:'Delivered outcomes', desc:'You get the thing you asked for — not a status update and an invoice. In 28 days.' },
             ].map((item, i) => (
-              <div key={item.num} className="step-card" style={{ display:'flex',alignItems:'stretch',flex:'1 1 0',minWidth:0 }}>
+              <div key={item.num} className="step-card" style={{ display:'flex',alignItems:'stretch',flex:'1 1 0',minWidth:0,position:'relative' }}>
                 <div style={{ flex:1,display:'flex',flexDirection:'column',background:i===0?'#E07B39':'rgba(224,123,57,0.05)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:16,padding:'36px 24px 28px',textAlign:'center',position:'relative',boxShadow:i===0?'0 8px 32px rgba(224,123,57,0.3)':'none' }}>
                   <div style={{ position:'absolute',top:-18,left:'50%',transform:'translateX(-50%)',background:i===0?'white':'#E07B39',color:i===0?'#E07B39':'white',width:32,height:32,borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'0.78rem',fontWeight:800,boxShadow:'0 4px 12px rgba(224,123,57,0.5)' }}>{item.num}</div>
                   <div style={{ fontSize:'3.4rem',marginBottom:14,marginTop:8,lineHeight:1,height:100,display:'flex',alignItems:'center',justifyContent:'center' }}>{item.icon}</div>
                   <div style={{ fontFamily:SERIF,fontSize:'1.1rem',color:'white',marginBottom:8,fontWeight:400 }}>{item.title}</div>
                   <div style={{ fontSize:'0.875rem',maxWidth:260,color:i===0?'rgba(255,255,255,0.85)':'rgba(255,255,255,0.55)',lineHeight:1.65 }}>{item.desc}</div>
                 </div>
-                {i < 2 && <div className="step-arrow" style={{ flexShrink:0,width:44,display:'flex',alignItems:'center',justifyContent:'center',color:'#E07B39',fontSize:'1.6rem' }}>→</div>}
+                {i < 2 && <div className="step-arrow" style={{ position:'absolute',right:-22,top:'50%',transform:'translateY(-50%)',width:44,display:'flex',alignItems:'center',justifyContent:'center',color:'#E07B39',fontSize:'1.6rem',zIndex:2 }}>→</div>}
               </div>
             ))}
           </div>

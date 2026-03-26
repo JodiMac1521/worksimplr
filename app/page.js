@@ -24,7 +24,7 @@ export default function Home() {
             <img src="/logo.png" alt="Work Simplr" style={{ height:52,width:'auto',display:'block' }} />
           </a>
           <div className="nav-desktop-links" style={{ display:'flex',gap:28,alignItems:'center' }}>
-            {[['#solution','Platform'],['#how','Process'],['/pricing','Pricing'],['/about','About']].map(([h,l]) => (
+            {[['#solution','Platform'],['#how','How It Works'],['/pricing','Pricing'],['/about','About']].map(([h,l]) => (
               <a key={h} href={h} style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none' }}>{l}</a>
             ))}
             {/* Case Studies dropdown */}
@@ -274,7 +274,7 @@ export default function Home() {
                 <polyline points="18,28 24,34 36,22" stroke="#22C55E" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>), title:'Delivered outcomes', desc:'You get the thing you asked for — not a status update and an invoice. In 28 days.' },
             ].map((item, i) => (
-              <div key={item.num} className="step-card" style={{ display:'flex',alignItems:'stretch',flex:1 }}>
+              <div key={item.num} className="step-card" style={{ display:'flex',alignItems:'stretch',flex:'1 1 0',minWidth:0 }}>
                 <div style={{ flex:1,display:'flex',flexDirection:'column',background:i===0?'#E07B39':'rgba(224,123,57,0.05)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:16,padding:'36px 24px 28px',textAlign:'center',position:'relative',boxShadow:i===0?'0 8px 32px rgba(224,123,57,0.3)':'none' }}>
                   <div style={{ position:'absolute',top:-18,left:'50%',transform:'translateX(-50%)',background:i===0?'white':'#E07B39',color:i===0?'#E07B39':'white',width:32,height:32,borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'0.78rem',fontWeight:800,boxShadow:'0 4px 12px rgba(224,123,57,0.5)' }}>{item.num}</div>
                   <div style={{ fontSize:'3.4rem',marginBottom:14,marginTop:8,lineHeight:1,height:100,display:'flex',alignItems:'center',justifyContent:'center' }}>{item.icon}</div>
@@ -389,44 +389,44 @@ export default function Home() {
         <div style={{ maxWidth:1020,margin:'0 auto',position:'relative',zIndex:1 }}>
 
           {/* WHY NOW — redesigned layout */}
-          {/* Label + subtitle */}
-          <div style={{ textAlign:'center',marginBottom:32 }}>
+          {/* WHY NOW? label + subtitle */}
+          <div style={{ textAlign:'center',marginBottom:40 }}>
             <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:12 }}>Why Now?</div>
             <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.55)',maxWidth:600,margin:'0 auto',lineHeight:1.75 }}>
               No new tools. No added headcount. Scalable decentralized hiring solutions for any company.
             </p>
           </div>
 
-          {/* Big headline — full width, centered */}
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,3rem)',color:'white',marginBottom:56,lineHeight:1.2,fontWeight:400,textAlign:'center',maxWidth:800,margin:'0 auto 56px' }}>
-            Built for forward-thinking employers<br /><em style={{ color:'#F08C4E' }}>done with broken internships.</em>
-          </h2>
-
-          {/* Horizontal: checklist + contrast table */}
+          {/* Two-column layout */}
           <div className="hp-whynow-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:32,marginBottom:40,alignItems:'start' }}>
 
-            {/* Left — bullets */}
-            <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px' }}>
-              <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:24,lineHeight:1.4 }}>For teams who value<br /><em style={{ color:'#F08C4E' }}>output over optics.</em></div>
-              <div style={{ display:'flex',flexDirection:'column',gap:14 }}>
-                {[
-                  'Projects completed in weeks, not semesters',
-                  'No HR lift or added headcount',
-                  'AI-native talent, structured delivery',
-                  'Transparent deliverables \u2014 not status updates'
-                ].map((item, i) => (
-                  <div key={item} style={{ display:'flex',alignItems:'flex-start',gap:12 }}>
-                    <div style={{ width:18,height:18,borderRadius:'50%',background:'rgba(224,123,57,0.2)',border:'1px solid rgba(224,123,57,0.5)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,marginTop:2 }}>
-                      <span style={{ color:'#E07B39',fontSize:'0.6rem',fontWeight:800 }}>✓</span>
+            {/* Left column: heading + checklist */}
+            <div>
+              <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',marginBottom:28,lineHeight:1.2,fontWeight:400 }}>
+                Built for forward-thinking employers<br /><em style={{ color:'#F08C4E' }}>done with broken internships.</em>
+              </h2>
+              <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px' }}>
+                <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:24,lineHeight:1.4 }}>For teams who value<br /><em style={{ color:'#F08C4E' }}>output over optics.</em></div>
+                <div style={{ display:'flex',flexDirection:'column',gap:14 }}>
+                  {[
+                    'Projects completed in weeks, not semesters',
+                    'No HR lift or added headcount',
+                    'AI-native talent, structured delivery',
+                    'Transparent deliverables \u2014 not status updates'
+                  ].map((item, i) => (
+                    <div key={item} style={{ display:'flex',alignItems:'flex-start',gap:12 }}>
+                      <div style={{ width:18,height:18,borderRadius:'50%',background:'rgba(224,123,57,0.2)',border:'1px solid rgba(224,123,57,0.5)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,marginTop:2 }}>
+                        <span style={{ color:'#E07B39',fontSize:'0.6rem',fontWeight:800 }}>✓</span>
+                      </div>
+                      <span style={{ fontSize:'0.9rem',color:'rgba(255,255,255,0.8)',lineHeight:1.5 }}>{item}</span>
                     </div>
-                    <span style={{ fontSize:'0.9rem',color:'rgba(255,255,255,0.8)',lineHeight:1.5 }}>{item}</span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Right — contrast table */}
-            <div style={{ display:'flex',flexDirection:'column',justifyContent:'center' }}>
+            {/* Right column: contrast heading + table */}
+            <div style={{ display:'flex',flexDirection:'column',justifyContent:'flex-end',height:'100%' }}>
               <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.4rem,2.5vw,1.8rem)',color:'white',lineHeight:1.35,marginBottom:24,fontWeight:400 }}>
                 Built to handle the part where most work breaks.
               </h3>

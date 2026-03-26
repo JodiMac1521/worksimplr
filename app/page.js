@@ -402,7 +402,7 @@ export default function Home() {
           <div className="hp-whynow-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:32,marginBottom:40,alignItems:'start' }}>
 
             {/* Left column: heading + checklist */}
-            <div>
+            <ScrollReveal delay={0}>
               <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',marginBottom:28,lineHeight:1.2,fontWeight:400 }}>
                 Built for forward-thinking employers<br /><em style={{ color:'#F08C4E' }}>done with broken internships.</em>
               </h2>

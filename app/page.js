@@ -25,7 +25,7 @@ export default function Home() {
             <img src="/logo.png" alt="Work Simplr" style={{ height:52,width:'auto',display:'block' }} />
           </a>
           <div className="nav-desktop-links" style={{ display:'flex',gap:28,alignItems:'center' }}>
-            {[['#solution','Platform'],['#how','How It Works'],['/pricing','Pricing'],['/about','About']].map(([h,l]) => (
+            {[['#solution','Solutions'],['#how','How It Works'],['/pricing','Pricing'],['/about','About']].map(([h,l]) => (
               <a key={h} href={h} style={{ fontSize:'0.88rem',fontWeight:500,color:'rgba(255,255,255,0.55)',textDecoration:'none' }}>{l}</a>
             ))}
             {/* Case Studies dropdown */}
@@ -59,9 +59,9 @@ export default function Home() {
           </div>
           <div className="nav-desktop-cta" style={{ display:'flex',gap:10 }}>
             <a href="/login" style={{ padding:'8px 20px',border:'1px solid rgba(255,255,255,0.2)',borderRadius:999,fontSize:'0.875rem',color:'rgba(255,255,255,0.7)',textDecoration:'none' }}>Log in</a>
-            <a href="/register?role=employer" style={{ padding:'8px 20px',background:'#E07B39',borderRadius:999,fontSize:'0.875rem',color:'white',textDecoration:'none',fontWeight:600 }}>Start a Sprint</a>
+            <a href="/register?role=employer" style={{ padding:'8px 20px',background:'#E07B39',borderRadius:999,fontSize:'0.875rem',color:'white',textDecoration:'none',fontWeight:600 }}>Get a Project Quote</a>
           </div>
-          <a className="mobile-menu-btn" href="/register?role=employer" style={{ padding:'8px 20px',background:'#E07B39',borderRadius:999,fontSize:'0.82rem',fontWeight:600,color:'white',textDecoration:'none' }}>Start a Sprint</a>
+          <a className="mobile-menu-btn" href="/register?role=employer" style={{ padding:'8px 20px',background:'#E07B39',borderRadius:999,fontSize:'0.82rem',fontWeight:600,color:'white',textDecoration:'none' }}>Get a Project Quote</a>
         </div>
       </nav>
 
@@ -72,11 +72,11 @@ export default function Home() {
         <div style={{ maxWidth:800,margin:'0 auto',padding:'0 24px',textAlign:'center',position:'relative',zIndex:1 }}>
           <div style={{ display:'inline-flex',alignItems:'center',gap:8,background:'rgba(224,123,57,0.12)',border:'1px solid rgba(224,123,57,0.3)',borderRadius:999,padding:'5px 14px',fontSize:'0.75rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'#F08C4E',marginBottom:28 }}>SprintWorkâ¢ Platform</div>
           <h1 style={{ fontFamily:SERIF,fontSize:'clamp(2.4rem,5vw,3.6rem)',fontWeight:400,color:'white',lineHeight:1.1,marginBottom:20 }}>
-            The Future of Work<br /><em style={{ fontStyle:'italic',color:'#F08C4E' }}>Runs on Sprints.</em>
+            AI-Powered Project Teams.<br /><em style={{ fontStyle:'italic',color:'#F08C4E' }}>Delivered in Weeks.</em>
           </h1>
-          <p style={{ fontSize:'1.1rem',color:'rgba(255,255,255,0.55)',lineHeight:1.7,marginBottom:12,maxWidth:600,margin:'0 auto 12px' }}>Structured work, executed in weeks â not months.</p>
+          <p style={{ fontSize:'1.1rem',color:'rgba(255,255,255,0.55)',lineHeight:1.7,marginBottom:12,maxWidth:640,margin:'0 auto 12px' }}>Structured work, executed in weeks â not months.</p>
           <div style={{ display:'flex',gap:12,justifyContent:'center',flexWrap:'wrap' }}>
-            <a href="/register?role=employer" style={{ padding:'14px 36px',background:'#E07B39',borderRadius:999,fontSize:'1rem',fontWeight:600,color:'white',textDecoration:'none',boxShadow:'0 4px 24px rgba(224,123,57,0.4)' }}>Start a Sprint â</a>
+            <a href="/register?role=employer" style={{ padding:'14px 36px',background:'#E07B39',borderRadius:999,fontSize:'1rem',fontWeight:600,color:'white',textDecoration:'none',boxShadow:'0 4px 24px rgba(224,123,57,0.4)' }}>Get a Project Quote â</a>
             <a href="#how" style={{ padding:'14px 28px',border:'1px solid rgba(255,255,255,0.2)',borderRadius:999,fontSize:'1rem',color:'rgba(255,255,255,0.7)',textDecoration:'none' }}>See how it works</a>
           </div>
           <div style={{ display:'flex',justifyContent:'center',gap:40,marginTop:60,paddingTop:40,borderTop:'1px solid rgba(224,123,57,0.2)' }}>
@@ -92,7 +92,7 @@ export default function Home() {
           <div style={{ textAlign:'center', marginBottom:52 }}>
             <div style={{ fontSize:'0.72rem', fontWeight:700, letterSpacing:'2px', textTransform:'uppercase', color:'#E07B39', marginBottom:12 }}>Client Results</div>
             <h2 style={{ fontFamily:SERIF, fontSize:'clamp(1.6rem,3vw,2.2rem)', color:'white', fontWeight:400, marginBottom:0, lineHeight:1.2 }}>
-              Proven Results â <em style={{ color:'#F08C4E', fontStyle:'italic' }}>In Weeks, Not Months</em>
+              Proven Results â <em style={{ color:'#F08C4E', fontStyle:'italic' }}>Delivered in Weeks</em>
             </h2>
           </div>
 
@@ -213,7 +213,7 @@ export default function Home() {
           </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Solution</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWorkâ¢</em></h2>
-          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7,textAlign:'center' }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
+          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7,textAlign:'center' }}>You describe the work. We scope it with AI, match vetted operators, and manage delivery — so you get outcomes, not headaches.</p>
 
           <AnimatedSteps>
           <div className="hp-steps-row" style={{ display:'flex',alignItems:'stretch',gap:56,paddingTop:24,marginBottom:40 }}>
@@ -300,7 +300,7 @@ export default function Home() {
           </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Problem</div>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:20,lineHeight:1.2,textAlign:'center' }}>Most work doesn't fail<br />because of talent.</h2>
-          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:520,textAlign:'center',margin:'0 auto 40px' }}>It fails because it's poorly defined before anyone starts.</p>
+          <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:40,lineHeight:1.7,maxWidth:560,textAlign:'center',margin:'0 auto 40px' }}>It fails because it's poorly defined before anyone starts.</p>
           <div className="hp-problem-grid" style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16,marginBottom:40,maxWidth:780,margin:'0 auto 40px' }}>
             {[
               {
@@ -402,12 +402,12 @@ export default function Home() {
             {/* Row 1: headings */}
             <ScrollReveal delay={0}>
               <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',marginBottom:0,lineHeight:1.2,fontWeight:400 }}>
-                Built for forward-thinking employers
+                Built for Teams That Need Results, Not Resumes
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.25}>
               <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',lineHeight:1.2,marginBottom:0,fontWeight:400 }}>
-                Built to handle the part where most work breaks.
+                Where Other Platforms Stop, We Start Delivering
               </h3>
             </ScrollReveal>
             {/* Row 2: boxes */}
@@ -465,7 +465,7 @@ export default function Home() {
           {/* CTA */}
           <div style={{ textAlign:'center' }}>
             <a href="/register?role=employer" style={{ display:'inline-block',padding:'16px 48px',background:'#E07B39',borderRadius:999,fontSize:'1.05rem',fontWeight:700,color:'white',textDecoration:'none',boxShadow:'0 8px 32px rgba(224,123,57,0.4)',letterSpacing:'0.3px' }}>
-              Start a Sprint â
+              Get a Project Quote â
             </a>
           </div>
 
@@ -502,7 +502,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Staffing Differentiator */}
+      <section style={{ padding:'40px 24px 0', maxWidth:900, margin:'0 auto', textAlign:'center' }}>
+        <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'clamp(1rem,1.8vw,1.15rem)', color:'rgba(255,255,255,0.7)', lineHeight:1.7, maxWidth:720, margin:'0 auto' }}>
+          Traditional staffing gives you people. We give you the finished project — scoped by AI, executed by vetted college talent, and delivered with quality checks built in. No hiring. No managing. Just outcomes.
+        </p>
+      </section>
+
       
+
+      {/* AAEO FAQ Section */}
+      <section id="faq" style={{ padding:'80px 24px', maxWidth:900, margin:'0 auto' }}>
+        <h2 style={{ fontFamily:"'DM Serif Display', serif", fontSize:'clamp(1.6rem,3vw,2.2rem)', color:'#fff', textAlign:'center', marginBottom:48 }}>
+          Frequently Asked Questions
+        </h2>
+        {[
+          { q: 'What does Work Simplr do?', a: 'Work Simplr is an AI-powered project delivery platform that matches employers with vetted college talent. Employers describe the work, AI scopes and prices it, then trained operators deliver results in 2–4 weeks with built-in quality checks.' },
+          { q: 'How is Work Simplr different from a staffing agency?', a: 'Traditional staffing gives you people. Work Simplr gives you the finished project. Every engagement is scoped by AI, executed by vetted operators, and delivered with quality checks built in.' },
+          { q: 'How much does Work Simplr cost?', a: 'Projects are priced per sprint based on scope and complexity. AI-powered scoping provides instant estimates. Most projects run $500—$5,000 per sprint with delivery in 2–4 weeks.' },
+          { q: 'What kind of projects can I hire for?', a: 'Work Simplr handles data research, product testing, content creation, campus marketing, and more. Any project that can be broken into structured tasks and completed in 2–4 weeks is a fit.' },
+        ].map((item, i) => (
+          <div key={i} style={{ borderBottom:'1px solid rgba(255,255,255,0.1)', padding:'24px 0' }}>
+            <h3 style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'1.1rem', color:'#E07B39', fontWeight:600, marginBottom:12 }}>{item.q}</h3>
+            <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'1rem', color:'rgba(255,255,255,0.7)', lineHeight:1.7, margin:0 }}>{item.a}</p>
+          </div>
+        ))}
+      </section>
 
       <footer style={{ background:'#050F1C',borderTop:'1px solid rgba(255,255,255,0.06)',padding:'48px 24px 32px' }}>
         <div style={{ maxWidth:1080,margin:'0 auto' }}>
@@ -512,7 +537,7 @@ export default function Home() {
               <p style={{ fontSize:'0.83rem',color:'rgba(255,255,255,0.35)',lineHeight:1.65,maxWidth:220 }}>AI-powered execution platform. We turn undefined work into delivered outcomes.</p>
             </div>
             {[
-              { title:'Platform',links:[['#solution','SprintWorkâ¢'],['/case-studies','Case Studies'],['#how','How It Works'],['/register','Start a Sprint']] },
+              { title:'Platform',links:[['#solution','SprintWorkâ¢'],['/case-studies','Case Studies'],['#how','How It Works'],['/register','Get a Project Quote']] },
               { title:'Company',links:[['/about','About'],['/case-studies','Case Studies'],['/contact','Contact']] },
               { title:'Legal',links:[['/privacy-policy','Privacy Policy'],['/terms','Terms']] },
             ].map(col => (

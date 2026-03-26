@@ -335,7 +335,7 @@ export default function CaseStudies() {
         <div style={{ position:'relative',zIndex:1,maxWidth:640,margin:'0 auto' }}>
           <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,4vw,3rem)',color:'white',marginBottom:16,lineHeight:1.15 }}>Ready to see results<br /><em style={{ color:ORANGE_LIGHT }}>like these?</em></h2>
           <p style={{ color:'rgba(255,255,255,0.5)',marginBottom:36,fontSize:'1rem',lineHeight:1.7 }}>Join the companies already using SprintWork™ to deliver outcomes, not headcount.</p>
-          <a href="/register?role=employer" style={{ display:'inline-block',padding:'16px 44px',background:ORANGE,borderRadius:999,fontSize:'1.05rem',fontWeight:700,color:'white',textDecoration:'none',boxShadow:'0 8px 32px rgba(224,123,57,0.45)' }}>Start a Sprint â</a>
+          <a href="/register?role=employer" style={{ display:'inline-block',padding:'16px 44px',background:ORANGE,borderRadius:999,fontSize:'1.05rem',fontWeight:700,color:'white',textDecoration:'none',boxShadow:'0 8px 32px rgba(224,123,57,0.45)' }}>Start a Sprint →</a>
         </div>
       </section>
 
@@ -363,7 +363,7 @@ export default function CaseStudies() {
             ))}
           </div>
           <div style={{ borderTop:'1px solid rgba(255,255,255,0.06)',paddingTop:24,display:'flex',justifyContent:'space-between',alignItems:'center',fontSize:'0.78rem',color:'rgba(255,255,255,0.25)' }}>
-            <span>Â© {new Date().getFullYear()} Work Simplr. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} Work Simplr. All rights reserved.</span>
             <div style={{ display:'flex',gap:20 }}>
               <a href="https://www.linkedin.com/company/68873365/" style={{ color:'inherit',textDecoration:'none' }}>LinkedIn</a>
               <a href="https://www.facebook.com/worksimplrUS/" style={{ color:'inherit',textDecoration:'none' }}>Facebook</a>

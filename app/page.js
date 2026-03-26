@@ -398,14 +398,14 @@ export default function Home() {
           </div>
 
           {/* Two-column layout */}
-          <div className="hp-whynow-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:32,marginBottom:40,alignItems:'start' }}>
+          <div className="hp-whynow-grid" id="whynow-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:32,marginBottom:40,alignItems:'start' }}>
 
             {/* Left column: heading + checklist */}
             <div>
               <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',marginBottom:28,lineHeight:1.2,fontWeight:400 }}>
                 Built for forward-thinking employers<br /><em style={{ color:'#F08C4E' }}>done with broken internships.</em>
               </h2>
-              <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px',opacity:0,animation:'fadeSlideUp 0.8s ease forwards',animationDelay:'0.2s' }}>
+              <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px' }}>
                 <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:24,lineHeight:1.4 }}>For teams who value<br /><em style={{ color:'#F08C4E' }}>output over optics.</em></div>
                 <div style={{ display:'flex',flexDirection:'column',gap:14 }}>
                   {[
@@ -426,7 +426,7 @@ export default function Home() {
             </div>
 
             {/* Right column: contrast heading + table */}
-            <div style={{ display:'flex',flexDirection:'column',justifyContent:'flex-end',height:'100%',opacity:0,animation:'fadeSlideUp 0.8s ease forwards',animationDelay:'0.4s' }}>
+            <div style={{ display:'flex',flexDirection:'column',justifyContent:'flex-end',height:'100%' }}>
               <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',lineHeight:1.2,marginBottom:28,fontWeight:400 }}>
                 Built to handle the part where most work breaks.
               </h3>
@@ -468,7 +468,10 @@ export default function Home() {
           </div>
 
         </div>
-      </section>
+      
+          <style>{`#whynow-grid > div { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); } #whynow-grid > div:nth-child(2) { transition-delay: 0.25s; } #whynow-grid.visible > div { opacity: 1; transform: translateY(0); }`}</style>
+          <script dangerouslySetInnerHTML={{ __html: `(function(){var g=document.getElementById("whynow-grid");if(!g)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){g.classList.add("visible");obs.disconnect();}});},{threshold:0.15});obs.observe(g);})();`}} />
+</section>
 
 
       <section style={{ background:'#0A2342',padding:'96px 24px' }}>

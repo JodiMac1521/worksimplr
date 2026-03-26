@@ -366,14 +366,22 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Right: Accent panel */}
-            <div style={{ width:340,flexShrink:0,borderRadius:20,background:'linear-gradient(135deg,rgba(224,123,57,0.08) 0%,rgba(224,123,57,0.03) 100%)',border:'1px solid rgba(224,123,57,0.15)',padding:'40px 32px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',gap:24,position:'relative',overflow:'hidden' }}>
-              <div style={{ position:'absolute',top:-60,right:-60,width:160,height:160,borderRadius:'50%',background:'radial-gradient(circle,rgba(224,123,57,0.15) 0%,transparent 70%)' }} />
-              <div style={{ position:'absolute',bottom:-40,left:-40,width:120,height:120,borderRadius:'50%',background:'radial-gradient(circle,rgba(224,123,57,0.1) 0%,transparent 70%)' }} />
-              <div style={{ fontFamily:SERIF,fontSize:72,fontWeight:400,color:'#E07B39',lineHeight:1,opacity:0.9 }}>5</div>
-              <div style={{ fontFamily:SERIF,fontSize:22,color:'white',textAlign:'center',lineHeight:1.3 }}>Simple steps.<br/>Zero complexity.</div>
-              <div style={{ width:48,height:2,background:'#E07B39',borderRadius:1,opacity:0.6 }} />
-              <div style={{ fontSize:14,color:'rgba(255,255,255,0.45)',textAlign:'center',lineHeight:1.7 }}>From request to delivery, every sprint is AI-scoped, talent-matched, and quality-checked.</div>
+            {/* Right: Before/After contrast table */}
+            <div style={{ width:380,flexShrink:0,borderRadius:16,overflow:'hidden',border:'1px solid rgba(255,255,255,0.08)',background:'rgba(255,255,255,0.02)' }}>
+              <div style={{ display:'flex',alignItems:'center',borderBottom:'1px solid rgba(255,255,255,0.1)',background:'rgba(255,255,255,0.03)' }}>
+                <div style={{ flex:1,padding:'14px 24px',fontSize:11,fontWeight:700,letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)' }}>Before</div>
+                <div style={{ width:36 }} />
+                <div style={{ flex:1,padding:'14px 24px',fontSize:11,fontWeight:700,letterSpacing:'0.15em',textTransform:'uppercase',color:'#E07B39',borderLeft:'2px solid #E07B39',background:'rgba(224,123,57,0.06)' }}>After</div>
+              </div>
+              {[['Messy','Handled'],['Ambiguous','Structured'],['Planned','Done'],['Slow','Fast/Reliable']].map(([b,a],i) => (
+                <div key={i} style={{ display:'flex',alignItems:'center',borderBottom:i<3?'1px solid rgba(255,255,255,0.06)':'none' }}>
+                  <div style={{ flex:1,padding:'18px 24px',fontSize:16,color:'rgba(255,255,255,0.35)',fontWeight:400 }}>{b}</div>
+                  <div style={{ width:36,display:'flex',alignItems:'center',justifyContent:'center' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#E07B39" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </div>
+                  <div style={{ flex:1,padding:'18px 24px',fontSize:16,color:'white',fontWeight:700,background:'rgba(224,123,57,0.06)',borderLeft:'2px solid #E07B39' }}>{a}</div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -480,60 +488,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ background:'#081A30',padding:'96px 24px' }}>
-        <div style={{ maxWidth:860,margin:'0 auto',textAlign:'center' }}>
-          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>AI + Human</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2 }}>AI does not execute.<br /><em style={{ color:'#F08C4E' }}>We do.</em></h2>
-          <p style={{ color:'rgba(255,255,255,0.5)',maxWidth:520,margin:'0 auto 48px',lineHeight:1.7,fontSize:'0.95rem' }}>We combine AI + human operators + structured workflows so work actually gets done.</p>
-          <div className="hp-ai-grid" style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16 }}>
-            {[
-              { icon:(<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="6" y="8" width="28" height="24" rx="4" stroke="#E07B39" strokeWidth="2"/>
-                <circle cx="15" cy="18" r="2" fill="#E07B39"/>
-                <circle cx="25" cy="18" r="2" fill="#E07B39"/>
-                <path d="M14 25 C14 22 26 22 26 25" stroke="#E07B39" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-                <line x1="16" y1="4" x2="16" y2="8" stroke="#E07B39" strokeWidth="1.5" strokeLinecap="round"/>
-                <line x1="24" y1="4" x2="24" y2="8" stroke="#E07B39" strokeWidth="1.5" strokeLinecap="round"/>
-                <rect x="12" y="2" width="3" height="4" rx="1" fill="#E07B39" opacity="0.4"/>
-                <rect x="25" y="2" width="3" height="4" rx="1" fill="#E07B39" opacity="0.4"/>
-              </svg>),label:'AI Scoping',desc:'Classifies and prices your work in minutes' },
-              { icon:(<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="12" r="6" stroke="#E07B39" strokeWidth="2"/>
-                <path d="M8 34 C8 24 32 24 32 34" stroke="#E07B39" strokeWidth="2" fill="none"/>
-                <circle cx="8" cy="16" r="4" stroke="#E07B39" strokeWidth="1.5" opacity="0.4"/>
-                <path d="M0 32 C0 26 12 26 12 30" stroke="#E07B39" strokeWidth="1.5" fill="none" opacity="0.3"/>
-                <circle cx="32" cy="16" r="4" stroke="#E07B39" strokeWidth="1.5" opacity="0.4"/>
-                <path d="M40 32 C40 26 28 26 28 30" stroke="#E07B39" strokeWidth="1.5" fill="none" opacity="0.3"/>
-              </svg>),label:'Human Operators',desc:'Vetted teams who actually execute the work' },
-              { icon:(<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="4" width="32" height="32" rx="6" stroke="#E07B39" strokeWidth="2"/>
-                <path d="M12 14 L18 14 L18 20 L24 20 L24 26 L28 26" stroke="#E07B39" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="12" cy="14" r="2" fill="#E07B39"/>
-                <circle cx="18" cy="14" r="2" fill="#E07B39" opacity="0.6"/>
-                <circle cx="18" cy="20" r="2" fill="#E07B39" opacity="0.6"/>
-                <circle cx="24" cy="20" r="2" fill="#E07B39" opacity="0.6"/>
-                <circle cx="24" cy="26" r="2" fill="#E07B39" opacity="0.6"/>
-                <circle cx="28" cy="26" r="2" fill="#E07B39"/>
-              </svg>),label:'Structured Workflows',desc:'Every step defined, tracked, and delivered' },
-            ].map(item => (
-              <div key={item.label} style={{ background:'rgba(255,255,255,0.03)',border:'1px solid rgba(224,123,57,0.1)',borderRadius:14,padding:'32px 24px',boxShadow:'0 4px 24px rgba(224,123,57,0.08)' }}>
-                <div style={{ width:64,height:64,borderRadius:16,background:'rgba(224,123,57,0.08)',border:'1px solid rgba(224,123,57,0.15)',boxShadow:'0 4px 16px rgba(224,123,57,0.12)',display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 16px' }}>{item.icon}</div>
-                <div style={{ fontWeight:700,color:'white',marginBottom:6,fontSize:'0.9rem' }}>{item.label}</div>
-                <div style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.45)',lineHeight:1.6 }}>{item.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ background:'linear-gradient(135deg,#0A2342 0%,#1a3560 100%)',padding:'100px 24px',textAlign:'center',position:'relative',overflow:'hidden' }}>
-        <div style={{ position:'absolute',inset:0,background:'radial-gradient(ellipse at center,rgba(224,123,57,0.15) 0%,transparent 65%)',pointerEvents:'none' }} />
-        <div style={{ position:'relative',zIndex:1,maxWidth:640,margin:'0 auto' }}>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,4vw,3rem)',color:'white',marginBottom:16,lineHeight:1.15 }}>Stop managing work.<br /><em style={{ color:'#F08C4E' }}>Start shipping it.</em></h2>
-          <p style={{ color:'rgba(255,255,255,0.5)',marginBottom:36,fontSize:'1rem',lineHeight:1.7 }}>Join the companies already using SprintWork™ to deliver outcomes, not headcount.</p>
-          <a href="/register?role=employer" style={{ display:'inline-block',padding:'16px 44px',background:'#E07B39',borderRadius:999,fontSize:'1.05rem',fontWeight:700,color:'white',textDecoration:'none',boxShadow:'0 8px 32px rgba(224,123,57,0.45)' }}>Start a Sprint →</a>
-        </div>
-      </section>
+      
 
       <footer style={{ background:'#050F1C',borderTop:'1px solid rgba(255,255,255,0.06)',padding:'48px 24px 32px' }}>
         <div style={{ maxWidth:1080,margin:'0 auto' }}>

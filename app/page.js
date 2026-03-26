@@ -8,9 +8,9 @@ export default function Home() {
   const steps = [
   { num: '01', title: 'Submit your work', desc: 'Describe what you need in plain language. No scope doc required.',
     icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><rect x="10" y="8" width="28" height="32" rx="3" stroke="rgba(255,255,255,0.7)" strokeWidth="2" fill="none"/><line x1="16" y1="18" x2="32" y2="18" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/><line x1="16" y1="24" x2="28" y2="24" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/><line x1="16" y1="30" x2="25" y2="30" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/><path d="M30 32 L34 36 L40 28" stroke="#E07B39" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>) },
-  { num: '02', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it — in minutes.',
+  { num: '02', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it â in minutes.',
     icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="rgba(255,255,255,0.7)" strokeWidth="2" fill="none"/><path d="M16 24 L22 24 L26 16 L30 32 L34 24 L38 24" stroke="#E07B39" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>) },
-  { num: '03', title: 'Sprint-Tern™ matched & onboarded', desc: 'Work is distributed across 1-100 Sprint-Terns™ and we train/manage them.',
+  { num: '03', title: 'Sprint-Ternâ¢ matched & onboarded', desc: 'Work is distributed across 1-100 Sprint-Ternsâ¢ and we train/manage them.',
     icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="10" cy="14" r="4.5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none"/><path d="M4 30 C4 24 7 22 10 22 C13 22 16 24 16 30" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none" strokeLinecap="round"/><circle cx="24" cy="12" r="5" stroke="#E07B39" strokeWidth="1.5" fill="none"/><path d="M17 30 C17 23 20 20 24 20 C28 20 31 23 31 30" stroke="#E07B39" strokeWidth="1.5" fill="none" strokeLinecap="round"/><circle cx="38" cy="14" r="4.5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none"/><path d="M32 30 C32 24 35 22 38 22 C41 22 44 24 44 30" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none" strokeLinecap="round"/><line x1="14" y1="34" x2="34" y2="34" stroke="rgba(255,255,255,0.2)" strokeWidth="1" strokeDasharray="2 2"/><path d="M19 4 L23 8 L30 0" stroke="#E07B39" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>) },
   { num: '04', title: 'AI-powered teams execute', desc: 'Vetted operators + AI tools work together on your project.',
     icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="16" cy="16" r="5" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" fill="none"/><circle cx="32" cy="16" r="5" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" fill="none"/><circle cx="24" cy="32" r="5" stroke="#E07B39" strokeWidth="1.5" fill="none"/><line x1="19" y1="19" x2="22" y2="28" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/><line x1="29" y1="19" x2="26" y2="28" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/><line x1="21" y1="16" x2="27" y2="16" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/></svg>) },
@@ -67,16 +67,16 @@ export default function Home() {
 
       <section style={{ paddingTop:140,paddingBottom:100,background:'linear-gradient(160deg,#081A30 0%,#0A2342 60%,#0D2B50 100%)',position:'relative',overflow:'hidden' }}>
         <div style={{ position:'absolute',top:-150,right:-150,width:500,height:500,background:'radial-gradient(circle,rgba(224,123,57,0.12) 0%,transparent 70%)',pointerEvents:'none' }} />
-        {/* Diagonal line texture — repeating CSS gradient */}
+        {/* Diagonal line texture â repeating CSS gradient */}
         <div style={{ position:'absolute',inset:0,pointerEvents:'none',opacity:1,background:'repeating-linear-gradient(15deg,rgba(255,255,255,0.025) 0px,rgba(255,255,255,0.025) 1px,transparent 1px,transparent 28px)' }} />
         <div style={{ maxWidth:800,margin:'0 auto',padding:'0 24px',textAlign:'center',position:'relative',zIndex:1 }}>
-          <div style={{ display:'inline-flex',alignItems:'center',gap:8,background:'rgba(224,123,57,0.12)',border:'1px solid rgba(224,123,57,0.3)',borderRadius:999,padding:'5px 14px',fontSize:'0.75rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'#F08C4E',marginBottom:28 }}>SprintWork™ Platform</div>
+          <div style={{ display:'inline-flex',alignItems:'center',gap:8,background:'rgba(224,123,57,0.12)',border:'1px solid rgba(224,123,57,0.3)',borderRadius:999,padding:'5px 14px',fontSize:'0.75rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'#F08C4E',marginBottom:28 }}>SprintWorkâ¢ Platform</div>
           <h1 style={{ fontFamily:SERIF,fontSize:'clamp(2.4rem,5vw,3.6rem)',fontWeight:400,color:'white',lineHeight:1.1,marginBottom:20 }}>
             The Future of Work<br /><em style={{ fontStyle:'italic',color:'#F08C4E' }}>Runs on Sprints.</em>
           </h1>
-          <p style={{ fontSize:'1.1rem',color:'rgba(255,255,255,0.55)',lineHeight:1.7,marginBottom:12,maxWidth:600,margin:'0 auto 12px' }}>Structured work, executed in weeks — not months.</p>
+          <p style={{ fontSize:'1.1rem',color:'rgba(255,255,255,0.55)',lineHeight:1.7,marginBottom:12,maxWidth:600,margin:'0 auto 12px' }}>Structured work, executed in weeks â not months.</p>
           <div style={{ display:'flex',gap:12,justifyContent:'center',flexWrap:'wrap' }}>
-            <a href="/register?role=employer" style={{ padding:'14px 36px',background:'#E07B39',borderRadius:999,fontSize:'1rem',fontWeight:600,color:'white',textDecoration:'none',boxShadow:'0 4px 24px rgba(224,123,57,0.4)' }}>Start a Sprint →</a>
+            <a href="/register?role=employer" style={{ padding:'14px 36px',background:'#E07B39',borderRadius:999,fontSize:'1rem',fontWeight:600,color:'white',textDecoration:'none',boxShadow:'0 4px 24px rgba(224,123,57,0.4)' }}>Start a Sprint â</a>
             <a href="#how" style={{ padding:'14px 28px',border:'1px solid rgba(255,255,255,0.2)',borderRadius:999,fontSize:'1rem',color:'rgba(255,255,255,0.7)',textDecoration:'none' }}>See how it works</a>
           </div>
           <div style={{ display:'flex',justifyContent:'center',gap:40,marginTop:60,paddingTop:40,borderTop:'1px solid rgba(224,123,57,0.2)' }}>
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SOCIAL PROOF ── */}
+      {/* ââ SOCIAL PROOF ââ */}
       <section style={{ background:'#081A30', padding:'72px 24px 80px', borderBottom:'1px solid rgba(255,255,255,0.06)', borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:1080, margin:'0 auto' }}>
 
@@ -92,7 +92,7 @@ export default function Home() {
           <div style={{ textAlign:'center', marginBottom:52 }}>
             <div style={{ fontSize:'0.72rem', fontWeight:700, letterSpacing:'2px', textTransform:'uppercase', color:'#E07B39', marginBottom:12 }}>Client Results</div>
             <h2 style={{ fontFamily:SERIF, fontSize:'clamp(1.6rem,3vw,2.2rem)', color:'white', fontWeight:400, marginBottom:0, lineHeight:1.2 }}>
-              Proven Results — <em style={{ color:'#F08C4E', fontStyle:'italic' }}>In Weeks, Not Months</em>
+              Proven Results â <em style={{ color:'#F08C4E', fontStyle:'italic' }}>In Weeks, Not Months</em>
             </h2>
           </div>
 
@@ -130,7 +130,7 @@ export default function Home() {
               {
                 stat:'6,000 Leads',
                 company:'Poolit',
-                quote:'Work Simplr helped us generate qualified leads while reducing the operational lift on our internal team. The quality of leads and the structure behind the work stood out. This wasn\'t busywork — it was real pipeline impact.',
+                quote:'Work Simplr helped us generate qualified leads while reducing the operational lift on our internal team. The quality of leads and the structure behind the work stood out. This wasn\'t busywork â it was real pipeline impact.',
                 name:'James L.',
                 tag:'Lead Generation',
                 color:'#6B8FD4',
@@ -162,7 +162,7 @@ export default function Home() {
               {
                 stat:'2-Week Launch',
                 company:'Education Design Lab',
-                quote:'This unblocked us. We needed product testing fast — in under 3 weeks we had end-to-end user tests completed in just 2 weeks, keeping our launch schedule on time.',
+                quote:'This unblocked us. We needed product testing fast â in under 3 weeks we had end-to-end user tests completed in just 2 weeks, keeping our launch schedule on time.',
                 name:'Tara M., Product Lead',
                 tag:'Product Testing',
                 color:'#4BBFA0',
@@ -197,7 +197,7 @@ export default function Home() {
                 </p>
 
                 {/* Attribution */}
-                <div style={{ fontSize:'0.78rem', color:'rgba(255,255,255,0.35)', fontWeight:500 }}>— {card.name}</div>
+                <div style={{ fontSize:'0.78rem', color:'rgba(255,255,255,0.35)', fontWeight:500 }}>â {card.name}</div>
               </div>
             ))}
           </div>
@@ -212,7 +212,7 @@ export default function Home() {
             <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
           </div>
           <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>The Solution</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWork™</em></h2>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:16,lineHeight:1.2,textAlign:'center' }}>Welcome to <em style={{ color:'#F08C4E' }}>SprintWorkâ¢</em></h2>
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7,textAlign:'center' }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
 
           <AnimatedSteps>
@@ -266,14 +266,14 @@ export default function Home() {
                       <path d="M0 26 C0 17 20 17 20 26"/>
                     </g>
                   ))}
-                </svg>), title:'Execution plans', desc:'We onboard and distribute the work across 1–100 workers with QA built in.' },
+                </svg>), title:'Execution plans', desc:'We onboard and distribute the work across 1â100 workers with QA built in.' },
               { num:'3', icon:(<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
                 <rect x="6" y="16" width="40" height="30" rx="4" stroke="rgba(255,255,255,0.8)" strokeWidth="2" fill="none"/>
                 <polyline points="6,16 26,6 46,16" stroke="rgba(255,255,255,0.8)" strokeWidth="2" fill="none" strokeLinejoin="round"/>
                 <line x1="26" y1="6" x2="26" y2="46" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5"/>
                 <line x1="6" y1="16" x2="46" y2="16" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5"/>
                 <polyline points="18,28 24,34 36,22" stroke="#22C55E" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>), title:'Delivered outcomes', desc:'You get the thing you asked for — not a status update and an invoice. In 28 days.' },
+              </svg>), title:'Delivered outcomes', desc:'You get the thing you asked for â not a status update and an invoice. In 28 days.' },
             ].map((item, i) => (
               <div key={item.num} className="step-card" style={{ display:'flex',alignItems:'stretch',flex:'1 1 0',minWidth:0,position:'relative' }}>
                 <div style={{ flex:1,display:'flex',flexDirection:'column',background:i===0?'#E07B39':'rgba(224,123,57,0.05)',border:'1px solid rgba(224,123,57,0.2)',borderRadius:16,padding:'36px 24px 28px',textAlign:'center',position:'relative',boxShadow:i===0?'0 8px 32px rgba(224,123,57,0.3)':'none' }}>
@@ -282,7 +282,7 @@ export default function Home() {
                   <div style={{ fontFamily:SERIF,fontSize:'1.1rem',color:'white',marginBottom:8,fontWeight:400 }}>{item.title}</div>
                   <div style={{ fontSize:'0.875rem',maxWidth:260,color:i===0?'rgba(255,255,255,0.85)':'rgba(255,255,255,0.55)',lineHeight:1.65 }}>{item.desc}</div>
                 </div>
-                {i < 2 && <div className="step-arrow" style={{ position:'absolute',right:-34,top:'50%',transform:'translateY(-50%)',width:44,height:44,display:'flex',alignItems:'center',justifyContent:'center',color:'#E07B39',fontSize:'2.4rem',fontWeight:700,zIndex:2,opacity:0.85 }}>→</div>}
+                {i < 2 && <div className="step-arrow" style={{ position:'absolute',right:-34,top:'50%',transform:'translateY(-50%)',width:44,height:44,display:'flex',alignItems:'center',justifyContent:'center',color:'#E07B39',fontSize:'2.4rem',fontWeight:700,zIndex:2,opacity:0.85 }}>â</div>}
               </div>
             ))}
           </div>
@@ -339,7 +339,7 @@ export default function Home() {
           </div>
           <div style={{ background:'rgba(224,123,57,0.06)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:14,padding:'28px 40px',textAlign:'center' }}>
             <div style={{ fontFamily:SERIF,fontSize:'clamp(1.4rem,2.5vw,2rem)',color:'white',marginBottom:8,lineHeight:1.3 }}>
-              <em style={{ color:'#F08C4E' }}>74%</em> of projects fail at the definition stage —<br />not the execution.
+              <em style={{ color:'#F08C4E' }}>74%</em> of projects fail at the definition stage â<br />not the execution.
             </div>
             <div style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.4)',marginTop:8 }}>That's the problem Work Simplr was built to solve.</div>
           </div>
@@ -377,18 +377,18 @@ export default function Home() {
           </div>
           </div>
 
-          <p style={{ textAlign:'center',color:'rgba(255,255,255,0.5)',fontSize:15,lineHeight:1.7,maxWidth:780,margin:'56px auto 0' }}>Whether you need research, analysis, content, or technical builds — Sprint-Terns™ deploy in hours, not weeks. Every sprint is scoped, managed, and delivered with AI precision.</p>
+          <p style={{ textAlign:'center',color:'rgba(255,255,255,0.5)',fontSize:15,lineHeight:1.7,maxWidth:780,margin:'56px auto 0' }}>Whether you need research, analysis, content, or technical builds â Sprint-Ternsâ¢ deploy in hours, not weeks. Every sprint is scoped, managed, and delivered with AI precision.</p>
         </div>
       </section>
 
 
-      {/* ── WHY NOW ── */}
+      {/* ââ WHY NOW ââ */}
       <section style={{ background:'#081A30',padding:'96px 24px',position:'relative',overflow:'hidden',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         {/* subtle bg glow */}
         <div style={{ position:'absolute',top:-120,right:-120,width:480,height:480,background:'radial-gradient(circle,rgba(224,123,57,0.1) 0%,transparent 70%)',pointerEvents:'none' }} />
         <div style={{ maxWidth:1020,margin:'0 auto',position:'relative',zIndex:1 }}>
 
-          {/* WHY NOW — redesigned layout */}
+          {/* WHY NOW â redesigned layout */}
           {/* WHY NOW? label + subtitle */}
           <div style={{ textAlign:'center',marginBottom:40 }}>
             <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:12 }}>Why Now?</div>
@@ -398,13 +398,20 @@ export default function Home() {
           </div>
 
           {/* Two-column layout */}
-          <div className="hp-whynow-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:32,marginBottom:40,alignItems:'stretch' }}>
-
-            {/* Left column: heading + checklist */}
+          <div className="hp-whynow-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gridTemplateRows:'auto 1fr',gap:'12px 32px',marginBottom:40,alignItems:'stretch' }}>
+            {/* Row 1: headings */}
             <ScrollReveal delay={0}>
-              <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',marginBottom:12,lineHeight:1.2,fontWeight:400 }}>
+              <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',marginBottom:0,lineHeight:1.2,fontWeight:400 }}>
                 Built for forward-thinking employers
               </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.25}>
+              <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',lineHeight:1.2,marginBottom:0,fontWeight:400 }}>
+                Built to handle the part where most work breaks.
+              </h3>
+            </ScrollReveal>
+            {/* Row 2: boxes */}
+            <ScrollReveal delay={0.1} style={{ display:'flex',height:'100%' }}>
               <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px',flex:1,display:'flex',flexDirection:'column',justifyContent:'center' }}>
                 <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:24,lineHeight:1.4 }}>For teams who value<br /><em style={{ color:'#F08C4E' }}>output over optics.</em></div>
                 <div style={{ display:'flex',flexDirection:'column',gap:14 }}>
@@ -424,12 +431,7 @@ export default function Home() {
                 </div>
               </div>
             </ScrollReveal>
-
-            {/* Right column: contrast heading + table */}
-            <ScrollReveal delay={0.25} style={{ display:'flex',flexDirection:'column',justifyContent:'flex-end',height:'100%' }}>
-              <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',lineHeight:1.2,marginBottom:28,fontWeight:400 }}>
-                Built to handle the part where most work breaks.
-              </h3>
+            <ScrollReveal delay={0.35} style={{ display:'flex',height:'100%' }}>
               <div style={{ borderRadius:16,overflow:'hidden',border:'1px solid rgba(255,255,255,0.08)',background:'rgba(255,255,255,0.02)',width:'100%',flex:1,display:'flex',flexDirection:'column' }}>
                 <div style={{ display:'flex',alignItems:'center',borderBottom:'1px solid rgba(255,255,255,0.1)',background:'rgba(255,255,255,0.03)' }}>
                   <div style={{ flex:1,padding:'14px 24px',fontSize:11,fontWeight:700,letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)' }}>Before</div>
@@ -437,7 +439,7 @@ export default function Home() {
                   <div style={{ flex:1,padding:'14px 24px',fontSize:11,fontWeight:700,letterSpacing:'0.15em',textTransform:'uppercase',color:'#E07B39',borderLeft:'2px solid #E07B39',background:'rgba(224,123,57,0.06)' }}>After</div>
                 </div>
                 {[['Messy','Handled'],['Ambiguous','Structured'],['Planned','Done'],['Slow + Chaos','Fast + reliable']].map(([b,a],i) => (
-                  <div key={i} style={{ display:'flex',alignItems:'center',borderBottom:i<3?'1px solid rgba(255,255,255,0.06)':'none' }}>
+                  <div key={i} style={{ display:'flex',alignItems:'center',borderBottom:i<3?'1px solid rgba(255,255,255,0.06)':'none',flex:i===3?1:undefined }}>
                     <div style={{ flex:1,padding:'18px 24px',fontSize:16,color:'rgba(255,255,255,0.35)',fontWeight:400 }}>{b}</div>
                     <div style={{ width:36,display:'flex',alignItems:'center',justifyContent:'center' }}>
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#E07B39" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -448,26 +450,6 @@ export default function Home() {
               </div>
             </ScrollReveal>
           </div>
-
-          {/* The challenge statement */}
-          <div style={{ background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:16,padding:'32px 40px',textAlign:'center',marginBottom:40 }}>
-            <p style={{ fontSize:'1.1rem',color:'rgba(255,255,255,0.7)',lineHeight:1.8,marginBottom:8 }}>
-              <em>...the challenge is the same...</em>
-            </p>
-            <p style={{ fontFamily:SERIF,fontSize:'clamp(1.2rem,2.5vw,1.6rem)',color:'white',lineHeight:1.4,marginBottom:8 }}>
-              How do you get quality results from distributed work<br />without adding management overhead?
-            </p>
-            <p style={{ fontSize:'1rem',color:'#F08C4E',fontWeight:600,marginTop:16 }}>That's what Work Simplr solves.</p>
-          </div>
-
-          {/* CTA */}
-          <div style={{ textAlign:'center' }}>
-            <a href="/register?role=employer" style={{ display:'inline-block',padding:'16px 48px',background:'#E07B39',borderRadius:999,fontSize:'1.05rem',fontWeight:700,color:'white',textDecoration:'none',boxShadow:'0 8px 32px rgba(224,123,57,0.4)',letterSpacing:'0.3px' }}>
-              Start a Sprint →
-            </a>
-          </div>
-
-        </div>
       
           
           
@@ -484,7 +466,7 @@ export default function Home() {
               <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:16 }}>The old way</div>
               {['Hiring people','Managing freelancers','Guessing scope'].map(t => (
                 <div key={t} style={{ display:'flex',alignItems:'center',gap:10,padding:'10px 0',borderBottom:'1px solid rgba(255,255,255,0.05)',fontSize:'0.875rem',color:'rgba(255,255,255,0.45)' }}>
-                  <span style={{ color:'#EF4444' }}>✕</span> {t}
+                  <span style={{ color:'#EF4444' }}>â</span> {t}
                 </div>
               ))}
             </div>
@@ -492,7 +474,7 @@ export default function Home() {
               <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Sprint way</div>
               {['Structured work','Managed delivery','Predictable outcomes'].map(t => (
                 <div key={t} style={{ display:'flex',alignItems:'center',gap:10,padding:'10px 0',borderBottom:'1px solid rgba(224,123,57,0.1)',fontSize:'0.875rem',color:'rgba(255,255,255,0.75)' }}>
-                  <span style={{ color:'#22C55E' }}>✓</span> {t}
+                  <span style={{ color:'#22C55E' }}>â</span> {t}
                 </div>
               ))}
             </div>
@@ -510,7 +492,7 @@ export default function Home() {
               <p style={{ fontSize:'0.83rem',color:'rgba(255,255,255,0.35)',lineHeight:1.65,maxWidth:220 }}>AI-powered execution platform. We turn undefined work into delivered outcomes.</p>
             </div>
             {[
-              { title:'Platform',links:[['#solution','SprintWork™'],['/case-studies','Case Studies'],['#how','How It Works'],['/register','Start a Sprint']] },
+              { title:'Platform',links:[['#solution','SprintWorkâ¢'],['/case-studies','Case Studies'],['#how','How It Works'],['/register','Start a Sprint']] },
               { title:'Company',links:[['/about','About'],['/case-studies','Case Studies'],['/contact','Contact']] },
               { title:'Legal',links:[['/privacy-policy','Privacy Policy'],['/terms','Terms']] },
             ].map(col => (
@@ -525,7 +507,7 @@ export default function Home() {
             ))}
           </div>
           <div style={{ borderTop:'1px solid rgba(255,255,255,0.06)',paddingTop:24,display:'flex',justifyContent:'space-between',alignItems:'center',fontSize:'0.78rem',color:'rgba(255,255,255,0.25)' }}>
-            <span>© {new Date().getFullYear()} Work Simplr. All rights reserved.</span>
+            <span>Â© {new Date().getFullYear()} Work Simplr. All rights reserved.</span>
             <div style={{ display:'flex',gap:20 }}>
               <a href="https://www.linkedin.com/company/68873365/" style={{ color:'inherit',textDecoration:'none' }}>LinkedIn</a>
               <a href="https://www.facebook.com/worksimplrUS/" style={{ color:'inherit',textDecoration:'none' }}>Facebook</a>

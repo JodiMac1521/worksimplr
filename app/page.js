@@ -402,8 +402,8 @@ export default function Home() {
 
             {/* Left column: heading + checklist */}
             <ScrollReveal delay={0}>
-              <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',marginBottom:28,lineHeight:1.2,fontWeight:400 }}>
-                Built for forward-thinking employers<br /><em style={{ color:'#F08C4E' }}>done.</em>
+              <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',marginBottom:12,lineHeight:1.2,fontWeight:400 }}>
+                Built for forward-thinking employers
               </h2>
               <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px' }}>
                 <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:24,lineHeight:1.4 }}>For teams who value<br /><em style={{ color:'#F08C4E' }}>output over optics.</em></div>

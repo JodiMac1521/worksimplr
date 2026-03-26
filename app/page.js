@@ -282,7 +282,7 @@ export default function Home() {
                   <div style={{ fontFamily:SERIF,fontSize:'1.1rem',color:'white',marginBottom:8,fontWeight:400 }}>{item.title}</div>
                   <div style={{ fontSize:'0.875rem',maxWidth:260,color:i===0?'rgba(255,255,255,0.85)':'rgba(255,255,255,0.55)',lineHeight:1.65 }}>{item.desc}</div>
                 </div>
-                {i < 2 && <div className="step-arrow" style={{ position:'absolute',right:-28,top:'50%',transform:'translateY(-50%)',width:56,height:56,display:'flex',alignItems:'center',justifyContent:'center',background:'rgba(224,123,57,0.15)',border:'2px solid rgba(224,123,57,0.4)',borderRadius:'50%',color:'#E07B39',fontSize:'1.8rem',fontWeight:700,zIndex:2,backdropFilter:'blur(4px)' }}>→</div>}
+                {i < 2 && <div className="step-arrow" style={{ position:'absolute',right:-34,top:'50%',transform:'translateY(-50%)',width:44,height:44,display:'flex',alignItems:'center',justifyContent:'center',color:'#E07B39',fontSize:'2.4rem',fontWeight:700,zIndex:2,opacity:0.85 }}>→</div>}
               </div>
             ))}
           </div>
@@ -362,8 +362,6 @@ export default function Home() {
                     <div style={{ fontFamily:SERIF,fontSize:'clamp(1.25rem,2.5vw,1.65rem)',color:'white',fontWeight:400,lineHeight:1.3,marginBottom:6 }}>{step.title}</div>
                     <div style={{ fontSize:15,color:'rgba(255,255,255,0.5)',lineHeight:1.6 }}>{step.desc}</div>
                   </div>
-                  <div style={{ width:72,height:72,borderRadius:14,background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',boxShadow:'0 4px 20px rgba(0,0,0,0.35),0 1px 4px rgba(0,0,0,0.2)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}>{step.icon}</div>
-                </div>
               ))}
             </div>
 
@@ -394,7 +392,7 @@ export default function Home() {
           <div style={{ textAlign:'center',marginBottom:40 }}>
             <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:12 }}>Why Now?</div>
             <p style={{ fontSize:'1.05rem',color:'rgba(255,255,255,0.55)',maxWidth:600,margin:'0 auto',lineHeight:1.75 }}>
-              No new tools. No added headcount. Scalable decentralized hiring solutions for any company.
+              No new tools. No added headcount. Scalable decentralized hiring solutions for any company. <em style={{ color:'#F08C4E',fontStyle:'normal',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.05em' }}>DONE</em> with broken internships.
             </p>
           </div>
 

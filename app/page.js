@@ -5,60 +5,17 @@ import AnimatedSteps from './components/AnimatedSteps';
 export default function Home() {
   const SERIF = "'DM Serif Display', serif"
   const steps = [
-    { num: '01', icon: (<svg width="140" height="100" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
-                  <defs>
-                    <marker id="wfArr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-                      <path d="M1,1 L7,4 L1,7" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"/>
-                    </marker>
-                  </defs>
-                  {/* Input node */}
-                  <rect x="6" y="42" width="36" height="24" rx="4" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="2"/>
-                  <text x="24" y="58" textAnchor="middle" fill="rgba(255,255,255,0.8)" fontSize="9" fontWeight="600" fontFamily="DM Sans, sans-serif">Input</text>
-                  {/* Arrows from Input */}
-                  <line x1="42" y1="50" x2="62" y2="26" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
-                  <line x1="42" y1="54" x2="62" y2="54" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
-                  <line x1="42" y1="58" x2="62" y2="86" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
-                  {/* Process A */}
-                  <ellipse cx="86" cy="22" rx="22" ry="14" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="2"/>
-                  <text x="86" y="26" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="8" fontFamily="DM Sans, sans-serif">Scope</text>
-                  {/* Process B */}
-                  <ellipse cx="86" cy="54" rx="22" ry="14" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="2"/>
-                  <text x="86" y="58" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="8" fontFamily="DM Sans, sans-serif">Build</text>
-                  {/* Process C */}
-                  <ellipse cx="86" cy="88" rx="22" ry="14" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="2"/>
-                  <text x="86" y="92" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="8" fontFamily="DM Sans, sans-serif">QA</text>
-                  {/* Arrows to Output */}
-                  <line x1="108" y1="26" x2="138" y2="46" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
-                  <line x1="108" y1="54" x2="138" y2="54" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
-                  <path d="M108 88 Q130 88 134 62" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" markerEnd="url(#wfArr)"/>
-                  {/* Cross-link: A to B */}
-                  <line x1="86" y1="36" x2="86" y2="40" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeDasharray="2,2"/>
-                  {/* Output node */}
-                  <ellipse cx="164" cy="54" rx="28" ry="16" fill="none" stroke="rgba(255,255,255,0.95)" strokeWidth="2.2"/>
-                  <text x="164" y="58" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="9" fontWeight="600" fontFamily="DM Sans, sans-serif">Output</text>
-                </svg>), title: 'Submit your work', desc: 'Describe what you need in plain language. No scope doc required.' },
-    { num: '02', icon: '⚡', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it — in minutes.' },
-    { num: '03', icon: (<svg width="120" height="56" viewBox="0 0 180 80" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
-                  {/* Row 1 - 5 people */}
-                  {[0,1,2,3,4].map(i => (
-                    <g key={`r1-${i}`} transform={`translate(${i*34+8},0)`} fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="9" cy="8" r="5.5"/>
-                      <path d="M0 24 C0 16 18 16 18 24"/>
-                    </g>
-                  ))}
-                  {/* Row 2 - 5 people */}
-                  {[0,1,2,3,4].map(i => (
-                    <g key={`r2-${i}`} transform={`translate(${i*34+8},34)`} fill="none" stroke="rgba(255,255,255,0.65)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="9" cy="8" r="5.5"/>
-                      <path d="M0 24 C0 16 18 16 18 24"/>
-                    </g>
-                  ))}
-                </svg>), title: 'AI-powered teams execute', desc: 'Vetted operators + AI tools work together on your project.' },
-    { num: '04', icon: (<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="22" cy="22" r="18" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2"/>
-      <polyline points="13,22 19,29 31,15" stroke="#22C55E" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>), title: 'QA + delivery', desc: 'Every deliverable is reviewed before you receive it. No surprises.' },
-  ];
+  { num: '01', title: 'Submit your work', desc: 'Describe what you need in plain language. No scope doc required.',
+    icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><rect x="10" y="8" width="28" height="32" rx="3" stroke="rgba(255,255,255,0.7)" strokeWidth="2" fill="none"/><line x1="16" y1="18" x2="32" y2="18" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/><line x1="16" y1="24" x2="28" y2="24" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/><line x1="16" y1="30" x2="25" y2="30" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/><path d="M30 32 L34 36 L40 28" stroke="#E07B39" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>) },
+  { num: '02', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it — in minutes.',
+    icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="rgba(255,255,255,0.7)" strokeWidth="2" fill="none"/><path d="M16 24 L22 24 L26 16 L30 32 L34 24 L38 24" stroke="#E07B39" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>) },
+  { num: '03', title: 'Sprint-Tern™ matched & onboarded', desc: 'Work is distributed across 1-100 Sprint-Terns™ and we train/manage them.',
+    icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="10" cy="14" r="4.5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none"/><path d="M4 30 C4 24 7 22 10 22 C13 22 16 24 16 30" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none" strokeLinecap="round"/><circle cx="24" cy="12" r="5" stroke="#E07B39" strokeWidth="1.5" fill="none"/><path d="M17 30 C17 23 20 20 24 20 C28 20 31 23 31 30" stroke="#E07B39" strokeWidth="1.5" fill="none" strokeLinecap="round"/><circle cx="38" cy="14" r="4.5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none"/><path d="M32 30 C32 24 35 22 38 22 C41 22 44 24 44 30" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none" strokeLinecap="round"/><line x1="14" y1="34" x2="34" y2="34" stroke="rgba(255,255,255,0.2)" strokeWidth="1" strokeDasharray="2 2"/><path d="M19 4 L23 8 L30 0" stroke="#E07B39" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>) },
+  { num: '04', title: 'AI-powered teams execute', desc: 'Vetted operators + AI tools work together on your project.',
+    icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="16" cy="16" r="5" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" fill="none"/><circle cx="32" cy="16" r="5" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" fill="none"/><circle cx="24" cy="32" r="5" stroke="#E07B39" strokeWidth="1.5" fill="none"/><line x1="19" y1="19" x2="22" y2="28" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/><line x1="29" y1="19" x2="26" y2="28" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/><line x1="21" y1="16" x2="27" y2="16" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/></svg>) },
+  { num: '05', title: 'QA + delivery', desc: 'We review and package up the work. No surprises.',
+    icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><rect x="10" y="12" width="28" height="22" rx="3" stroke="rgba(255,255,255,0.7)" strokeWidth="2" fill="none"/><polyline points="12,14 24,24 36,14" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5" fill="none"/><circle cx="36" cy="34" r="7" fill="#E07B39"/><path d="M33 34 L35.5 36.5 L39.5 31.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>) },
+];
   return (
     <div style={{ overflowX:'hidden',minHeight:'100vh' }}>
       <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:100,background:'rgba(10,35,66,0.95)',backdropFilter:'blur(14px)',borderBottom:'1px solid rgba(224,123,57,0.2)',height:60,display:'flex',alignItems:'center' }}>
@@ -389,123 +346,38 @@ export default function Home() {
       </section>
 
       <section id="how" style={{ background:'#0A2342',padding:'96px 24px',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
-        <div style={{ maxWidth:860,margin:'0 auto' }}>
-          {/* Left-justified header */}
+        <div style={{ maxWidth:1320,margin:'0 auto' }}>
+          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:12,textAlign:'center' }}>How It Works</div>
+          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:64,lineHeight:1.2,textAlign:'center' }}>5 steps to delivered work.</h2>
 
-          {/* diamond divider */}
-          <div style={{ display:'flex',alignItems:'center',gap:16,marginBottom:40 }}>
-            <div style={{ flex:1,height:'1px',background:'linear-gradient(to right,transparent,rgba(255,255,255,0.08))' }} />
-            <span style={{ color:'rgba(224,123,57,0.45)',fontSize:'0.5rem' }}>&#9670;</span>
-            <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
-          </div>
-          <div style={{ display:'flex',alignItems:'center',gap:16,marginBottom:40 }}>
-            <div style={{ flex:1,height:'1px',background:'linear-gradient(to right,transparent,rgba(255,255,255,0.08))' }} />
-            <span style={{ color:'rgba(224,123,57,0.45)',fontSize:'0.5rem' }}>&#9670;</span>
-            <div style={{ flex:1,height:'1px',background:'linear-gradient(to left,transparent,rgba(255,255,255,0.08))' }} />
-          </div>
-          <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'#E07B39',marginBottom:16,textAlign:'center' }}>How It Works</div>
-          <h2 style={{ fontFamily:SERIF,fontSize:'clamp(2rem,3.8vw,2.9rem)',color:'white',marginBottom:12,lineHeight:1.2,textAlign:'center' }}>4 steps to delivered work.</h2>
-
-          {/* Visual flow diagram — horizontal node chain */}
-          <div style={{ paddingBottom:8, paddingTop:24 }}>
-            <div className="hp-4step-grid" style={{ display:'grid', gridTemplateColumns:'1fr 36px 1fr 36px 1fr 36px 1fr', alignItems:'stretch' }}>
-
+          <div style={{ display:'flex',gap:48,alignItems:'stretch' }}>
+            {/* Left: Vertical timeline */}
+            <div style={{ flex:1,position:'relative',paddingLeft:56 }}>
+              <div style={{ position:'absolute',left:19,top:16,bottom:16,width:2,background:'rgba(255,255,255,0.1)' }} />
               {steps.map((step, i) => (
-                <>
-                  {/* Node card */}
-                  <div key={step.num} style={{
-                    background: i === 0 ? '#E07B39' : i === steps.length-1 ? '#0A2342' : 'rgba(255,255,255,0.04)',
-                    border: i === 0 ? '2px solid #E07B39' : i === steps.length-1 ? '2px solid #E07B39' : '1.5px solid rgba(255,255,255,0.12)',
-                    borderRadius:14,
-                    padding:'36px 20px 28px',
-                    textAlign:'center',
-                    position:'relative',
-                    display:'flex',
-                    flexDirection:'column',
-                    alignItems:'center',
-                    boxShadow: i === 0 ? '0 8px 32px rgba(224,123,57,0.35)' : i === steps.length-1 ? '0 4px 20px rgba(224,123,57,0.2)' : 'none',
-                  }}>
-                    {/* Step number */}
-                    <div style={{
-                      position:'absolute', top:-14, left:'50%', transform:'translateX(-50%)',
-                      background: i === 0 ? 'white' : '#E07B39',
-                      color: i === 0 ? '#E07B39' : 'white',
-                      width:28, height:28, borderRadius:'50%',
-                      display:'flex', alignItems:'center', justifyContent:'center',
-                      fontSize:'0.72rem', fontWeight:800,
-                      boxShadow:'0 2px 8px rgba(0,0,0,0.3)',
-                    }}>{i+1}</div>
-                    {/* Icon */}
-                    <div style={{ fontSize:'2.2rem', marginBottom:12, marginTop:6 }}>{step.icon}</div>
-                    {/* Title */}
-                    <div style={{ fontWeight:700, color:'white', fontSize:'0.9rem', marginBottom:8, lineHeight:1.3 }}>{step.title}</div>
-                    {/* Desc */}
-                    <div style={{ fontSize:'0.78rem', color: i === 0 ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.5)', lineHeight:1.6 }}>{step.desc}</div>
+                <div key={step.num} style={{ position:'relative',display:'flex',alignItems:'flex-start',gap:32,paddingBottom:i < steps.length - 1 ? 40 : 0 }}>
+                  <div style={{ position:'absolute',left:-44,top:2,width:32,height:32,borderRadius:'50%',background:'#E07B39',display:'flex',alignItems:'center',justifyContent:'center',zIndex:2,fontSize:14,fontWeight:700,color:'white' }}>{step.num}</div>
+                  <div style={{ flex:1 }}>
+                    <div style={{ fontFamily:SERIF,fontSize:'clamp(1.25rem,2.5vw,1.65rem)',color:'white',fontWeight:400,lineHeight:1.3,marginBottom:6 }}>{step.title}</div>
+                    <div style={{ fontSize:15,color:'rgba(255,255,255,0.5)',lineHeight:1.6 }}>{step.desc}</div>
                   </div>
-
-                  {/* Arrow — not after last card */}
-                  {i < steps.length - 1 && (
-                    <div key={`a${i}`} className="hp-4step-arrow" style={{ display:'flex', alignItems:'center', justifyContent:'center', color:'#E07B39', fontSize:'1.4rem' }}>→</div>
-                  )}
-                </>
+                  <div style={{ width:72,height:72,borderRadius:14,background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',boxShadow:'0 4px 20px rgba(0,0,0,0.35),0 1px 4px rgba(0,0,0,0.2)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}>{step.icon}</div>
+                </div>
               ))}
             </div>
-          </div>
 
-          {/* ── HOW THE ENGINE RUNS ── */}
-          <div style={{ marginTop:56, background:'rgba(255,255,255,0.02)', border:'1px solid rgba(255,255,255,0.07)', borderRadius:20, padding:'36px 28px' }}>
-            <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:32,textAlign:'center' }}>How the engine runs</div>
-
-            {/* SVG flow diagram */}
-            <div style={{ overflow:'hidden' }}>
-              <svg className="hp-engine-svg" width="100%" viewBox="0 0 660 240" xmlns="http://www.w3.org/2000/svg" style={{ display:'block', maxWidth:700, margin:'0 auto' }}>
-                <defs>
-                  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                    <path d="M0,0 L0,6 L8,3 z" fill="#E07B39"/>
-                  </marker>
-                </defs>
-
-                {/* ROW 1 */}
-                <rect x="20" y="30" width="160" height="52" rx="10" fill="#16a34a" stroke="#22c55e" strokeWidth="1.5"/>
-                <text x="100" y="51" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.9)" fontFamily="DM Sans,sans-serif">Project Intake</text>
-                <text x="100" y="68" textAnchor="middle" fontSize="10" fill="rgba(255,255,255,0.6)" fontFamily="DM Sans,sans-serif">Client submits work</text>
-
-                <path d="M180 56 L225 56" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)"/>
-
-                <rect x="225" y="18" width="210" height="76" rx="12" fill="white"/>
-                <text x="330" y="52" textAnchor="middle" fontSize="16" fontWeight="800" fill="#0A2342" fontFamily="DM Sans,sans-serif">SprintWork™</text>
-                <text x="330" y="70" textAnchor="middle" fontSize="10" fill="#0A2342" fontFamily="DM Sans,sans-serif">AI scoping + project structure</text>
-
-                <path d="M435 56 L480 56" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)"/>
-
-                <rect x="480" y="30" width="160" height="52" rx="10" fill="#E07B39"/>
-                <text x="560" y="51" textAnchor="middle" fontSize="12" fontWeight="700" fill="white" fontFamily="DM Sans,sans-serif">TalentOS</text>
-                <text x="560" y="68" textAnchor="middle" fontSize="10" fill="rgba(255,255,255,0.8)" fontFamily="DM Sans,sans-serif">Worker matching</text>
-
-                {/* DOTTED LINES: Row 1 → Row 2 */}
-                <path d="M100 82 L100 140" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.6"/>
-                <path d="M330 94 L330 140" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.6"/>
-                <path d="M560 82 L560 140" stroke="#E07B39" strokeWidth="1.5" strokeDasharray="5,4" fill="none" opacity="0.6"/>
-
-                {/* ROW 2 */}
-                <rect x="20" y="140" width="190" height="44" rx="9" fill="rgba(224,123,57,0.08)" stroke="rgba(224,123,57,0.4)" strokeWidth="1.5"/>
-                <text x="115" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">Talent Matching</text>
-
-                <rect x="235" y="140" width="190" height="44" rx="9" fill="rgba(224,123,57,0.08)" stroke="rgba(224,123,57,0.4)" strokeWidth="1.5"/>
-                <text x="330" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">Workflow Automation</text>
-
-                <rect x="450" y="140" width="190" height="44" rx="9" fill="rgba(224,123,57,0.08)" stroke="rgba(224,123,57,0.4)" strokeWidth="1.5"/>
-                <text x="545" y="162" textAnchor="middle" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)" fontFamily="DM Sans,sans-serif">Performance Analytics</text>
-
-                {/* Arrow down to dashboard */}
-                <path d="M330 184 L330 214" stroke="#E07B39" strokeWidth="2" markerEnd="url(#arr)" opacity="0.7"/>
-              </svg>
+            {/* Right: Accent panel */}
+            <div style={{ width:340,flexShrink:0,borderRadius:20,background:'linear-gradient(135deg,rgba(224,123,57,0.08) 0%,rgba(224,123,57,0.03) 100%)',border:'1px solid rgba(224,123,57,0.15)',padding:'40px 32px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',gap:24,position:'relative',overflow:'hidden' }}>
+              <div style={{ position:'absolute',top:-60,right:-60,width:160,height:160,borderRadius:'50%',background:'radial-gradient(circle,rgba(224,123,57,0.15) 0%,transparent 70%)' }} />
+              <div style={{ position:'absolute',bottom:-40,left:-40,width:120,height:120,borderRadius:'50%',background:'radial-gradient(circle,rgba(224,123,57,0.1) 0%,transparent 70%)' }} />
+              <div style={{ fontFamily:SERIF,fontSize:72,fontWeight:400,color:'#E07B39',lineHeight:1,opacity:0.9 }}>5</div>
+              <div style={{ fontFamily:SERIF,fontSize:22,color:'white',textAlign:'center',lineHeight:1.3 }}>Simple steps.<br/>Zero complexity.</div>
+              <div style={{ width:48,height:2,background:'#E07B39',borderRadius:1,opacity:0.6 }} />
+              <div style={{ fontSize:14,color:'rgba(255,255,255,0.45)',textAlign:'center',lineHeight:1.7 }}>From request to delivery, every sprint is AI-scoped, talent-matched, and quality-checked.</div>
             </div>
-
-            <AnimatedDashboard />
-
           </div>
 
+          <p style={{ textAlign:'center',color:'rgba(255,255,255,0.5)',fontSize:15,lineHeight:1.7,maxWidth:780,margin:'56px auto 0' }}>Whether you need research, analysis, content, or technical builds — Sprint-Terns™ deploy in hours, not weeks. Every sprint is scoped, managed, and delivered with AI precision.</p>
         </div>
       </section>
 

@@ -7,7 +7,7 @@ import AnimatedHowItWorks from './components/AnimatedHowItWorks';
 export default function Home() {
   const SERIF = "'DM Serif Display', serif"
   return (
-    <div style={{ overflowX:'hidden',minHeight:'100vh' }}>
+    <div style={{ overflowX:'hidden',minHeight:'100vh',background:'#0A2342' }}>
       <nav style={{ position:'fixed',top:0,left:0,right:0,zIndex:100,background:'rgba(10,35,66,0.95)',backdropFilter:'blur(14px)',borderBottom:'1px solid rgba(224,123,57,0.2)',height:60,display:'flex',alignItems:'center' }}>
         <div style={{ maxWidth:1080,margin:'0 auto',padding:'0 24px',display:'flex',alignItems:'center',justifyContent:'space-between',width:'100%' }}>
           <a href="/" style={{ textDecoration:'none',display:'flex',alignItems:'center' }}>
@@ -73,7 +73,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ã¢ÂÂÃ¢ÂÂ SOCIAL PROOF Ã¢ÂÂÃ¢ÂÂ */}
+      {/* —— SOCIAL PROOF —— */}
       <section style={{ background:'#081A30', padding:'72px 24px 80px', borderBottom:'1px solid rgba(255,255,255,0.06)', borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:1080, margin:'0 auto' }}>
 
@@ -326,19 +326,14 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div style={{ background:'rgba(224,123,57,0.06)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:14,padding:'28px 40px',textAlign:'center' }}>
-            <div style={{ fontFamily:SERIF,fontSize:'clamp(1.4rem,2.5vw,2rem)',color:'white',marginBottom:8,lineHeight:1.3 }}>
-              <em style={{ color:'#F08C4E' }}>74%</em> of projects fail at the definition stage —<br />not the execution.
-            </div>
-            <div style={{ fontSize:'0.82rem',color:'rgba(255,255,255,0.4)',marginTop:8 }}>That's the problem Work Simplr was built to solve.</div>
-          </div>
+</div>
         </div>
       </section>
 
       <AnimatedHowItWorks />
 
 
-      {/* Ã¢ÂÂÃ¢ÂÂ WHY NOW Ã¢ÂÂÃ¢ÂÂ */}
+      {/* —— WHY NOW —— */}
       <section style={{ background:'#081A30',padding:'96px 24px',position:'relative',overflow:'hidden',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         {/* subtle bg glow */}
         <div style={{ position:'absolute',top:-120,right:-120,width:480,height:480,background:'radial-gradient(circle,rgba(224,123,57,0.1) 0%,transparent 70%)',pointerEvents:'none' }} />
@@ -379,7 +374,7 @@ export default function Home() {
                   ].map((item, i) => (
                     <div key={item} style={{ display:'flex',alignItems:'flex-start',gap:12 }}>
                       <div style={{ width:18,height:18,borderRadius:'50%',background:'rgba(224,123,57,0.2)',border:'1px solid rgba(224,123,57,0.5)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,marginTop:2 }}>
-                        <span style={{ color:'#E07B39',fontSize:'0.6rem',fontWeight:800 }}>â</span>
+                        <span style={{ color:'#E07B39',fontSize:'0.6rem',fontWeight:800 }}>✓</span>
                       </div>
                       <span style={{ fontSize:'0.9rem',color:'rgba(255,255,255,0.8)',lineHeight:1.5 }}>{item}</span>
                     </div>
@@ -442,7 +437,7 @@ export default function Home() {
               <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:16 }}>The old way</div>
               {['Hiring people','Managing freelancers','Guessing scope'].map(t => (
                 <div key={t} style={{ display:'flex',alignItems:'center',gap:10,padding:'10px 0',borderBottom:'1px solid rgba(255,255,255,0.05)',fontSize:'0.875rem',color:'rgba(255,255,255,0.45)' }}>
-                  <span style={{ color:'#EF4444' }}>Ã¢ÂÂ</span> {t}
+                  <span style={{ color:'#EF4444' }}>✗</span> {t}
                 </div>
               ))}
             </div>
@@ -450,7 +445,7 @@ export default function Home() {
               <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Sprint way</div>
               {['Structured work','Managed delivery','Predictable outcomes'].map(t => (
                 <div key={t} style={{ display:'flex',alignItems:'center',gap:10,padding:'10px 0',borderBottom:'1px solid rgba(224,123,57,0.1)',fontSize:'0.875rem',color:'rgba(255,255,255,0.75)' }}>
-                  <span style={{ color:'#22C55E' }}>â</span> {t}
+                  <span style={{ color:'#22C55E' }}>✓</span> {t}
                 </div>
               ))}
             </div>

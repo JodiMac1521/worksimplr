@@ -169,7 +169,7 @@ export default function PricingPage() {
                 borderRadius: 999, color: 'white', textDecoration: 'none',
                 fontWeight: 600, fontSize: '0.95rem',
                 boxShadow: plan.highlight ? '0 8px 24px rgba(224,123,57,0.35)' : 'none',
-              }}>{plan.cta} â</Link>
+              }}>{plan.cta} →</Link>
             </div>
           ))}
         </div>
@@ -178,7 +178,7 @@ export default function PricingPage() {
         <div style={{ textAlign: 'center', marginTop: 40, fontSize: '0.82rem', color: 'rgba(255,255,255,0.3)', display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap' }}>
           {['No setup fees', '28-day delivery guarantee', 'QA on every deliverable', 'Cancel anytime'].map(t => (
             <span key={t} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-              <span style={{ color: '#22C55E', fontSize: '0.75rem' }}>â</span> {t}
+              <span style={{ color: '#22C55E', fontSize: '0.75rem' }}>✓</span> {t}
             </span>
           ))}
         </div>
@@ -198,9 +198,9 @@ export default function PricingPage() {
             ))}
             {[
               ['Time to first output', '3–6 months', '2–8 weeks', '28 days'],
-              ['Scoping included', 'â', 'â', 'â AI-powered'],
-              ['QA built in', 'â', 'â', 'â Every sprint'],
-              ['Predictable cost', 'â hourly', 'â varies', 'â Fixed price'],
+              ['Scoping included', '✗', '✗', '✓ AI-powered'],
+              ['QA built in', '✗', '✗', '✓ Every sprint'],
+              ['Predictable cost', '✗ hourly', '✗ varies', '✓ Fixed price'],
               ['Management overhead', 'High', 'Medium', 'None'],
               ['Talent pipeline', 'Their network', 'Public marketplace', '590+ school partners'],
             ].map((row, ri) => row.map((cell, ci) => (
@@ -231,7 +231,7 @@ export default function PricingPage() {
         <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 400, marginBottom: 12 }}>Ready to run your first sprint?</h2>
         <p style={{ color: 'rgba(255,255,255,0.45)', marginBottom: 32, fontSize: '0.95rem' }}>Set up takes 10 minutes. First deliverable in 28 days.</p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/register?role=employer" style={{ padding: '14px 40px', background: '#E07B39', borderRadius: 999, color: 'white', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', boxShadow: '0 8px 24px rgba(224,123,57,0.4)' }}>Start a Sprint â</Link>
+          <Link href="/register?role=employer" style={{ padding: '14px 40px', background: '#E07B39', borderRadius: 999, color: 'white', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', boxShadow: '0 8px 24px rgba(224,123,57,0.4)' }}>Start a Sprint →</Link>
           <a href="mailto:hello@worksimplr.com" style={{ padding: '14px 32px', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 999, color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: '0.95rem' }}>Talk to sales</a>
         </div>
       </section>
@@ -271,7 +271,7 @@ export default function PricingPage() {
             </div>
           </div>
           <div style={{ borderTop:'1px solid rgba(255,255,255,0.06)',paddingTop:20,textAlign:'center',fontSize:'0.78rem',color:'rgba(255,255,255,0.25)' }}>
-            Â© {new Date().getFullYear()} Work Simplr. All rights reserved.
+            © {new Date().getFullYear()} Work Simplr. All rights reserved.
           </div>
         </div>
       </footer>

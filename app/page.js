@@ -398,14 +398,14 @@ export default function Home() {
           </div>
 
           {/* Two-column layout */}
-          <div className="hp-whynow-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:32,marginBottom:40,alignItems:'start' }}>
+          <div className="hp-whynow-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:32,marginBottom:40,alignItems:'stretch' }}>
 
             {/* Left column: heading + checklist */}
             <ScrollReveal delay={0}>
               <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',marginBottom:12,lineHeight:1.2,fontWeight:400 }}>
                 Built for forward-thinking employers
               </h2>
-              <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px' }}>
+              <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px',flex:1,display:'flex',flexDirection:'column',justifyContent:'center' }}>
                 <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:24,lineHeight:1.4 }}>For teams who value<br /><em style={{ color:'#F08C4E' }}>output over optics.</em></div>
                 <div style={{ display:'flex',flexDirection:'column',gap:14 }}>
                   {[
@@ -430,7 +430,7 @@ export default function Home() {
               <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',lineHeight:1.2,marginBottom:28,fontWeight:400 }}>
                 Built to handle the part where most work breaks.
               </h3>
-              <div style={{ borderRadius:16,overflow:'hidden',border:'1px solid rgba(255,255,255,0.08)',background:'rgba(255,255,255,0.02)',width:'100%' }}>
+              <div style={{ borderRadius:16,overflow:'hidden',border:'1px solid rgba(255,255,255,0.08)',background:'rgba(255,255,255,0.02)',width:'100%',flex:1,display:'flex',flexDirection:'column' }}>
                 <div style={{ display:'flex',alignItems:'center',borderBottom:'1px solid rgba(255,255,255,0.1)',background:'rgba(255,255,255,0.03)' }}>
                   <div style={{ flex:1,padding:'14px 24px',fontSize:11,fontWeight:700,letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)' }}>Before</div>
                   <div style={{ width:36 }} />

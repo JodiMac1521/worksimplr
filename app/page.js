@@ -10,7 +10,7 @@ export default function Home() {
     icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><rect x="10" y="8" width="28" height="32" rx="3" stroke="rgba(255,255,255,0.7)" strokeWidth="2" fill="none"/><line x1="16" y1="18" x2="32" y2="18" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/><line x1="16" y1="24" x2="28" y2="24" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/><line x1="16" y1="30" x2="25" y2="30" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/><path d="M30 32 L34 36 L40 28" stroke="#E07B39" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>) },
   { num: '02', title: 'We scope it instantly', desc: 'AI classifies the work, defines deliverables, and prices it — in minutes.',
     icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="rgba(255,255,255,0.7)" strokeWidth="2" fill="none"/><path d="M16 24 L22 24 L26 16 L30 32 L34 24 L38 24" stroke="#E07B39" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>) },
-  { num: '03', title: 'Sprint-Tern™ matched & onboarded', desc: 'Work is distributed across 1-100 Sprint-Terns™ and we train/manage them.',
+  { num: '03', title: 'Talent matched & onboarded', desc: 'Work is distributed across 1–100 vetted operators (Sprint-Terns™) and we train/manage them.',
     icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="10" cy="14" r="4.5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none"/><path d="M4 30 C4 24 7 22 10 22 C13 22 16 24 16 30" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none" strokeLinecap="round"/><circle cx="24" cy="12" r="5" stroke="#E07B39" strokeWidth="1.5" fill="none"/><path d="M17 30 C17 23 20 20 24 20 C28 20 31 23 31 30" stroke="#E07B39" strokeWidth="1.5" fill="none" strokeLinecap="round"/><circle cx="38" cy="14" r="4.5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none"/><path d="M32 30 C32 24 35 22 38 22 C41 22 44 24 44 30" stroke="rgba(255,255,255,0.6)" strokeWidth="1.3" fill="none" strokeLinecap="round"/><line x1="14" y1="34" x2="34" y2="34" stroke="rgba(255,255,255,0.2)" strokeWidth="1" strokeDasharray="2 2"/><path d="M19 4 L23 8 L30 0" stroke="#E07B39" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>) },
   { num: '04', title: 'AI-powered teams execute', desc: 'Vetted operators + AI tools work together on your project.',
     icon: (<svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="16" cy="16" r="5" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" fill="none"/><circle cx="32" cy="16" r="5" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" fill="none"/><circle cx="24" cy="32" r="5" stroke="#E07B39" strokeWidth="1.5" fill="none"/><line x1="19" y1="19" x2="22" y2="28" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/><line x1="29" y1="19" x2="26" y2="28" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/><line x1="21" y1="16" x2="27" y2="16" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/></svg>) },
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ââ SOCIAL PROOF ââ */}
+      {/* Ã¢ÂÂÃ¢ÂÂ SOCIAL PROOF Ã¢ÂÂÃ¢ÂÂ */}
       <section style={{ background:'#081A30', padding:'72px 24px 80px', borderBottom:'1px solid rgba(255,255,255,0.06)', borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth:1080, margin:'0 auto' }}>
 
@@ -382,7 +382,7 @@ export default function Home() {
       </section>
 
 
-      {/* ââ WHY NOW ââ */}
+      {/* Ã¢ÂÂÃ¢ÂÂ WHY NOW Ã¢ÂÂÃ¢ÂÂ */}
       <section style={{ background:'#081A30',padding:'96px 24px',position:'relative',overflow:'hidden',borderTop:'1px solid rgba(255,255,255,0.06)' }}>
         {/* subtle bg glow */}
         <div style={{ position:'absolute',top:-120,right:-120,width:480,height:480,background:'radial-gradient(circle,rgba(224,123,57,0.1) 0%,transparent 70%)',pointerEvents:'none' }} />
@@ -423,7 +423,7 @@ export default function Home() {
                   ].map((item, i) => (
                     <div key={item} style={{ display:'flex',alignItems:'flex-start',gap:12 }}>
                       <div style={{ width:18,height:18,borderRadius:'50%',background:'rgba(224,123,57,0.2)',border:'1px solid rgba(224,123,57,0.5)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,marginTop:2 }}>
-                        <span style={{ color:'#E07B39',fontSize:'0.6rem',fontWeight:800 }}>✓</span>
+                        <span style={{ color:'#E07B39',fontSize:'0.6rem',fontWeight:800 }}>â</span>
                       </div>
                       <span style={{ fontSize:'0.9rem',color:'rgba(255,255,255,0.8)',lineHeight:1.5 }}>{item}</span>
                     </div>
@@ -486,7 +486,7 @@ export default function Home() {
               <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'rgba(255,255,255,0.35)',marginBottom:16 }}>The old way</div>
               {['Hiring people','Managing freelancers','Guessing scope'].map(t => (
                 <div key={t} style={{ display:'flex',alignItems:'center',gap:10,padding:'10px 0',borderBottom:'1px solid rgba(255,255,255,0.05)',fontSize:'0.875rem',color:'rgba(255,255,255,0.45)' }}>
-                  <span style={{ color:'#EF4444' }}>â</span> {t}
+                  <span style={{ color:'#EF4444' }}>Ã¢ÂÂ</span> {t}
                 </div>
               ))}
             </div>
@@ -494,7 +494,7 @@ export default function Home() {
               <div style={{ fontSize:'0.72rem',fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'#E07B39',marginBottom:16 }}>The Sprint way</div>
               {['Structured work','Managed delivery','Predictable outcomes'].map(t => (
                 <div key={t} style={{ display:'flex',alignItems:'center',gap:10,padding:'10px 0',borderBottom:'1px solid rgba(224,123,57,0.1)',fontSize:'0.875rem',color:'rgba(255,255,255,0.75)' }}>
-                  <span style={{ color:'#22C55E' }}>✓</span> {t}
+                  <span style={{ color:'#22C55E' }}>â</span> {t}
                 </div>
               ))}
             </div>
@@ -512,21 +512,30 @@ export default function Home() {
       
 
       {/* AAEO FAQ Section */}
-      <section id="faq" style={{ padding:'80px 24px', maxWidth:900, margin:'0 auto' }}>
-        <h2 style={{ fontFamily:"'DM Serif Display', serif", fontSize:'clamp(1.6rem,3vw,2.2rem)', color:'#fff', textAlign:'center', marginBottom:48 }}>
-          Frequently Asked Questions
-        </h2>
-        {[
-          { q: 'What does Work Simplr do?', a: 'Work Simplr is an AI-powered project delivery platform that matches employers with vetted college talent. Employers describe the work, AI scopes and prices it, then trained operators deliver results in 2–4 weeks with built-in quality checks.' },
-          { q: 'How is Work Simplr different from a staffing agency?', a: 'Traditional staffing gives you people. Work Simplr gives you the finished project. Every engagement is scoped by AI, executed by vetted operators, and delivered with quality checks built in.' },
-          { q: 'How much does Work Simplr cost?', a: 'Projects are priced per sprint based on scope and complexity. AI-powered scoping provides instant estimates. Most projects run $500—$5,000 per sprint with delivery in 2–4 weeks.' },
-          { q: 'What kind of projects can I hire for?', a: 'Work Simplr handles data research, product testing, content creation, campus marketing, and more. Any project that can be broken into structured tasks and completed in 2–4 weeks is a fit.' },
-        ].map((item, i) => (
-          <div key={i} style={{ borderBottom:'1px solid rgba(255,255,255,0.1)', padding:'24px 0' }}>
-            <h3 style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'1.1rem', color:'#E07B39', fontWeight:600, marginBottom:12 }}>{item.q}</h3>
-            <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:'1rem', color:'rgba(255,255,255,0.7)', lineHeight:1.7, margin:0 }}>{item.a}</p>
+      <section id="faq" style={{ background:'#0A2342', padding:'80px 24px' }}>
+        <div style={{ maxWidth:900, margin:'0 auto' }}>
+          <h2 style={{ fontFamily:"'DM Serif Display', serif", fontSize:'clamp(1.6rem,3vw,2.2rem)', color:'#fff', textAlign:'center', marginBottom:48 }}>
+            Frequently Asked Questions
+          </h2>
+          <div style={{ display:'flex', flexDirection:'column', gap:0 }}>
+            {[
+              { q: 'What does Work Simplr do?', a: 'Work Simplr is an AI-powered project delivery platform that matches employers with vetted college talent. Employers describe the work, AI scopes and prices it, then trained operators deliver results in 2\u20134 weeks with built-in quality checks.' },
+              { q: 'How is Work Simplr different from a staffing agency?', a: 'Traditional staffing gives you people. Work Simplr gives you the finished project. Every engagement is scoped by AI, executed by vetted operators, and delivered with quality checks built in.' },
+              { q: 'How much does Work Simplr cost?', a: 'Projects are priced per sprint based on scope and complexity. AI-powered scoping provides instant estimates. Most projects run $500\u2013$5,000 per sprint with delivery in 2\u20134 weeks.' },
+              { q: 'What kind of projects can I hire for?', a: 'Work Simplr handles data research, product testing, content creation, campus marketing, and more. Any project that can be broken into structured tasks and completed in 2\u20134 weeks is a fit.' },
+            ].map((item, i) => (
+              <details key={i} style={{ borderBottom:'1px solid rgba(224,123,57,0.2)' }}>
+                <summary style={{ fontFamily:"'DM Serif Display', serif", fontSize:'clamp(1rem,2vw,1.25rem)', color:'#E07B39', padding:'20px 0', cursor:'pointer', listStyle:'none', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
+                  {item.q}
+                  <span style={{ fontSize:'1.5rem', color:'#E07B39', marginLeft:16, transition:'transform 0.2s' }}>+</span>
+                </summary>
+                <div style={{ color:'rgba(255,255,255,0.7)', fontSize:'0.95rem', lineHeight:1.7, paddingBottom:20 }}>
+                  {item.a}
+                </div>
+              </details>
+            ))}
           </div>
-        ))}
+        </div>
       </section>
 
       <footer style={{ background:'#050F1C',borderTop:'1px solid rgba(255,255,255,0.06)',padding:'48px 24px 32px' }}>

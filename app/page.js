@@ -362,6 +362,7 @@ export default function Home() {
                     <div style={{ fontFamily:SERIF,fontSize:'clamp(1.25rem,2.5vw,1.65rem)',color:'white',fontWeight:400,lineHeight:1.3,marginBottom:6 }}>{step.title}</div>
                     <div style={{ fontSize:15,color:'rgba(255,255,255,0.5)',lineHeight:1.6 }}>{step.desc}</div>
                   </div>
+                </div>
               ))}
             </div>
 

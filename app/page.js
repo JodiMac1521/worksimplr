@@ -419,7 +419,7 @@ export default function Home() {
                     'Projects completed in weeks, not semesters',
                     'No HR lift or added headcount',
                     'AI-native talent, structured delivery',
-                    'Transparent deliverables \u2014 not status updates'
+                    'Transparent deliverables — not status updates'
                   ].map((item, i) => (
                     <div key={item} style={{ display:'flex',alignItems:'flex-start',gap:12 }}>
                       <div style={{ width:18,height:18,borderRadius:'50%',background:'rgba(224,123,57,0.2)',border:'1px solid rgba(224,123,57,0.5)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,marginTop:2 }}>
@@ -450,6 +450,26 @@ export default function Home() {
               </div>
             </ScrollReveal>
           </div>
+
+          {/* The challenge statement */}
+          <div style={{ background:'rgba(255,255,255,0.02)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:16,padding:'32px 40px',textAlign:'center',marginBottom:40 }}>
+            <p style={{ fontSize:'1.1rem',color:'rgba(255,255,255,0.7)',lineHeight:1.8,marginBottom:8 }}>
+              <em>...the challenge is the same...</em>
+            </p>
+            <p style={{ fontFamily:SERIF,fontSize:'clamp(1.2rem,2.5vw,1.6rem)',color:'white',lineHeight:1.4,marginBottom:8 }}>
+              How do you get quality results from distributed work<br />without adding management overhead?
+            </p>
+            <p style={{ fontSize:'1rem',color:'#F08C4E',fontWeight:600,marginTop:16 }}>That's what Work Simplr solves.</p>
+          </div>
+
+          {/* CTA */}
+          <div style={{ textAlign:'center' }}>
+            <a href="/register?role=employer" style={{ display:'inline-block',padding:'16px 48px',background:'#E07B39',borderRadius:999,fontSize:'1.05rem',fontWeight:700,color:'white',textDecoration:'none',boxShadow:'0 8px 32px rgba(224,123,57,0.4)',letterSpacing:'0.3px' }}>
+              Start a Sprint â
+            </a>
+          </div>
+
+        </div>
       
           
           

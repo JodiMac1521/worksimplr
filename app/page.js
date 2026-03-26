@@ -375,6 +375,7 @@ export default function Home() {
             <div style={{ width:48,height:2,background:'#E07B39',borderRadius:1,opacity:0.6 }} />
             <div style={{ fontSize:14,color:'rgba(255,255,255,0.45)',textAlign:'center',lineHeight:1.7 }}>From request to delivery, every sprint is AI-scoped, talent-matched, and quality-checked.</div>
           </div>
+          </div>
 
           <p style={{ textAlign:'center',color:'rgba(255,255,255,0.5)',fontSize:15,lineHeight:1.7,maxWidth:780,margin:'56px auto 0' }}>Whether you need research, analysis, content, or technical builds — Sprint-Terns™ deploy in hours, not weeks. Every sprint is scoped, managed, and delivered with AI precision.</p>
         </div>

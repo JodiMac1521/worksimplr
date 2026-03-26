@@ -215,7 +215,7 @@ export default function Home() {
           <p style={{ fontSize:'1rem',color:'rgba(255,255,255,0.5)',marginBottom:56,lineHeight:1.7,textAlign:'center' }}>We take messy, undefined work and turn it into real outcomes. In weeks, not months.</p>
 
           <AnimatedSteps>
-          <div className="hp-steps-row" style={{ display:'flex',alignItems:'stretch',gap:44,paddingTop:24,marginBottom:40 }}>
+          <div className="hp-steps-row" style={{ display:'flex',alignItems:'stretch',gap:56,paddingTop:24,marginBottom:40 }}>
             {[
               { num:'1', icon:(<svg width="120" height="68" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'0 auto'}}>
                   <defs>
@@ -281,7 +281,7 @@ export default function Home() {
                   <div style={{ fontFamily:SERIF,fontSize:'1.1rem',color:'white',marginBottom:8,fontWeight:400 }}>{item.title}</div>
                   <div style={{ fontSize:'0.875rem',maxWidth:260,color:i===0?'rgba(255,255,255,0.85)':'rgba(255,255,255,0.55)',lineHeight:1.65 }}>{item.desc}</div>
                 </div>
-                {i < 2 && <div className="step-arrow" style={{ position:'absolute',right:-22,top:'50%',transform:'translateY(-50%)',width:44,display:'flex',alignItems:'center',justifyContent:'center',color:'#E07B39',fontSize:'1.6rem',zIndex:2 }}>→</div>}
+                {i < 2 && <div className="step-arrow" style={{ position:'absolute',right:-28,top:'50%',transform:'translateY(-50%)',width:56,height:56,display:'flex',alignItems:'center',justifyContent:'center',background:'rgba(224,123,57,0.15)',border:'2px solid rgba(224,123,57,0.4)',borderRadius:'50%',color:'#E07B39',fontSize:'1.8rem',fontWeight:700,zIndex:2,backdropFilter:'blur(4px)' }}>→</div>}
               </div>
             ))}
           </div>
@@ -405,7 +405,7 @@ export default function Home() {
               <h2 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',marginBottom:28,lineHeight:1.2,fontWeight:400 }}>
                 Built for forward-thinking employers<br /><em style={{ color:'#F08C4E' }}>done with broken internships.</em>
               </h2>
-              <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px' }}>
+              <div style={{ background:'rgba(224,123,57,0.07)',border:'1px solid rgba(224,123,57,0.25)',borderRadius:18,padding:'36px 32px',opacity:0,animation:'fadeSlideUp 0.8s ease forwards',animationDelay:'0.2s' }}>
                 <div style={{ fontFamily:SERIF,fontSize:'1.2rem',color:'white',marginBottom:24,lineHeight:1.4 }}>For teams who value<br /><em style={{ color:'#F08C4E' }}>output over optics.</em></div>
                 <div style={{ display:'flex',flexDirection:'column',gap:14 }}>
                   {[
@@ -426,8 +426,8 @@ export default function Home() {
             </div>
 
             {/* Right column: contrast heading + table */}
-            <div style={{ display:'flex',flexDirection:'column',justifyContent:'flex-end',height:'100%' }}>
-              <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.4rem,2.5vw,1.8rem)',color:'white',lineHeight:1.35,marginBottom:24,fontWeight:400 }}>
+            <div style={{ display:'flex',flexDirection:'column',justifyContent:'flex-end',height:'100%',opacity:0,animation:'fadeSlideUp 0.8s ease forwards',animationDelay:'0.4s' }}>
+              <h3 style={{ fontFamily:SERIF,fontSize:'clamp(1.8rem,3.2vw,2.6rem)',color:'white',lineHeight:1.2,marginBottom:28,fontWeight:400 }}>
                 Built to handle the part where most work breaks.
               </h3>
               <div style={{ borderRadius:16,overflow:'hidden',border:'1px solid rgba(255,255,255,0.08)',background:'rgba(255,255,255,0.02)',width:'100%' }}>
